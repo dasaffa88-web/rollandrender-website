@@ -1,0 +1,221 @@
+/* BACKGROUND */
+body {
+  background-image: url(../assets/honeycomb.svg);
+  background-size: 277.128px 160px;
+  background-repeat: repeat;
+  background-color: rgb(212, 212, 212);
+}
+
+/* LOGO IM OVAL */
+.logo {
+  width: 500px;
+  z-index: 10;
+}
+
+/* GROSSES OVAL */
+.logo-wrapper {
+  position: absolute;
+  top: 53px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 650px;
+  height: 400px;
+  background: rgb(100, 100, 100);
+  border-radius: 50%;
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* HERO TEXT */
+.hero {
+    margin-top: 480px; /* Abstand unter dem Oval */
+    text-align: center;
+    line-height: 1.45;
+    color: #1F1F1F; /* CI Text Dark */
+    font-family: 'Inter', sans-serif;
+}
+
+.hero-line {
+    font-size: 1.35rem;
+    opacity: 0.9;
+    margin: 6px 0;
+    font-weight: 300; /* Inter Light */
+    letter-spacing: -0.2px;
+}
+
+.hero-core {
+    font-size: 2.8rem;
+    margin-top: 26px;
+    font-weight: 600; /* Inter SemiBold */
+    letter-spacing: -0.6px;
+}
+
+.tagline {
+  font-size: 1.3rem;
+  opacity: 0.8;
+  margin-top: 10px;
+}
+
+/* FEATURE CARDS */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 30px 20px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  width: 260px;
+  background: #B5C5DB;
+  padding: 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(4px);
+  border: 2px solid rgba(0,0,0,0.1);
+  text-align: center;
+  color: #1F1F1F;
+  font-family: 'Inter', sans-serif;
+}
+
+.feature-card h3 {
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  opacity: 0.6;
+  font-size: 0.9rem;
+}
+
+/* LEGAL PAGES */
+.legal-container {
+    max-width: 800px;
+    margin: 120px auto;
+    padding: 40px;
+    background: #646464;
+    color: #CEDAE0;
+    font-family: 'Inter', sans-serif;
+    border-radius: 16px;
+    line-height: 1.6;
+}
+
+.legal-container h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.legal-container h2 {
+    margin-top: 30px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.legal-container p {
+    margin-bottom: 12px;
+}
+
+.legal-container a {
+    color: #b5c5db; /* sanftes Blau passend zu deinen Cards */
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.legal-container a:hover {
+    color: #E2EAF3; /* helleres Blau beim Hover */
+    text-decoration: none;
+}
+
+/* --------------------------------------------- */
+/* NAVIGATION OVALE (4 Stück, wie im Mockup)     */
+/* --------------------------------------------- */
+
+.nav-oval {
+  position: absolute;
+  background: rgb(100, 100, 100);
+  color: #CEDAE0;
+  font-family: 'Inter', sans-serif;
+
+  width: 240px;     /* Breiter */
+  height: 120px;    /* Höher → ovaler */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%; /* WICHTIG: echtes Oval */
+  text-decoration: none;
+  font-size: 1.25rem;
+
+  border: 2px solid rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: 0.25s ease;
+  z-index: 6;
+}
+
+.nav-oval:hover {
+  background: rgb(120, 120, 120);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+
+/* Positionierung oben links & rechts */
+.nav-oval-top {
+  top: 150px; /* Abstand vom Logo */
+}
+
+/* Positionierung links & rechts neben dem Hero */
+.nav-oval-mid {
+  top: 370px; /* exakt neben dem Hero-Text */
+}
+
+/* Links & rechts */
+.nav-oval-left {
+  left: 8%;
+}
+
+.nav-oval-right {
+  right: 8%;
+}
+/* Untere Ovale enger zusammen */
+.nav-oval-mid.nav-oval-left {
+  left: 18%;   /* vorher 12% → weiter zur Mitte */
+}
+
+.nav-oval-mid.nav-oval-right {
+  right: 18%;  /* vorher 12% → weiter zur Mitte */
+}
+
+.nav-icon {
+  width: 60%;      /* skaliert proportional */
+  height: auto;    /* verhindert Verzerrung */
+  object-fit: contain;
+  opacity: 0.95;   /* leicht futuristisch */
+}
+.placeholder {
+  text-align: center;
+  padding: 80px 20px;
+  color: #CEDAE0;
+  font-family: 'Inter', sans-serif;
+}
+
+.placeholder h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.placeholder p {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.placeholder .subtle {
+  font-size: 1rem;
+  color: #888;
+}
