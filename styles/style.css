@@ -219,3 +219,107 @@ footer {
   font-size: 1rem;
   color: #888;
 }
+/* SOCIAL SECTION */
+.social-section {
+  display: flex;
+  justify-content: center;
+  padding: 80px 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Das graue Panel */
+.social-panel {
+  background: #646464; /* Secondary Grey */
+  padding: 50px 40px;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+
+  color: #CEDAE0; /* Secondary Light */
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+
+/* Titel */
+.social-panel h2 {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  font-weight: 600;
+  color: #CEDAE0;
+}
+
+/* Icon-Reihe */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin: 30px 0 14px 0;
+}
+
+/* Icons */
+.social-links a {
+  font-size: 38px;
+  color: #CEDAE0;
+  transition: 0.25s ease;
+}
+
+/* Hover-Effekt */
+.social-links a:hover {
+  color: #A2CDE3; /* Accent Blue */
+  transform: scale(1.18);
+}
+
+/* Untertitel */
+.social-note {
+  font-size: 1rem;
+  opacity: 0.85;
+  margin-top: 12px;
+  color: #CEDAE0;
+}
+/* KONTAKT SECTION */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  padding: 80px 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Graues Panel wie bei Socials */
+.contact-panel {
+  background: #646464; /* Secondary Grey */
+  padding: 50px 40px;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+
+  color: #CEDAE0; /* Secondary Light */
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+
+.contact-panel h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #CEDAE0;
+}
+
+.contact-text {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+.contact-mail {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #A2CDE3; /* Accent Blue */
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.contact-mail:hover {
+  color: #E2EAF3; /* helleres Blau */
+  text-decoration: underline;
+}
+
