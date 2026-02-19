@@ -176,7 +176,7 @@ body {
 /* RESPONSIVE */
 /* --------------------------------------------- */
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
     .timeline-block {
         grid-template-columns: 1fr;
         justify-items: center;
@@ -188,7 +188,7 @@ body {
         margin: 20px 0;
     }
 }
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
 
     /* 1. Timeline auf 1 Spalte */
     .timeline-block {
@@ -250,7 +250,7 @@ body {
         margin: 10px 0;
     }
 }
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
 
     .lightbox-overlay {
         display: flex;
