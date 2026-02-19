@@ -253,8 +253,11 @@ body {
 @media (max-width: 900px) {
 
     .lightbox-overlay {
-        padding: 10px;
-        align-items: flex-start; /* verhindert Springen */
+        display: flex;
+        justify-content: center;
+        align-items: center; /* wieder zentriert */
+        padding: 20px;
+        overflow-y: auto; /* wichtig! */
     }
 
     .lightbox-overlay img {
@@ -263,9 +266,10 @@ body {
         max-width: 100%;
         max-height: none;
         object-fit: contain;
-        margin-top: 40px; /* Abstand zur oberen Leiste */
+        margin: 0; /* kein margin-top mehr */
     }
 }
+
 
 
 
