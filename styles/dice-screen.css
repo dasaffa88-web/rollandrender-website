@@ -188,6 +188,28 @@ body {
         margin: 20px 0;
     }
 }
+@media (max-width: 900px) {
+
+    /* Deine bestehenden Regeln bleiben */
+
+    /* Reihenfolge auf Mobile erzwingen */
+    .timeline-block .image-cell {
+        order: 1;
+    }
+
+    .timeline-block .text-cell {
+        order: 2;
+    }
+
+    /* Left/Right-Grid-Positionen neutralisieren */
+    .timeline-block.left .image-cell,
+    .timeline-block.left .text-cell,
+    .timeline-block.right .image-cell,
+    .timeline-block.right .text-cell {
+        grid-column: 1 !important;
+    }
+}
+
 
 /* --------------------------------------------- */
 /* FOOTER */
