@@ -192,7 +192,20 @@ body {
 
     /* Deine bestehenden Regeln bleiben */
 
-    /* Reihenfolge auf Mobile erzwingen */
+    /* 1. Grid auf 1 Spalte */
+    .timeline-block {
+        grid-template-columns: 1fr;
+    }
+
+    /* 2. Left/Right-Positionen neutralisieren */
+    .timeline-block.left .image-cell,
+    .timeline-block.left .text-cell,
+    .timeline-block.right .image-cell,
+    .timeline-block.right .text-cell {
+        grid-column: 1 !important;
+    }
+
+    /* 3. Reihenfolge erzwingen: Bild oben, Text unten */
     .timeline-block .image-cell {
         order: 1;
     }
@@ -201,14 +214,15 @@ body {
         order: 2;
     }
 
-    /* Left/Right-Grid-Positionen neutralisieren */
-    .timeline-block.left .image-cell,
-    .timeline-block.left .text-cell,
-    .timeline-block.right .image-cell,
-    .timeline-block.right .text-cell {
-        grid-column: 1 !important;
+    /* 4. Breite anpassen */
+    .image-cell,
+    .text-cell {
+        width: 100%;
+        max-width: 600px;
+        margin: 20px 0;
     }
 }
+
 
 
 /* --------------------------------------------- */
