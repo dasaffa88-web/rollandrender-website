@@ -250,6 +250,22 @@ body {
         margin: 10px 0;
     }
 }
+@media (max-width: 900px) {
+
+    .lightbox-overlay {
+        padding: 10px;
+        align-items: flex-start; /* verhindert Springen */
+    }
+
+    .lightbox-overlay img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: none;
+        object-fit: contain;
+        margin-top: 40px; /* Abstand zur oberen Leiste */
+    }
+}
 
 
 
