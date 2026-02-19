@@ -40,39 +40,31 @@ body {
 .timeline-block {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: start;        /* Zellen oben ausrichten */
-    justify-items: center;
+    align-items: start;        /* Oberkante! */
+    justify-items: center;     /* horizontale Mitte bleibt */
     margin: clamp(30px, 10vw, 250px) 0;
 }
 
-/* Neue Struktur: jede Seite hat eine eigene Zelle */
-.image-cell {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+.timeline-block.left .timeline-image { grid-column: 1; }
+.timeline-block.left .timeline-text  { grid-column: 2; }
+
+.timeline-block.right .timeline-image { grid-column: 2; }
+.timeline-block.right .timeline-text  { grid-column: 1; }
+
+
+
+
+/* Abstand zur Mittelachse (symmetrisch!) */
+.timeline-image,
+.timeline-text {
+    align-self: start;
     margin: 0 40px;
-
-    width: fit-content;      /* <<< verhindert riesige Bilder */
-    max-width: 550px;        /* <<< optional */
 }
-.text-cell {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 0 40px;
-
-    width: 650px;            /* <<< exakt wie die Tafel */
+.timeline-block {
+    align-items: start;
+    grid-auto-rows: auto;
 }
 
-
-/* Left/Right Umschaltung */
-.timeline-block.left .image-cell { grid-column: 1; }
-.timeline-block.left .text-cell  { grid-column: 2; }
-
-.timeline-block.right .image-cell { grid-column: 2; }
-.timeline-block.right .text-cell  { grid-column: 1; }
 
 /* --------------------------------------------- */
 /* BILD + FENSTERRAHMEN */
@@ -116,6 +108,33 @@ body {
 .frame-2::before { background-image: url("../assets/frames/Windowframe_A2.png"); }
 .frame-3::before { background-image: url("../assets/frames/Windowframe_A3.png"); }
 .frame-4::before { background-image: url("../assets/frames/Windowframe_A4.png"); }
+
+.timeline-separator {
+    width: 100%;
+    height: 2px;
+    background: rgba(255,255,255,0.15);
+    margin: 120px 0; /* Abstand zwischen den Blöcken */
+}
+/* fenstervergrößerung */
+
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.lightbox-overlay img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 8px;
+}
 
 /* --------------------------------------------- */
 /* TAFEL / TEXTBEREICH */
@@ -164,8 +183,8 @@ body {
         text-align: center;
     }
 
-    .image-cell,
-    .text-cell {
+    .timeline-image,
+    .timeline-text {
         margin: 20px 0;
     }
 }
@@ -215,25 +234,4 @@ body {
 .footer-board a:hover {
     color: #b4e95f;
     text-decoration: underline;
-}
-
-.lightbox-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0,0,0,0.85);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    cursor: zoom-out;
-}
-
-.lightbox-overlay img {
-    max-width: 90vw;
-    max-height: 90vh;
-    border-radius: 8px;
-    box-shadow: 0 0 25px rgba(0,0,0,0.6);
 }
