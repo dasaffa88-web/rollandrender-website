@@ -190,14 +190,21 @@ body {
 }
 @media (max-width: 900px) {
 
-    /* Deine bestehenden Regeln bleiben */
-
-    /* 1. Grid auf 1 Spalte */
+    /* 1. Timeline auf 1 Spalte */
     .timeline-block {
         grid-template-columns: 1fr;
+        margin: 60px 0; /* viel kleiner */
     }
 
-    /* 2. Left/Right-Positionen neutralisieren */
+    /* 2. Reihenfolge: Bild oben, Text unten */
+    .timeline-block .image-cell {
+        order: 1;
+    }
+    .timeline-block .text-cell {
+        order: 2;
+    }
+
+    /* 3. Left/Right neutralisieren */
     .timeline-block.left .image-cell,
     .timeline-block.left .text-cell,
     .timeline-block.right .image-cell,
@@ -205,23 +212,45 @@ body {
         grid-column: 1 !important;
     }
 
-    /* 3. Reihenfolge erzwingen: Bild oben, Text unten */
-    .timeline-block .image-cell {
-        order: 1;
+    /* 4. Bildgröße anpassen */
+    .timeline-image img {
+        max-width: 90vw;
+        max-height: 60vh;
     }
 
-    .timeline-block .text-cell {
-        order: 2;
+    /* 5. Fensterrahmen skalieren */
+    .timeline-image::before {
+        top: -12%;
+        left: -12%;
+        right: -12%;
+        bottom: -12%;
     }
 
-    /* 4. Breite anpassen */
+    /* 6. Tafeln skalieren */
+    .timeline-text {
+        width: 90vw;
+        padding: 25px 20px;
+        background-size: cover;
+    }
+
+    /* 7. Textgröße anpassen */
+    .timeline-text h3 {
+        font-size: 1.4rem;
+    }
+    .timeline-text p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    /* 8. Zellenbreite */
     .image-cell,
     .text-cell {
         width: 100%;
-        max-width: 600px;
-        margin: 20px 0;
+        max-width: 90vw;
+        margin: 10px 0;
     }
 }
+
 
 
 
