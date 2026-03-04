@@ -370,3 +370,41 @@ footer {
     object-fit: contain;
 }
 
+/* Mini-Oval Logo-Button oben links */
+.mini-oval {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    width: 140px;      /* oval → breiter als hoch */
+    height: 80px;
+
+    background: rgb(100, 100, 100);
+    border-radius: 50%; /* echtes Oval */
+    border: 2px solid rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 999;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.mini-oval:hover {
+    background: rgb(120, 120, 120);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+/* Logo im Mini-Oval */
+.mini-oval-icon {
+    height: 120%;       /* orientiert sich an der Oval-Höhe */
+    width: auto;
+    object-fit: contain;
+    opacity: 0.95;
+}
+
+
