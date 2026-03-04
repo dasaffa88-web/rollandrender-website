@@ -324,3 +324,49 @@ footer {
 }
 
 
+/* --------------------------------------------- */
+/* MOBILE / TABLET FIX: Navigation unter das Logo */
+/* --------------------------------------------- */
+@media (max-width: 1200px) {
+
+    /* Logo soll im normalen Flow stehen */
+    .logo-wrapper {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin: 20px auto;
+    }
+
+    /* Buttons untereinander */
+    .nav-oval {
+        position: static;
+        margin: 20px auto;
+        width: 80%;
+        max-width: 300px;
+        height: 110px;
+    }
+
+    /* Alte absolute Positionen neutralisieren */
+    .nav-oval-top,
+    .nav-oval-mid,
+    .nav-oval-left,
+    .nav-oval-right {
+        top: unset;
+        left: unset;
+        right: unset;
+    }
+
+    /* Hero weiter nach unten */
+    .hero {
+        margin-top: 40px;
+    }
+}
+
+.nav-icon {
+    width: auto;
+    height: 70%;      /* statt width: 60% */
+    max-height: 80px; /* verhindert Überragen */
+    object-fit: contain;
+}
+
