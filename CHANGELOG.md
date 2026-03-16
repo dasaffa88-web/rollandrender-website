@@ -1,5 +1,31 @@
 # Changelog
 
+## 2026-03-16 (Nachtrag 9)
+
+### Bereich
+Dice-&-Screen-Seite / Features-URL-Struktur
+
+### Dateien
+- dice-and-screen.html
+- dice-and-screen/features/index.html
+- features.html
+
+### Aenderung
+- Features-Seite als klare Unterseite unter `dice-and-screen/features/` angelegt.
+- CTA auf der Dice-&-Screen-Timeline auf die neue Unterseiten-URL umgestellt.
+- Alte Root-URL `features.html` in eine Weiterleitungsseite umgewandelt (Meta-Refresh + JavaScript), damit bestehende Links weiterhin funktionieren.
+- Alle relativen Pfade in der neuen Unterseite auf die Unterordner-Struktur angepasst (Styles, Logos, Vision-Bild, Ruecklink).
+
+### Grund
+Die Features sollten nicht mehr wie eine eigenstaendige Hauptseite auf Domain-Ebene wirken, sondern sichtbar als Teilbereich von Dice & Screen.
+
+### Risiko/Hinweise
+- Geringes Risiko: Routing bleibt rueckwaertskompatibel durch Weiterleitung von der alten URL.
+- Hinweis: Falls externe Links im Web existieren, werden sie weiterhin korrekt auf die neue Unterseite gefuehrt.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer `dice-and-screen.html`, `features.html` und `dice-and-screen/features/index.html`: keine Fehler gefunden.
+
 ## 2026-03-16
 
 ### Bereich
