@@ -451,7 +451,13 @@ document.addEventListener("click", function(e) {
         overlay.appendChild(img);
         document.body.appendChild(overlay);
 
-        overlay.addEventListener("click", () => overlay.remove());
+        const previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+
+        overlay.addEventListener("click", () => {
+            overlay.remove();
+            document.body.style.overflow = previousOverflow;
+        });
     }
 });
 </script>

@@ -95,6 +95,30 @@ Die Seite wurde auf Smartphones initial zu weit herausgezoomt und nach links ver
 ### Teststatus
 - VS Code Fehlerpruefung fuer `dice-and-screen.html`: keine Fehler gefunden.
 
+## 2026-03-16 (Nachtrag 7)
+
+### Bereich
+Dice-&-Screen-Seite (Lightbox Mobile)
+
+### Dateien
+- dice-and-screen.html
+- styles/dice-screen.css
+
+### Aenderung
+- Lightbox-Overlay auf viewport-stabile Groessen (`inset: 0`, `height: 100dvh`, Box-Sizing mit Padding) angepasst.
+- Bild-Skalierung auf sichere Mobile-Werte umgestellt (`max-width`/`max-height` mit `100dvh`), damit Bilder mittig und voll sichtbar bleiben.
+- Problematische Mobile-Regeln (`width: 100%` + unlimitierte Hoehe) ersetzt.
+- Beim Oeffnen der Lightbox wird Body-Scroll gesperrt und beim Schliessen wiederhergestellt, um Verschiebungen/Spruenge zu vermeiden.
+
+### Grund
+Auf Smartphones war die Lightbox nicht sauber zentriert und verschob sich beim Oeffnen.
+
+### Risiko/Hinweise
+- Geringes Risiko: Aenderungen betreffen nur das Lightbox-Verhalten der Dice-&-Screen-Seite.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer `dice-and-screen.html` und `styles/dice-screen.css`: keine Fehler gefunden.
+
 ## 2026-03-16 (Nachtrag 4)
 
 ### Bereich
