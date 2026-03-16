@@ -119,6 +119,29 @@ Auf Smartphones war die Lightbox nicht sauber zentriert und verschob sich beim O
 ### Teststatus
 - VS Code Fehlerpruefung fuer `dice-and-screen.html` und `styles/dice-screen.css`: keine Fehler gefunden.
 
+## 2026-03-16 (Nachtrag 8)
+
+### Bereich
+Dice-&-Screen-Seite (Lightbox Mobile Feinschliff)
+
+### Dateien
+- dice-and-screen.html
+- styles/dice-screen.css
+
+### Aenderung
+- Lightbox-Overlay auf `display: grid` mit `place-items: center` umgestellt fuer stabilere Zentrierung.
+- Bild-Constraints auf viewport-stabile Werte mit `100svh` und `calc(100vw - 32px)` angepasst.
+- Scroll-Lock im Script verstaerkt: Body wird beim Oeffnen mit `position: fixed` inkl. gespeicherter Scroll-Position fixiert und beim Schliessen exakt wiederhergestellt.
+
+### Grund
+Auf Mobile trat weiterhin der Eindruck auf, dass die Lightbox sich an einem anderen (ausgezoomten) Viewport orientiert und das Bild nach oben/rechts verschiebt.
+
+### Risiko/Hinweise
+- Geringes Risiko: Nur Lightbox-Logik und Lightbox-Styling der Dice-&-Screen-Seite betroffen.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer `dice-and-screen.html` und `styles/dice-screen.css`: keine Fehler gefunden.
+
 ## 2026-03-16 (Nachtrag 4)
 
 ### Bereich
