@@ -52,6 +52,49 @@ Der Footer sollte auf der Features-Seite explizit eingebaut und visuell klar wah
 ### Teststatus
 - VS Code Fehlerpruefung fuer `features.html` und `styles/style.css`: keine Fehler gefunden.
 
+## 2026-03-16 (Nachtrag 5)
+
+### Bereich
+Features-Seite (Initiales Laden / Styling)
+
+### Dateien
+- features.html
+
+### Aenderung
+- Stylesheet-Link um Cache-Buster erweitert (`styles/style.css?v=20260316-features-1`), damit beim Oeffnen sicher die aktuelle CSS-Version geladen wird.
+- Kritisches Inline-CSS fuer `body.features-page` im Head ergaenzt, um den visuellen Style-Sprung beim initialen Laden zu reduzieren.
+
+### Grund
+Beim Oeffnen der Features-Seite wurde zunaechst ein abweichender Stil angezeigt, bevor das finale Design erschien.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: Anpassung ist auf die Features-Seite begrenzt.
+- Query-String kann bei künftigen Style-Aenderungen erneut angepasst werden.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer `features.html`: keine Fehler gefunden.
+
+## 2026-03-16 (Nachtrag 6)
+
+### Bereich
+Dice-&-Screen-Seite (Mobile Initial-Rendering)
+
+### Dateien
+- dice-and-screen.html
+
+### Aenderung
+- Fehlenden Viewport-Meta-Tag ergaenzt: `width=device-width, initial-scale=1.0`.
+- Externen Google-Font-Link aus der ungueltigen Position vor dem Head in den Head verschoben.
+
+### Grund
+Die Seite wurde auf Smartphones initial zu weit herausgezoomt und nach links verschoben dargestellt.
+
+### Risiko/Hinweise
+- Geringes Risiko: Nur Head-Struktur und Meta-Angaben der Dice-&-Screen-Seite angepasst.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer `dice-and-screen.html`: keine Fehler gefunden.
+
 ## 2026-03-16 (Nachtrag 4)
 
 ### Bereich

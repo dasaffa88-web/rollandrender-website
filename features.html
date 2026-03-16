@@ -8,7 +8,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css?v=20260316-features-1">
+    <style>
+        /* Critical styles to prevent visual flash before full stylesheet is applied */
+        body.features-page {
+            margin: 0;
+            color: #f5e6c2;
+            background:
+                radial-gradient(circle at 18% 20%, rgba(203, 155, 76, 0.16), transparent 38%),
+                radial-gradient(circle at 82% 9%, rgba(92, 136, 153, 0.2), transparent 42%),
+                linear-gradient(180deg, #141313 0%, #1f1914 48%, #130f0e 100%);
+            min-height: 100vh;
+        }
+    </style>
 </head>
 <body class="features-page">
 
@@ -17,75 +29,84 @@
 </a>
 
 <main class="features-main" id="features">
-    <header class="features-hero">
-        <img src="../assets/images/D&SLogoohnebackground.png" alt="Dice & Screen" class="features-kicker-logo">
-        <h1>Aktuelle Features</h1>
-        <p class="features-intro">
-            Ein Toolkit für taktische Kämpfe, klare Spielleitung und kreative Content-Erstellung.
-            Alle Module sind darauf ausgelegt, Rundenfluss zu erhalten und Vorbereitung zu verkürzen.
+<header class="features-hero">
+    <img src="../assets/images/D&SLogoohnebackground.png" alt="Dice & Screen" class="features-kicker-logo">
+    <h1>Aktuelle Features</h1>
+    <p class="features-intro">
+        Dice & Screen ist dein taktisches Command‑Center für moderne Pen‑&‑Paper‑Sessions.
+        Entwickelt für flüssige Kämpfe, klare Entscheidungen und grenzenlose Kreativität.
+    </p>
+</header>
+
+<section class="features-grid" aria-label="Feature Kategorien">
+    <article class="feature-card feature-card-lg">
+        <p class="feature-tag" aria-label="Combat Core" title="Combat Core">⚔️</p>
+        <h2>Kampf und Regeln</h2>
+        <p>
+            Ein dynamisches, RAW‑präzises Kampfsystem mit Deckung, Zuständen, Contests,
+            Konzentration und taktischen Manövern. Jeder Zug fühlt sich bedeutend an – klar,
+            kontrollierbar und intensiv.
         </p>
-    </header>
+    </article>
 
-    <section class="features-grid" aria-label="Feature Kategorien">
-        <article class="feature-card feature-card-lg">
-            <p class="feature-tag" aria-label="Combat Core" title="Combat Core">⚔️</p>
-            <h2>Kampf und Regeln</h2>
-            <p>
-                Dynamisches, rundenbasiertes Kampfsystem mit Zuständen, Deckung, Contests,
-                Konzentration und taktischen Aktionen. Die Regeln bleiben transparent und steuerbar.
-            </p>
-        </article>
+    <article class="feature-card">
+        <p class="feature-tag" aria-label="Battlefield" title="Battlefield">🗺️</p>
+        <h2>Taktisches Grid</h2>
+        <p>
+            Ein lebendiges Battle‑Grid mit Movement, Pathfinding, Sichtlinien,
+            AoE‑Previews und Projektil‑Animationen. Kämpfe entfalten sich wie auf einem
+            digitalen Tabletop – nur schneller und smarter.
+        </p>
+    </article>
 
-        <article class="feature-card">
-            <p class="feature-tag" aria-label="Battlefield" title="Battlefield">🗺️</p>
-            <h2>Taktisches Grid</h2>
-            <p>
-                Bewegungen, Sichtlinien, Pathfinding, AoE-Vorschau und Projektil-Effekte in einer klaren,
-                visuellen Kampfarena.
-            </p>
-        </article>
+    <article class="feature-card">
+        <p class="feature-tag" aria-label="Abilities" title="Abilities">✨</p>
+        <h2>Fähigkeiten und Magie</h2>
+        <p>
+            Ein flexibles Ability‑System mit Upcasting, Reaktionen, Triggern und klaren
+            Wirkbereichen. Zauber wirken sichtbar auf das Schlachtfeld – spürbar, mächtig,
+            unverwechselbar.
+        </p>
+    </article>
 
-        <article class="feature-card">
-            <p class="feature-tag" aria-label="Abilities" title="Abilities">✨</p>
-            <h2>Fähigkeiten und Magie</h2>
-            <p>
-                Zauber- und Ability-System mit Triggern, Reaktionen, Upcasting und klaren Wirkbereichen.
-            </p>
-        </article>
+    <article class="feature-card">
+        <p class="feature-tag" aria-label="Roster" title="Roster">🧙</p>
+        <h2>Charaktere und Begleiter</h2>
+        <p>
+            Erstelle Helden, verwalte Zustände, nutze Begleiter‑AI und greife auf eine
+            vollständige Gegnerdatenbank zu. Encounter starten sofort – ohne Vorbereitungsstress.
+        </p>
+    </article>
 
-        <article class="feature-card">
-            <p class="feature-tag" aria-label="Roster" title="Roster">🧙</p>
-            <h2>Charaktere und Begleiter</h2>
-            <p>
-                Heldenverwaltung, Zustände, Companion-Handling und Gegnerdatenbank für schnell startbare Encounters.
-            </p>
-        </article>
+    <article class="feature-card">
+        <p class="feature-tag" aria-label="Items" title="Items">🎒</p>
+        <h2>Inventar und Ausrüstung</h2>
+        <p>
+            Ein modernes Grid‑Inventar mit Drag‑and‑Drop, Ausrüstungsslots, globaler Truhe
+            und klaren Item‑Icons. Schnell, intuitiv und perfekt für lange Kampagnen.
+        </p>
+    </article>
 
-        <article class="feature-card">
-            <p class="feature-tag" aria-label="Items" title="Items">🎒</p>
-            <h2>Inventar und Ausrüstung</h2>
-            <p>
-                Grid-Inventar mit Drag-and-Drop, Ausrüstungsslots, Truhe und direkter visueller Item-Zuordnung.
-            </p>
-        </article>
+    <article class="feature-card">
+        <p class="feature-tag" aria-label="Control" title="Control">🎛️</p>
+        <h2>DM‑Werkzeuge</h2>
+        <p>
+            Leite Sessions wie ein Regisseur: Director‑Mode, Kampf‑Dashboard, Rest‑System,
+            Roll‑Info und volle Encounter‑Kontrolle. Weniger Verwaltung, mehr Story.
+        </p>
+    </article>
 
-        <article class="feature-card">
-            <p class="feature-tag" aria-label="Control" title="Control">🎛️</p>
-            <h2>DM-Werkzeuge</h2>
-            <p>
-                Director-Mode, Dashboard, Rest-System und Encounter-Steuerung für strukturierte, flüssige Sessions.
-            </p>
-        </article>
+    <article class="feature-card feature-card-wide">
+        <p class="feature-tag" aria-label="Creator Suite" title="Creator Suite">🛠️</p>
+        <h2>Eigener Content</h2>
+        <p>
+            Erschaffe eigene Fähigkeiten, Effekte, Items, Gegner und Portraits. Alles
+            datengetrieben, modular und direkt im Spielkontext testbar – deine Welt,
+            deine Regeln.
+        </p>
+    </article>
+</section>
 
-        <article class="feature-card feature-card-wide">
-            <p class="feature-tag" aria-label="Creator Suite" title="Creator Suite">🛠️</p>
-            <h2>Eigener Content</h2>
-            <p>
-                Erstelle eigene Fähigkeiten, Effekte, Items, Gegner und Portraits. Datengetrieben,
-                modular und direkt im Spielkontext testbar.
-            </p>
-        </article>
-    </section>
 
     <div class="features-actions">
         <a href="dice-and-screen.html" class="features-link">Zur Dice & Screen Timeline</a>
