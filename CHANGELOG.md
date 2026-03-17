@@ -1,5 +1,31 @@
 # Changelog
 
+## 2026-03-17
+
+### Bereich
+Features-Seite (CSS-Struktur)
+
+### Dateien
+- styles/style.css
+- styles/features.css
+- dice-and-screen/features/index.html
+
+### Aenderung
+- Feature-seitenspezifische Styles aus der globalen [styles/style.css](styles/style.css) in eine eigene Datei [styles/features.css](styles/features.css) ausgelagert.
+- Die reale Feature-Unterseite [dice-and-screen/features/index.html](dice-and-screen/features/index.html) bindet die neue CSS-Datei zusaetzlich ein.
+- Die bestehenden globalen Mini-Oval-Styles in [styles/style.css](styles/style.css) wurden unveraendert belassen, da sie von mehreren Seiten genutzt werden.
+
+### Grund
+Die Feature-Seite sollte eine klar getrennte, eigene CSS-Datei erhalten, damit Styles besser wartbar sind und die globale Stylesheet-Datei schlanker bleibt.
+
+### Risiko/Hinweise
+- Geringes Risiko: Es handelt sich um eine strukturelle Auslagerung ohne beabsichtigte Design-Aenderung.
+- Hinweis: Der bestehende Inline-Critical-CSS-Block in [dice-and-screen/features/index.html](dice-and-screen/features/index.html) bleibt bewusst erhalten, um FOUC beim ersten Laden zu minimieren.
+
+### Teststatus
+- Selektor-Pruefung durchgefuehrt: Feature-Selektoren befinden sich in [styles/features.css](styles/features.css) und nicht mehr in [styles/style.css](styles/style.css).
+- Einbindung der neuen Datei in [dice-and-screen/features/index.html](dice-and-screen/features/index.html) verifiziert.
+
 ## 2026-03-16 (Nachtrag 9)
 
 ### Bereich
