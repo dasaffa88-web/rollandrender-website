@@ -1,5 +1,157 @@
 # Changelog
 
+## 2026-03-17 (Nachtrag CTA-Ziele Features/Timeline)
+
+### Bereich
+Dice-&-Screen-Seiten (Navigation)
+
+### Dateien
+- dice-and-screen/timeline/index.html
+- dice-and-screen/features/index.html
+
+### Aenderung
+- CTA in [dice-and-screen/timeline/index.html](dice-and-screen/timeline/index.html) von der Feature-Seite auf die Dice-&-Screen-Hauptseite umgestellt.
+- CTA in [dice-and-screen/features/index.html](dice-and-screen/features/index.html) von der Timeline auf die Dice-&-Screen-Hauptseite umgestellt.
+- Beide Seiten verweisen damit konsistent auf [dice-and-screen/index.html](dice-and-screen/index.html).
+
+### Grund
+Features- und Timeline-Seite sollten nicht mehr gegenseitig als primäres Ziel verlinken, sondern zentral auf die neue Dice-&-Screen-Hauptseite führen.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: reine Linkziel- und Label-Anpassung.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer [dice-and-screen/timeline/index.html](dice-and-screen/timeline/index.html), [dice-and-screen/features/index.html](dice-and-screen/features/index.html) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-03-17 (Nachtrag Link-Fix Dice-&-Screen)
+
+### Bereich
+Routing/Navigation (Dice-&-Screen)
+
+### Dateien
+- index.html
+- dice-and-screen.html
+- dice-and-screen/timeline/index.html
+
+### Aenderung
+- Dice-&-Screen-Links auf explizite Dateipfade umgestellt, um lokale Routing-Probleme mit Ordner-URLs zu vermeiden.
+- Startseiten-Link in [index.html](index.html) von `dice-and-screen/` auf `dice-and-screen/index.html` geaendert.
+- Weiterleitung in [dice-and-screen.html](dice-and-screen.html) auf `/dice-and-screen/index.html` umgestellt (Meta-Refresh, Canonical, JavaScript-Link).
+- Ruecklink im Timeline-Header in [dice-and-screen/timeline/index.html](dice-and-screen/timeline/index.html) auf `dice-and-screen/index.html` gesetzt.
+
+### Grund
+Beim Klick auf Dice & Screen trat lokal ein 404 auf. Durch explizite Dateiziele wird die Navigation server-unabhaengiger und robuster.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: nur Linkziele, keine Inhalts- oder Logikaenderung.
+
+### Teststatus
+- Linkpruefung per Suche und VS Code Fehlerpruefung der geaenderten Dateien: keine Fehler gefunden.
+
+## 2026-03-17 (Nachtrag Dice-&-Screen-Hauptseite)
+
+### Bereich
+Dice-&-Screen-Seite (Hauptseite)
+
+### Dateien
+- dice-and-screen/index.html
+- styles/dice-screen-home.css
+
+### Aenderung
+- Platzhalter durch eine echte Dice-&-Screen-Hauptseite ersetzt.
+- Neue Startstruktur mit Hero-Bereich, klarer Produktbotschaft und zwei primaren Einstiegs-CTAs (Features und Timeline) umgesetzt.
+- Drei Kernversprechen als eigene Sektion eingebaut: Regelvereinfachung, digitale Encounter-Hilfe, Theatre-of-Mind-Fokus.
+- Schnellnavigation als Kartenbereich ergaenzt, damit Nutzer direkt zwischen Feature-Ueberblick und Projektreise waehlen koennen.
+- Das bisherige Platzhalter-Styling durch ein vollstaendiges Landing-Layout in [styles/dice-screen-home.css](styles/dice-screen-home.css) ersetzt.
+
+### Grund
+Die neue Dice-&-Screen-Hauptseite soll als klarer Einstieg fungieren und Besucher strukturiert zu Features oder Timeline fuehren.
+
+### Risiko/Hinweise
+- Geringes Risiko: Frontend- und Layout-Aenderungen ohne Backend- oder Logik-Eingriffe.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer [dice-and-screen/index.html](dice-and-screen/index.html) und [styles/dice-screen-home.css](styles/dice-screen-home.css): keine Fehler gefunden.
+
+## 2026-03-17 (Nachtrag Dice-&-Screen-Struktur)
+
+### Bereich
+Dice-&-Screen-Seite (Navigation/Struktur)
+
+### Dateien
+- dice-and-screen.html
+- dice-and-screen/index.html
+- dice-and-screen/timeline/index.html
+- styles/dice-screen-home.css
+- index.html
+- dice-and-screen/features/index.html
+
+### Aenderung
+- Bisherige Dice-&-Screen-Seite als Unterseite unter [dice-and-screen/timeline/index.html](dice-and-screen/timeline/index.html) bereitgestellt.
+- Neue Platzhalter-Hauptseite fuer Dice & Screen unter [dice-and-screen/index.html](dice-and-screen/index.html) erstellt (mit Links zu Features und Timeline).
+- Legacy-URL [dice-and-screen.html](dice-and-screen.html) in eine Weiterleitungsseite auf `/dice-and-screen/` umgewandelt (Meta-Refresh + JavaScript).
+- Startseiten-Link in [index.html](index.html) auf die neue Dice-&-Screen-Hauptseite (`dice-and-screen/`) umgestellt.
+- Timeline-CTA auf der Feature-Unterseite in [dice-and-screen/features/index.html](dice-and-screen/features/index.html) auf die neue Timeline-URL (`/dice-and-screen/timeline/`) angepasst.
+
+### Grund
+Die bisherige Timeline sollte als eigene Unterseite weiter bestehen, waehrend eine neue zentrale Dice-&-Screen-Hauptseite fuer den kuenftigen Ausbau vorbereitet wird.
+
+### Risiko/Hinweise
+- Geringes Risiko: Hauptsaechlich Routing- und Link-Anpassungen ohne inhaltliche Funktionsaenderungen.
+- Hinweis: In [dice-and-screen/timeline/index.html](dice-and-screen/timeline/index.html) wird ein `base`-Tag genutzt, damit bestehende relative Pfade der Timeline-Datei im Unterordner korrekt aufgeloest werden.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer die geaenderten Dateien: keine Fehler gefunden.
+- Link-Pruefung per Suche durchgefuehrt: neue Zielpfade (`/dice-and-screen/`, `/dice-and-screen/timeline/`) sind in den relevanten HTML-Dateien gesetzt.
+
+## 2026-03-17 (Nachtrag Vision-Ausrichtung)
+
+### Bereich
+Features-Seite (Vision-Text)
+
+### Dateien
+- dice-and-screen/features/index.html
+
+### Aenderung
+- Hero-Introtext der Feature-Seite inhaltlich auf die Kernvision ausgerichtet: Regeln vereinfachen, Verwaltungsaufwand fuer Spielleitung und Spielende reduzieren, TTRPG-Spielgefuehl erhalten.
+- Vision-Text im Showcase-Block praezisiert: digitale Encounter-Visualisierung bei gleichzeitigem Fokus auf Theatre-of-Mind-Storytelling.
+- Vision-Chips von generischen Schlagworten auf konkrete Leitbegriffe umgestellt (z. B. Regeln vereinfachen, Spielleitung entlasten, digitale Encounter-Visualisierung).
+
+### Grund
+Die Vision sollte auf der Seite klar, direkt und konsistent mit dem Produktziel kommuniziert werden.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: reine Text- und Label-Anpassungen ohne funktionale Aenderung.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer [dice-and-screen/features/index.html](dice-and-screen/features/index.html) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-03-17 (Nachtrag Arcane Bronze)
+
+### Bereich
+Features-Seite (Visual Overhaul)
+
+### Dateien
+- dice-and-screen/features/index.html
+- styles/features.css
+
+### Aenderung
+- Arcane-Bronze-Design umgesetzt: staerkere Hero-Inszenierung mit Lichtkegel, dupliziertem Titellayer und atmosphaerischerem Hintergrund.
+- Feature-Cards visuell aufgewertet (edlere Materialflaechen, differenziertere Rahmen/Highlights, staerkeres Hover-Verhalten).
+- Vision-Sektion als Showcase ausgebaut (eigene Klassen fuer Vision-Bild/Notiz, neue Schwerpunkt-Chips).
+- Bisherige Inline-Styles aus der Feature-Seite entfernt und in [styles/features.css](styles/features.css) ueberfuehrt.
+- Cache-Buster der Feature-CSS in [dice-and-screen/features/index.html](dice-and-screen/features/index.html) aktualisiert.
+
+### Grund
+Die Seite sollte im Stil "Arcane Bronze" sichtbarer premium wirken: epischer, klarer hierarchisiert und mit konsistenterer visueller Sprache.
+
+### Risiko/Hinweise
+- Gering bis mittel: Reines Frontend-Styling, keine funktionalen Aenderungen.
+- Hinweis: Der bestehende kritische Inline-Block fuer [dice-and-screen/features/index.html](dice-and-screen/features/index.html) bleibt bewusst erhalten, um FOUC weiterhin zu minimieren.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer [dice-and-screen/features/index.html](dice-and-screen/features/index.html) und [styles/features.css](styles/features.css): keine Fehler gefunden.
+
 ## 2026-03-17
 
 ### Bereich
