@@ -1,5 +1,115 @@
 # Changelog
 
+## 2026-03-17 (Nachtrag Hero-Headline Entduplizierung)
+
+### Bereich
+Dice-&-Screen-Hauptseite (Hero)
+
+### Dateien
+- dice-and-screen/index.html
+- styles/dice-screen-home.css
+
+### Aenderung
+- Doppelte Markenzeile im Hero entfernt: Unter dem Logo wird nicht mehr zusaetzlich "Dice & Screen" als Titelzeile angezeigt.
+- Hero-H1 auf die eigentliche Message reduziert: "Beherrsche das Schlachtfeld.".
+- Hero-Typografie in [styles/dice-screen-home.css](styles/dice-screen-home.css) auf die einzeilige Ueberschrift angepasst.
+
+### Grund
+Im Hero war die Markenbezeichnung visuell doppelt vorhanden (im Logo und nochmals als Text), was die Inszenierung unnoetig aufblaehte.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: reine Text-/Styling-Anpassung im Hero-Bereich.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer [dice-and-screen/index.html](dice-and-screen/index.html), [styles/dice-screen-home.css](styles/dice-screen-home.css) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-03-17 (Nachtrag DNS-Hauptseite Vision-Implementierung)
+
+### Bereich
+Dice-&-Screen-Hauptseite (Struktur, Copy, Material, Motion)
+
+### Dateien
+- dice-and-screen/index.html
+- styles/dice-screen-home.css
+
+### Aenderung
+- DNS-Hauptseite in [dice-and-screen/index.html](dice-and-screen/index.html) auf die neue Zielstruktur mit acht klaren Bloecken umgebaut:
+  - Hero (Signature Moment)
+  - Vision
+  - Core Features (3 Saeulen)
+  - Erlebnis (Flow statt Verwaltung)
+  - Theatre-of-Mind/Grid
+  - Modularitaet
+  - Timeline-Teaser
+  - Footer
+- Hero-Copy und CTA-Hierarchie auf die freigegebene Vision angepasst (Primary: "Jetzt entdecken", Secondary: "Features ansehen").
+- Footer erweitert um Branding, Navigation, Kontakt und zusaetzliche Meta-Links (inkl. GitHub-Link).
+- Hauptseiten-Styling in [styles/dice-screen-home.css](styles/dice-screen-home.css) umfassend auf Basis des DNS-Brand-Systems erneuert:
+  - Arcane-Bronze Token-Setup,
+  - Material-Look mit Top-Highlight/Vignette/Shadow-Level,
+  - CTA-System Primary/Secondary/Tertiary,
+  - dezente Motion (Reveal, Hero-Ambient, Logo-Breathing, Micro-Interactions),
+  - prefers-reduced-motion und focus-visible-Regeln.
+- CSS-Cache-Buster in [dice-and-screen/index.html](dice-and-screen/index.html) aktualisiert (`v=20260317-main-2`).
+
+### Grund
+Die DNS-Hauptseite sollte von einer guten Landingpage zu einer markenreinen, dramaturgisch gefuehrten Hauptseite gemaess Phase 1 bis 3 weiterentwickelt werden.
+
+### Risiko/Hinweise
+- Gering bis mittel: Frontend-Only mit groesserem Layout-/Style-Umbau, ohne Backend- oder Datenlogik-Aenderung.
+- Hinweis: Der GitHub-Link im Footer verweist aktuell allgemein auf `https://github.com/` und kann bei Bedarf auf ein konkretes Repository angepasst werden.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer [dice-and-screen/index.html](dice-and-screen/index.html), [styles/dice-screen-home.css](styles/dice-screen-home.css) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-03-17 (Nachtrag DNS-Brand-System-Basis)
+
+### Bereich
+Dice-&-Screen-Dokumentation (Design/Copy-Richtlinien)
+
+### Dateien
+- dice-and-screen/DNS_BRAND_SYSTEM_BASE.md
+
+### Aenderung
+- Neue zentrale Basisdatei [dice-and-screen/DNS_BRAND_SYSTEM_BASE.md](dice-and-screen/DNS_BRAND_SYSTEM_BASE.md) erstellt.
+- Inhalte der Phasen 1 bis 3 als umsetzbares Referenzsystem zusammengefuehrt:
+  - Design Foundation (Farben, Typo, CTA, Cards, Spacing)
+  - Material & Motion (Noise, Highlights, Vignette, Motion-Regeln, Performance)
+  - Copy & Dramaturgie (Tone, Satzbau, Struktur, Limits, CTA-Whitelist, Glossar)
+- Verbindliche "Definition of Done" und einfache Rollout-Reihenfolge fuer neue DNS-Seiten ergaenzt.
+
+### Grund
+Die drei Phasen sollten in einer einzigen, klaren Orientierungsdatei konsolidiert werden, damit Design- und Copy-Entscheidungen konsistent umgesetzt werden.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: reine Dokumentations-Erweiterung, keine funktionalen Code-Aenderungen.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer [dice-and-screen/DNS_BRAND_SYSTEM_BASE.md](dice-and-screen/DNS_BRAND_SYSTEM_BASE.md) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-03-17 (Nachtrag DNS-Hauptseite Footer)
+
+### Bereich
+Dice-&-Screen-Hauptseite (Layout)
+
+### Dateien
+- dice-and-screen/index.html
+- styles/dice-screen-home.css
+
+### Aenderung
+- Footer auf der Dice-&-Screen-Hauptseite in [dice-and-screen/index.html](dice-and-screen/index.html) eingebaut.
+- Footer-Panel und Link-Styles in [styles/dice-screen-home.css](styles/dice-screen-home.css) ergaenzt, passend zur bestehenden Arcane-Bronze-Optik.
+- Rechtliche Links auf Impressum und Datenschutz in den Footer integriert.
+
+### Grund
+Die Hauptseite sollte wie die anderen Unterseiten einen vollstaendigen Abschluss mit Footer und Legal-Links erhalten.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: reine Markup- und Styling-Ergaenzung ohne Logik-Aenderung.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer [dice-and-screen/index.html](dice-and-screen/index.html), [styles/dice-screen-home.css](styles/dice-screen-home.css) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
 ## 2026-03-17 (Nachtrag CTA-Ziele Features/Timeline)
 
 ### Bereich
