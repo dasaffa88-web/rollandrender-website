@@ -224,6 +224,31 @@ Zuordnung:
 - Vergleichsproben: Ersatz fuer Contest
 - aufrechterhaltene Effekte: Ersatz fuer Konzentration
 
+### 7) Layout-Ausrichtung (Lesefuehrung)
+DNS-Hauptseite:
+- Hero-Headline und Sektions-Headlines zentriert.
+- Sektions-Subline zentriert.
+- Allgemeine Sektionsabschnitte duerfen zentriert gesetzt werden, wenn sie als dramaturgische Leittexte dienen.
+
+Feature-/Core-Cards:
+- Karteninhalte (Fliesstext) linksbuendig fuer bessere Scanbarkeit.
+- Card-Headlines duerfen linksbuendig bleiben, auch wenn die Sektion insgesamt zentriert inszeniert ist.
+
+Ziel:
+- Premium-Inszenierung auf Sektionsebene + schnelle Lesbarkeit auf Kartenebene.
+
+### 8) Sprachbild (Deutsch in UI-Copy)
+Grundregel:
+- In sichtbarer UI-Copy echte deutsche Zeichen verwenden: ae, oe, ue nur wenn technisch noetig.
+- Bevorzugte Schreibweise: ae/oe/ue -> aequivalent mit Umlaut in UI-Texten.
+
+Erlaubte Ausnahmen:
+- Dateinamen, Slugs, URLs, Klassen, IDs, technische Keys.
+- Legacy-Kontexte, in denen ein Zeichen-Encoding nicht kontrollierbar ist.
+
+Ziel:
+- Sprachlich hochwertiger Markenauftritt ohne ASCII-Artefakte in sichtbaren Texten.
+
 ---
 
 ## Definition of Done (DoD) fuer neue DNS-Seiten
@@ -234,6 +259,8 @@ Eine Seite ist nur "fertig", wenn:
 - CTA-Whitelist eingehalten
 - Glossar-konforme Begriffe genutzt
 - Read-aloud-Regel bestanden
+- Layout-Ausrichtungsregeln (Sektion vs Card) eingehalten
+- Sichtbare UI-Texte ohne ASCII-Umschreibungen (ausser technische Ausnahmen)
 - Focus-visible vorhanden
 - prefers-reduced-motion vorhanden
 - Mobile-Layout geprueft (>= 360px Breite)

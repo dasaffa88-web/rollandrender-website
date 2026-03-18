@@ -1,5 +1,166 @@
 # Changelog
 
+## 2026-03-18 (Feature-Seite Copy an Bildmaterial angepasst)
+
+### Bereich
+Dice-&-Screen-Feature-Seite (Copy/Visual-Matching)
+
+### Dateien
+- dice-and-screen/features/index.html
+
+### Aenderung
+- Texte in den drei Saeulen auf die aktuell verwendeten Screenshots konkretisiert:
+  - Theatre of Mind: Bezug auf Dashboard-Ansicht
+  - Grid & Taktik: Bezug auf Movement und Danger Zones
+  - Modularitaet: Bezug auf Creator-Auswahl
+- Nutzenmatrix-Eintraege in allen drei Spalten inhaltlich auf die gezeigten Bilder abgestimmt.
+- Showcase-Claim von `So spielt eure Runde im Flow.` auf `Am Tisch zaehlt der Moment, nicht die Verwaltung.` angepasst.
+
+### Grund
+Die Feature-Seite sollte in Text und Bild konsistent sein, damit jede Sektion unmittelbar zur gezeigten Szene passt.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: reine Copy-Anpassung ohne Struktur- oder Logikaenderungen.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer [dice-and-screen/features/index.html](dice-and-screen/features/index.html) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-03-18 (Feature-Seite Showcase Rueckstellung)
+
+### Bereich
+Dice-&-Screen-Feature-Seite (Showcase)
+
+### Dateien
+- dice-and-screen/features/index.html
+
+### Aenderung
+- Showcase-Bild von der technischen Blockaden/AoE-Ansicht zur spielenden Runde zurueckgestellt.
+- Bildquelle auf `assets/images/DNS_Vision.png` geaendert.
+- Showcase-Claim kurz auf Bildwirkung angepasst: `So spielt eure Runde im Flow.`
+
+### Grund
+Der Showcase soll wieder den gemeinsamen Spielmoment der Runde transportieren statt ein reines Technikmotiv.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: nur Bildreferenz und kurzer Text im Showcase angepasst.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer [dice-and-screen/features/index.html](dice-and-screen/features/index.html) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-03-18 (Nachtrag Feature-Seite Bildquellen)
+
+### Bereich
+Dice-&-Screen-Feature-Seite (Visuals)
+
+### Dateien
+- dice-and-screen/features/index.html
+
+### Aenderung
+- Bildquellen der neuen Vision-v1-Sektionen auf die neu hinzugefuegten cleanen Screenshots umgestellt.
+- Neue Zuordnung:
+  - Theatre of Mind: `assets/images/dashboard_screenshot.png`
+  - Grid & Taktik: `assets/images/movement_und_dangezones.png`
+  - Modularitaet: `assets/images/Creator_auswahl.png`
+  - Showcase: `assets/images/blockades_und_aoeformen+block.png`
+- Alt-Texte entsprechend auf die neuen Inhalte angepasst.
+
+### Grund
+Die Feature-Seite sollte visuell konsistenter mit klaren, cleanen In-App-Screenshots arbeiten statt mit gemischtem Bildmaterial.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: reine Asset-Referenz-Anpassung.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer [dice-and-screen/features/index.html](dice-and-screen/features/index.html) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-03-18 (Nachtrag Feature-Seite Vision v1)
+
+### Bereich
+Dice-&-Screen-Feature-Seite (Struktur, Copy, Material, Motion)
+
+### Dateien
+- dice-and-screen/features/index.html
+- styles/features.css
+
+### Aenderung
+- Feature-Seite in [dice-and-screen/features/index.html](dice-and-screen/features/index.html) auf die neue Vision-v1-Struktur mit acht Sektionen umgestellt:
+  - Hero-Claim mit CTA-Set
+  - Saeule 1: Theatre of Mind
+  - Saeule 2: Grid & Taktik
+  - Saeule 3: Modularitaet
+  - Nutzenmatrix (3 Spalten)
+  - Showcase-Moment
+  - CTA-Block (Primary/Secondary/Tertiary)
+  - Footer
+- CTA-System nach Whitelist konsolidiert (`Jetzt entdecken`, `Hauptseite ansehen`, `Timeline ansehen`, `Mehr erfahren`).
+- Footer-Markup auf der Feature-Seite an die Hauptseite angeglichen (Branding, Navigation, Kontakt, GitHub, Impressum, Datenschutz).
+- Styling in [styles/features.css](styles/features.css) neu aufgebaut:
+  - Arcane-Bronze-Material-Look,
+  - gestaffelte Entry-Motion,
+  - Micro-Hover-Interaktionen,
+  - reduzierte Parallax-/Showcase-Bewegung,
+  - focus-visible und prefers-reduced-motion.
+- CSS-Cache-Buster in [dice-and-screen/features/index.html](dice-and-screen/features/index.html) auf `v=20260318-features-v1` aktualisiert.
+
+### Grund
+Die Feature-Seite sollte von einer allgemeinen Feature-Liste zu einem klaren, taktischen Briefing mit konsistenter Markensprache und besserer Entscheidungsfuehrung weiterentwickelt werden.
+
+### Risiko/Hinweise
+- Gering bis mittel: Frontend-Only mit groesserem strukturellem und visuellem Umbau.
+- Hinweis: Die verwendeten Pilar-Bilder sind bestehende Projekt-Screenshots als Platzhalter und koennen spaeter gegen finale Visuals/Icons ersetzt werden.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer [dice-and-screen/features/index.html](dice-and-screen/features/index.html), [styles/features.css](styles/features.css) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-03-18 (Nachtrag DNS-Basisregeln Ausrichtung & Sprachbild)
+
+### Bereich
+Dice-&-Screen-Dokumentation (Brand-System)
+
+### Dateien
+- dice-and-screen/DNS_BRAND_SYSTEM_BASE.md
+
+### Aenderung
+- In [dice-and-screen/DNS_BRAND_SYSTEM_BASE.md](dice-and-screen/DNS_BRAND_SYSTEM_BASE.md) neue verbindliche Regeln ergaenzt:
+  - Layout-Ausrichtung (zentrierte Sektionstypografie vs linksbuendige Card-Leseflaechen)
+  - Sprachbild-Regel fuer sichtbare UI-Copy (echte deutsche Zeichen statt ASCII-Umschreibungen)
+- DoD-Checkliste um zwei Compliance-Punkte erweitert:
+  - Ausrichtungsregeln eingehalten
+  - sichtbare UI-Texte ohne ASCII-Umschreibungen (mit technischen Ausnahmen)
+
+### Grund
+Die zuletzt umgesetzten Entscheidungen zu Typografie-Ausichtung und deutschem Sprachbild sollten als Systemregel dokumentiert werden, damit kuenftige Seiten konsistent bleiben.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: reine Dokumentations-Erweiterung.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer [dice-and-screen/DNS_BRAND_SYSTEM_BASE.md](dice-and-screen/DNS_BRAND_SYSTEM_BASE.md) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-03-18 (Nachtrag DNS-Hauptseite Typografie & Sprachbild)
+
+### Bereich
+Dice-&-Screen-Hauptseite (Typografie/Copy)
+
+### Dateien
+- dice-and-screen/index.html
+- styles/dice-screen-home.css
+
+### Aenderung
+- Abschnitts-Ueberschriften der DNS-Hauptseite auf mittige Ausrichtung umgestellt, um den Hero-/Sektionenfluss eleganter und konsistenter zu gestalten.
+- Sichtbare Textinhalte auf der DNS-Hauptseite sprachlich normalisiert: ASCII-Umschreibungen (`ue/ae/oe`) durch echte Umlaute ersetzt.
+- Section-Textausrichtung auf Blockebene zentriert; Core-Feature-Card-Texte bewusst linksbuendig belassen, damit die Karten weiterhin gut scanbar bleiben.
+- CSS-Cache-Buster in [dice-and-screen/index.html](dice-and-screen/index.html) auf `v=20260318-main-3` aktualisiert.
+
+### Grund
+Die Seite sollte sprachlich hochwertiger wirken und die visuelle Typo-Hierarchie auf der Hauptseite ruhiger/eleganter ausfallen.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: reine Text-/Typografie-Anpassungen ohne funktionale Aenderungen.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer [dice-and-screen/index.html](dice-and-screen/index.html), [styles/dice-screen-home.css](styles/dice-screen-home.css) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
 ## 2026-03-17 (Nachtrag Hero-Headline Entduplizierung)
 
 ### Bereich
