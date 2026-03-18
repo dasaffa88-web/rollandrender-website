@@ -1,5 +1,83 @@
 # Changelog
 
+## 2026-03-18 (Feature-Seite Umlaute im Ausblick korrigiert)
+
+### Bereich
+Dice-&-Screen-Feature-Seite (Copy/Sprachbild)
+
+### Dateien
+- dice-and-screen/features/index.html
+- CHANGELOG.md
+
+### Aenderung
+- Im Abschnitt `Was noch kommt` auf [dice-and-screen/features/index.html](dice-and-screen/features/index.html) ASCII-Umschreibungen auf echte deutsche Zeichen korrigiert.
+- Betroffene Begriffe auf korrektes Sprachbild umgestellt, unter anderem:
+  - `fuer` -> `für`
+  - `waehrend` -> `während`
+  - `Stabilitaets` -> `Stabilitäts`
+  - `Charakterboegen` -> `Charakterbögen`
+  - `Zauberbuecher` -> `Zauberbücher`
+  - `ueber` -> `über`
+
+### Grund
+Sichtbare UI-Copy soll dem definierten deutschen Sprachbild folgen und keine ASCII-Umschreibungen enthalten.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: reine Textkorrektur ohne Struktur- oder Logikänderungen.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer [dice-and-screen/features/index.html](dice-and-screen/features/index.html) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-03-18 (Feature-Seite Ausblick um Begleitapp erweitert)
+
+### Bereich
+Dice-&-Screen-Feature-Seite (Content/Roadmap-Ausblick)
+
+### Dateien
+- dice-and-screen/features/index.html
+- CHANGELOG.md
+
+### Aenderung
+- In [dice-and-screen/features/index.html](dice-and-screen/features/index.html) den Abschnitt `Was noch kommt` um einen weiteren Punkt ergaenzt.
+- Neuer Ausblickspunkt: geplante Begleitapp fuer Smartphone/Tablet mit mobilem Zugriff auf Charakterboegen, Zauberbuecher und Inventar-Management.
+- Die Begleitapp wird als ueber einen in Dice & Screen integrierten LAN-Server verbunden beschrieben.
+
+### Grund
+Der geplante Mobile-Pfad sollte auf der Feature-Seite sichtbar sein, damit Interessierte den kuenftigen Nutzungsumfang und die lokale Verbindungsstrategie frueh einordnen koennen.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: reine Content-Erweiterung im bestehenden Ausblicksbereich ohne strukturelle oder logische Aenderungen.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer [dice-and-screen/features/index.html](dice-and-screen/features/index.html) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-03-18 (Feature-Seite Abschnitt "Was noch kommt")
+
+### Bereich
+Dice-&-Screen-Feature-Seite (Content/Erwartungsmanagement)
+
+### Dateien
+- dice-and-screen/features/index.html
+- styles/features.css
+
+### Aenderung
+- Auf [dice-and-screen/features/index.html](dice-and-screen/features/index.html) einen neuen Abschnitt `Was noch kommt` direkt vor dem CTA-Block eingefuegt.
+- Inhaltlich drei naechste Fokusfelder ergaenzt:
+  - Trigger-/Recharge-Bedienung im UI
+  - Stabilitaets-Hardening mit Regression-Smoketests
+  - Beta-Content-Pack fuer den Einstieg
+- In [styles/features.css](styles/features.css) neue Styles fuer `upcoming-section` und `upcoming-list` hinzugefuegt, damit der Ausblick visuell in den bestehenden Seitenstil passt.
+- CSS-Cache-Buster in [dice-and-screen/features/index.html](dice-and-screen/features/index.html) auf `v=20260318-features-v2` aktualisiert.
+
+### Grund
+Am unteren Seitenende sollte ein klarer Ausblick auf naechste Entwicklungsschritte sichtbar werden, damit Interessierte den Projektpfad besser einordnen koennen.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: reine Frontend-Content-/Style-Erweiterung ohne Logikaenderungen.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer [dice-and-screen/features/index.html](dice-and-screen/features/index.html), [styles/features.css](styles/features.css) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
 ## 2026-03-18 (Feature-Seite Copy an Bildmaterial angepasst)
 
 ### Bereich

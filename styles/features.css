@@ -306,6 +306,38 @@ body.features-page::after {
   color: #f1ddb4;
 }
 
+.upcoming-section p {
+  max-width: 70ch;
+}
+
+.upcoming-list {
+  position: relative;
+  z-index: 1;
+  margin: 1rem auto 0;
+  max-width: 76ch;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.upcoming-list li {
+  border-radius: 12px;
+  border: 1px solid rgba(203, 155, 76, 0.28);
+  background:
+    linear-gradient(150deg, rgba(255, 239, 206, 0.09), rgba(255, 239, 206, 0.02)),
+    rgba(30, 23, 18, 0.82);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+  padding: 0.9rem 1rem;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.55;
+  color: #e4d2ad;
+}
+
+.upcoming-list strong {
+  color: #f5e3bc;
+}
+
 .dice-btn {
   display: inline-block;
   padding: 12px 20px;
