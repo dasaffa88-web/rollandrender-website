@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="d04af094-6d74-403a-b236-dac26a28b1f7"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutzerklaerung - Bookielist</title>
+    <meta name="description" content="Datenschutzerklaerung fuer die App Bookielist mit Informationen zu lokaler Datenspeicherung, Cloud-Cache und API-Nutzung.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/bookielist.css">
+</head>
+<body>
+    <a href="../index.html" class="bookie-home-pill" aria-label="Zurueck zur Startseite">Roll &amp; Render</a>
+
+    <main class="bookie-shell legal-shell">
+        <header class="bookie-hero compact reveal">
+            <p class="bookie-eyebrow">Bookielist</p>
+            <h1>Datenschutzerklaerung</h1>
+            <p class="bookie-subline">Stand: April 2026</p>
+            <div class="bookie-hero-actions">
+                <a href="index.html" class="bookie-button secondary">Zur Bookielist Seite</a>
+            </div>
+        </header>
+
+        <article class="legal-panel reveal">
+            <section>
+                <h2>1. Verantwortlicher</h2>
+                <p>
+                    Diese Datenschutzerklaerung gilt fuer die Android-App Bookielist.
+                </p>
+                <p>
+                    Roll &amp; Render Studio<br>
+                    Rafael Meier<br>
+                    Am Anschlag 10<br>
+                    58553 Halver<br>
+                    Deutschland<br>
+                    E-Mail: contact@rollandrender.studio
+                </p>
+            </section>
+
+            <section>
+                <h2>2. Grundsatz: Lokale Datenspeicherung</h2>
+                <p>
+                    Bookielist ist vollstaendig offline-faehig. Alle persoenlichen Bibliotheksdaten
+                    werden ausschliesslich lokal auf deinem Geraet gespeichert.
+                </p>
+                <p>
+                    Besitzstatus, Lesestatus und Notizen verlassen dein Geraet nicht automatisch.
+                </p>
+            </section>
+
+            <section>
+                <h2>3. Welche Daten werden gespeichert?</h2>
+                <ul>
+                    <li>Buchdaten: Titel, Autor, ISBN/EAN, Cover-URL, Verlag (sofern vorhanden)</li>
+                    <li>Statusdaten: Besitzstatus (Besitz/Merkliste), Lesestatus (Ungelesen/Angefangen/Gelesen/Abgebrochen)</li>
+                    <li>Metadaten: Zeitstempel des Hinzufuegens und der letzten Aenderung</li>
+                    <li>App-Einstellungen: gewaehlter Stimmungsmodus</li>
+                </ul>
+                <p>Die Daten liegen in der lokalen Datenbank auf deinem Geraet.</p>
+            </section>
+
+            <section>
+                <h2>4. Online-Suche und Cover-Abfragen</h2>
+                <p>
+                    Bei der Online-Suche oder automatischen Metadaten-Suche koennen Anfragen an externe APIs gestellt werden
+                    (Google Books API, Open Library API).
+                </p>
+                <p>
+                    Uebertragen wird nur der Suchbegriff (zum Beispiel Titel oder ISBN), nicht dein Nutzerprofil.
+                </p>
+                <p>
+                    Externe Datenschutzinformationen:<br>
+                    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a><br>
+                    <a href="https://archive.org/about/terms.php" target="_blank" rel="noopener noreferrer">Open Library / Internet Archive</a>
+                </p>
+                <p>
+                    Beim Laden externer Cover-Bilder kann technisch bedingt deine IP-Adresse an den jeweiligen Bildserver uebermittelt werden.
+                </p>
+            </section>
+
+            <section>
+                <h2>5. Bookielist Cloud-Cache (anonymer Metadaten-Cache)</h2>
+                <p>
+                    Bookielist nutzt einen optionalen anonymen Community-Metadaten-Cache
+                    (Cloudflare Workers / KV), um Treffer zu beschleunigen.
+                </p>
+
+                <h3>Was wird uebermittelt?</h3>
+                <ul>
+                    <li>ISBN/EAN</li>
+                    <li>Buchtitel</li>
+                    <li>Autor</li>
+                    <li>Cover-URL</li>
+                    <li>Datenquelle (zum Beispiel Google Books, Open Library, manuell)</li>
+                </ul>
+
+                <h3>Was wird nicht uebermittelt?</h3>
+                <ul>
+                    <li>Name, Nutzername oder Accountdaten</li>
+                    <li>Besitzstatus oder Lesestatus</li>
+                    <li>personenbezogene Aktivitaetsprotokolle</li>
+                    <li>Geraetekennungen durch die Anwendung</li>
+                </ul>
+
+                <p>
+                    Hosting: Cloudflare, Inc. (USA). Cloudflare ist unter dem EU-US Data Privacy Framework zertifiziert.
+                    Weitere Informationen: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare Privacy Policy</a>
+                </p>
+                <p>
+                    Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an schnellerer Metadaten-Erkennung).
+                </p>
+            </section>
+
+            <section>
+                <h2>6. Backup und Export (Import/Export)</h2>
+                <ul>
+                    <li>Export erfolgt nur auf Initiative des Nutzers</li>
+                    <li>Speicherort wird vom Nutzer gewaehlt</li>
+                    <li>keine automatische Cloud-Uebertragung</li>
+                    <li>Import liest nur lokal bereitgestellte Dateien</li>
+                </ul>
+                <p>Bookielist uebertraegt keine persoenlichen Backup-Daten in eine eigene Cloud.</p>
+            </section>
+
+            <section>
+                <h2>7. Keine Benutzerkonten</h2>
+                <p>
+                    Bookielist erfordert keine Registrierung, kein Konto und keine E-Mail-Adresse zur Nutzung.
+                </p>
+            </section>
+
+            <section>
+                <h2>8. Kein Tracking, keine Werbung</h2>
+                <ul>
+                    <li>kein Analyse-Tracking innerhalb der App</li>
+                    <li>keine Werbeanzeigen</li>
+                    <li>keine Marketing-SDKs oder Profilbildung</li>
+                    <li>keine versteckten Folgekosten nach dem initialen Kauf</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>9. Kamera-Berechtigung (Barcode-Scanner)</h2>
+                <p>
+                    Die Kamera wird nur verwendet, wenn du den Scanner aktiv oeffnest.
+                    Es werden keine Fotos oder Videos gespeichert.
+                </p>
+            </section>
+
+            <section>
+                <h2>10. Datenloeschung</h2>
+                <p>Du kannst Daten jederzeit entfernen durch:</p>
+                <ul>
+                    <li>Loeschen einzelner Buecher in der App</li>
+                    <li>Loeschen des App-Speichers in Android</li>
+                    <li>Deinstallation der App (entfernt lokale Daten)</li>
+                </ul>
+                <p>
+                    Hinweis zum Cloud-Cache: Dort liegen keine nutzerbezogenen Datensaetze,
+                    daher ist keine personenspezifische Loeschung erforderlich.
+                </p>
+            </section>
+
+            <section>
+                <h2>11. Deine Rechte (DSGVO)</h2>
+                <p>Du hast insbesondere das Recht auf Auskunft, Berichtigung, Loeschung und Datenuebertragbarkeit.</p>
+                <p>Kontakt fuer Datenschutzanfragen: contact@rollandrender.studio</p>
+            </section>
+
+            <section>
+                <h2>12. Aenderungen dieser Datenschutzerklaerung</h2>
+                <p>
+                    Bei neuen App-Versionen kann diese Datenschutzerklaerung aktualisiert werden.
+                    Die jeweils aktuelle Fassung ist unter dieser URL abrufbar.
+                </p>
+                <p>Letzte Aenderung: April 2026 (Cloud-Cache Abschnitt ergaenzt).</p>
+            </section>
+        </article>
+    </main>
+
+    <footer class="bookie-footer">
+        <p>
+            © 2026 Roll &amp; Render Studio -
+            <a href="../impressum.html">Impressum</a> -
+            <a href="../datenschutz.html">Website Datenschutz</a> -
+            <a href="index.html">Bookielist</a>
+        </p>
+    </footer>
+</body>
+</html>

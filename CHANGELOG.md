@@ -1,5 +1,220 @@
 # Changelog
 
+## 2026-04-09 (Projekte-Seite: Dice & Screen als Hauptprojekt priorisiert)
+
+### Bereich
+Roll-&-Render-Website (Projekte-Seite Hierarchie)
+
+### Dateien
+- projects.html
+- styles/projects.css
+- CHANGELOG.md
+
+### Änderung
+- Auf [projects.html](projects.html) Dice & Screen explizit als `Hauptprojekt` markiert.
+- Dice-&-Screen-Karte inhaltlich und visuell stärker priorisiert:
+  - zusätzlicher Hinweistext zum Fokusprojekt,
+  - zweiter CTA zu den Features,
+  - stärkere Desktop-Gewichtung in der Grid-Hierarchie.
+- In [styles/projects.css](styles/projects.css) Layout und Kartenhierarchie so erweitert, dass Dice & Screen auf größeren Viewports präsenter wirkt, ohne Bookielist aus der Übersicht zu drängen.
+
+### Grund
+Dice & Screen soll in der Projektübersicht klar als zentrales Studio-Projekt erkennbar bleiben.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: reine Frontend-/Hierarchie-Anpassung ohne Logikänderung.
+
+### Teststatus
+- VS Code Fehlerprüfung für [projects.html](projects.html), [styles/projects.css](styles/projects.css) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-04-09 (Projekte-Seite: Bookielist-Logo und Hexagon-Grid ergänzt)
+
+### Bereich
+Roll-&-Render-Website (Projekte-Seite Visuals)
+
+### Dateien
+- projects.html
+- styles/projects.css
+- CHANGELOG.md
+
+### Änderung
+- Auf [projects.html](projects.html) das echte Bookielist-Logo aus [Bookielist/Images/logo_bookielist.png](Bookielist/Images/logo_bookielist.png) in den Bookielist-Projektbutton übernommen.
+- In [styles/projects.css](styles/projects.css) für die Projekte-Seite wieder das Hexagon-Grid der Hauptseite als Hintergrundmuster ergänzt.
+- Bookielist-Projektbutton farblich leicht an das warme Bookielist-Farbspektrum angepasst.
+
+### Grund
+Die Projekte-Seite sollte visuell stärker an die Hauptseite anschließen und für Bookielist nicht nur mit Text, sondern mit dem vorhandenen Projektlogo arbeiten.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: reine Frontend-/Visual-Anpassung ohne Struktur- oder Logikänderung.
+
+### Teststatus
+- VS Code Fehlerprüfung für [projects.html](projects.html), [styles/projects.css](styles/projects.css) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-04-09 (Hauptseite auf Projekte-Übersicht umgestellt)
+
+### Bereich
+Roll-&-Render-Website (Navigation und Projektarchitektur)
+
+### Dateien
+- index.html
+- projects.html
+- styles/projects.css
+- CHANGELOG.md
+
+### Änderung
+- Auf [index.html](index.html) den bisherigen Dice-&-Screen-Navigationsbutton auf eine neue Projekte-Übersicht umgestellt.
+- Neue Seite [projects.html](projects.html) erstellt als zentrale, erweiterbare Projektübersicht mit drei Bereichen:
+  - Dice & Screen
+  - Bookielist
+  - Platzhalter für kommende Projekte
+- Für Dice & Screen auf der Projekte-Seite das bestehende Logo aus der Hauptseite wiederverwendet und direkt als Projekt-CTA eingebunden.
+- Neues Styling in [styles/projects.css](styles/projects.css) ergänzt, damit die Projektkarten eigenständig, scanbar und später leicht erweiterbar sind.
+
+### Grund
+Mit mehreren eigenständigen Projekten sollte die Hauptnavigation nicht mehr direkt nur auf Dice & Screen zeigen, sondern auf eine skalierbare Projektübersicht führen.
+
+### Risiko/Hinweise
+- Geringes Risiko: Frontend-/Navigationsänderung ohne Logikänderung.
+- Hinweis: Bookielist nutzt auf der Projekte-Seite vorerst eine typografische Wortmarke; ein eigenes Logo kann später leicht ergänzt werden.
+
+### Teststatus
+- VS Code Fehlerprüfung für [index.html](index.html), [projects.html](projects.html), [styles/projects.css](styles/projects.css) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-04-09 (Bookielist Play-Store-Platzhalter ergänzt)
+
+### Bereich
+Roll-&-Render-Website (Bookielist Landingpage und Store-Platzhalter)
+
+### Dateien
+- bookielist/index.html
+- bookielist/playstore.html
+- CHANGELOG.md
+
+### Änderung
+- Auf [bookielist/index.html](bookielist/index.html) einen zusätzlichen Button ergänzt, der später zur Google-Play-Store-Seite führen soll.
+- Neue Platzhalterseite [bookielist/playstore.html](bookielist/playstore.html) erstellt.
+- Die Platzhalterseite informiert aktuell darüber, dass Bookielist noch in der Testphase ist und der Play-Store-Link erst mit dem Release live geschaltet wird.
+
+### Grund
+Es sollte bereits ein sichtbarer Einstieg für den späteren Play-Store-Link vorhanden sein, ohne einen noch nicht veröffentlichten Store-Eintrag vorzutäuschen.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: reine Frontend-Erweiterung ohne Logikänderung.
+- Der Button verweist aktuell bewusst auf die interne Platzhalterseite statt auf einen externen Store-Link.
+
+### Teststatus
+- VS Code Fehlerprüfung für [bookielist/index.html](bookielist/index.html), [bookielist/playstore.html](bookielist/playstore.html) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-04-09 (Bookielist Screenshot-Captions auf Wunschtext mit Umlauten angepasst)
+
+### Bereich
+Roll-&-Render-Website (Bookielist Landingpage Copy)
+
+### Dateien
+- bookielist/index.html
+- CHANGELOG.md
+
+### Aenderung
+- Die ersten drei Screenshot-Captions auf [bookielist/index.html](bookielist/index.html) an den gewuenschten Wortlaut angepasst.
+- Sichtbare Umlaute in diesen Captions auf normales deutsches Sprachbild umgestellt (`Bücher`, `überall`, `hinkommst`).
+- Neue Formulierungen:
+  - `Das ist dein Hub, von dem aus du überall hinkommst.`
+  - `Suche Bücher entweder durch Scannen des Codes.`
+  - `Oder mit der manuellen Suchfunktion.`
+
+### Grund
+Die ersten drei Screenshots sollten sprachlich direkter an den gewuenschten Nutzerflow angepasst und mit echten Umlauten statt ASCII-Umschreibungen dargestellt werden.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: reine Copy-Anpassung ohne Struktur- oder Logikaenderung.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer [bookielist/index.html](bookielist/index.html) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-04-09 (Bookielist Copy fuer Erfassungswege und Stimmungsmodi geschaerft)
+
+### Bereich
+Roll-&-Render-Website (Bookielist Landingpage Copy)
+
+### Dateien
+- bookielist/index.html
+- CHANGELOG.md
+
+### Aenderung
+- Copy auf [bookielist/index.html](bookielist/index.html) so angepasst, dass der Erfassungsweg klarer beschrieben wird: Nutzer koennen entweder per Scanner starten oder ein Buch manuell ueber die Online-Suche finden.
+- Hero-Subline, Ablauftext und erste Screenshot-Caption entsprechend sprachlich geschaerft.
+- Hinweise zu den Stimmungsmodi erweitert: Die gezeigten Screens `Verliebt` und `Gemuetlich` werden jetzt explizit als Beispiele aus mehreren verfuegbaren Modi beschrieben.
+
+### Grund
+Die Seite sollte den tatsaechlichen Nutzungsfluss klarer vermitteln und nicht den Eindruck erzeugen, es gaebe nur zwei Stimmungsmodi.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: reine Copy-Anpassung ohne Struktur- oder Logikaenderung.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer [bookielist/index.html](bookielist/index.html) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-04-09 (Bookielist Screenshot-Galerie auf neue Bildfolge umgestellt)
+
+### Bereich
+Roll-&-Render-Website (Bookielist Showcase)
+
+### Dateien
+- bookielist/index.html
+- styles/bookielist.css
+- CHANGELOG.md
+
+### Aenderung
+- Screenshot-Galerie auf [bookielist/index.html](bookielist/index.html) von den alten Zeitstempel-Dateinamen auf die neue nummerierte Bildfolge `1.jpg` bis `9.jpg` bzw. `4.png` umgestellt.
+- Reihenfolge in der Galerie an die neue Nummerierung angepasst.
+- Fuer alle neun Screenshots kurze sichtbare Minisatz-Captions ergaenzt, passend zu den gezeigten App-Schritten und Screens.
+- In [styles/bookielist.css](styles/bookielist.css) Screenshot-Cards erweitert, damit Bild und Caption gemeinsam als saubere Cozy-Card dargestellt werden.
+
+### Grund
+Die bereitgestellten Bookielist-Screenshots wurden neu sortiert und umbenannt; die Landingpage sollte diese Aenderung direkt uebernehmen und die Bilder zugleich besser einordnen.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: reine Frontend-Content-/Style-Anpassung.
+- Hinweis: Die Galerie folgt jetzt direkt der Dateinummerierung im Ordner `Bookielist/Images`.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer [bookielist/index.html](bookielist/index.html), [styles/bookielist.css](styles/bookielist.css) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-04-09 (Bookielist Unterseiten: App-Showcase + App-Datenschutz)
+
+### Bereich
+Roll-&-Render-Website (Bookielist Landingpage und App-Rechtstexte)
+
+### Dateien
+- bookielist/index.html
+- bookielist/datenschutz.html
+- styles/bookielist.css
+- CHANGELOG.md
+
+### Aenderung
+- Neue Unterseite [bookielist/index.html](bookielist/index.html) erstellt fuer `rollandrender.studio/bookielist` mit:
+  - Hero im cozy Bookie-Look,
+  - Feature-Ueberblick auf Basis der bereitgestellten Produktdaten,
+  - Ablaufsektion fuer die zentralen Nutzerflows,
+  - Screenshot-Galerie mit den bereitgestellten Bildern aus `Bookielist/Images`,
+  - klarer Verlinkung zur dedizierten App-Datenschutzerklaerung.
+- Neue Unterseite [bookielist/datenschutz.html](bookielist/datenschutz.html) erstellt als separate Datenschutzerklaerung fuer Bookielist (Google/Store-Kontext) auf Basis der gelieferten Datenschutzvorlage, inklusive Verantwortlichendaten und externer Quellenhinweise.
+- Neues Stylesheet [styles/bookielist.css](styles/bookielist.css) eingefuehrt:
+  - eigenes warmes, cozy Farb- und Materialsystem,
+  - mobile-optimierte Layouts fuer Landing und Rechtstextseite,
+  - dezente Entry-Animationen mit `prefers-reduced-motion`-Fallback.
+
+### Grund
+Fuer Bookielist wurden eine eigene, visuell stimmige Produktseite mit Screenshots/Features sowie eine separate App-Datenschutzerklaerung benoetigt.
+
+### Risiko/Hinweise
+- Geringes Risiko: reine Frontend-/Content-Erweiterung ohne Backend- oder Laufzeitlogik.
+- Hinweis: Bildpfade verweisen bewusst auf den bestehenden Ordner `Bookielist/Images` (Gross-/Kleinschreibung beibehalten).
+
+### Teststatus
+- VS Code Fehlerpruefung fuer [bookielist/index.html](bookielist/index.html), [bookielist/datenschutz.html](bookielist/datenschutz.html), [styles/bookielist.css](styles/bookielist.css) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
 ## 2026-03-18 (Feature-Seite Umlaute im Ausblick korrigiert)
 
 ### Bereich
