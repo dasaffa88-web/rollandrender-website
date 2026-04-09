@@ -1,5 +1,30 @@
 # Changelog
 
+## 2026-04-09 (Bookielist komplett auf sichtbare Umlaute umgestellt)
+
+### Bereich
+Roll-&-Render-Website (Bookielist Copy und Metadaten)
+
+### Dateien
+- bookielist/index.html
+- bookielist/datenschutz.html
+- CHANGELOG.md
+
+### Änderung
+- Die sichtbaren Texte, `title`-Tags, Meta-Descriptions und Accessibility-Texte auf den Bookielist-Seiten auf echte deutsche Umlaute umgestellt.
+- Auf [bookielist/index.html](bookielist/index.html) Copy, Alt-Texte und CTA-Beschriftungen von ASCII-Umschreibungen wie `Buecher`, `fuer` und `Gemuetlich` auf normales deutsches Schriftbild angepasst.
+- Auf [bookielist/datenschutz.html](bookielist/datenschutz.html) die komplette Datenschutzerklärung sprachlich von `ae/oe/ue`-Schreibweise auf Umlaute und korrekte Sonderzeichen umgestellt.
+
+### Grund
+Die komplette Bookielist-Webpräsenz sollte im sichtbaren deutschen Textbild konsistent echte Umlaute verwenden statt ASCII-Umschreibungen.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: reine Content-Änderung ohne Layout-, Routing- oder Logik-Eingriff.
+- Voraussetzung bleibt erfüllt: Die betroffenen HTML-Dateien deklarieren bereits UTF-8, daher sind echte Umlaute technisch unkritisch.
+
+### Teststatus
+- VS Code Fehlerprüfung für [bookielist/index.html](bookielist/index.html), [bookielist/datenschutz.html](bookielist/datenschutz.html) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
 ## 2026-04-09 (Bookielist Daten-Ordner aus Git ausgenommen)
 
 ### Bereich
