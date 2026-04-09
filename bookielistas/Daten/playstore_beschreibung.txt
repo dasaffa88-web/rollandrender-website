@@ -1,0 +1,55 @@
+Bookielist ist dein digitales Bücherregal.
+Eine ruhige App, um deine Bücher zu sammeln, zu ordnen und wiederzufinden – ohne Ablenkung, ohne Druck.
+
+
+Was Bookielist kann
+
+- Bücher per ISBN-Scan direkt hinzufügen
+- Scanner mit intelligentem Suchfallback: lokal prüfen, Cloud prüfen, dann Google/Open Library
+- Bücher manuell erfassen (ISBN, Titel, Autor, Cover)
+- Bücher online suchen und Metadaten automatisch laden
+- Öffnest du ein Buch ohne Cover, prüft Bookielist kurz die Cloud und ergänzt das Cover automatisch, wenn vorhanden
+- Lesestatus verwalten: Ungelesen, Angefangen, Gelesen, Abgebrochen
+- Bücher als „Besitz" oder „Merkliste" markieren
+- Dein Bücherregal filtern, sortieren und durchsuchen
+- Backup erstellen und auf einem neuen Gerät wiederherstellen
+- Stimmungsmodi: Passe das Erscheinungsbild deiner aktuellen Lesestimmung an
+- Bookielist Cloud: Metadaten werden schneller gefunden dank Community-Cache
+
+
+Wie Bookielist immer besser wird
+
+Wenn du ein Buch scannst oder hinzufügst, kann die App die Buch-Metadaten
+(Titel, Autor, ISBN, Cover-URL) anonym in einem gemeinsamen Cloud-Cache speichern.
+Das bedeutet: Bücher, die andere schon gescannt haben, werden bei dir sofort gefunden –
+ohne Umweg über externe APIs.
+
+Kein Account. Keine persönlichen Daten. Nur Buchmetadaten.
+
+
+Deine Daten gehören dir
+
+Bookielist speichert alle persönlichen Daten ausschließlich lokal auf deinem Gerät.
+Es gibt keinen Account-Zwang, kein Tracking und kein Profiling.
+Import und Export funktionieren manuell – du entscheidest, wann und wohin.
+
+
+Warum kostet Bookielist 1 €?
+
+Bookielist ist bewusst werbefrei, ohne Tracking und ohne Spam.
+Es gibt keine Accounts, keine Abo-Falle und keine versteckten Kosten.
+
+Der einmalige Preis sorgt dafür, dass die App ruhig, unabhängig
+und respektvoll bleiben kann – so wie ein persönliches Bücherregal sein sollte.
+
+Einmal kaufen. Für immer nutzen.
+
+
+Für wen ist Bookielist?
+
+Wenn du Bücher liebst und dein Regal digital ordnen möchtest,
+ist Bookielist für dich gemacht.
+
+---
+Zeichenanzahl: ca. 1.450 / 4.000 (Limit Google Play)
+Stand: April 2026
