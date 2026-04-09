@@ -1,5 +1,52 @@
 # Changelog
 
+## 2026-04-09 (Bookielist Daten-Ordner aus Git ausgenommen)
+
+### Bereich
+Repository-Hygiene (Bookielist Arbeitsmaterial)
+
+### Dateien
+- .gitignore
+- CHANGELOG.md
+
+### Aenderung
+- Neue [.gitignore](.gitignore) angelegt.
+- Den Arbeitsordner `Bookielist/Daten/` sowie die lowercase-Variante `bookielist/Daten/` explizit in Git-Ignore aufgenommen.
+
+### Grund
+Die Inhalte im Daten-Ordner dienen als internes Arbeitsmaterial und sollen kuenftig nicht mehr ins Repository bzw. auf GitHub Pages gelangen.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: betrifft nur kuenftiges Tracking neuer Aenderungen im Daten-Ordner.
+- Bereits getrackte Dateien muessen zusaetzlich einmal aus dem Git-Index entfernt und erneut gepusht werden.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer [.gitignore](.gitignore) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-04-09 (Bookielist Pfade auf GitHub-Pages-Case abgestimmt)
+
+### Bereich
+Roll-&-Render-Website (Bookielist Routing und Assets)
+
+### Dateien
+- Bookielist/index.html
+- projects.html
+- CHANGELOG.md
+
+### Aenderung
+- Bildpfade auf [Bookielist/index.html](Bookielist/index.html) von `../Bookielist/Images/...` auf die fuer GitHub Pages erwartete lowercase-Form `../bookielist/Images/...` umgestellt.
+- Logo-Pfad auf [projects.html](projects.html) von `Bookielist/Images/logo_bookielist.png` auf `bookielist/Images/logo_bookielist.png` angepasst.
+
+### Grund
+Nach dem geplanten Ordner-Rename auf `bookielist` sollen Route und Asset-Pfade auf GitHub Pages konsistent case-sensitiv funktionieren.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: reine Pfadnormalisierung.
+- Hinweis: Damit die Seite unter `/bookielist` erreichbar wird, muss der Ordner im Repository selbst ebenfalls auf lowercase umbenannt und neu gepusht werden.
+
+### Teststatus
+- VS Code Fehlerpruefung fuer [Bookielist/index.html](Bookielist/index.html), [projects.html](projects.html) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
 ## 2026-04-09 (Projekte-Seite: Dice & Screen als Hauptprojekt priorisiert)
 
 ### Bereich
