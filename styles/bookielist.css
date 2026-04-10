@@ -73,6 +73,47 @@ a {
   box-shadow: 0 10px 20px rgba(60, 39, 19, 0.2);
 }
 
+.bookie-language-switch {
+  position: fixed;
+  top: 76px;
+  left: 20px;
+  z-index: 49;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px;
+  border-radius: 999px;
+  border: 1px solid rgba(47, 38, 34, 0.16);
+  background: rgba(255, 249, 240, 0.84);
+  box-shadow: 0 6px 14px rgba(60, 39, 19, 0.1);
+  backdrop-filter: blur(4px);
+}
+
+.bookie-language-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  min-height: 30px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  color: #5a4a41;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+.bookie-language-link.is-active {
+  background: var(--bookie-accent);
+  color: #fff;
+}
+
+.bookie-language-switch a.bookie-language-link:hover {
+  background: rgba(183, 103, 69, 0.12);
+  color: #7f3d23;
+}
+
 .bookie-shell {
   width: min(1120px, calc(100% - 44px));
   margin: 100px auto 48px;
@@ -98,6 +139,44 @@ a {
   border-radius: 50%;
   background: radial-gradient(circle at 30% 30%, rgba(183, 103, 69, 0.34), rgba(183, 103, 69, 0.08));
   pointer-events: none;
+}
+
+.bookie-hero-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(220px, 320px);
+  grid-template-areas:
+    "title logo"
+    "copy logo";
+  align-items: center;
+  gap: clamp(20px, 4vw, 34px);
+}
+
+.bookie-hero-title {
+  grid-area: title;
+  min-width: 0;
+}
+
+.bookie-hero-copy {
+  grid-area: copy;
+  min-width: 0;
+}
+
+.bookie-hero-logo {
+  grid-area: logo;
+  margin: 0;
+  justify-self: end;
+  width: min(100%, 320px);
+}
+
+.bookie-hero-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 28px;
+  border: 1px solid rgba(90, 61, 36, 0.16);
+  box-shadow: 0 16px 34px rgba(60, 39, 19, 0.18);
 }
 
 .bookie-hero.compact {
@@ -193,6 +272,12 @@ a {
   font-size: clamp(1.5rem, 3vw, 2.1rem);
 }
 
+.section-intro {
+  margin: 10px 0 0;
+  max-width: 760px;
+  color: #5b4f46;
+}
+
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -214,6 +299,45 @@ a {
 .feature-card p {
   margin: 0;
   color: #594a42;
+}
+
+.difference-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.difference-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 100%;
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid #e1cfb9;
+  background: linear-gradient(160deg, rgba(255, 250, 242, 0.95), rgba(245, 234, 217, 0.95));
+}
+
+.difference-card h3 {
+  font-size: 1.2rem;
+}
+
+.difference-card p {
+  margin: 0;
+  color: #594a42;
+}
+
+.difference-card--price {
+  border-color: #d6b298;
+  background: linear-gradient(145deg, rgba(183, 103, 69, 0.18), rgba(255, 247, 237, 0.96));
+}
+
+.difference-price-kicker {
+  text-transform: uppercase;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  color: #7f4b32;
 }
 
 .flow-list {
@@ -367,6 +491,7 @@ a {
 .bookie-shell .reveal:nth-of-type(3) { animation-delay: 0.22s; }
 .bookie-shell .reveal:nth-of-type(4) { animation-delay: 0.32s; }
 .bookie-shell .reveal:nth-of-type(5) { animation-delay: 0.42s; }
+.bookie-shell .reveal:nth-of-type(6) { animation-delay: 0.52s; }
 
 @keyframes liftIn {
   from {
@@ -388,6 +513,18 @@ a {
     font-size: 0.9rem;
   }
 
+  .bookie-language-switch {
+    top: 58px;
+    left: 12px;
+    padding: 5px;
+  }
+
+  .bookie-language-link {
+    min-width: 38px;
+    min-height: 28px;
+    font-size: 0.74rem;
+  }
+
   .bookie-shell {
     width: calc(100% - 24px);
     margin-top: 72px;
@@ -397,9 +534,29 @@ a {
     border-radius: 24px;
   }
 
+  .bookie-hero-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "logo"
+      "copy";
+    align-items: start;
+  }
+
+  .bookie-hero-logo {
+    justify-self: start;
+    width: min(100%, 220px);
+  }
+
   .bookie-section,
   .legal-panel {
     border-radius: 22px;
+  }
+}
+
+@media (min-width: 860px) {
+  .difference-card--price {
+    grid-column: span 2;
   }
 }
 

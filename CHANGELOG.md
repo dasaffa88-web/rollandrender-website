@@ -1,5 +1,209 @@
 # Changelog
 
+## 2026-04-10 (Bookielist Play-Store-Platzhalter um EN-Version ergänzt)
+
+### Bereich
+Roll-&-Render-Website (Bookielist Landingpage Localization)
+
+### Dateien
+- bookielist/playstore.html
+- bookielist/playstore-en.html
+- bookielist/en.html
+- CHANGELOG.md
+
+### Änderung
+- Neue englische Platzhalterseite [bookielist/playstore-en.html](bookielist/playstore-en.html) für den späteren Play-Store-Link erstellt.
+- Auf [bookielist/playstore.html](bookielist/playstore.html) und [bookielist/playstore-en.html](bookielist/playstore-en.html) den festen DE/EN-Sprachswitch oben links ergänzt.
+- Den englischen Hero-Button auf [bookielist/en.html](bookielist/en.html) von der deutschen Platzhalterseite auf [bookielist/playstore-en.html](bookielist/playstore-en.html) umgestellt.
+
+### Grund
+Die englische Bookielist-Landingpage sollte nicht mehr auf einen deutschen Play-Store-Platzhalter verweisen, sondern auf eine konsistente englische Gegenroute.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: neue statische Sprachvariante und Link-Anpassung ohne Logik- oder Routingänderung außerhalb der Bookielist-Seiten.
+
+### Teststatus
+- VS Code Fehlerprüfung für [bookielist/playstore.html](bookielist/playstore.html), [bookielist/playstore-en.html](bookielist/playstore-en.html), [bookielist/en.html](bookielist/en.html) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-04-10 (Bookielist Landingpage um EN-Version und Sprachswitch erweitert)
+
+### Bereich
+Roll-&-Render-Website (Bookielist Landingpage Localization)
+
+### Dateien
+- bookielist/index.html
+- bookielist/en.html
+- bookielist/privacy.html
+- CHANGELOG.md
+
+### Änderung
+- Auf [bookielist/index.html](bookielist/index.html) denselben festen DE/EN-Sprachswitch unter dem Roll-&-Render-Pill ergänzt wie auf den Privacy-Seiten.
+- Neue englische Landingpage [bookielist/en.html](bookielist/en.html) erstellt als übersetzte Gegenroute zur deutschen Bookielist-Seite.
+- Die englische Seite enthält englische Hero-, Feature-, USP-, Flow-, Screenshot- und Privacy-Texte und verlinkt auf [bookielist/privacy.html](bookielist/privacy.html).
+- Auf [bookielist/privacy.html](bookielist/privacy.html) den Rücklink zur neuen englischen Bookielist-Seite angepasst.
+
+### Grund
+Der Sprachswitch auf der Bookielist-Seite sollte nicht nur sichtbar sein, sondern auch auf eine echte englische Seitenvariante führen.
+
+### Risiko/Hinweise
+- Geringes Risiko: neue statische Sprachvariante ohne Eingriff in App- oder Routinglogik außerhalb der Bookielist-Seiten.
+- Der Play-Store-Platzhalter ist weiterhin nur in deutscher Fassung vorhanden; der englische Hero-Button verweist deshalb vorerst noch auf dieselbe Platzhalterroute.
+
+### Teststatus
+- VS Code Fehlerprüfung für [bookielist/index.html](bookielist/index.html), [bookielist/en.html](bookielist/en.html), [bookielist/privacy.html](bookielist/privacy.html) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-04-10 (Bookielist Privacy-Sprachswitch oben links ergänzt)
+
+### Bereich
+Roll-&-Render-Website (Bookielist Legal Pages UI)
+
+### Dateien
+- bookielist/datenschutz.html
+- bookielist/privacy.html
+- styles/bookielist.css
+- CHANGELOG.md
+
+### Änderung
+- Auf [bookielist/datenschutz.html](bookielist/datenschutz.html) und [bookielist/privacy.html](bookielist/privacy.html) direkt unter dem festen Roll-&-Render-Pill einen kleinen DE/EN-Sprachswitch ergänzt.
+- Der Switch markiert die aktuelle Sprache visuell und führt jeweils zur anderen Sprachversion der Datenschutzerklärung.
+- Die bisherigen Sprachwechsel-Buttons im Hero entfernt, damit die Sprachumschaltung konsistent oben links sitzt.
+- In [styles/bookielist.css](styles/bookielist.css) neue Styles für den festen Sprachswitch ergänzt, inklusive mobiler Anpassung.
+
+### Grund
+Der Sprachwechsel sollte auf den Privacy-Seiten sofort sichtbar und an derselben Stelle erreichbar sein, statt nur innerhalb des Hero-Bereichs.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: reine UI- und Navigationsanpassung auf den statischen Rechtsseiten.
+
+### Teststatus
+- VS Code Fehlerprüfung für [bookielist/datenschutz.html](bookielist/datenschutz.html), [bookielist/privacy.html](bookielist/privacy.html), [styles/bookielist.css](styles/bookielist.css) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-04-10 (Bookielist Privacy um Google Play Billing ergänzt)
+
+### Bereich
+Roll-&-Render-Website (Bookielist Legal Pages)
+
+### Dateien
+- bookielist/datenschutz.html
+- bookielist/privacy.html
+- CHANGELOG.md
+
+### Änderung
+- Auf [bookielist/datenschutz.html](bookielist/datenschutz.html) eine eigene Sektion zu Käufen über Google Play Billing ergänzt.
+- Die Datenschutzerklärung erwähnt jetzt ausdrücklich, dass Google beim Kauf eigene Daten wie Google-Konto und Zahlungsinformationen verarbeitet.
+- Ergänzt, dass Roll &amp; Render Studio keine vollständigen Zahlungsdaten sieht oder speichert und dass der Kaufstatus lokal auf dem Gerät gespeichert wird.
+- Die englische Fassung auf [bookielist/privacy.html](bookielist/privacy.html) inhaltlich parallel um denselben Billing-Abschnitt erweitert.
+
+### Grund
+Die App-Datenschutzerklärung sollte den Kaufablauf über Google Play Billing und die lokale Speicherung des Freischaltstatus ausdrücklich benennen.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: reine Ergänzung der rechtlichen Informationsseite ohne Logik- oder Routingänderung.
+- Die Formulierungen sind bewusst knapp gehalten und beschränken sich auf die verpflichtenden Punkte zum Kaufprozess.
+
+### Teststatus
+- VS Code Fehlerprüfung für [bookielist/datenschutz.html](bookielist/datenschutz.html), [bookielist/privacy.html](bookielist/privacy.html) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-04-10 (Bookielist Privacy Policy auf Englisch unter eigener URL ergänzt)
+
+### Bereich
+Roll-&-Render-Website (Bookielist Legal Pages)
+
+### Dateien
+- bookielist/privacy.html
+- bookielist/datenschutz.html
+- CHANGELOG.md
+
+### Änderung
+- Neue englische Privacy-Policy-Seite [bookielist/privacy.html](bookielist/privacy.html) erstellt als inhaltliche Übersetzung der bestehenden Bookielist-App-Datenschutzerklärung.
+- Die englische Version nutzt die gewünschte eigenständige URL `bookielist/privacy.html` statt die deutsche Route `datenschutz.html`.
+- Auf [bookielist/datenschutz.html](bookielist/datenschutz.html) einen direkten Sprachwechsel zur englischen Version ergänzt.
+
+### Grund
+Für Bookielist ist Englisch als Hauptsprache vorgesehen; deshalb sollte die App-Datenschutzerklärung in einer klaren englischen Fassung unter einer passenden URL erreichbar sein.
+
+### Risiko/Hinweise
+- Geringes Risiko: neue statische Legal-Seite ohne Eingriff in Logik oder Navigation außerhalb der Bookielist-Rechtsseiten.
+- Die englische Fassung bildet die bestehende Struktur und Aussagen der deutschen Datenschutzerklärung inhaltlich nach; für formale Rechtsprüfung kann bei Bedarf später noch juristisches Review erfolgen.
+
+### Teststatus
+- VS Code Fehlerprüfung für [bookielist/privacy.html](bookielist/privacy.html), [bookielist/datenschutz.html](bookielist/datenschutz.html) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-04-10 (Bookielist Mobile-Hero-Reihenfolge für Logo angepasst)
+
+### Bereich
+Roll-&-Render-Website (Bookielist Landingpage Responsive Layout)
+
+### Dateien
+- bookielist/index.html
+- styles/bookielist.css
+- CHANGELOG.md
+
+### Änderung
+- Die Hero-Struktur auf [bookielist/index.html](bookielist/index.html) in getrennte Bereiche für Wortmarke, Logo und übrige Copy aufgeteilt.
+- Das responsive Grid in [styles/bookielist.css](styles/bookielist.css) so angepasst, dass auf Mobilgeräten zuerst Name, dann Logo und erst danach Claim, Subline und Buttons erscheinen.
+- Das Desktop-Verhalten bleibt dabei erhalten: links Text, rechts das App-Logo.
+
+### Grund
+Auf kleinen Viewports sollte das Logo direkt unter dem Namen sichtbar werden statt erst nach den Hero-Buttons.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: reine Layout-Anpassung innerhalb des bestehenden Hero-Bereichs.
+
+### Teststatus
+- VS Code Fehlerprüfung für [bookielist/index.html](bookielist/index.html), [styles/bookielist.css](styles/bookielist.css) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-04-10 (Bookielist Hero um App-Logo erweitert)
+
+### Bereich
+Roll-&-Render-Website (Bookielist Landingpage Visual Hierarchy)
+
+### Dateien
+- bookielist/index.html
+- styles/bookielist.css
+- CHANGELOG.md
+
+### Änderung
+- Auf [bookielist/index.html](bookielist/index.html) das vorhandene App-Logo `logo_bookielist.png` direkt in den Hero der Bookielist-Landingpage integriert.
+- Den Hero in ein responsives Zwei-Spalten-Layout umgebaut, damit Wortmarke, Claim und CTAs links bleiben und das App-Logo rechts prominent sichtbar ist.
+- In [styles/bookielist.css](styles/bookielist.css) neue Hero-Layout- und Logo-Styles ergänzt, inklusive mobiler Stapelung und eigener Bildkarte für das Icon.
+
+### Grund
+Die Bookielist-Seite sollte das vorhandene Produktlogo nicht nur in der Projektübersicht, sondern auch auf der eigentlichen Landingpage sichtbar einsetzen.
+
+### Risiko/Hinweise
+- Geringes Risiko: rein visuelle Hero-Erweiterung ohne Routing- oder Inhaltslogik.
+- Das Logo nutzt den bereits vorhandenen Asset-Pfad in lowercase-Form für konsistentes Deployment auf GitHub Pages.
+
+### Teststatus
+- VS Code Fehlerprüfung für [bookielist/index.html](bookielist/index.html), [styles/bookielist.css](styles/bookielist.css) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-04-10 (Bookielist USP- und Preis-Sektion ergänzt)
+
+### Bereich
+Roll-&-Render-Website (Bookielist Landingpage Copy und Struktur)
+
+### Dateien
+- bookielist/index.html
+- styles/bookielist.css
+- CHANGELOG.md
+
+### Änderung
+- Auf [bookielist/index.html](bookielist/index.html) direkt nach den Feature-Karten eine neue Sektion `Was Bookielist besonders macht` ergänzt.
+- Die neue Sektion hebt die Abgrenzung von Bookielist in vier Punkten hervor: lokale Kontrolle über die Bibliothek, datensparsame Produktlogik, werbefreie Nutzung und das Einmalzahlungsmodell.
+- Die Monetarisierung jetzt explizit auf der Landingpage erklärt: kostenlos testen, später einmalig 1,99 € für die Vollversion, ohne Abo und ohne versteckte Folgekosten.
+- In [styles/bookielist.css](styles/bookielist.css) neue Card- und Grid-Styles für die USP-/Preis-Sektion ergänzt und die Reveal-Animation um einen zusätzlichen Abschnitt erweitert.
+
+### Grund
+Die Bookielist-Seite sollte klarer kommunizieren, wodurch sich das Produkt in Datenschutz, Nutzungsgefühl und Preisstruktur von typischen App-Modellen abhebt.
+
+### Risiko/Hinweise
+- Geringes Risiko: Content- und Layout-Erweiterung ohne Routing- oder Logikänderung.
+- Formulierungen wurden bewusst so gewählt, dass sie zur bestehenden Datenschutzerklärung mit anonymem Metadaten-Cache passen und keine pauschal falsche `keine Weitergabe`-Aussage erzeugen.
+
+### Teststatus
+- VS Code Fehlerprüfung für [bookielist/index.html](bookielist/index.html), [styles/bookielist.css](styles/bookielist.css) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
 ## 2026-04-09 (Bookielist komplett auf sichtbare Umlaute umgestellt)
 
 ### Bereich
