@@ -1,5 +1,29 @@
 # Changelog
 
+## 2026-04-10 (Bookielist Monetarisierungs-Copy ohne festen Preis)
+
+### Bereich
+Roll-&-Render-Website (Bookielist Landingpage Copy)
+
+### Dateien
+- bookielist/index.html
+- bookielist/en.html
+- CHANGELOG.md
+
+### Änderung
+- Den Monetarisierungs-Block auf [bookielist/index.html](bookielist/index.html) von einer festen Preisnennung auf eine allgemeinere Formulierung mit kleinem einmaligem Aufpreis umgestellt.
+- Den entsprechenden englischen Monetarisierungs-Block auf [bookielist/en.html](bookielist/en.html) ebenfalls ohne konkrete Preiszahl formuliert.
+
+### Grund
+Auf der Bookielist-Landingpage soll aktuell kein konkreter Preis angezeigt werden, das Modell eines kleinen einmaligen Unlocks aber weiterhin verständlich bleiben.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: reine Textanpassung auf zwei statischen Landingpages ohne Layout-, Logik- oder Routingänderung.
+- Die Formulierung "kleiner Aufpreis" bleibt bewusst unscharf und sollte vor Store-Launch mit der finalen Preisstrategie abgeglichen werden.
+
+### Teststatus
+- VS Code Fehlerprüfung für [bookielist/index.html](bookielist/index.html), [bookielist/en.html](bookielist/en.html) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
 ## 2026-04-10 (Bookielist Play-Store-Platzhalter um EN-Version ergänzt)
 
 ### Bereich
