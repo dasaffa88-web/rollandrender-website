@@ -4,8 +4,8 @@
     <script defer src="https://cloud.umami.is/script.js" data-website-id="d04af094-6d74-403a-b236-dac26a28b1f7"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookielist - Your digital bookshelf</title>
-    <meta name="description" content="Bookielist is your digital bookshelf: scan ISBNs, organize books, track reading progress, and keep backups stored locally.">
+    <title>Bookielist - Your personal library manager</title>
+    <meta name="description" content="Bookielist manages your book collection: scan ISBNs, track series, manage reading status, and keep everything stored locally.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -29,10 +29,12 @@
                     <img src="../bookielist/Images/logo_bookielist.png" alt="Bookielist logo with books on a shelf and a glowing glass orb">
                 </figure>
                 <div class="bookie-hero-copy">
-                    <p class="bookie-claim">Your digital bookshelf: calm, clear, and free from distractions.</p>
+                    <p class="bookie-claim">Your personal library manager: calm, clear, and free from distractions.</p>
                     <p class="bookie-subline">
-                        Scan ISBNs or search for books online, manage reading status,
-                        sort your collection, and keep everything backed up locally.
+                        Keep track of your physical books and your reading list.
+                        Bookielist is a collection manager, not an e-reader, and lets you
+                        try up to 10 books for free before unlocking the full version in the app.
+                        Currently available for Android only, not for iOS.
                         No forced account. No tracking. No subscription trap.
                     </p>
                     <div class="bookie-hero-actions">
@@ -52,11 +54,11 @@
             <div class="feature-grid">
                 <article class="feature-card">
                     <h3>ISBN Scanner</h3>
-                    <p>Capture books in seconds, including an intelligent lookup chain with cloud and API fallback.</p>
+                    <p>Capture books in seconds, including an intelligent lookup chain from local matches to the community cache and external sources.</p>
                 </article>
                 <article class="feature-card">
                     <h3>Online Search</h3>
-                    <p>Load metadata from external sources when no barcode is available.</p>
+                    <p>Load metadata from the cloud, Google Books, or Open Library when no barcode is available.</p>
                 </article>
                 <article class="feature-card">
                     <h3>Manual Entry</h3>
@@ -71,8 +73,16 @@
                     <p>Keep your actual collection separate from your wishlist while still managing everything in one app.</p>
                 </article>
                 <article class="feature-card">
-                    <h3>Cloud Metadata Cache</h3>
-                    <p>Anonymous book metadata helps make matches faster for the community.</p>
+                    <h3>Series Support</h3>
+                    <p>Bookielist recognizes book series automatically, shows volume numbers, and gives you a quick series view.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Custom Cover Photos</h3>
+                    <p>If no online cover is available, you can use your own photo as a cover. Those images stay exclusively on your device.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Community Cache</h3>
+                    <p>Anonymous book metadata and optionally shared series details help deliver faster matches for the community.</p>
                 </article>
                 <article class="feature-card">
                     <h3>Mood Modes</h3>
@@ -90,15 +100,22 @@
                 <p class="section-kicker">Why Bookielist</p>
                 <h2 id="difference-title">What makes Bookielist different</h2>
                 <p class="section-intro">
-                    Bookielist is meant to feel like a personal bookshelf, not like a service
-                    that turns your collection into a profile or pushes you toward a subscription.
+                    Bookielist is meant to feel like a personal shelf manager for your physical books,
+                    not like a service that wants to become your reader, your profile, or your subscription.
                 </p>
             </div>
             <div class="difference-grid">
                 <article class="difference-card">
+                    <h3>No e-reader, no platform lock-in</h3>
+                    <p>
+                        Bookielist is not trying to replace your reading device. It is built to organize,
+                        surface, and manage your shelf instead of pushing you into a closed reading ecosystem.
+                    </p>
+                </article>
+                <article class="difference-card">
                     <h3>Your library stays with you</h3>
                     <p>
-                        Your collection, reading status, and backups stay under your control on the device
+                        Your collection, reading status, custom cover photos, and backups stay under your control on the device
                         instead of being tied to a user account or mandatory cloud service.
                     </p>
                 </article>
@@ -106,23 +123,16 @@
                     <h3>Privacy-minded instead of profile-driven</h3>
                     <p>
                         No in-app tracking, no profiling, and no ad IDs. To improve matches,
-                        Bookielist only uses general book metadata instead of personal reading profiles.
-                    </p>
-                </article>
-                <article class="difference-card">
-                    <h3>Calm instead of pushy</h3>
-                    <p>
-                        No banners, no advertising interruptions, and no artificial friction.
-                        The focus stays on your shelf instead of attention tricks.
+                        Bookielist only shares general book metadata and optional series details, never personal reading data.
                     </p>
                 </article>
                 <article class="difference-card difference-card--price">
                     <p class="difference-price-kicker">Monetization</p>
-                        <h3>Try it free, unlock it with a small one-time fee</h3>
+                        <h3>Try it free, unlock it once later</h3>
                     <p>
-                            You can try Bookielist for free. The full version can be unlocked
-                            with a small one-time fee, with no subscription, no hidden follow-up costs,
-                            and no paywall spiral.
+                            You can store up to 10 books for free and test all core features.
+                            Once your trial shelf is full, the full version can be unlocked directly in the app:
+                            one-time, no subscription, no ads, and no hidden follow-up costs.
                     </p>
                 </article>
             </div>
@@ -135,8 +145,8 @@
             </div>
             <ol class="flow-list">
                 <li>Open the scanner or find a book manually through online search.</li>
-                <li>Add the book with its metadata and place it in your collection or wishlist.</li>
-                <li>Set reading status, filter, sort, and keep your shelf tidy.</li>
+                <li>Add the book with its metadata, place it in your collection or wishlist, and set a custom cover photo if needed.</li>
+                <li>Track reading status, keep series in view, and tidy your shelf with filters and sorting.</li>
                 <li>Use the backup feature so your library stays with you when changing devices.</li>
             </ol>
         </section>
@@ -189,8 +199,8 @@
         <section class="bookie-privacy-cta reveal" aria-labelledby="privacy-cta-title">
             <h2 id="privacy-cta-title">Privacy explained clearly</h2>
             <p>
-                The app stores personal library data locally on your device.
-                Details about the cloud cache, API requests, and your rights are available
+                The app stores personal library data and custom cover photos locally on your device.
+                Details about the community cache, optionally shared series details, API requests, and your rights are available
                 in the separate Bookielist Privacy Policy.
             </p>
             <a href="privacy.html" class="bookie-button primary">Go to Privacy Policy</a>

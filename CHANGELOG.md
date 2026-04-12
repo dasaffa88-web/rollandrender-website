@@ -1,28 +1,86 @@
 # Changelog
 
-## 2026-04-10 (Bookielist Monetarisierungs-Copy ohne festen Preis)
+## 2026-04-12 (Bookielist Plattform-Hinweis auf Android-only geschärft)
 
 ### Bereich
-Roll-&-Render-Website (Bookielist Landingpage Copy)
+Roll-&-Render-Website (Bookielist Plattform-Copy)
 
 ### Dateien
 - bookielist/index.html
 - bookielist/en.html
+- bookielist/playstore.html
+- bookielist/playstore-en.html
+- bookielist/Daten/playstore_beschreibung.txt
+- bookielist/Daten/playstore_beschreibung2.txt
+- CHANGELOG.md
+
+### Änderung
+- Auf den deutschen und englischen Bookielist-Landingpages ausdrücklich ergänzt, dass Bookielist aktuell nur für Android verfügbar ist und keine iOS-Version angeboten wird.
+- Die deutschen und englischen Play-Store-Platzhalterseiten um denselben klaren Android-only-Hinweis erweitert.
+- Beide deutschen Play-Store-Copy-Dateien um eine frühe Plattform-Klarstellung ergänzt, damit Store- und Website-Texte dieselbe Aussage transportieren.
+
+### Grund
+Die bisherige Kommunikation ließ sich über den Play-Store-Kontext zwar indirekt als Android-only lesen, sollte aber ausdrücklich klarstellen, dass es derzeit keine iOS-Version gibt.
+
+### Risiko/Hinweise
+- Sehr geringes Risiko: reine Textanpassung ohne Layout-, Routing- oder Skriptänderungen.
+- Falls später eine iOS-Version geplant oder veröffentlicht wird, muss die Plattform-Copy an allen Bookielist-Stellen gemeinsam aktualisiert werden.
+
+### Teststatus
+- VS Code Fehlerprüfung für [bookielist/index.html](bookielist/index.html), [bookielist/en.html](bookielist/en.html), [bookielist/playstore.html](bookielist/playstore.html), [bookielist/playstore-en.html](bookielist/playstore-en.html) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-04-11 (Bookielist Landingpage und Privacy an neue Store-Copy angepasst)
+
+### Bereich
+Roll-&-Render-Website (Bookielist Copy, Produktpositionierung und Legal-Konsistenz)
+
+### Dateien
+- bookielist/index.html
+- bookielist/en.html
+- bookielist/datenschutz.html
+- bookielist/privacy.html
+- CHANGELOG.md
+
+### Änderung
+- Die Landingpages [bookielist/index.html](bookielist/index.html) und [bookielist/en.html](bookielist/en.html) auf die neue Bookielist-Positionierung aus [bookielist/Daten/playstore_beschreibung2.txt](bookielist/Daten/playstore_beschreibung2.txt) gezogen: persönlicher Sammlungs-Manager statt E-Reader, Testversion mit bis zu 10 Büchern, Serienunterstützung und lokale eigene Coverfotos.
+- Die Feature- und Monetarisierungsblöcke auf beiden Landingpages um die neuen Kernbotschaften erweitert, inklusive optional geteilter Serieninfos im Community-Cache und klarerer Trial-/Unlock-Kommunikation.
+- Die Datenschutzerklärungen [bookielist/datenschutz.html](bookielist/datenschutz.html) und [bookielist/privacy.html](bookielist/privacy.html) inhaltlich nachgezogen: Serienname/Bandnummer als optionale Community-Freigabe ergänzt und klargestellt, dass selbst gesetzte Coverfotos ausschließlich lokal bleiben.
+
+### Grund
+Die aktualisierte Store-Copy beschreibt Bookielist in mehreren Punkten präziser als die Website. Landingpage und Datenschutz sollten dieselben Produktaussagen und Datenflüsse widerspruchsfrei abbilden.
+
+### Risiko/Hinweise
+- Geringes Risiko: reine Text- und Inhaltsanpassung auf statischen Bookielist-Seiten ohne Layout-, Routing- oder Skriptänderung.
+- Die Datenschutzformulierung beschreibt optionale Serienfreigaben funktional; für formale Rechtsprüfung kann bei Bedarf später noch juristisches Review erfolgen.
+
+### Teststatus
+- VS Code Fehlerprüfung für [bookielist/index.html](bookielist/index.html), [bookielist/en.html](bookielist/en.html), [bookielist/datenschutz.html](bookielist/datenschutz.html), [bookielist/privacy.html](bookielist/privacy.html) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+
+## 2026-04-10 (Bookielist Monetarisierungs-Copy ohne festen Preis)
+
+### Bereich
+Roll-&-Render-Website (Bookielist Monetarisierungs-Copy)
+
+### Dateien
+- bookielist/index.html
+- bookielist/en.html
+- bookielist/Daten/playstore_beschreibung.txt
 - CHANGELOG.md
 
 ### Änderung
 - Den Monetarisierungs-Block auf [bookielist/index.html](bookielist/index.html) von einer festen Preisnennung auf eine allgemeinere Formulierung mit kleinem einmaligem Aufpreis umgestellt.
 - Den entsprechenden englischen Monetarisierungs-Block auf [bookielist/en.html](bookielist/en.html) ebenfalls ohne konkrete Preiszahl formuliert.
+- Die Play-Store-Beschreibung in [bookielist/Daten/playstore_beschreibung.txt](bookielist/Daten/playstore_beschreibung.txt) von einer festen Preisfrage auf eine generelle Einmalkauf-Begründung umgestellt.
 
 ### Grund
-Auf der Bookielist-Landingpage soll aktuell kein konkreter Preis angezeigt werden, das Modell eines kleinen einmaligen Unlocks aber weiterhin verständlich bleiben.
+In der Bookielist-Kommunikation soll aktuell kein konkreter Preis angezeigt werden, das Modell eines kleinen einmaligen Unlocks aber weiterhin verständlich bleiben.
 
 ### Risiko/Hinweise
-- Sehr geringes Risiko: reine Textanpassung auf zwei statischen Landingpages ohne Layout-, Logik- oder Routingänderung.
+- Sehr geringes Risiko: reine Textanpassung auf statischen Seiten und Copy-Dateien ohne Layout-, Logik- oder Routingänderung.
 - Die Formulierung "kleiner Aufpreis" bleibt bewusst unscharf und sollte vor Store-Launch mit der finalen Preisstrategie abgeglichen werden.
 
 ### Teststatus
-- VS Code Fehlerprüfung für [bookielist/index.html](bookielist/index.html), [bookielist/en.html](bookielist/en.html) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
+- VS Code Fehlerprüfung für [bookielist/index.html](bookielist/index.html), [bookielist/en.html](bookielist/en.html), [bookielist/Daten/playstore_beschreibung.txt](bookielist/Daten/playstore_beschreibung.txt) und [CHANGELOG.md](CHANGELOG.md): keine Fehler gefunden.
 
 ## 2026-04-10 (Bookielist Play-Store-Platzhalter um EN-Version ergänzt)
 
