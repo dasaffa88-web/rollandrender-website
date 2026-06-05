@@ -217,13 +217,23 @@
 </head>
 <body>
     <script>
+    function base64UrlDecodeToUtf8(base64) {
+        var binary = atob(base64.replace(/-/g, '+').replace(/_/g, '/'));
+        var bytes = new Uint8Array(binary.length);
+        for (var i = 0; i < binary.length; i++) {
+            bytes[i] = binary.charCodeAt(i);
+        }
+        return new TextDecoder('utf-8').decode(bytes);
+    }
+    </script>
+    <script>
     (function() {
         var params = new URLSearchParams(window.location.search);
         var mode = params.get('mode');
         var data = params.get('data');
         if (mode === 'redirect' && data) {
             try {
-                var jsonString = atob(data.replace(/-/g, '+').replace(/_/g, '/'));
+                var jsonString = base64UrlDecodeToUtf8(data);
                 var books = JSON.parse(jsonString);
                 var isbn = '';
                 if (Array.isArray(books) && books.length > 0) {
@@ -273,7 +283,7 @@
             }
 
             try {
-                const jsonString = atob(data.replace(/-/g, '+').replace(/_/g, '/'));
+                const jsonString = base64UrlDecodeToUtf8(data);
                 const books = JSON.parse(jsonString);
 
                 if (!Array.isArray(books)) {
