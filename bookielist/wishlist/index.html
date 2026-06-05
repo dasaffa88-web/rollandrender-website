@@ -216,6 +216,28 @@
     </style>
 </head>
 <body>
+    <script>
+    (function() {
+        var params = new URLSearchParams(window.location.search);
+        var mode = params.get('mode');
+        var data = params.get('data');
+        if (mode === 'redirect' && data) {
+            try {
+                var jsonString = atob(data.replace(/-/g, '+').replace(/_/g, '/'));
+                var books = JSON.parse(jsonString);
+                var isbn = '';
+                if (Array.isArray(books) && books.length > 0) {
+                    isbn = books[0].isbn || '';
+                } else if (books && books.isbn) {
+                    isbn = books.isbn;
+                }
+                if (isbn) {
+                    window.location.replace('https://www.thalia.de/suche?sq=' + encodeURIComponent(isbn));
+                }
+            } catch (e) {}
+        }
+    })();
+    </script>
     <div class="container">
         <header>
             <h1>Wunschliste</h1>
@@ -255,19 +277,7 @@
                 const books = JSON.parse(jsonString);
 
                 if (!Array.isArray(books)) {
-                    // Single book (redirect mode)
-                    const book = books;
-                    if (mode === 'redirect' && book.isbn) {
-                        window.location.href = 'https://www.thalia.de/suche?sq=' + encodeURIComponent(book.isbn);
-                        return;
-                    }
-                    // Single book display
                     books = [books];
-                }
-
-                if (mode === 'redirect' && books.length > 0 && books[0].isbn) {
-                    window.location.href = 'https://www.thalia.de/suche?sq=' + encodeURIComponent(books[0].isbn);
-                    return;
                 }
 
                 if (books.length === 0) {
