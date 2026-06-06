@@ -107,6 +107,16 @@
             font-size: 2rem;
         }
 
+        .book-cover {
+            width: 120px;
+            height: auto;
+            max-height: 180px;
+            margin: 0 auto 1.25rem;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
         .book-title {
             font-family: "Fraunces", serif;
             font-size: 1.35rem;
@@ -262,6 +272,7 @@
                 var title = book.title || 'Unbekanntes Buch';
                 var author = book.author || '';
                 var isbn = book.isbn || '';
+                var coverUrl = book.coverUrl || '';
 
                 var playStoreLink = 'https://play.google.com/store/apps/details?id=com.rollandrender.bookscanner' +
                     '&referrer=' + encodeURIComponent('utm_source=bookielist_share&utm_campaign=add_book&isbn=' + isbn);
@@ -287,7 +298,11 @@
                 var openLink = (isAndroid && (isChrome || isFirefox)) ? intentLink : 'https://rollandrender.studio/bookielist/add?data=' + encodeURIComponent(data);
 
                 var html = '<div class="book-card">';
-                html += '<div class="book-icon">&#128214;</div>';
+                if (coverUrl) {
+                    html += '<img src="' + escapeHtml(coverUrl) + '" alt="" class="book-cover" loading="lazy">';
+                } else {
+                    html += '<div class="book-icon">&#128214;</div>';
+                }
                 html += '<div class="book-title">' + escapeHtml(title) + '</div>';
                 if (author) {
                     html += '<div class="book-author">' + escapeHtml(author) + '</div>';
