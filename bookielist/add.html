@@ -281,6 +281,10 @@
                     return; // Seite nicht rendern, Redirect läuft
                 }
 
+                var isAndroid = /Android/.test(ua);
+                var isChrome = /Chrome/.test(ua) && !/Edge|Edg/.test(ua);
+                var openLink = (isAndroid && isChrome) ? intentLink : 'https://rollandrender.studio/bookielist/add?data=' + encodeURIComponent(data);
+
                 var html = '<div class="book-card">';
                 html += '<div class="book-icon">&#128214;</div>';
                 html += '<div class="book-title">' + escapeHtml(title) + '</div>';
@@ -292,9 +296,10 @@
                 }
                 html += '<div class="divider"></div>';
                 html += '<div class="actions">';
-                html += '<a href="' + playStoreLink + '" class="btn btn-primary" target="_blank" rel="noopener">App installieren</a>';
+                html += '<a href="' + openLink + '" class="btn btn-primary">In Bookielist &ouml;ffnen</a>';
+                html += '<a href="' + playStoreLink + '" class="btn btn-secondary" target="_blank" rel="noopener">App installieren</a>';
                 html += '</div>';
-                html += '<div class="hint">Schon Bookielist installiert? Der Link funktioniert dann direkt in WhatsApp.</div>';
+                html += '<div class="hint">Noch keine Bookielist-App? Klicke auf &quot;App installieren&quot;.</div>';
                 html += '</div>';
 
                 content.innerHTML = html;
