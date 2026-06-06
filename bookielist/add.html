@@ -327,13 +327,35 @@
                 }
                 html += '<div class="divider"></div>';
                 html += '<div class="actions">';
-                html += '<a href="' + openLink + '" class="btn btn-primary">In Bookielist &ouml;ffnen</a>';
+                html += '<button class="btn btn-primary" id="openBtn">In Bookielist &ouml;ffnen</button>';
                 html += '<a href="' + playStoreLink + '" class="btn btn-secondary" target="_blank" rel="noopener">App installieren</a>';
                 html += '</div>';
                 html += '<div class="hint">Noch keine Bookielist-App? Klicke auf &quot;App installieren&quot;.</div>';
                 html += '</div>';
 
                 content.innerHTML = html;
+
+                // Smart open: try app first, fall back to Play Store with referrer if not installed
+                var openBtn = document.getElementById('openBtn');
+                if (openBtn && isAndroid && (isChrome || isFirefox)) {
+                    openBtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        // Try to open the app
+                        window.location = intentLink;
+                        // If still here after 1.5s, app wasn't installed → redirect to Play Store
+                        setTimeout(function() {
+                            if (!document.hidden) {
+                                window.location = playStoreLink;
+                            }
+                        }, 1500);
+                    });
+                } else if (openBtn) {
+                    // Non-Chrome/Firefox: go directly to Play Store (already handled by openLink, but keep as fallback)
+                    openBtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        window.location = playStoreLink;
+                    });
+                }
             } catch (e) {
                 content.innerHTML = `
                     <div class="error-state">
