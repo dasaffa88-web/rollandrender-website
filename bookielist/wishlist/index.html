@@ -360,10 +360,6 @@
             }
         }
     </style>
-</head>
-<body>
-    <a href="../index.html" class="bookie-home-pill" aria-label="Zurück zu Bookielist">Roll &amp; Render</a>
-
     <script>
     function base64UrlDecodeToUtf8(base64) {
         var binary = atob(base64.replace(/-/g, '+').replace(/_/g, '/'));
@@ -373,8 +369,6 @@
         }
         return new TextDecoder('utf-8').decode(bytes);
     }
-    </script>
-    <script>
     (function() {
         var params = new URLSearchParams(window.location.search);
         var mode = params.get('mode');
@@ -396,6 +390,10 @@
         }
     })();
     </script>
+</head>
+<body>
+    <a href="../index.html" class="bookie-home-pill" aria-label="Zurück zu Bookielist">Roll &amp; Render</a>
+
     <div class="container">
         <div class="banner">
             <img src="../Images/Bookielist_Banner.jpg" alt="Bookielist Banner">
