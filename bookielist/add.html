@@ -284,10 +284,8 @@
                 }
                 var playStoreLink = 'https://play.google.com/store/apps/details?id=com.rollandrender.bookscanner' +
                     '&referrer=' + encodeURIComponent(referrerData);
-                var fallbackUrl = encodeURIComponent(playStoreLink);
                 var intentLink = 'intent://rollandrender.studio/bookielist/add?data=' + encodeURIComponent(data) +
-                    '#Intent;scheme=https;package=com.rollandrender.bookscanner;' +
-                    'S.browser_fallback_url=' + fallbackUrl + ';end';
+                    '#Intent;scheme=https;package=com.rollandrender.bookscanner;end';
 
                 // WhatsApp In-App-Browser blockiert App Links -> automatischer Redirect
                 var ua = navigator.userAgent;
