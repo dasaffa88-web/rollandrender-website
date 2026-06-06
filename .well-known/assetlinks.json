@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.rollandrender.bookscanner",
+    "sha256_cert_fingerprints":
+      ["E8:29:B6:9C:3B:3D:9E:B4:98:6E:1F:38:18:BA:60:43:4E:45:40:B4:4D:08:64:93:26:3C:7D:66:69:AD:EE:A5"]
+  }
+}]
