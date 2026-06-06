@@ -342,12 +342,12 @@
                         e.preventDefault();
                         // Try to open the app
                         window.location = intentLink;
-                        // If still here after 1.5s, app wasn't installed → redirect to Play Store
+                        // If still here after 800ms, app wasn't installed → redirect to Play Store
                         setTimeout(function() {
                             if (!document.hidden) {
                                 window.location = playStoreLink;
                             }
-                        }, 1500);
+                        }, 800);
                     });
                 } else if (openBtn) {
                     // Non-Chrome/Firefox: go directly to Play Store (already handled by openLink, but keep as fallback)
