@@ -265,6 +265,21 @@
 
                 var playStoreLink = 'https://play.google.com/store/apps/details?id=com.rollandrender.bookscanner' +
                     '&referrer=' + encodeURIComponent('utm_source=bookielist_share&utm_campaign=add_book&isbn=' + isbn);
+                var intentLink = 'intent://rollandrender.studio/bookielist/add?data=' + encodeURIComponent(data) +
+                    '#Intent;scheme=https;package=com.rollandrender.bookscanner;end';
+
+                // WhatsApp In-App-Browser blockiert App Links -> automatischer Redirect
+                var ua = navigator.userAgent;
+                var isWhatsApp = /WhatsApp/.test(ua);
+                var isInAppBrowser = /wv|WebView/.test(ua) && !/Chrome|Firefox|SamsungBrowser/.test(ua);
+
+                if ((isWhatsApp || isInAppBrowser) && /Android/.test(ua)) {
+                    window.location = intentLink;
+                    setTimeout(function() {
+                        window.location = playStoreLink;
+                    }, 2000);
+                    return; // Seite nicht rendern, Redirect läuft
+                }
 
                 var html = '<div class="book-card">';
                 html += '<div class="book-icon">&#128214;</div>';
