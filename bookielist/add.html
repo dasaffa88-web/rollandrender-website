@@ -283,7 +283,8 @@
 
                 var isAndroid = /Android/.test(ua);
                 var isChrome = /Chrome/.test(ua) && !/Edge|Edg/.test(ua);
-                var openLink = (isAndroid && isChrome) ? intentLink : 'https://rollandrender.studio/bookielist/add?data=' + encodeURIComponent(data);
+                var isFirefox = /Firefox/.test(ua);
+                var openLink = (isAndroid && (isChrome || isFirefox)) ? intentLink : 'https://rollandrender.studio/bookielist/add?data=' + encodeURIComponent(data);
 
                 var html = '<div class="book-card">';
                 html += '<div class="book-icon">&#128214;</div>';
