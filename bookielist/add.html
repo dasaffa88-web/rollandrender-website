@@ -263,7 +263,7 @@
                 var author = book.author || '';
                 var isbn = book.isbn || '';
 
-                var appLink = 'https://rollandrender.studio/bookielist/add?data=' + encodeURIComponent(data);
+                var appLink = 'intent://rollandrender.studio/bookielist/add?data=' + encodeURIComponent(data) + '#Intent;scheme=https;package=com.rollandrender.bookscanner;end';
                 var playStoreLink = 'https://play.google.com/store/apps/details?id=com.rollandrender.bookscanner' +
                     '&referrer=' + encodeURIComponent('utm_source=bookielist_share&utm_campaign=add_book&isbn=' + isbn);
 
