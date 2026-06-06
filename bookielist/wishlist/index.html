@@ -163,6 +163,31 @@
             white-space: nowrap;
         }
 
+        .sold-ribbon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-35deg);
+            background: rgba(183, 103, 69, 0.78);
+            color: #fff;
+            font-family: "Fraunces", serif;
+            font-weight: 700;
+            font-size: 1.6rem;
+            letter-spacing: 0.06em;
+            padding: 0.35rem 2.5rem;
+            border-radius: 4px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.25s ease;
+            z-index: 5;
+            box-shadow: 0 4px 12px rgba(60, 39, 19, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .book-card.checked .sold-ribbon {
+            opacity: 1;
+        }
+
         .book-number {
             font-family: "Fraunces", serif;
             font-size: 1.4rem;
@@ -608,6 +633,11 @@
                     const card = document.createElement('div');
                     card.className = 'book-card' + (isChecked ? ' checked' : '');
                     if (isbn) card.dataset.isbn = isbn;
+
+                    const ribbon = document.createElement('div');
+                    ribbon.className = 'sold-ribbon';
+                    ribbon.textContent = 'GEKAUFT';
+                    card.appendChild(ribbon);
 
                     const checkbox = document.createElement('input');
                     checkbox.type = 'checkbox';
