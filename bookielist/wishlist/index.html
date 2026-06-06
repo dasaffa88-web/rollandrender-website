@@ -146,6 +146,20 @@
             box-shadow: 0 6px 20px rgba(60, 39, 19, 0.1);
         }
 
+        .check-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.25rem;
+            margin-left: auto;
+        }
+
+        .check-label {
+            font-size: 0.75rem;
+            color: var(--bookie-muted);
+            white-space: nowrap;
+        }
+
         .book-number {
             font-family: "Fraunces", serif;
             font-size: 1.4rem;
@@ -650,14 +664,16 @@
                         card.appendChild(link);
                     }
 
+                    const checkCol = document.createElement('div');
+                    checkCol.className = 'check-col';
+
                     const label = document.createElement('span');
+                    label.className = 'check-label';
                     label.textContent = 'Gekauft?';
-                    label.style.fontSize = '0.8rem';
-                    label.style.color = 'var(--bookie-muted)';
-                    label.style.whiteSpace = 'nowrap';
-                    label.style.marginLeft = '-0.5rem';
-                    card.appendChild(label);
-                    card.appendChild(checkbox);
+
+                    checkCol.appendChild(checkbox);
+                    checkCol.appendChild(label);
+                    card.appendChild(checkCol);
                     list.appendChild(card);
                 });
 
