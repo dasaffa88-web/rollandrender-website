@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buch geteilt – Bookielist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bookie-ink: #2f2622;
+            --bookie-muted: #6f6259;
+            --bookie-cream: #f7f0e4;
+            --bookie-paper: #fff9f0;
+            --bookie-accent: #b76745;
+            --bookie-accent-soft: #d89573;
+            --bookie-sage: #78907b;
+            --bookie-border: #d9c6ad;
+            --bookie-shadow: 0 14px 34px rgba(60, 39, 19, 0.14);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: "Nunito Sans", "Segoe UI", sans-serif;
+            color: var(--bookie-ink);
+            background:
+                radial-gradient(circle at 15% -10%, rgba(216, 149, 115, 0.26), transparent 34%),
+                radial-gradient(circle at 88% 0%, rgba(120, 144, 123, 0.22), transparent 28%),
+                repeating-linear-gradient(
+                    -8deg,
+                    rgba(255, 255, 255, 0.62) 0px,
+                    rgba(255, 255, 255, 0.62) 2px,
+                    rgba(246, 234, 216, 0.9) 2px,
+                    rgba(246, 234, 216, 0.9) 26px
+                ),
+                var(--bookie-cream);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1, h2, h3 {
+            font-family: "Fraunces", "Times New Roman", serif;
+            letter-spacing: 0.02em;
+            margin: 0;
+        }
+
+        .bookie-home-pill {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 50;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 10px 18px;
+            border-radius: 999px;
+            border: 1px solid rgba(47, 38, 34, 0.2);
+            background: rgba(255, 249, 240, 0.86);
+            color: var(--bookie-ink);
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            font-size: 0.9rem;
+            box-shadow: 0 6px 14px rgba(60, 39, 19, 0.14);
+            backdrop-filter: blur(4px);
+            transition: transform 0.24s ease, box-shadow 0.24s ease;
+        }
+
+        .bookie-home-pill:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(60, 39, 19, 0.2);
+        }
+
+        .container {
+            max-width: 520px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .book-card {
+            background: var(--bookie-paper);
+            border-radius: 20px;
+            padding: 2rem 1.75rem;
+            box-shadow: var(--bookie-shadow);
+            border: 1px solid var(--bookie-border);
+            text-align: center;
+        }
+
+        .book-icon {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 1.25rem;
+            background: var(--bookie-accent-soft);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .book-title {
+            font-family: "Fraunces", serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--bookie-ink);
+            margin-bottom: 0.35rem;
+            line-height: 1.35;
+        }
+
+        .book-author {
+            font-size: 1rem;
+            color: var(--bookie-muted);
+            margin-bottom: 0.25rem;
+        }
+
+        .book-isbn {
+            font-size: 0.85rem;
+            color: var(--bookie-muted);
+            font-family: monospace;
+            opacity: 0.8;
+            margin-bottom: 1.75rem;
+        }
+
+        .divider {
+            height: 1px;
+            background: var(--bookie-border);
+            margin: 1.25rem 0;
+        }
+
+        .actions {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.5rem;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: background 0.2s ease, transform 0.2s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--bookie-accent);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: var(--bookie-accent-soft);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--bookie-accent);
+            border: 2px solid var(--bookie-accent);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(183, 103, 69, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .hint {
+            font-size: 0.8rem;
+            color: var(--bookie-muted);
+            margin-top: 0.75rem;
+        }
+
+        .footer {
+            margin-top: auto;
+            background: rgba(255, 249, 240, 0.72);
+            border-top: 1px solid var(--bookie-border);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .footer-copyright {
+            color: var(--bookie-muted);
+            font-size: 0.85rem;
+        }
+
+        .error-state {
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        .error-state h2 {
+            font-size: 1.4rem;
+            color: #B85450;
+            margin-bottom: 0.5rem;
+        }
+
+        .error-state p {
+            color: var(--bookie-muted);
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="bookie-home-pill" aria-label="Zurück zu Bookielist">Roll &amp; Render</a>
+
+    <div class="container">
+        <div id="content"></div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-copyright">&copy; 2026 Roll &amp; Render Studio</div>
+    </div>
+
+    <script>
+        function base64UrlDecodeToUtf8(base64) {
+            var binary = atob(base64.replace(/-/g, '+').replace(/_/g, '/'));
+            var bytes = new Uint8Array(binary.length);
+            for (var i = 0; i < binary.length; i++) {
+                bytes[i] = binary.charCodeAt(i);
+            }
+            return new TextDecoder('utf-8').decode(bytes);
+        }
+
+        function escapeHtml(text) {
+            var div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        (function() {
+            var params = new URLSearchParams(window.location.search);
+            var data = params.get('data');
+            var content = document.getElementById('content');
+
+            if (!data) {
+                content.innerHTML = `
+                    <div class="error-state">
+                        <h2>Ungültiger Link</h2>
+                        <p>Keine Buchdaten gefunden. Der Link ist möglicherweise beschädigt.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            try {
+                var jsonString = base64UrlDecodeToUtf8(data);
+                var book = JSON.parse(jsonString);
+
+                var title = book.title || 'Unbekanntes Buch';
+                var author = book.author || '';
+                var isbn = book.isbn || '';
+
+                var appLink = 'https://rollandrender.studio/bookielist/add?data=' + encodeURIComponent(data);
+                var playStoreLink = 'https://play.google.com/store/apps/details?id=com.rollandrender.bookscanner' +
+                    '&referrer=' + encodeURIComponent('utm_source=bookielist_share&utm_campaign=add_book&isbn=' + isbn);
+
+                var html = '<div class="book-card">';
+                html += '<div class="book-icon">&#128214;</div>';
+                html += '<div class="book-title">' + escapeHtml(title) + '</div>';
+                if (author) {
+                    html += '<div class="book-author">' + escapeHtml(author) + '</div>';
+                }
+                if (isbn) {
+                    html += '<div class="book-isbn">ISBN: ' + escapeHtml(isbn) + '</div>';
+                }
+                html += '<div class="divider"></div>';
+                html += '<div class="actions">';
+                html += '<a href="' + appLink + '" class="btn btn-primary">In Bookielist &ouml;ffnen</a>';
+                html += '<a href="' + playStoreLink + '" class="btn btn-secondary" target="_blank" rel="noopener">App installieren</a>';
+                html += '</div>';
+                html += '<div class="hint">Noch keine Bookielist-App? Klicke auf &quot;App installieren&quot;.</div>';
+                html += '</div>';
+
+                content.innerHTML = html;
+            } catch (e) {
+                content.innerHTML = `
+                    <div class="error-state">
+                        <h2>Ungültiger Link</h2>
+                        <p>Die Buchdaten konnten nicht geladen werden. Der Link ist möglicherweise beschädigt.</p>
+                    </div>
+                `;
+            }
+        })();
+    </script>
+</body>
+</html>

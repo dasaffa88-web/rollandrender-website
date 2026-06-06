@@ -243,6 +243,72 @@
             transform: translateY(-1px);
         }
 
+        .cta-card {
+            background: var(--bookie-paper);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            margin: 2rem auto 0;
+            max-width: 600px;
+            box-shadow: 0 2px 12px rgba(60, 39, 19, 0.06);
+            border: 1px solid var(--bookie-border);
+            text-align: center;
+        }
+
+        .cta-card h2 {
+            font-size: 1.4rem;
+            color: var(--bookie-ink);
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-card p {
+            color: var(--bookie-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .footer {
+            margin-top: auto;
+            background: rgba(255, 249, 240, 0.72);
+            border-top: 1px solid var(--bookie-border);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-copyright {
+            color: var(--bookie-muted);
+            font-size: 0.85rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .footer-links a {
+            color: var(--bookie-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--bookie-accent);
+        }
+
+        .footer-separator {
+            color: var(--bookie-border);
+            font-size: 0.85rem;
+        }
+
         .empty-state {
             text-align: center;
             padding: 4rem 1rem;
@@ -332,7 +398,7 @@
     </script>
     <div class="container">
         <div class="banner">
-            <img src="../images/Bookielist_Banner.jpg" alt="Bookielist Banner">
+            <img src="../Images/Bookielist_Banner.jpg" alt="Bookielist Banner">
         </div>
         <header>
             <h1>Wunschliste</h1>
@@ -341,14 +407,21 @@
         <div id="content"></div>
     </div>
 
+    <div class="cta-card">
+        <h2>Erstelle deine eigene Wunschliste</h2>
+        <p>Organisiere deine Bücher, behalte den Überblick und teile deine Wunschliste mit Freunden — kostenlos.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.rollandrender.bookscanner" class="playstore-button" target="_blank" rel="noopener">Jetzt im Play Store</a>
+    </div>
+
     <div class="footer">
         <div class="footer-content">
-            <h2>Erstelle deine eigene Wunschliste</h2>
-            <p>Organisiere deine Bücher, behalte den Überblick und teile deine Wunschliste mit Freunden — kostenlos.</p>
-            <a href="https://play.google.com/store/apps/details?id=com.rollandrender.bookscanner" class="playstore-button" target="_blank" rel="noopener">Jetzt im Play Store</a>
-            <div class="footer-legal" style="margin-top: 1.5rem; display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap;">
-                <a href="../datenschutz.html" style="color: var(--bookie-muted); text-decoration: none; font-size: 0.85rem; transition: color 0.2s ease;">Datenschutz</a>
-                <a href="../../impressum.html" style="color: var(--bookie-muted); text-decoration: none; font-size: 0.85rem; transition: color 0.2s ease;">Impressum</a>
+            <div class="footer-copyright">&copy; 2026 Roll &amp; Render Studio</div>
+            <div class="footer-links">
+                <a href="../../datenschutz.html">Website Datenschutz</a>
+                <span class="footer-separator">|</span>
+                <a href="../datenschutz.html">Bookielist Datenschutz</a>
+                <span class="footer-separator">|</span>
+                <a href="../../impressum.html">Impressum</a>
             </div>
         </div>
     </div>
