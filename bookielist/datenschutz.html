@@ -144,18 +144,28 @@
             </section>
 
             <section>
-                <h2>7. Wunschliste teilen und Weiterleitung zu Thalia</h2>
+                <h2>7. Weiterleitung zu Thalia (Kauf- und Wunschlisten-Links)</h2>
                 <p>
-                    In der App kannst du eine persönliche Wunschliste erstellen und diese über einen Link teilen.
+                    In der App kannst du direkt aus einem Buch-Detail auf "Bei Thalia kaufen *" tippen
+                    oder eine persönliche Wunschliste erstellen und diese über einen Link teilen.
+                    In beiden Fällen wird zu Thalia.de weitergeleitet.
+                </p>
+                <h3>Direkter Kauf aus der App</h3>
+                <p>
+                    Im Buch-Detail befindet sich ein Button "Bei Thalia kaufen *". Wenn du diesen antippst,
+                    wird die ISBN des Buchs an Thalia übermittelt, um direkt zur Produktseite weitergeleitet zu werden.
+                </p>
+                <h3>Wunschliste teilen</h3>
+                <p>
+                    Du kannst eine Wunschliste erstellen und diese über einen Link teilen.
                     Die Freigabe erfolgt ausschließlich auf deine Initiative hin.
                 </p>
-                <h3>Wie funktioniert das Teilen?</h3>
                 <ul>
                     <li>Die Wunschliste wird als Base64-kodierter Text in der URL untergebracht (z. B. <code>rollandrender.studio/bookielist/wishlist?data=...</code>)</li>
                     <li>Es findet keine serverseitige Speicherung deiner Wunschliste statt</li>
                     <li>Die Daten verbleiben im Link selbst; wer den Link erhält, kann die enthaltenen Buchdaten einsehen</li>
                 </ul>
-                <h3>Welche Daten sind im Link enthalten?</h3>
+                <h3>Welche Daten sind im Wunschlisten-Link enthalten?</h3>
                 <ul>
                     <li>Buchtitel</li>
                     <li>Autor</li>
