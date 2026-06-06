@@ -650,6 +650,13 @@
                         card.appendChild(link);
                     }
 
+                    const label = document.createElement('span');
+                    label.textContent = 'Gekauft?';
+                    label.style.fontSize = '0.8rem';
+                    label.style.color = 'var(--bookie-muted)';
+                    label.style.whiteSpace = 'nowrap';
+                    label.style.marginLeft = '-0.5rem';
+                    card.appendChild(label);
                     card.appendChild(checkbox);
                     list.appendChild(card);
                 });
