@@ -265,9 +265,6 @@
 
                 var playStoreLink = 'https://play.google.com/store/apps/details?id=com.rollandrender.bookscanner' +
                     '&referrer=' + encodeURIComponent('utm_source=bookielist_share&utm_campaign=add_book&isbn=' + isbn);
-                var appLink = 'https://rollandrender.studio/bookielist/add?data=' + encodeURIComponent(data);
-                var intentLink = 'intent://rollandrender.studio/bookielist/add?data=' + encodeURIComponent(data) +
-                    '#Intent;scheme=https;package=com.rollandrender.bookscanner;end';
 
                 var html = '<div class="book-card">';
                 html += '<div class="book-icon">&#128214;</div>';
@@ -280,29 +277,12 @@
                 }
                 html += '<div class="divider"></div>';
                 html += '<div class="actions">';
-                html += '<button id="openAppBtn" class="btn btn-primary">In Bookielist &ouml;ffnen</button>';
-                html += '<a href="' + playStoreLink + '" class="btn btn-secondary" target="_blank" rel="noopener">App installieren</a>';
+                html += '<a href="' + playStoreLink + '" class="btn btn-primary" target="_blank" rel="noopener">App installieren</a>';
                 html += '</div>';
-                html += '<div class="hint">Noch keine Bookielist-App? Klicke auf &quot;App installieren&quot;.</div>';
+                html += '<div class="hint">Schon Bookielist installiert? Der Link funktioniert dann direkt in WhatsApp.</div>';
                 html += '</div>';
 
                 content.innerHTML = html;
-
-                document.getElementById('openAppBtn').addEventListener('click', function() {
-                    var isAndroid = /Android/.test(navigator.userAgent);
-                    var isChrome = /Chrome/.test(navigator.userAgent) && !/Edge|Edg/.test(navigator.userAgent);
-                    var link = isAndroid && isChrome ? intentLink : appLink;
-
-                    var iframe = document.createElement('iframe');
-                    iframe.style.display = 'none';
-                    iframe.src = link;
-                    document.body.appendChild(iframe);
-
-                    setTimeout(function() {
-                        document.body.removeChild(iframe);
-                        window.location = playStoreLink;
-                    }, 1500);
-                });
             } catch (e) {
                 content.innerHTML = `
                     <div class="error-state">
