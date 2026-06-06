@@ -201,6 +201,68 @@
             transform: translateY(-1px);
         }
 
+        .book-checkbox {
+            width: 22px;
+            height: 22px;
+            border: 2px solid var(--bookie-border);
+            border-radius: 6px;
+            cursor: pointer;
+            accent-color: var(--bookie-accent);
+            flex-shrink: 0;
+        }
+
+        .book-card.checked {
+            opacity: 0.55;
+            background: var(--bookie-cream);
+        }
+
+        .book-card.checked .book-title {
+            text-decoration: line-through;
+            color: var(--bookie-muted);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: var(--bookie-border);
+            border-radius: 999px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--bookie-sage);
+            border-radius: 999px;
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--bookie-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .reset-button {
+            display: inline-block;
+            background: transparent;
+            color: var(--bookie-muted);
+            border: 1px solid var(--bookie-border);
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-top: 1rem;
+        }
+
+        .reset-button:hover {
+            color: var(--bookie-ink);
+            border-color: var(--bookie-accent-soft);
+        }
+
         .footer {
             margin-top: auto;
             background: rgba(255, 249, 240, 0.72);
@@ -430,6 +492,40 @@
             const content = document.getElementById('content');
             const subtitle = document.getElementById('subtitle');
 
+            function simpleHash(str) {
+                let h = 0;
+                for (let i = 0; i < str.length; i++) {
+                    h = ((h << 5) - h) + str.charCodeAt(i);
+                    h |= 0;
+                }
+                return 'h' + Math.abs(h).toString(36);
+            }
+
+            function getStorageKey() {
+                return 'bookielist_checked_' + simpleHash(data || '');
+            }
+
+            function loadChecked() {
+                try {
+                    const raw = localStorage.getItem(getStorageKey());
+                    return raw ? JSON.parse(raw) : [];
+                } catch (e) {
+                    return [];
+                }
+            }
+
+            function saveChecked(isbns) {
+                try {
+                    localStorage.setItem(getStorageKey(), JSON.stringify(isbns));
+                } catch (e) {}
+            }
+
+            function escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            }
+
             if (!data) {
                 content.innerHTML = `
                     <div class="empty-state">
@@ -442,7 +538,7 @@
 
             try {
                 const jsonString = base64UrlDecodeToUtf8(data);
-                const books = JSON.parse(jsonString);
+                let books = JSON.parse(jsonString);
 
                 if (!Array.isArray(books)) {
                     books = [books];
@@ -458,28 +554,126 @@
                     return;
                 }
 
+                const checkedIsbns = loadChecked();
+                let checkedCount = 0;
+
+                function updateProgress() {
+                    const pct = Math.round((checkedCount / books.length) * 100);
+                    const fill = document.querySelector('.progress-fill');
+                    const txt = document.querySelector('.progress-text');
+                    if (fill) fill.style.width = pct + '%';
+                    if (txt) txt.textContent = checkedCount + ' von ' + books.length + ' erledigt';
+                }
+
                 subtitle.textContent = books.length + ' Buch' + (books.length !== 1 ? 'er' : '') + ' auf der Wunschliste';
 
-                let html = '<div class="book-list">';
+                const wrapper = document.createElement('div');
+
+                const progressText = document.createElement('div');
+                progressText.className = 'progress-text';
+                wrapper.appendChild(progressText);
+
+                const progressBar = document.createElement('div');
+                progressBar.className = 'progress-bar';
+                const progressFill = document.createElement('div');
+                progressFill.className = 'progress-fill';
+                progressBar.appendChild(progressFill);
+                wrapper.appendChild(progressBar);
+
+                const list = document.createElement('div');
+                list.className = 'book-list';
+
                 books.forEach((book, index) => {
                     const isbn = book.isbn || '';
-                    const thaliaUrl = isbn
-                        ? 'https://www.thalia.de/suche?sq=' + encodeURIComponent(isbn)
-                        : '#';
-                    html += `
-                        <div class="book-card">
-                            <div class="book-number">${index + 1}</div>
-                            <div class="book-info">
-                                <div class="book-title">${escapeHtml(book.title || 'Unbekannt')}</div>
-                                <div class="book-author">${escapeHtml(book.author || '')}</div>
-                                ${isbn ? '<div class="book-isbn">ISBN: ' + escapeHtml(isbn) + '</div>' : ''}
-                            </div>
-                            ${isbn ? '<a href="' + thaliaUrl + '" class="buy-button" target="_blank" rel="noopener">Bei Thalia kaufen</a>' : ''}
-                        </div>
-                    `;
+                    const isChecked = isbn && checkedIsbns.includes(isbn);
+                    if (isChecked) checkedCount++;
+
+                    const card = document.createElement('div');
+                    card.className = 'book-card' + (isChecked ? ' checked' : '');
+                    if (isbn) card.dataset.isbn = isbn;
+
+                    const checkbox = document.createElement('input');
+                    checkbox.type = 'checkbox';
+                    checkbox.className = 'book-checkbox';
+                    checkbox.checked = isChecked;
+                    checkbox.title = 'Abhaken';
+                    checkbox.addEventListener('change', function() {
+                        const checked = loadChecked();
+                        if (this.checked) {
+                            if (isbn && !checked.includes(isbn)) checked.push(isbn);
+                            card.classList.add('checked');
+                            checkedCount++;
+                        } else {
+                            const idx = checked.indexOf(isbn);
+                            if (idx > -1) checked.splice(idx, 1);
+                            card.classList.remove('checked');
+                            checkedCount--;
+                        }
+                        saveChecked(checked);
+                        updateProgress();
+                    });
+
+                    const number = document.createElement('div');
+                    number.className = 'book-number';
+                    number.textContent = index + 1;
+
+                    const info = document.createElement('div');
+                    info.className = 'book-info';
+
+                    const title = document.createElement('div');
+                    title.className = 'book-title';
+                    title.textContent = book.title || 'Unbekannt';
+
+                    const author = document.createElement('div');
+                    author.className = 'book-author';
+                    author.textContent = book.author || '';
+
+                    info.appendChild(title);
+                    info.appendChild(author);
+                    if (isbn) {
+                        const isbnEl = document.createElement('div');
+                        isbnEl.className = 'book-isbn';
+                        isbnEl.textContent = 'ISBN: ' + isbn;
+                        info.appendChild(isbnEl);
+                    }
+
+                    card.appendChild(checkbox);
+                    card.appendChild(number);
+                    card.appendChild(info);
+
+                    if (isbn) {
+                        const link = document.createElement('a');
+                        link.href = 'https://www.thalia.de/suche?sq=' + encodeURIComponent(isbn);
+                        link.className = 'buy-button';
+                        link.target = '_blank';
+                        link.rel = 'noopener';
+                        link.textContent = 'Bei Thalia kaufen';
+                        card.appendChild(link);
+                    }
+
+                    list.appendChild(card);
                 });
-                html += '</div>';
-                content.innerHTML = html;
+
+                wrapper.appendChild(list);
+
+                const resetBtn = document.createElement('button');
+                resetBtn.className = 'reset-button';
+                resetBtn.textContent = 'Zurücksetzen';
+                resetBtn.addEventListener('click', function() {
+                    if (!confirm('Alle Haken zurücksetzen?')) return;
+                    saveChecked([]);
+                    checkedCount = 0;
+                    document.querySelectorAll('.book-card').forEach(card => {
+                        card.classList.remove('checked');
+                        const cb = card.querySelector('.book-checkbox');
+                        if (cb) cb.checked = false;
+                    });
+                    updateProgress();
+                });
+                wrapper.appendChild(resetBtn);
+
+                content.appendChild(wrapper);
+                updateProgress();
             } catch (e) {
                 content.innerHTML = `
                     <div class="error-state">
@@ -487,12 +681,6 @@
                         <p>Die Wunschliste konnte nicht geladen werden. Der Link ist möglicherweise beschädigt.</p>
                     </div>
                 `;
-            }
-
-            function escapeHtml(text) {
-                const div = document.createElement('div');
-                div.textContent = text;
-                return div.innerHTML;
             }
         })();
     </script>
