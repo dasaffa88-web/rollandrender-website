@@ -2,22 +2,24 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Weiterleitung...</title>
+    <title>Weiterleitung zu Thalia...</title>
     <script>
-        (function() {
+        document.addEventListener("DOMContentLoaded", function() {
             const params = new URLSearchParams(window.location.search);
             const isbn = params.get('isbn');
+
             if (isbn) {
-                const thaliaUrl = 'https://www.thalia.de/shop/home/suche/?sq=' + encodeURIComponent(isbn);
-                const awinUrl = 'https://www.awin1.com/awclick.php?mid=14158&id=2925911&p=' + encodeURIComponent(thaliaUrl);
+                const thaliaUrl = 'https://www.thalia.de/suche?sq=' + encodeURIComponent(isbn);
+                const awinUrl = 'https://www.awin1.com/cread.php?awinmid=14158&awinaffid=2925911&ued=' + encodeURIComponent(thaliaUrl);
                 window.location.replace(awinUrl);
             } else {
-                document.body.textContent = 'Fehlende ISBN.';
+                document.body.innerHTML = '<div style="font-family:sans-serif; text-align:center; margin-top:50px;"><h2>Fehlende ISBN</h2><p>Bitte uberprufe deinen Link.</p></div>';
             }
-        })();
+        });
     </script>
 </head>
-<body>
-    Weiterleitung wird vorbereitet...
+<body style="font-family: sans-serif; text-align: center; margin-top: 50px; color: #333;">
+    <h3>Weiterleitung zu Thalia wird vorbereitet...</h3>
+    <p>Bitte warten einen kleinen Moment.</p>
 </body>
 </html>
