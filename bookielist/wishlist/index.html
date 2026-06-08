@@ -488,7 +488,7 @@
                     isbn = books.isbn;
                 }
                 if (isbn) {
-                    window.location.replace('https://www.thalia.de/suche?sq=' + encodeURIComponent(isbn));
+                    window.location.replace('../forward.html?isbn=' + encodeURIComponent(isbn));
                 }
             } catch (e) {}
         }
@@ -689,11 +689,11 @@
 
                     if (isbn) {
                         const link = document.createElement('a');
-                        link.href = 'https://www.thalia.de/suche?sq=' + encodeURIComponent(isbn);
+                        link.href = '../forward.html?isbn=' + encodeURIComponent(isbn);
                         link.className = 'buy-button';
                         link.target = '_blank';
                         link.rel = 'noopener';
-                        link.textContent = 'Bei Thalia kaufen';
+                        link.textContent = 'Bei Thalia kaufen *';
                         card.appendChild(link);
                     }
 
@@ -727,6 +727,11 @@
                     updateProgress();
                 });
                 wrapper.appendChild(resetBtn);
+
+                const affiliateHint = document.createElement('p');
+                affiliateHint.style.cssText = 'text-align:center; font-size:0.85rem; color:var(--bookie-muted); margin-top:1.5rem;';
+                affiliateHint.innerHTML = '* Affiliate-Link — wir erhalten bei Kauf eine kleine Provision, für dich entstehen keine Mehrkosten.';
+                wrapper.appendChild(affiliateHint);
 
                 content.appendChild(wrapper);
                 updateProgress();
