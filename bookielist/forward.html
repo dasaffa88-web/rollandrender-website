@@ -8,7 +8,7 @@
             const params = new URLSearchParams(window.location.search);
             const isbn = params.get('isbn');
             if (isbn) {
-                const thaliaUrl = 'https://www.thalia.de/suche?searchString=' + encodeURIComponent(isbn);
+                const thaliaUrl = 'https://www.thalia.de/suche?sq=' + encodeURIComponent(isbn);
                 const awinUrl = 'https://www.awin1.com/awclick.php?mid=14158&id=2925911&p=' + encodeURIComponent(thaliaUrl);
                 window.location.replace(awinUrl);
             } else {
