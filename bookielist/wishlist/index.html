@@ -533,6 +533,9 @@
             const mode = params.get('mode');
             const content = document.getElementById('content');
             const subtitle = document.getElementById('subtitle');
+            
+            // DACH-Check: Thalia-Button nur in deutschsprachigen Regionen anzeigen
+            const isGerman = navigator.language.startsWith('de');
 
             function simpleHash(str) {
                 let h = 0;
@@ -687,7 +690,8 @@
                     card.appendChild(number);
                     card.appendChild(info);
 
-                    if (isbn) {
+                    // Thalia-Kaufbutton nur in DACH-Regionen anzeigen
+                    if (isbn && isGerman) {
                         const link = document.createElement('a');
                         link.href = '../forward.html?isbn=' + encodeURIComponent(isbn);
                         link.className = 'buy-button';
@@ -728,10 +732,13 @@
                 });
                 wrapper.appendChild(resetBtn);
 
-                const affiliateHint = document.createElement('p');
-                affiliateHint.style.cssText = 'text-align:center; font-size:0.85rem; color:var(--bookie-muted); margin-top:1.5rem;';
-                affiliateHint.innerHTML = '* Affiliate-Link — wir erhalten bei Kauf eine kleine Provision, für dich entstehen keine Mehrkosten.';
-                wrapper.appendChild(affiliateHint);
+                // Affiliate-Hinweis nur in DACH-Regionen anzeigen
+                if (isGerman) {
+                    const affiliateHint = document.createElement('p');
+                    affiliateHint.style.cssText = 'text-align:center; font-size:0.85rem; color:var(--bookie-muted); margin-top:1.5rem;';
+                    affiliateHint.innerHTML = '* Affiliate-Link — wir erhalten bei Kauf eine kleine Provision, für dich entstehen keine Mehrkosten.';
+                    wrapper.appendChild(affiliateHint);
+                }
 
                 content.appendChild(wrapper);
                 updateProgress();
