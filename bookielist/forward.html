@@ -8,8 +8,28 @@
             const params = new URLSearchParams(window.location.search);
             const isbn = params.get('isbn');
 
+            // Special-URL-Mapping für Stöber-Modus
+            const specialUrls = {
+                'shop': 'https://www.thalia.de/',
+                'bestseller': 'https://www.thalia.de/themenwelten/bestseller',
+                'neuheiten': 'https://www.thalia.de/themenwelten/neuheiten',
+                'vorbesteller': 'https://www.thalia.de/themenwelten/vorbesteller',
+                'tropes': 'https://www.thalia.de/themenwelten/book-tropes',
+                'reihen': 'https://www.thalia.de/kategorie/buecher-reihen-19491/',
+                'monatsbuch': 'https://www.thalia.de/buch/buchdesmonats'
+            };
+
             if (isbn) {
-                const thaliaUrl = 'https://www.thalia.de/suche?sq=' + encodeURIComponent(isbn);
+                let thaliaUrl;
+                
+                // Prüfe ob isbn ein Special-Key ist
+                if (specialUrls.hasOwnProperty(isbn)) {
+                    thaliaUrl = specialUrls[isbn];
+                } else {
+                    // Normale ISBN-Suche
+                    thaliaUrl = 'https://www.thalia.de/suche?sq=' + encodeURIComponent(isbn);
+                }
+                
                 const awinUrl = 'https://www.awin1.com/cread.php?awinmid=14158&awinaffid=2925911&ued=' + encodeURIComponent(thaliaUrl);
                 window.location.replace(awinUrl);
             } else {
