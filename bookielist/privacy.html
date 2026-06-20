@@ -152,9 +152,30 @@
                 <h3>How does sharing work?</h3>
                 <ul>
                     <li>The wishlist is embedded as Base64-encoded text in the URL (e.g. <code>rollandrender.studio/bookielist/wishlist?data=...</code>)</li>
-                    <li>No server-side storage of your wishlist takes place</li>
-                    <li>The data remains in the link itself; anyone who receives the link can view the book information it contains</li>
+                    <li>The link may optionally include an anonymous list ID for social sync (e.g. <code>&amp;listID=...</code>)</li>
+                    <li>The book data contained in the link (title, author, ISBN) remains in the link itself; anyone who receives the link can view this information</li>
                 </ul>
+                <h3>Wishlist Social Sync (optional)</h3>
+                <p>
+                    If you share a wishlist with social sync enabled, the purchase status of individual books
+                    is synchronized via an anonymous Cloudflare Worker. This allows multiple people who receive the link
+                    to mark which books have already been purchased.
+                </p>
+                <ul>
+                    <li>No server-side storage of book data (title, author, ISBN) takes place</li>
+                    <li>Only the anonymous list ID and the ISBNs of books marked as "purchased" are stored</li>
+                    <li>Removed books are marked as deleted for 14 days (tombstone) so the purchase status remains synchronized for recipients</li>
+                    <li>No user profiles, names, or device identifiers are collected</li>
+                    <li>Sync only happens when the link contains a list ID and a recipient actively checks a box</li>
+                </ul>
+                <p>
+                    Hosting: Cloudflare, Inc. (USA). Cloudflare is certified under the EU-US Data Privacy Framework.
+                    More information: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare Privacy Policy</a>
+                </p>
+                <p>
+                    <strong>Legal basis:</strong> Art. 6 para. 1 lit. f GDPR (legitimate interest in providing shared wishlist functionality).
+                    Storage is anonymous and limited to the duration of technical provision.
+                </p>
                 <h3>What data is in the link?</h3>
                 <ul>
                     <li>Book title</li>
@@ -255,7 +276,7 @@
                     This Privacy Policy may be updated with new app versions.
                     The current version is available at this URL.
                 </p>
-                <p>Last updated: June 2026 (wishlist sharing and Thalia redirect added).</p>
+                <p>Last updated: June 2026 (wishlist social sync added).</p>
             </section>
         </article>
     </main>

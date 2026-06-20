@@ -530,10 +530,12 @@
         (function() {
             const params = new URLSearchParams(window.location.search);
             const data = params.get('data');
-            const mode = params.get('mode');
+            const listID = params.get('listID') || params.get('listid') || '';
             const content = document.getElementById('content');
             const subtitle = document.getElementById('subtitle');
-            
+
+            const API_BASE = 'https://bookielist-api-worker.shy-recipe-e2b7.workers.dev';
+
             // DACH-Check: Thalia-Button nur in deutschsprachigen Regionen anzeigen
             const isGerman = navigator.language.startsWith('de');
 
@@ -547,10 +549,10 @@
             }
 
             function getStorageKey() {
-                return 'bookielist_checked_' + simpleHash(data || '');
+                return 'bookielist_checked_' + (listID || simpleHash(data || ''));
             }
 
-            function loadChecked() {
+            function loadCheckedLocal() {
                 try {
                     const raw = localStorage.getItem(getStorageKey());
                     return raw ? JSON.parse(raw) : [];
@@ -559,7 +561,7 @@
                 }
             }
 
-            function saveChecked(isbns) {
+            function saveCheckedLocal(isbns) {
                 try {
                     localStorage.setItem(getStorageKey(), JSON.stringify(isbns));
                 } catch (e) {}
@@ -570,6 +572,54 @@
                 div.textContent = text;
                 return div.innerHTML;
             }
+
+            function showStatus(message) {
+                let el = document.getElementById('sync-status');
+                if (!el) {
+                    el = document.createElement('div');
+                    el.id = 'sync-status';
+                    el.style.cssText = 'text-align:center; font-size:0.85rem; color:var(--bookie-muted); margin-bottom:1rem;';
+                    content.insertBefore(el, content.firstChild);
+                }
+                el.textContent = message;
+            }
+
+            async function fetchPurchased() {
+                if (!listID) return loadCheckedLocal();
+                try {
+                    const response = await fetch(API_BASE + '/api/sync?id=' + encodeURIComponent(listID));
+                    if (!response.ok) throw new Error('sync fetch failed');
+                    const body = await response.json();
+                    const isbns = Array.isArray(body.purchasedISBNs) ? body.purchasedISBNs : [];
+                    saveCheckedLocal(isbns);
+                    return isbns;
+                } catch (e) {
+                    return loadCheckedLocal();
+                }
+            }
+
+            async function syncToCloud(checked) {
+                if (!listID || !books) return;
+                const currentISBNs = books.map(b => b.isbn || '').filter(Boolean);
+                try {
+                    showStatus('Synchronisiere…');
+                    const response = await fetch(API_BASE + '/api/sync', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ id: listID, currentISBNs, purchasedISBNs: checked }),
+                    });
+                    if (!response.ok) throw new Error('sync post failed');
+                    showStatus('Synchronisiert');
+                    setTimeout(() => {
+                        const el = document.getElementById('sync-status');
+                        if (el) el.textContent = '';
+                    }, 2000);
+                } catch (e) {
+                    showStatus('Sync fehlgeschlagen – offline?');
+                }
+            }
+
+            let books = null;
 
             if (!data) {
                 content.innerHTML = `
@@ -583,7 +633,7 @@
 
             try {
                 const jsonString = base64UrlDecodeToUtf8(data);
-                let books = JSON.parse(jsonString);
+                books = JSON.parse(jsonString);
 
                 if (!Array.isArray(books)) {
                     books = [books];
@@ -599,149 +649,154 @@
                     return;
                 }
 
-                const checkedIsbns = loadChecked();
-                let checkedCount = 0;
+                fetchPurchased().then(checkedIsbns => render(checkedIsbns));
 
-                function updateProgress() {
-                    const pct = Math.round((checkedCount / books.length) * 100);
-                    const fill = document.querySelector('.progress-fill');
-                    const txt = document.querySelector('.progress-text');
-                    if (fill) fill.style.width = pct + '%';
-                    if (txt) txt.textContent = checkedCount + ' von ' + books.length + ' erledigt';
-                }
+                function render(checkedIsbns) {
+                    let checkedCount = 0;
 
-                subtitle.textContent = books.length + ' Buch' + (books.length !== 1 ? 'er' : '') + ' auf der Wunschliste';
+                    function updateProgress() {
+                        const pct = Math.round((checkedCount / books.length) * 100);
+                        const fill = document.querySelector('.progress-fill');
+                        const txt = document.querySelector('.progress-text');
+                        if (fill) fill.style.width = pct + '%';
+                        if (txt) txt.textContent = checkedCount + ' von ' + books.length + ' erledigt';
+                    }
 
-                const wrapper = document.createElement('div');
+                    subtitle.textContent = books.length + ' Buch' + (books.length !== 1 ? 'er' : '') + ' auf der Wunschliste';
 
-                const progressText = document.createElement('div');
-                progressText.className = 'progress-text';
-                wrapper.appendChild(progressText);
+                    const wrapper = document.createElement('div');
 
-                const progressBar = document.createElement('div');
-                progressBar.className = 'progress-bar';
-                const progressFill = document.createElement('div');
-                progressFill.className = 'progress-fill';
-                progressBar.appendChild(progressFill);
-                wrapper.appendChild(progressBar);
+                    const progressText = document.createElement('div');
+                    progressText.className = 'progress-text';
+                    wrapper.appendChild(progressText);
 
-                const list = document.createElement('div');
-                list.className = 'book-list';
+                    const progressBar = document.createElement('div');
+                    progressBar.className = 'progress-bar';
+                    const progressFill = document.createElement('div');
+                    progressFill.className = 'progress-fill';
+                    progressBar.appendChild(progressFill);
+                    wrapper.appendChild(progressBar);
 
-                books.forEach((book, index) => {
-                    const isbn = book.isbn || '';
-                    const isChecked = isbn && checkedIsbns.includes(isbn);
-                    if (isChecked) checkedCount++;
+                    const list = document.createElement('div');
+                    list.className = 'book-list';
 
-                    const card = document.createElement('div');
-                    card.className = 'book-card' + (isChecked ? ' checked' : '');
-                    if (isbn) card.dataset.isbn = isbn;
+                    books.forEach((book, index) => {
+                        const isbn = book.isbn || '';
+                        const isChecked = isbn && checkedIsbns.includes(isbn);
+                        if (isChecked) checkedCount++;
 
-                    const ribbon = document.createElement('div');
-                    ribbon.className = 'sold-ribbon';
-                    ribbon.textContent = 'GEKAUFT';
-                    card.appendChild(ribbon);
+                        const card = document.createElement('div');
+                        card.className = 'book-card' + (isChecked ? ' checked' : '');
+                        if (isbn) card.dataset.isbn = isbn;
 
-                    const checkbox = document.createElement('input');
-                    checkbox.type = 'checkbox';
-                    checkbox.className = 'book-checkbox';
-                    checkbox.checked = isChecked;
-                    checkbox.title = 'Abhaken';
-                    checkbox.addEventListener('change', function() {
-                        const checked = loadChecked();
-                        if (this.checked) {
-                            if (isbn && !checked.includes(isbn)) checked.push(isbn);
-                            card.classList.add('checked');
-                            checkedCount++;
-                        } else {
-                            const idx = checked.indexOf(isbn);
-                            if (idx > -1) checked.splice(idx, 1);
-                            card.classList.remove('checked');
-                            checkedCount--;
+                        const ribbon = document.createElement('div');
+                        ribbon.className = 'sold-ribbon';
+                        ribbon.textContent = 'GEKAUFT';
+                        card.appendChild(ribbon);
+
+                        const checkbox = document.createElement('input');
+                        checkbox.type = 'checkbox';
+                        checkbox.className = 'book-checkbox';
+                        checkbox.checked = isChecked;
+                        checkbox.title = 'Abhaken';
+                        checkbox.addEventListener('change', function() {
+                            const checked = loadCheckedLocal();
+                            if (this.checked) {
+                                if (isbn && !checked.includes(isbn)) checked.push(isbn);
+                                card.classList.add('checked');
+                                checkedCount++;
+                            } else {
+                                const idx = checked.indexOf(isbn);
+                                if (idx > -1) checked.splice(idx, 1);
+                                card.classList.remove('checked');
+                                checkedCount--;
+                            }
+                            saveCheckedLocal(checked);
+                            syncToCloud(checked);
+                            updateProgress();
+                        });
+
+                        const number = document.createElement('div');
+                        number.className = 'book-number';
+                        number.textContent = index + 1;
+
+                        const info = document.createElement('div');
+                        info.className = 'book-info';
+
+                        const title = document.createElement('div');
+                        title.className = 'book-title';
+                        title.textContent = book.title || 'Unbekannt';
+
+                        const author = document.createElement('div');
+                        author.className = 'book-author';
+                        author.textContent = book.author || '';
+
+                        info.appendChild(title);
+                        info.appendChild(author);
+                        if (isbn) {
+                            const isbnEl = document.createElement('div');
+                            isbnEl.className = 'book-isbn';
+                            isbnEl.textContent = 'ISBN: ' + isbn;
+                            info.appendChild(isbnEl);
                         }
-                        saveChecked(checked);
+
+                        card.appendChild(number);
+                        card.appendChild(info);
+
+                        // Thalia-Kaufbutton nur in DACH-Regionen anzeigen
+                        if (isbn && isGerman) {
+                            const link = document.createElement('a');
+                            link.href = '../forward.html?isbn=' + encodeURIComponent(isbn);
+                            link.className = 'buy-button';
+                            link.target = '_blank';
+                            link.rel = 'noopener';
+                            link.textContent = 'Bei Thalia kaufen *';
+                            card.appendChild(link);
+                        }
+
+                        const checkCol = document.createElement('div');
+                        checkCol.className = 'check-col';
+
+                        const label = document.createElement('span');
+                        label.className = 'check-label';
+                        label.textContent = 'Gekauft?';
+
+                        checkCol.appendChild(checkbox);
+                        checkCol.appendChild(label);
+                        card.appendChild(checkCol);
+                        list.appendChild(card);
+                    });
+
+                    wrapper.appendChild(list);
+
+                    const resetBtn = document.createElement('button');
+                    resetBtn.className = 'reset-button';
+                    resetBtn.textContent = 'Zurücksetzen';
+                    resetBtn.addEventListener('click', function() {
+                        if (!confirm('Alle Haken zurücksetzen?')) return;
+                        saveCheckedLocal([]);
+                        syncToCloud([]);
+                        checkedCount = 0;
+                        document.querySelectorAll('.book-card').forEach(card => {
+                            card.classList.remove('checked');
+                            const cb = card.querySelector('.book-checkbox');
+                            if (cb) cb.checked = false;
+                        });
                         updateProgress();
                     });
+                    wrapper.appendChild(resetBtn);
 
-                    const number = document.createElement('div');
-                    number.className = 'book-number';
-                    number.textContent = index + 1;
-
-                    const info = document.createElement('div');
-                    info.className = 'book-info';
-
-                    const title = document.createElement('div');
-                    title.className = 'book-title';
-                    title.textContent = book.title || 'Unbekannt';
-
-                    const author = document.createElement('div');
-                    author.className = 'book-author';
-                    author.textContent = book.author || '';
-
-                    info.appendChild(title);
-                    info.appendChild(author);
-                    if (isbn) {
-                        const isbnEl = document.createElement('div');
-                        isbnEl.className = 'book-isbn';
-                        isbnEl.textContent = 'ISBN: ' + isbn;
-                        info.appendChild(isbnEl);
+                    // Affiliate-Hinweis nur in DACH-Regionen anzeigen
+                    if (isGerman) {
+                        const affiliateHint = document.createElement('p');
+                        affiliateHint.style.cssText = 'text-align:center; font-size:0.85rem; color:var(--bookie-muted); margin-top:1.5rem;';
+                        affiliateHint.innerHTML = '* Affiliate-Link — wir erhalten bei Kauf eine kleine Provision, für dich entstehen keine Mehrkosten.';
+                        wrapper.appendChild(affiliateHint);
                     }
 
-                    card.appendChild(number);
-                    card.appendChild(info);
-
-                    // Thalia-Kaufbutton nur in DACH-Regionen anzeigen
-                    if (isbn && isGerman) {
-                        const link = document.createElement('a');
-                        link.href = '../forward.html?isbn=' + encodeURIComponent(isbn);
-                        link.className = 'buy-button';
-                        link.target = '_blank';
-                        link.rel = 'noopener';
-                        link.textContent = 'Bei Thalia kaufen *';
-                        card.appendChild(link);
-                    }
-
-                    const checkCol = document.createElement('div');
-                    checkCol.className = 'check-col';
-
-                    const label = document.createElement('span');
-                    label.className = 'check-label';
-                    label.textContent = 'Gekauft?';
-
-                    checkCol.appendChild(checkbox);
-                    checkCol.appendChild(label);
-                    card.appendChild(checkCol);
-                    list.appendChild(card);
-                });
-
-                wrapper.appendChild(list);
-
-                const resetBtn = document.createElement('button');
-                resetBtn.className = 'reset-button';
-                resetBtn.textContent = 'Zurücksetzen';
-                resetBtn.addEventListener('click', function() {
-                    if (!confirm('Alle Haken zurücksetzen?')) return;
-                    saveChecked([]);
-                    checkedCount = 0;
-                    document.querySelectorAll('.book-card').forEach(card => {
-                        card.classList.remove('checked');
-                        const cb = card.querySelector('.book-checkbox');
-                        if (cb) cb.checked = false;
-                    });
+                    content.appendChild(wrapper);
                     updateProgress();
-                });
-                wrapper.appendChild(resetBtn);
-
-                // Affiliate-Hinweis nur in DACH-Regionen anzeigen
-                if (isGerman) {
-                    const affiliateHint = document.createElement('p');
-                    affiliateHint.style.cssText = 'text-align:center; font-size:0.85rem; color:var(--bookie-muted); margin-top:1.5rem;';
-                    affiliateHint.innerHTML = '* Affiliate-Link — wir erhalten bei Kauf eine kleine Provision, für dich entstehen keine Mehrkosten.';
-                    wrapper.appendChild(affiliateHint);
                 }
-
-                content.appendChild(wrapper);
-                updateProgress();
             } catch (e) {
                 content.innerHTML = `
                     <div class="error-state">

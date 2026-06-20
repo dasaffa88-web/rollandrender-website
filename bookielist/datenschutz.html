@@ -162,9 +162,31 @@
                 </p>
                 <ul>
                     <li>Die Wunschliste wird als Base64-kodierter Text in der URL untergebracht (z. B. <code>rollandrender.studio/bookielist/wishlist?data=...</code>)</li>
-                    <li>Es findet keine serverseitige Speicherung deiner Wunschliste statt</li>
-                    <li>Die Daten verbleiben im Link selbst; wer den Link erhält, kann die enthaltenen Buchdaten einsehen</li>
+                    <li>Der Link enthält optional eine anonyme Listen-ID für den Social-Sync (z. B. <code>&amp;listID=...</code>)</li>
+                    <li>Die im Link enthaltenen Buchdaten (Titel, Autor, ISBN) verbleiben im Link selbst; wer den Link erhält, kann diese Daten einsehen</li>
                 </ul>
+                <h3>Wunschlisten-Social-Sync (optional)</h3>
+                <p>
+                    Wenn du eine Wunschliste mit Social-Sync teilst, wird der Kaufstatus einzelner Bücher
+                    über einen anonymen Cloudflare Worker synchronisiert. Damit können mehrere Personen,
+                    die den Link erhalten, abhaken, welche Bücher bereits gekauft wurden.
+                </p>
+                <ul>
+                    <li>Es wird keine serverseitige Speicherung der Buchdaten (Titel, Autor, ISBN) vorgenommen</li>
+                    <li>Es wird ausschließlich die anonyme Listen-ID sowie die ISBNs der als "gekauft" markierten Bücher gespeichert</li>
+                    <li>Entfernte Bücher werden für 14 Tage als gelöscht markiert (Tombstone), damit der Kaufstatus bei Empfängern synchronisiert bleibt</li>
+                    <li>Es werden keine Nutzerprofile, Namen oder Gerätekennungen erfasst</li>
+                    <li>Die Synchronisation erfolgt nur, wenn der Link eine Listen-ID enthält und wenn ein Empfänger aktiv einen Haken setzt</li>
+                </ul>
+                <p>
+                    Hosting: Cloudflare, Inc. (USA). Cloudflare ist unter dem EU-US Data Privacy Framework zertifiziert.
+                    Weitere Informationen: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare Privacy Policy</a>
+                </p>
+                <p>
+                    <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der
+                    Funktionalität der gemeinsamen Wunschliste). Die Speicherung erfolgt anonym und nur für die
+                    Dauer der technischen Bereitstellung.
+                </p>
                 <h3>Welche Daten sind im Wunschlisten-Link enthalten?</h3>
                 <ul>
                     <li>Buchtitel</li>
@@ -260,7 +282,7 @@
                     Bei neuen App-Versionen kann diese Datenschutzerklärung aktualisiert werden.
                     Die jeweils aktuelle Fassung ist unter dieser URL abrufbar.
                 </p>
-                <p>Letzte Änderung: Juni 2026 (Wunschlisten-Teilen und Thalia-Weiterleitung ergänzt).</p>
+                <p>Letzte Änderung: Juni 2026 (Wunschlisten-Social-Sync ergänzt).</p>
             </section>
         </article>
     </main>
