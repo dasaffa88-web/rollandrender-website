@@ -587,7 +587,7 @@
             async function fetchPurchased() {
                 if (!listID) return loadCheckedLocal();
                 try {
-                    const response = await fetch(API_BASE + '/api/sync?id=' + encodeURIComponent(listID));
+                    const response = await fetch(API_BASE + '/api/sync?id=' + encodeURIComponent(listID), { cache: 'no-store' });
                     if (!response.ok) throw new Error('sync fetch failed');
                     const body = await response.json();
                     const isbns = Array.isArray(body.purchasedISBNs) ? body.purchasedISBNs : [];
