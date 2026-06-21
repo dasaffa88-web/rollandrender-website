@@ -4,8 +4,8 @@
     <script defer src="https://cloud.umami.is/script.js" data-website-id="d04af094-6d74-403a-b236-dac26a28b1f7"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookielist - Your personal library manager</title>
-    <meta name="description" content="Bookielist manages your book collection: scan ISBNs, track series, manage reading status, and keep everything stored locally.">
+    <title>Bookielist - Your digital bookshelf and reading companion</title>
+    <meta name="description" content="Bookielist is your digital bookshelf and reading companion: scan ISBNs, manage your physical book collection, and read with focus using timer, ambient sounds, and reading light.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -29,11 +29,12 @@
                     <img src="../bookielist/Images/logo_bookielist.png" alt="Bookielist logo with books on a shelf and a glowing glass orb">
                 </figure>
                 <div class="bookie-hero-copy">
-                    <p class="bookie-claim">Your personal library manager: calm, clear, and free from distractions.</p>
+                    <p class="bookie-claim">Your digital bookshelf and reading companion – calm, clear, and free from distractions.</p>
                     <p class="bookie-subline">
-                        Keep track of your physical books and your reading list.
-                        Bookielist is a collection manager, not an e-reader, and your shelf is completely free to use.
-                        All features like bulk scan and ISBN text recognition are included for free.
+                        Keep track of your physical books and dive into every reading session with focus.
+                        Bookielist is a collection manager and reading companion, not an e-reader.
+                        Manage your shelf, share books with friends, keep a wishlist, and buy directly from Thalia.
+                        All features like bulk scan and ISBN text recognition are included completely free.
                         Currently available for Android only, not for iOS.
                         No forced account. No tracking. No subscription trap.
                     </p>
@@ -49,7 +50,10 @@
         <section class="bookie-section reveal" aria-labelledby="features-title">
             <div class="section-head">
                 <p class="section-kicker">Features</p>
-                <h2 id="features-title">What Bookielist helps you manage</h2>
+                <h2 id="features-title">Your digital bookshelf</h2>
+                <p class="section-intro">
+                    Everything you need to capture, organize, and rediscover your physical books.
+                </p>
             </div>
             <div class="feature-grid">
                 <article class="feature-card">
@@ -144,11 +148,80 @@
                 <h2 id="flow-title">How Bookielist feels in everyday use</h2>
             </div>
             <ol class="flow-list">
-                <li>Open the scanner or find a book manually through online search.</li>
-                <li>Add the book with its metadata, place it in your collection or wishlist, and set a custom cover photo if needed.</li>
-                <li>Track reading status, keep series in view, and tidy your shelf with filters and sorting.</li>
+                <li>Capture a book: open the scanner, use online search, or enter it manually.</li>
+                <li>Add the book with its metadata and place it in your collection or wishlist.</li>
+                <li>Start Reading Mode: focus, ambient sounds, and timer for a focused reading session.</li>
+                <li>Update your page and let your reading status adjust automatically – right to the last page.</li>
+                <li>Share books or jump directly from book detail and wishlist to Thalia.de.</li>
                 <li>Use the backup feature so your library stays with you when changing devices.</li>
             </ol>
+        </section>
+
+        <section class="bookie-section reveal" aria-labelledby="reading-mode-title">
+            <div class="section-head">
+                <p class="section-kicker">Special feature</p>
+                <h2 id="reading-mode-title">Bookielist Reading Mode – Dive deeper, read longer</h2>
+                <p class="section-intro">
+                    Pick a book from your shelf and start the reading session. Reading Mode turns your
+                    smartphone into a dedicated reading station – with everything you need to lose yourself
+                    in a book, and everything that distracts you kept outside.
+                </p>
+            </div>
+            <div class="reading-mode-grid">
+                <article class="reading-mode-card">
+                    <img src="Images/timerranking.png" alt="Timer with reading statistics in Reading Mode" loading="lazy">
+                    <div class="reading-mode-card__body">
+                        <h3>⏱️ Dynamic Timer & Wake-up Call</h3>
+                        <p>
+                            Start the timer as a classic stopwatch or set a time limit in countdown mode.
+                            When the time runs out, the timer seamlessly switches to stopwatch. You receive a
+                            high-priority wake-up call notification with vibration.
+                        </p>
+                    </div>
+                </article>
+                <article class="reading-mode-card">
+                    <img src="Images/lesefokus.png" alt="Reading focus in Reading Mode" loading="lazy">
+                    <div class="reading-mode-card__body">
+                        <h3>🔕 Reading Focus</h3>
+                        <p>
+                            A tap on the bell activates Android Do Not Disturb mode. Notifications from
+                            social media, messengers, and other apps are blocked while Bookielist's own
+                            notifications still come through.
+                        </p>
+                    </div>
+                </article>
+                <article class="reading-mode-card">
+                    <img src="Images/ambientsounds.png" alt="Ambient sounds in Reading Mode" loading="lazy">
+                    <div class="reading-mode-card__body">
+                        <h3>🎧 Ambient Sounds</h3>
+                        <p>
+                            Immerse yourself with ambient background sounds: rain, sea, fireplace, night,
+                            birds and thunder. Each sound can be adjusted individually in volume.
+                        </p>
+                    </div>
+                </article>
+                <article class="reading-mode-card">
+                    <img src="Images/leselicht.png" alt="Reading light settings in Reading Mode" loading="lazy">
+                    <div class="reading-mode-card__body">
+                        <h3>💡 Reading Light</h3>
+                        <p>
+                            Control screen brightness directly from the app and choose color filters like
+                            warm amber or cool white for cozy reading evenings.
+                        </p>
+                    </div>
+                </article>
+                <article class="reading-mode-card">
+                    <img src="Images/lesemodus.png" alt="Reading Mode main screen with book details and statistics" loading="lazy">
+                    <div class="reading-mode-card__body">
+                        <h3>📊 Reading Statistics & Book Integration</h3>
+                        <p>
+                            Bookielist tracks your reading speed, shows your ranking from Cozy to Divine,
+                            and estimates remaining time. Pick a book from your library, update your page,
+                            and your reading status adjusts automatically.
+                        </p>
+                    </div>
+                </article>
+            </div>
         </section>
 
         <section class="bookie-section reveal" aria-labelledby="gallery-title">

@@ -394,6 +394,56 @@ a {
   font-size: 0.93rem;
 }
 
+.reading-mode-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.reading-mode-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #e1cfb9;
+  background: linear-gradient(160deg, rgba(255, 250, 242, 0.95), rgba(245, 234, 217, 0.95));
+  box-shadow: 0 8px 18px rgba(57, 36, 16, 0.12);
+  transform: translateY(0);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.reading-mode-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 24px rgba(57, 36, 16, 0.22);
+}
+
+.reading-mode-card img {
+  width: 100%;
+  aspect-ratio: 9 / 19;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid rgba(126, 92, 65, 0.14);
+}
+
+.reading-mode-card h3 {
+  font-size: 1.2rem;
+  margin: 16px 16px 8px;
+}
+
+.reading-mode-card p {
+  margin: 0 16px 16px;
+  color: #594a42;
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+
+.reading-mode-card .reading-mode-card__body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
 .bookie-privacy-cta {
   margin-top: 26px;
   border-radius: 22px;
@@ -492,6 +542,7 @@ a {
 .bookie-shell .reveal:nth-of-type(4) { animation-delay: 0.32s; }
 .bookie-shell .reveal:nth-of-type(5) { animation-delay: 0.42s; }
 .bookie-shell .reveal:nth-of-type(6) { animation-delay: 0.52s; }
+.bookie-shell .reveal:nth-of-type(7) { animation-delay: 0.62s; }
 
 @keyframes liftIn {
   from {
