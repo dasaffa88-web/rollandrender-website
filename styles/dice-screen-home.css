@@ -143,6 +143,21 @@ body.dice-screen-home::after {
     0 0 9px rgba(203, 155, 76, 0.25);
 }
 
+.dice-hero-image {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  margin: 16px auto 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(203, 155, 76, 0.5);
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(203, 155, 76, 0.15);
+}
+
 .dice-hero-subline {
   position: relative;
   z-index: 1;
@@ -222,12 +237,13 @@ body.dice-screen-home::after {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  gap: 14px;
   margin-top: 1rem;
 }
 
 .dice-core-card {
+  display: block;
   border-radius: 12px;
   border: 1px solid rgba(203, 155, 76, 0.28);
   background:
@@ -235,7 +251,30 @@ body.dice-screen-home::after {
     rgba(30, 23, 18, 0.82);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
   padding: 1.6rem;
-  transition: transform 0.16s ease-out, border-color 0.16s ease-out;
+  text-decoration: none;
+  transition:
+    transform 0.16s ease-out,
+    border-color 0.16s ease-out,
+    box-shadow 0.16s ease-out;
+}
+
+.dice-core-icon {
+  display: inline-flex;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 12px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(203, 155, 76, 0.5);
+  background:
+    linear-gradient(160deg, rgba(255, 239, 206, 0.12), rgba(255, 239, 206, 0.03)),
+    rgba(31, 23, 17, 0.7);
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(203, 155, 76, 0.16);
+  font-size: 1.5rem;
+  line-height: 1;
 }
 
 .dice-core-card h3 {
@@ -251,9 +290,31 @@ body.dice-screen-home::after {
   font-size: 1rem;
 }
 
+.dice-core-more {
+  display: inline-block;
+  margin-top: 0.9rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.92rem;
+  letter-spacing: 0.03em;
+  color: #ddb46e;
+  transition: color 0.16s ease-out;
+}
+
 .dice-core-card:hover {
-  transform: translateY(-2px) scale(1.01);
-  border-color: rgba(203, 155, 76, 0.44);
+  transform: translateY(-3px) scale(1.01);
+  border-color: rgba(203, 155, 76, 0.5);
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.42),
+    0 0 22px rgba(203, 155, 76, 0.16);
+}
+
+.dice-core-card:hover .dice-core-more {
+  color: #f4d79a;
+}
+
+.dice-core-card:focus-visible {
+  outline: 2px solid rgba(245, 230, 194, 0.95);
+  outline-offset: 3px;
 }
 
 .dice-btn {
@@ -431,10 +492,6 @@ body.dice-screen-home::after {
 }
 
 @media (max-width: 1024px) {
-  .dice-core-grid {
-    grid-template-columns: 1fr;
-  }
-
   .dice-screen-home-footer-board {
     grid-template-columns: 1fr;
     text-align: center;
@@ -461,6 +518,25 @@ body.dice-screen-home::after {
 
   .dice-hero-title {
     font-size: clamp(1.42rem, 6.1vw, 2rem);
+  }
+
+  .dice-hero-image {
+    margin: 10px auto 14px;
+    border-radius: 10px;
+  }
+
+  .dice-core-card {
+    padding: 1.25rem;
+  }
+
+  .dice-core-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+  }
+
+  .dice-section h2 {
+    font-size: clamp(1.4rem, 6vw, 1.9rem);
   }
 }
 

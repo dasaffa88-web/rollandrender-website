@@ -9,18 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../styles/style.css?v=20260316-features-1">
-    <link rel="stylesheet" href="../../styles/features.css?v=20260318-features-v2">
-    <style>
-        body.features-page {
-            margin: 0;
-            color: #f5e6c2;
-            background:
-                radial-gradient(circle at 18% 20%, rgba(203, 155, 76, 0.16), transparent 38%),
-                radial-gradient(circle at 82% 9%, rgba(92, 136, 153, 0.2), transparent 42%),
-                linear-gradient(180deg, #141313 0%, #1f1914 48%, #130f0e 100%);
-            min-height: 100vh;
-        }
-    </style>
+    <link rel="stylesheet" href="../../styles/features.css?v=20260725-features-v10">
 </head>
 <body class="features-page">
 
@@ -31,102 +20,191 @@
 <main class="features-main" id="features">
     <header class="features-hero" aria-label="Feature Claim">
         <img src="../../assets/images/D&SLogoohnebackground.png" alt="Dice & Screen" class="features-kicker-logo">
-        <h1 class="features-title">Die drei Säulen deiner Kontrolle.</h1>
-        <p class="features-intro">Kurz, klar, taktisch. Ein taktisches Briefing für Spielleitung und Spielende.</p>
+        <img src="../../assets/images/vision_neu.png" alt="Gruppe spielt D&D mit Dice and Screen am Tisch" class="features-vision-img">
+        <h1 class="features-title">Alles für dein Abenteuer.</h1>
+        <p class="features-intro">3D-Schlachtfelder, Kampagnen-Planung, lebendige Städte — ein System, das mit deiner Geschichte wächst.</p>
         <div class="features-hero-actions">
-            <a href="#pillar-mind" class="dice-btn dice-btn-primary">Jetzt entdecken</a>
-            <a href="../index.html" class="dice-btn dice-btn-secondary">Hauptseite ansehen</a>
+            <a href="#combat" class="dice-btn dice-btn-primary">Kampf entdecken</a>
+            <a href="#adventure" class="dice-btn dice-btn-secondary">Abenteuer erkunden</a>
+            <a href="#basics" class="dice-btn dice-btn-secondary">Grundlagen</a>
         </div>
     </header>
 
-    <section class="features-section pillar-section" id="pillar-mind" aria-label="Säule Theatre of Mind">
-        <article class="pillar-card">
-            <img src="../../assets/images/dashboard_screenshot.png" alt="Theatre of Mind Übersicht in Dice and Screen" class="pillar-image">
-            <div class="pillar-copy">
-                <span class="pillar-icon" aria-hidden="true">✦</span>
-                <h2>Theatre of Mind</h2>
-                <p>Das Dashboard bündelt Initiative, Zustände und Kerninfos an einem Ort. So bleibt die Szene im Fluss, ohne dass der Tisch den Überblick verliert.</p>
-            </div>
-        </article>
-    </section>
-
-    <section class="features-section pillar-section" aria-label="Säule Grid und Taktik">
-        <article class="pillar-card pillar-card-reverse">
-            <img src="../../assets/images/movement_und_dangezones.png" alt="Grid und Taktik mit Movement und Danger Zones" class="pillar-image">
-            <div class="pillar-copy">
-                <span class="pillar-icon" aria-hidden="true">▣</span>
-                <h2>Grid &amp; Taktik</h2>
-                <p>Movement und Danger Zones machen Positionen sofort lesbar. Reichweiten, Wege und Risiken sind direkt sichtbar und schneller entschieden.</p>
-            </div>
-        </article>
-    </section>
-
-    <section class="features-section pillar-section" aria-label="Säule Modularität">
-        <article class="pillar-card">
-            <img src="../../assets/images/Creator_auswahl.png" alt="Modulare Creator-Auswahl in Dice and Screen" class="pillar-image">
-            <div class="pillar-copy">
-                <span class="pillar-icon" aria-hidden="true">⬢</span>
-                <h2>Modularität</h2>
-                <p>Die Creator-Auswahl zeigt den modularen Baukasten in der Praxis. Du aktivierst genau die Werkzeuge, die zu deinem Stil und deiner Kampagne passen.</p>
-            </div>
-        </article>
-    </section>
-
-    <section class="features-section matrix-section" aria-label="Nutzenmatrix">
-        <h2>Nutzenmatrix</h2>
-        <div class="matrix-grid">
-            <article class="matrix-card">
-                <h3>Theatre of Mind</h3>
-                <ul>
-                    <li>Dashboard mit den wichtigsten Rundeninfos</li>
-                    <li>Weniger Wechsel zwischen Notizen und Tools</li>
-                    <li>Schnelle Entscheidungen im Erzählfluss</li>
-                    <li>Mehr Fokus auf Szene statt Verwaltung</li>
-                </ul>
+    <!-- ==================== KAMPF ==================== -->
+    <section class="features-category" id="combat" aria-label="Kampf">
+        <header class="category-header">
+            <span class="category-icon" aria-hidden="true">⚔️</span>
+            <h2>Kampf</h2>
+            <p>Taktische Tiefe trifft auf visuelle Klarheit — vom 3D-Schlachtfeld bis zum Fog of War.</p>
+        </header>
+        <div class="category-grid">
+            <article class="feature-card flagship">
+                <img src="../../assets/images/neue_view_aufgedeckt.png" alt="Tabletop-Modus mit 5 Viewports für DM und Spieler" class="pillar-image">
+                <div class="feature-body">
+                    <span class="pillar-icon" aria-hidden="true">🎲</span>
+                    <h3>Tabletop-Modus</h3>
+                    <p>Fünf Perspektiven gleichzeitig: Der DM sieht alles von oben, vier Spieler-Views zeigen das Schlachtfeld aus ihrer Richtung. Perfekt für den großen Bildschirm am Tisch.</p>
+                </div>
             </article>
-            <article class="matrix-card">
-                <h3>Grid &amp; Taktik</h3>
-                <ul>
-                    <li>Movement-Felder klar markiert</li>
-                    <li>Danger Zones sofort erkennbar</li>
-                    <li>Positionen und Wege direkt lesbar</li>
-                    <li>Taktische Zugplanung mit weniger Diskussion</li>
-                </ul>
+
+            <article class="feature-card flagship">
+                <img src="../../assets/images/Lava_particles_volcanobiom.png" alt="3D Voxel-Battlefield mit Vulkan-Biom, Lava und Wetter-Partikeln" class="pillar-image">
+                <div class="feature-body">
+                    <span class="pillar-icon" aria-hidden="true">🌋</span>
+                    <h3>3D Battlefield</h3>
+                    <p>Voxel-basiertes 3D-Schlachtfeld mit Elevation, 13 Biomen und dynamischem Wetter. Lava glüht, Wasser fließt, Vulkanasche regnet vom Himmel — jeder Kampf hat seine eigene Atmosphäre.</p>
+                </div>
             </article>
-            <article class="matrix-card">
-                <h3>Modularität</h3>
-                <ul>
-                    <li>Creator-Module gezielt auswählbar</li>
-                    <li>Features pro Kampagne flexibel kombinierbar</li>
-                    <li>Neue Inhalte strukturiert ergänzbar</li>
-                    <li>Konsistente Bedienung über alle Bausteine</li>
-                </ul>
+
+            <article class="feature-card">
+                <img src="../../assets/images/neue_view_mit_fow.png" alt="Fog of War mit Sichtlinien und versteckten Bereichen" class="pillar-image">
+                <div class="feature-body">
+                    <span class="pillar-icon" aria-hidden="true">👁</span>
+                    <h3>Fog of War</h3>
+                    <p>Echte Sichtlinien mit Elevation-Blockierung. Unerforschte Bereiche bleiben schwarz, bereits gesehene Tiles sind abgedunkelt. Die Party teilt ihr Sichtfeld — Gegner erscheinen erst, wenn sie gesehen werden.</p>
+                </div>
+            </article>
+
+            <article class="feature-card">
+                <img src="../../assets/images/movement_und_dangezones.png" alt="Grid und Taktik mit Movement und Danger Zones" class="pillar-image">
+                <div class="feature-body">
+                    <span class="pillar-icon" aria-hidden="true">▣</span>
+                    <h3>Grid &amp; Taktik</h3>
+                    <p>Movement und Danger Zones machen Positionen sofort lesbar. Reichweiten, Wege und Risiken sind direkt sichtbar — taktische Entscheidungen ohne langes Diskutieren.</p>
+                </div>
             </article>
         </div>
     </section>
 
-    <section class="features-section showcase-section" aria-label="Showcase Moment">
-        <img src="../../assets/images/DNS_Vision.png" alt="Spielende Runde mit Dice and Screen" class="showcase-image">
-        <p class="showcase-claim">Am Tisch zählt der Moment, nicht die Verwaltung.</p>
+    <!-- ==================== ABENTEUER ==================== -->
+    <section class="features-category" id="adventure" aria-label="Abenteuer">
+        <header class="category-header">
+            <span class="category-icon" aria-hidden="true">🧭</span>
+            <h2>Abenteuer</h2>
+            <p>Von der Weltkarte bis zur Taverne — plane Kampagnen, erkunde Städte, erlebe Geschichten.</p>
+        </header>
+        <div class="category-grid">
+            <article class="feature-card">
+                <img src="../../assets/images/tavern.png" alt="Taverne mit CRPG-Style Dialog und Speisekarte" class="pillar-image">
+                <div class="feature-body">
+                    <span class="pillar-icon" aria-hidden="true">🍺</span>
+                    <h3>NPCs &amp; Gebäude</h3>
+                    <p>Interagiere mit NPCs in Tavernen, Tempeln, Shops und der Abenteurergilde. Höre Gerüchte, heile im Tempel, heuere Mitstreiter an — oder nimm Quests von Quest-Givern an.</p>
+                </div>
+            </article>
+
+            <article class="feature-card">
+                <img src="../../assets/images/story_flow_plan.png" alt="Storyline Flow Plan mit verbundenen Kapiteln und Encounters" class="pillar-image">
+                <div class="feature-body">
+                    <span class="pillar-icon" aria-hidden="true">📜</span>
+                    <h3>Kampagnen &amp; Storylines</h3>
+                    <p>Visueller Storyline-Graph mit Kapiteln, Encounters und Events. Plane deine Kampagne als Flow-Diagramm, verknüpfe Begegnungen und behalte den roten Faden im Blick.</p>
+                </div>
+            </article>
+
+            <article class="feature-card">
+                <img src="../../assets/images/townmap.png" alt="3D Townmap mit Gebäuden und Charakteren" class="pillar-image">
+                <div class="feature-body">
+                    <span class="pillar-icon" aria-hidden="true">🏘</span>
+                    <h3>3D Townmaps</h3>
+                    <p>Städte in 3D erkunden. Gebäude, Straßen und Plätze — deine Gruppe bewegt sich durch die Stadt wie auf einem Tabletop. Betritt Gebäude und interagiere mit NPCs.</p>
+                </div>
+            </article>
+
+            <article class="feature-card">
+                <img src="../../assets/images/weltkarte.png" alt="Adventure Manager mit Weltkarte und Gruppen-Verwaltung" class="pillar-image">
+                <div class="feature-body">
+                    <span class="pillar-icon" aria-hidden="true">🗺️</span>
+                    <h3>Weltkarte &amp; Gruppen</h3>
+                    <p>Verwalte mehrere Gruppen gleichzeitig auf der Weltkarte. Bewege sie über Kontinente, splitte die Party, führe sie wieder zusammen — alles im Adventure Manager.</p>
+                </div>
+            </article>
+
+            <article class="feature-card">
+                <img src="../../assets/images/kampagnenplaner_encountercreator.png" alt="Encounter-Editor mit Gegner-Referenzen und CR-Berechnung" class="pillar-image">
+                <div class="feature-body">
+                    <span class="pillar-icon" aria-hidden="true">⚔</span>
+                    <h3>Encounter-Editor</h3>
+                    <p>Definiere Begegnungen mit Gegnern, Map und Loot. Live-CR-Berechnung nach D&amp;D 5e zeigt sofort die Schwierigkeit. Positioniere Gegner visuell auf der Karte.</p>
+                </div>
+            </article>
+        </div>
     </section>
 
+    <!-- ==================== GRUNDLAGEN ==================== -->
+    <section class="features-category" id="basics" aria-label="Grundlagen">
+        <header class="category-header">
+            <span class="category-icon" aria-hidden="true">📖</span>
+            <h2>Grundlagen</h2>
+            <p>Das Fundament: Dashboard, Creator-Tools, Inventar und flexible Session-Modi.</p>
+        </header>
+        <div class="category-grid">
+            <article class="feature-card">
+                <img src="../../assets/images/dashboard_screenshot.png" alt="Dashboard mit Initiative, Zuständen und HP" class="pillar-image">
+                <div class="feature-body">
+                    <span class="pillar-icon" aria-hidden="true">✦</span>
+                    <h3>Dashboard</h3>
+                    <p>Initiative, Zustände, HP und Kerninfos an einem Ort. Das Dashboard hält den Überblick, damit du dich auf die Geschichte konzentrieren kannst.</p>
+                </div>
+            </article>
+
+            <article class="feature-card">
+                <img src="../../assets/images/Creator_auswahl.png" alt="Modulare Creator-Auswahl in Dice and Screen" class="pillar-image">
+                <div class="feature-body">
+                    <span class="pillar-icon" aria-hidden="true">⬢</span>
+                    <h3>Creator-Tools</h3>
+                    <p>Abilities, Items, Gegner, Feats — alles modular erstellbar. Aktiviere genau die Werkzeuge, die zu deinem Stil und deiner Kampagne passen.</p>
+                </div>
+            </article>
+
+            <article class="feature-card">
+                <img src="../../assets/images/gridinventar_mit_formen.png" alt="Grid-Inventar mit Ausrüstung und Container-System" class="pillar-image">
+                <div class="feature-body">
+                    <span class="pillar-icon" aria-hidden="true">🎒</span>
+                    <h3>Grid-Inventar</h3>
+                    <p>Drag-and-Drop Inventar mit visuellem Grid-Layout. Waffen, Rüstungen, Tränke — alles an seinem Platz. Container für extra Stauraum, Ausrüstungs-Slots für schnellen Zugriff.</p>
+                </div>
+            </article>
+
+            <article class="feature-card">
+                <img src="../../assets/images/globales_inventar_dm_management.png" alt="DM-Truhe für Quest-Items und Belohnungen" class="pillar-image">
+                <div class="feature-body">
+                    <span class="pillar-icon" aria-hidden="true">🧰</span>
+                    <h3>DM-Truhe</h3>
+                    <p>Dein Lager für Quest-Gegenstände und besondere Belohnungen. Bereite Items vor und schiebe sie Spielern direkt ins Inventar — ohne Umwege, ohne Suchen.</p>
+                </div>
+            </article>
+
+            <article class="feature-card">
+                <img src="../../assets/images/startauswahl_kampagne_weltkarte_freiesspiel.png" alt="Session-Start mit drei Modi: Kampagne, Weltkarte, Freies Spiel" class="pillar-image">
+                <div class="feature-body">
+                    <span class="pillar-icon" aria-hidden="true">▶️</span>
+                    <h3>Drei Session-Modi</h3>
+                    <p>Starte wie du willst: <strong>Kampagne</strong> lädt Storyline und Weltkarte, <strong>Weltkarte</strong> für freies Sandbox-Spiel, <strong>Freies Spiel</strong> für schnelle Combat-Sessions.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ==================== WAS NOCH KOMMT ==================== -->
     <section class="features-section upcoming-section" aria-label="Was noch kommt">
         <h2>Was noch kommt</h2>
-        <p>Dice &amp; Screen wird in klaren Schritten weiterentwickelt. Der Fokus bleibt auf einem stabilen, DM-first Werkzeug mit nachvollziehbarer Roadmap.</p>
+        <p>Dice &amp; Screen wird in klaren Schritten weiterentwickelt. Der Fokus bleibt auf einem stabilen, DM-first Werkzeug.</p>
         <ul class="upcoming-list">
-            <li><strong>Trigger- und Recharge-Bedienung im UI:</strong> Mehr direkte Kontrolle für Encounter-Entscheidungen während der Session.</li>
-            <li><strong>Stabilitäts-Hardening:</strong> Reproduzierbare Regression-Smoketests für Combat, Reactions, Saves und Persistent Zones.</li>
+            <li><strong>3D-Modelle für Charaktere:</strong> GLB-Modelle statt Placeholder-Figuren — dein Held sieht aus wie dein Held.</li>
+            <li><strong>Animationen im Kampf:</strong> Angriffe, Zauber und Bewegungen visuell dargestellt.</li>
             <li><strong>Beta-Content-Pack:</strong> Kuratierte Starterinhalte und klarere In-App-Regelhinweise für den Closed-Beta-Einstieg.</li>
-            <li><strong>Begleitapp für Smartphone und Tablet:</strong> Charakterbögen, Zauberbücher und Inventar-Management mobil nutzen - verbunden über einen in Dice &amp; Screen integrierten LAN-Server.</li>
+            <li><strong>Begleitapp für Smartphone und Tablet:</strong> Charakterbögen, Zauberbücher und Inventar-Management mobil nutzen.</li>
         </ul>
     </section>
 
+    <!-- ==================== CTA ==================== -->
     <section class="features-section features-cta-block" aria-label="Call to Action">
         <h2>Bereit für den nächsten Schritt?</h2>
         <div class="features-cta-actions">
             <a href="../index.html#vision" class="dice-btn dice-btn-primary">Jetzt entdecken</a>
-            <a href="../timeline/" class="dice-btn dice-btn-secondary">Timeline ansehen</a>
-            <a href="../index.html#vision" class="dice-btn dice-btn-tertiary">Mehr erfahren</a>
+            <a href="../../social.html" class="dice-btn dice-btn-secondary">Kontakt</a>
+            <a href="../index.html" class="dice-btn dice-btn-tertiary">Hauptseite</a>
         </div>
     </section>
 </main>
@@ -140,7 +218,6 @@
         <nav class="dice-footer-nav" aria-label="Footer Navigation">
             <a href="../index.html">Hauptseite</a>
             <a href="./">Features</a>
-            <a href="../timeline/">Timeline</a>
             <a href="../../social.html">Kontakt</a>
         </nav>
         <div class="dice-footer-meta">
@@ -150,6 +227,46 @@
         </div>
     </div>
 </footer>
+
+<!-- Lightbox Overlay -->
+<div class="lightbox-overlay" id="lightbox">
+    <button class="lightbox-close" aria-label="Schließen">&times;</button>
+    <img src="" alt="">
+</div>
+
+<script>
+(function() {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    const closeBtn = lightbox.querySelector('.lightbox-close');
+    
+    // Alle pillar-images klickbar machen
+    document.querySelectorAll('.pillar-image').forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    // Schließen bei Klick auf Overlay oder Close-Button
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox || e.target === closeBtn) {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Schließen mit ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+})();
+</script>
 
 </body>
 </html>

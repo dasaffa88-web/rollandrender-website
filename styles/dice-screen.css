@@ -335,25 +335,7 @@ body {
         margin-top: 24px;
     }
 }
-@media (max-width: 1200px) {
 
-    .lightbox-overlay {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 16px;
-        overflow: hidden;
-    }
-
-    .lightbox-overlay img {
-        width: auto;
-        height: auto;
-        max-width: 94vw;
-        max-height: calc(100dvh - 32px);
-        object-fit: contain;
-        margin: 0;
-    }
-}
 
 
 
@@ -404,31 +386,4 @@ body {
 .footer-board a:hover {
     color: #b4e95f;
     text-decoration: underline;
-}
-
-.lightbox-overlay {
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100svh;
-    padding: 20px;
-    box-sizing: border-box;
-    background: rgba(0,0,0,0.85);
-    display: grid;
-    place-items: center;
-    z-index: 9999;
-    cursor: zoom-out;
-}
-
-.lightbox-overlay img {
-    width: auto;
-    height: auto;
-    max-width: min(calc(100vw - 32px), 1400px);
-    max-height: calc(100svh - 32px);
-    display: block;
-    margin: auto;
-    object-fit: contain;
-    object-position: center;
-    border-radius: 8px;
-    box-shadow: 0 0 25px rgba(0,0,0,0.6);
 }
