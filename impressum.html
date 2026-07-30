@@ -3,54 +3,74 @@
 <head>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="d04af094-6d74-403a-b236-dac26a28b1f7"></script>
     <meta charset="UTF-8">
-    <title>Impressum – Roll & Render Studio</title>
-    <link rel="stylesheet" href="/styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum — Roll & Render Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <a href="index.html" class="mini-oval">
-    <img src="../assets/images/logo.png" alt="Home" class="mini-oval-icon">
-</a>
 
-<div class="legal-container">
-    <h1>Impressum</h1>
+    <!-- STICKY NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-logo" aria-label="Roll & Render Studio Startseite">
+            <img src="assets/images/rollandrender_logo_neu.png" alt="Roll & Render Studio">
+        </a>
+        <button class="navbar-burger" aria-label="Menü öffnen" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="navbar-links">
+            <li><a href="projects.html">Projekte</a></li>
+            <li><a href="ueber-mich.html">Über mich</a></li>
+            <li><a href="social.html">Connect</a></li>
+        </ul>
+    </nav>
 
-    <h2>Angaben gemäß § 5 TMG</h2>
-    <p>
-        Roll & Render Studio<br>
-        Rafael Meier<br>
-        Am Anschlag 10<br>
-        58553 Halver<br>
-        Deutschland
-    </p>
+    <main class="content-page">
+        <div class="content-container">
+            <h1>Impressum</h1>
 
-    <h2>Kontakt</h2>
-    <p>E-Mail: contact@rollandrender.studio</p>
+            <h2>Angaben gemäß § 5 TMG</h2>
+            <p>
+                Roll & Render Studio<br>
+                Rafael Meier<br>
+                Am Anschlag 10<br>
+                58553 Halver<br>
+                Deutschland
+            </p>
 
+            <h2>Kontakt</h2>
+            <p>E-Mail: <a href="mailto:contact@rollandrender.studio">contact@rollandrender.studio</a></p>
 
+            <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+            <p>
+                Rafael Meier<br>
+                Am Anschlag 10<br>
+                58553 Halver<br>
+                Deutschland
+            </p>
 
-    <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
-    <p>
-        Rafael Meier<br>
-        Am Anschlag 10<br>
-        58553 Halver<br>
-        Deutschland
-    </p>
-    
-    <h2>Umsatzsteuer-ID</h2>
-    <p>Nicht vorhanden / entfällt (Kleinunternehmer gemäß § 19 UStG)</p>
+            <h2>Umsatzsteuer-ID</h2>
+            <p>Nicht vorhanden / entfällt (Kleinunternehmer gemäß § 19 UStG)</p>
 
-    <h2>Haftungsausschluss</h2>
-    <p>
-        Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links.
-        Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
-    </p>
-</div>
-<footer>
-    © 2026 Roll & Render Studio —
-    <a href="/impressum.html">Impressum</a> • 
-    <a href="/datenschutz.html">Datenschutz</a>
-</footer>
+            <h2>Haftungsausschluss</h2>
+            <p>
+                Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links.
+                Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+            </p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Roll & Render Studio —
+            <a href="impressum.html">Impressum</a> •
+            <a href="datenschutz.html">Datenschutz</a>
+        </p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
 </body>
-
 </html>
-

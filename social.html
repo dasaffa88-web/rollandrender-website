@@ -1,58 +1,73 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <script defer src="https://cloud.umami.is/script.js" data-website-id="d04af094-6d74-403a-b236-dac26a28b1f7"></script>
-  <meta charset="UTF-8">
-  <title>Roll & Render Studio</title>
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- Dein Theme -->
-  <link rel="stylesheet" href="styles/style.css">
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="d04af094-6d74-403a-b236-dac26a28b1f7"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect — Roll & Render Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-
 <body>
-  <a href="index.html" class="mini-oval">
-    <img src="../assets/images/logo.png" alt="Home" class="mini-oval-icon">
-</a>
 
-  <section class="social-section">
-    <div class="social-panel">
-      <h2>Social Links</h2>
+    <!-- STICKY NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-logo" aria-label="Roll & Render Studio Startseite">
+            <img src="assets/images/rollandrender_logo_neu.png" alt="Roll & Render Studio">
+        </a>
+        <button class="navbar-burger" aria-label="Menü öffnen" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="navbar-links">
+            <li><a href="projects.html">Projekte</a></li>
+            <li><a href="ueber-mich.html">Über mich</a></li>
+            <li><a href="social.html">Connect</a></li>
+        </ul>
+    </nav>
 
-      <div class="social-links">
-        <a href="https://www.instagram.com/rollandrender.studio/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@rollandrender.studio" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="https://www.youtube.com/@RollAndRender.Studio" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-        <a href="https://x.com/RollandrenderS" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="https://www.linkedin.com/in/rafael-meier-a1b01b3b2/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-      </div>
+    <main class="content-page">
 
-      <p class="social-note">Folge dem Studio für Updates, Tools & Projekte.</p>
-    </div>
-  </section>
-  <section class="contact-section">
-  <div class="contact-panel">
-    <h2>Kontakt</h2>
+        <section class="social-section">
+            <div class="social-panel">
+                <h2>Connect</h2>
+                <p class="social-note">Folge dem Studio für Updates, Tools & Projekte.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/rollandrender.studio/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@rollandrender.studio" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@RollAndRender.Studio" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://x.com/RollandrenderS" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/rafael-meier-a1b01b3b2/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </section>
 
-    <p class="contact-text">
-      Du möchtest mit dem Studio in Kontakt treten?
-      Schreib einfach eine E‑Mail an:
-    </p>
+        <section class="contact-section">
+            <div class="contact-panel">
+                <h2>Kontakt</h2>
+                <p class="contact-text">
+                    Du möchtest mit dem Studio in Kontakt treten?
+                    Schreib einfach eine E-Mail an:
+                </p>
+                <a class="contact-mail" href="mailto:contact@rollandrender.studio">
+                    contact@rollandrender.studio
+                </a>
+            </div>
+        </section>
 
-    <a class="contact-mail" href="mailto:contact@rollandrender.studio">
-      contact@rollandrender.studio
-    </a>
-  </div>
-</section>
+    </main>
 
+    <footer class="footer">
+        <p>© 2026 Roll & Render Studio —
+            <a href="impressum.html">Impressum</a> •
+            <a href="datenschutz.html">Datenschutz</a>
+        </p>
+    </footer>
 
-  <footer>
-      © 2026 Roll & Render Studio —
-      <a href="/impressum.html">Impressum</a> • 
-      <a href="/datenschutz.html">Datenschutz</a>
-  </footer>
-
+    <script src="scripts/main.js"></script>
 </body>
 </html>

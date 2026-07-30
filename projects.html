@@ -4,25 +4,39 @@
     <script defer src="https://cloud.umami.is/script.js" data-website-id="d04af094-6d74-403a-b236-dac26a28b1f7"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projekte – Roll & Render Studio</title>
+    <title>Projekte — Roll & Render Studio</title>
     <meta name="description" content="Projektübersicht von Roll & Render Studio mit Dice & Screen, Bookielist und Platz für weitere Projekte.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/projects.css">
 </head>
 <body class="projects-page">
-    <a href="index.html" class="mini-oval" aria-label="Zur Startseite">
-        <img src="../assets/images/logo.png" alt="Home" class="mini-oval-icon">
-    </a>
+
+    <!-- STICKY NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-logo" aria-label="Roll & Render Studio Startseite">
+            <img src="assets/images/rollandrender_logo_neu.png" alt="Roll & Render Studio">
+        </a>
+        <button class="navbar-burger" aria-label="Menü öffnen" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="navbar-links">
+            <li><a href="projects.html">Projekte</a></li>
+            <li><a href="ueber-mich.html">Über mich</a></li>
+            <li><a href="social.html">Connect</a></li>
+        </ul>
+    </nav>
 
     <main class="projects-main">
         <header class="projects-hero">
             <p class="projects-kicker">Studio Projects</p>
             <h1>Projekte</h1>
             <p class="projects-lead">
-                Hier liegen die aktuellen Welten von Roll &amp; Render Studio: spielerische Systeme,
+                Hier liegen die aktuellen Welten von Roll &amp; Render Studio: hybride Systeme,
                 ruhige Tools und Platz für alles, was als Nächstes entsteht.
             </p>
         </header>
@@ -89,9 +103,11 @@
 
     <footer class="footer projects-footer">
         <p>© 2026 Roll &amp; Render Studio —
-            <a href="/impressum.html">Impressum</a> •
-            <a href="/datenschutz.html">Datenschutz</a>
+            <a href="impressum.html">Impressum</a> •
+            <a href="datenschutz.html">Datenschutz</a>
         </p>
     </footer>
+
+    <script src="scripts/main.js"></script>
 </body>
 </html>

@@ -1,410 +1,737 @@
-/* BACKGROUND */
+/* ============================================================
+   ROLL & RENDER STUDIO — Dark Mode Design System
+   ============================================================ */
+
+:root {
+  /* Base */
+  --rr-bg: #0d1117;
+  --rr-bg-elevated: #161b22;
+  --rr-bg-card: #1a2029;
+
+  /* Text */
+  --rr-text: #f4f1ea;
+  --rr-text-muted: #a8b0bd;
+  --rr-text-dim: #6b7280;
+
+  /* Accents */
+  --rr-steel: #a2d2df;
+  --rr-steel-bright: #c5e3ed;
+  --rr-gold: #d4af37;
+
+  /* Borders */
+  --rr-border: rgba(255, 255, 255, 0.08);
+  --rr-border-strong: rgba(255, 255, 255, 0.16);
+  --rr-border-steel: rgba(162, 210, 223, 0.32);
+
+  /* Shadows */
+  --rr-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --rr-shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.5);
+
+  /* Spacing */
+  --rr-space-xs: 0.5rem;
+  --rr-space-s: 1rem;
+  --rr-space-m: 2rem;
+  --rr-space-l: 4rem;
+  --rr-space-xl: 6rem;
+
+  /* Navbar */
+  --rr-navbar-height: 72px;
+
+  /* Fonts */
+  --rr-font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --rr-font-display: 'Inter', system-ui, sans-serif;
+
+  /* Radius */
+  --rr-radius: 12px;
+  --rr-radius-lg: 20px;
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-image: url(../assets/honeycomb.svg);
-  background-size: 277.128px 160px;
-  background-repeat: repeat;
-  background-color: rgb(212, 212, 212);
+  background-color: var(--rr-bg);
+  color: var(--rr-text);
+  font-family: var(--rr-font-body);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* LOGO IM OVAL */
-.logo {
-  width: 500px;
-  z-index: 10;
+a {
+  color: var(--rr-steel);
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-/* GROSSES OVAL */
-.logo-wrapper {
-  position: absolute;
-  top: 53px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 650px;
-  height: 400px;
-  background: rgb(100, 100, 100);
-  border-radius: 50%;
-  z-index: 5;
+a:hover {
+  color: var(--rr-steel-bright);
+}
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================================================
+   STICKY NAVBAR
+   ============================================================ */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--rr-navbar-height);
+  background: rgba(13, 17, 23, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--rr-border);
+  z-index: 1000;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--rr-space-m);
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  height: calc(var(--rr-navbar-height) - 16px);
+  text-decoration: none;
+}
+
+.navbar-logo img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: var(--rr-space-m);
+  list-style: none;
+}
+
+.navbar-links a {
+  color: var(--rr-text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 0.5rem 0.25rem;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.navbar-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--rr-steel);
+  transition: width 0.25s ease;
+}
+
+.navbar-links a:hover,
+.navbar-links a.is-active {
+  color: var(--rr-text);
+}
+
+.navbar-links a:hover::after,
+.navbar-links a.is-active::after {
+  width: 100%;
+}
+
+/* Burger Menu (Mobile) */
+.navbar-burger {
+  display: none;
+  flex-direction: column;
   justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
 
-/* HERO TEXT */
+.navbar-burger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--rr-text);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.navbar-burger.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.navbar-burger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.navbar-burger.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+
+main {
+  padding-top: var(--rr-navbar-height);
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 var(--rr-space-m);
+}
+
+/* ============================================================
+   HERO (Startseite)
+   ============================================================ */
+
 .hero {
-    margin-top: 480px; /* Abstand unter dem Oval */
-    text-align: center;
-    line-height: 1.45;
-    color: #1F1F1F; /* CI Text Dark */
-    font-family: 'Inter', sans-serif;
+  text-align: center;
+  padding: var(--rr-space-l) var(--rr-space-m) var(--rr-space-m);
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.hero-line {
-    font-size: 1.35rem;
-    opacity: 0.9;
-    margin: 6px 0;
-    font-weight: 300; /* Inter Light */
-    letter-spacing: -0.2px;
+.hero-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--rr-space-l);
+}
+
+.hero-logo img {
+  max-width: 360px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.5));
+}
+
+.hero-tagline {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: var(--rr-text-muted);
+  font-weight: 300;
+  letter-spacing: -0.2px;
+  line-height: 1.5;
+  margin-bottom: var(--rr-space-s);
 }
 
 .hero-core {
-    font-size: 2.8rem;
-    margin-top: 26px;
-    font-weight: 600; /* Inter SemiBold */
-    letter-spacing: -0.6px;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 600;
+  letter-spacing: -0.6px;
+  color: var(--rr-text);
+  line-height: 1.15;
+  margin-bottom: var(--rr-space-s);
 }
 
-.tagline {
-  font-size: 1.3rem;
-  opacity: 0.8;
-  margin-top: 10px;
+.hero-core .accent {
+  color: var(--rr-steel);
 }
 
-/* FEATURE CARDS */
-.features {
+.hero-intro {
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: var(--rr-text-muted);
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* ============================================================
+   PORTAL SÄULEN (Startseite Showcase)
+   Säule = äußere Karte, Projekt = innere Karte
+   ============================================================ */
+
+.portals {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr));
+  gap: var(--rr-space-m);
+  padding: var(--rr-space-m) var(--rr-space-m) var(--rr-space-l);
+  max-width: 1120px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+/* Äußere Karte — die Säule */
+.portal-column {
   display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding: 30px 20px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: var(--rr-space-s);
+  background: var(--rr-bg-elevated);
+  border: 1px solid var(--rr-border-steel);
+  border-radius: var(--rr-radius-lg);
+  padding: var(--rr-space-m);
+  box-shadow: var(--rr-shadow), 0 0 0 1px rgba(162, 210, 223, 0.06);
 }
 
-.feature-card {
-  width: 260px;
-  background: #B5C5DB;
-  padding: 25px;
-  border-radius: 15px;
-  backdrop-filter: blur(4px);
-  border: 2px solid rgba(0,0,0,0.1);
+.portal-column-head {
   text-align: center;
-  color: #1F1F1F;
-  font-family: 'Inter', sans-serif;
+  padding-bottom: var(--rr-space-s);
+  border-bottom: 1px solid var(--rr-border);
 }
 
-.feature-card h3 {
-  margin-bottom: 10px;
+.portal-column-title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--rr-text);
+  margin-bottom: 0.5rem;
 }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 40px;
-  opacity: 0.6;
-  font-size: 0.9rem;
-}
-
-/* LEGAL PAGES */
-.legal-container {
-    max-width: 800px;
-    margin: 120px auto;
-    padding: 40px;
-    background: #646464;
-    color: #CEDAE0;
-    font-family: 'Inter', sans-serif;
-    border-radius: 16px;
-    line-height: 1.6;
-}
-
-.legal-container h1 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 30px;
-    font-weight: 600;
-}
-
-.legal-container h2 {
-    margin-top: 30px;
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-
-.legal-container p {
-    margin-bottom: 12px;
-}
-
-.legal-container a {
-    color: #b5c5db; /* sanftes Blau passend zu deinen Cards */
-    text-decoration: underline;
-    font-weight: 500;
-}
-
-.legal-container a:hover {
-    color: #E2EAF3; /* helleres Blau beim Hover */
-    text-decoration: none;
-}
-
-/* --------------------------------------------- */
-/* NAVIGATION OVALE (4 Stück, wie im Mockup)     */
-/* --------------------------------------------- */
-
-.nav-oval {
-  position: absolute;
-  background: rgb(100, 100, 100);
-  color: #CEDAE0;
-  font-family: 'Inter', sans-serif;
-
-  width: 240px;     /* Breiter */
-  height: 120px;    /* Höher → ovaler */
+.portal-column-claim {
+  font-size: 1rem;
+  color: var(--rr-text-muted);
+  line-height: 1.5;
+  min-height: 3em;
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
-  border-radius: 50%; /* WICHTIG: echtes Oval */
+/* Innere Karte — das Projekt */
+.portal-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border-radius: var(--rr-radius);
+  padding: var(--rr-space-m);
   text-decoration: none;
-  font-size: 1.25rem;
-
-  border: 2px solid rgba(0,0,0,0.15);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  transition: 0.25s ease;
-  z-index: 6;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-.nav-oval:hover {
-  background: rgb(120, 120, 120);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+.portal-card:hover {
+  transform: translateY(-4px);
 }
 
-
-/* Positionierung oben links & rechts */
-.nav-oval-top {
-  top: 150px; /* Abstand vom Logo */
+.portal-card-logo {
+  width: 72px;
+  height: auto;
+  margin-bottom: var(--rr-space-s);
 }
 
-/* Positionierung links & rechts neben dem Hero */
-.nav-oval-mid {
-  top: 370px; /* exakt neben dem Hero-Text */
+.portal-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
-/* Links & rechts */
-.nav-oval-left {
-  left: 8%;
+.portal-card p {
+  font-size: 0.98rem;
+  line-height: 1.55;
+  flex: 1;
 }
 
-.nav-oval-right {
-  right: 8%;
-}
-/* Untere Ovale enger zusammen */
-.nav-oval-mid.nav-oval-left {
-  left: 18%;   /* vorher 12% → weiter zur Mitte */
-}
-
-.nav-oval-mid.nav-oval-right {
-  right: 18%;  /* vorher 12% → weiter zur Mitte */
+.portal-card-cta {
+  margin-top: var(--rr-space-s);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.nav-icon {
-  width: 60%;      /* skaliert proportional */
-  height: auto;    /* verhindert Verzerrung */
-  object-fit: contain;
-  opacity: 0.95;   /* leicht futuristisch */
-}
-.placeholder {
-  text-align: center;
-  padding: 80px 20px;
-  color: #CEDAE0;
+/* Portal Card — Dice & Screen (Dark/Bronze/Gold) */
+.portal-card-dns {
+  background:
+    radial-gradient(circle at 20% 10%, rgba(203, 155, 76, 0.18), transparent 50%),
+    radial-gradient(circle at 80% 90%, rgba(92, 136, 153, 0.14), transparent 45%),
+    linear-gradient(160deg, #1f1914 0%, #141313 100%);
+  border: 1px solid rgba(203, 155, 76, 0.32);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  color: #f5e6c2;
   font-family: 'Inter', sans-serif;
 }
 
-.placeholder h2 {
-  font-size: 2rem;
-  margin-bottom: 12px;
+.portal-card-dns h3 {
+  font-family: 'Cinzel', serif;
+  color: #f6e5bf;
 }
 
-.placeholder p {
-  font-size: 1.2rem;
-  margin-bottom: 6px;
+.portal-card-dns .portal-card-cta {
+  color: #ddb46e;
 }
 
-.placeholder .subtle {
+.portal-card-dns:hover {
+  border-color: rgba(203, 155, 76, 0.55);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55), 0 0 24px rgba(203, 155, 76, 0.18);
+}
+
+/* Portal Card — Bookielist (Cream/Terracotta/Cozy, leicht abgedunkelt) */
+.portal-card-bookie {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgba(232, 222, 205, 0.96) 0%, rgba(214, 202, 182, 0.92) 100%);
+  border: 1px solid #c4b094;
+  box-shadow: 0 12px 32px rgba(60, 39, 19, 0.22);
+  color: #2f2622;
+  font-family: 'Nunito Sans', 'Inter', sans-serif;
+}
+
+/* Terrakotta-Kreis unten rechts — wie im Bookielist-Hero */
+.portal-card-bookie::after {
+  content: "";
+  position: absolute;
+  right: -70px;
+  bottom: -60px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(183, 103, 69, 0.32), rgba(183, 103, 69, 0.06));
+  pointer-events: none;
+  z-index: 0;
+}
+
+.portal-card-bookie > * {
+  position: relative;
+  z-index: 1;
+}
+
+.portal-card-bookie h3 {
+  font-family: 'Fraunces', 'Times New Roman', serif;
+  color: #2f2622;
+}
+
+.portal-card-bookie .portal-card-cta {
+  color: #b76745;
+}
+
+.portal-card-bookie:hover {
+  border-color: #b76745;
+  box-shadow: 0 18px 40px rgba(60, 39, 19, 0.28);
+}
+
+/* ============================================================
+   CTA SECTION
+   ============================================================ */
+
+.cta-section {
+  text-align: center;
+  padding: var(--rr-space-l) var(--rr-space-m) var(--rr-space-xl);
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: transparent;
+  border: 1px solid var(--rr-border-steel);
+  border-radius: var(--rr-radius);
+  color: var(--rr-steel);
   font-size: 1rem;
-  color: #888;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all 0.25s ease;
 }
-/* SOCIAL SECTION */
+
+.cta-button:hover {
+  background: rgba(162, 210, 223, 0.1);
+  border-color: var(--rr-steel);
+  color: var(--rr-steel-bright);
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   LEGAL / CONTENT PAGES (Über mich, Social, Legal)
+   ============================================================ */
+
+.content-page {
+  padding: calc(var(--rr-navbar-height) + var(--rr-space-l)) var(--rr-space-m) var(--rr-space-xl);
+}
+
+.content-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--rr-bg-elevated);
+  border: 1px solid var(--rr-border);
+  border-radius: var(--rr-radius-lg);
+  padding: var(--rr-space-l);
+  box-shadow: var(--rr-shadow);
+}
+
+.content-container h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--rr-space-m);
+  color: var(--rr-text);
+}
+
+.content-container h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-top: var(--rr-space-m);
+  margin-bottom: var(--rr-space-s);
+  color: var(--rr-text);
+}
+
+.content-container p {
+  margin-bottom: var(--rr-space-s);
+  color: var(--rr-text-muted);
+  line-height: 1.7;
+}
+
+.content-container p strong {
+  color: var(--rr-text);
+}
+
+.content-container p em {
+  color: var(--rr-steel);
+  font-style: italic;
+}
+
+.content-container ul {
+  margin: var(--rr-space-s) 0;
+  padding-left: 1.5rem;
+}
+
+.content-container ul li {
+  margin-bottom: 0.5rem;
+  color: var(--rr-text-muted);
+}
+
+/* ============================================================
+   SOCIAL / CONNECT PAGE
+   ============================================================ */
+
 .social-section {
   display: flex;
   justify-content: center;
-  padding: 80px 20px;
-  font-family: 'Inter', sans-serif;
+  padding: var(--rr-space-l) var(--rr-space-m);
 }
 
-/* Das graue Panel */
 .social-panel {
-  background: #646464; /* Secondary Grey */
-  padding: 50px 40px;
-  border-radius: 20px;
+  background: var(--rr-bg-card);
+  border: 1px solid var(--rr-border);
+  border-radius: var(--rr-radius-lg);
+  padding: var(--rr-space-l) var(--rr-space-m);
   max-width: 600px;
   width: 100%;
   text-align: center;
-
-  color: #CEDAE0; /* Secondary Light */
-  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  box-shadow: var(--rr-shadow);
 }
 
-/* Titel */
 .social-panel h2 {
-  font-size: 2rem;
-  margin-bottom: 24px;
+  font-size: 1.8rem;
   font-weight: 600;
-  color: #CEDAE0;
+  margin-bottom: var(--rr-space-m);
+  color: var(--rr-text);
 }
 
-/* Icon-Reihe */
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 32px;
-  margin: 30px 0 14px 0;
+  gap: var(--rr-space-m);
+  margin: var(--rr-space-m) 0;
+  font-size: 2rem;
 }
 
-/* Icons */
 .social-links a {
-  font-size: 38px;
-  color: #CEDAE0;
-  transition: 0.25s ease;
+  color: var(--rr-text-muted);
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
-/* Hover-Effekt */
 .social-links a:hover {
-  color: #A2CDE3; /* Accent Blue */
-  transform: scale(1.18);
+  color: var(--rr-steel);
+  transform: scale(1.15);
 }
 
-/* Untertitel */
 .social-note {
-  font-size: 1rem;
-  opacity: 0.85;
-  margin-top: 12px;
-  color: #CEDAE0;
+  font-size: 0.95rem;
+  color: var(--rr-text-dim);
+  margin-top: var(--rr-space-s);
 }
-/* KONTAKT SECTION */
+
 .contact-section {
   display: flex;
   justify-content: center;
-  padding: 80px 20px;
-  font-family: 'Inter', sans-serif;
+  padding: 0 var(--rr-space-m) var(--rr-space-xl);
 }
 
-/* Graues Panel wie bei Socials */
 .contact-panel {
-  background: #646464; /* Secondary Grey */
-  padding: 50px 40px;
-  border-radius: 20px;
+  background: var(--rr-bg-card);
+  border: 1px solid var(--rr-border);
+  border-radius: var(--rr-radius-lg);
+  padding: var(--rr-space-l) var(--rr-space-m);
   max-width: 600px;
   width: 100%;
   text-align: center;
-
-  color: #CEDAE0; /* Secondary Light */
-  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  box-shadow: var(--rr-shadow);
 }
 
 .contact-panel h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 1.8rem;
   font-weight: 600;
-  color: #CEDAE0;
+  margin-bottom: var(--rr-space-s);
+  color: var(--rr-text);
 }
 
 .contact-text {
-  font-size: 1.1rem;
-  opacity: 0.85;
-  margin-bottom: 20px;
+  font-size: 1.05rem;
+  color: var(--rr-text-muted);
+  margin-bottom: var(--rr-space-s);
 }
 
 .contact-mail {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  color: #A2CDE3; /* Accent Blue */
-  text-decoration: none;
-  transition: 0.25s ease;
+  color: var(--rr-steel);
 }
 
 .contact-mail:hover {
-  color: #E2EAF3; /* helleres Blau */
+  color: var(--rr-steel-bright);
   text-decoration: underline;
 }
 
+/* ============================================================
+   FOOTER
+   ============================================================ */
 
-/* --------------------------------------------- */
-/* MOBILE / TABLET FIX: Navigation unter das Logo */
-/* --------------------------------------------- */
-@media (max-width: 1200px) {
-
-    /* Logo soll im normalen Flow stehen */
-    .logo-wrapper {
-        position: relative;
-        top: 0;
-        left: 0;
-        transform: none;
-        margin: 20px auto;
-    }
-
-    /* Buttons untereinander */
-    .nav-oval {
-        position: static;
-        margin: 20px auto;
-        width: 80%;
-        max-width: 300px;
-        height: 110px;
-    }
-
-    /* Alte absolute Positionen neutralisieren */
-    .nav-oval-top,
-    .nav-oval-mid,
-    .nav-oval-left,
-    .nav-oval-right {
-        top: unset;
-        left: unset;
-        right: unset;
-    }
-
-    /* Hero weiter nach unten */
-    .hero {
-        margin-top: 40px;
-    }
+.footer {
+  text-align: center;
+  padding: var(--rr-space-m);
+  border-top: 1px solid var(--rr-border);
+  color: var(--rr-text-dim);
+  font-size: 0.9rem;
 }
 
-.nav-icon {
-    width: auto;
-    height: 70%;      /* statt width: 60% */
-    max-height: 80px; /* verhindert Überragen */
-    object-fit: contain;
+.footer a {
+  color: var(--rr-text-muted);
 }
 
-/* Mini-Oval Logo-Button oben links */
+.footer a:hover {
+  color: var(--rr-steel);
+}
+
+/* ============================================================
+   MINI-OVAL (Legacy — nur für Sub-Sites: dice-and-screen, bookielist)
+   Hauptseiten nutzen die Sticky-Navbar.
+   ============================================================ */
+
 .mini-oval {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-
-    width: 140px;      /* oval → breiter als hoch */
-    height: 80px;
-
-    background: rgb(100, 100, 100);
-    border-radius: 50%; /* echtes Oval */
-    border: 2px solid rgba(0,0,0,0.15);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    z-index: 999;
-    text-decoration: none;
-    transition: 0.25s ease;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 50;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 70px;
+  background: rgba(13, 17, 23, 0.85);
+  border-radius: 50%;
+  border: 1px solid var(--rr-border);
+  box-shadow: var(--rr-shadow);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
 }
 
 .mini-oval:hover {
-    background: rgb(120, 120, 120);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  transform: translateY(-2px);
+  box-shadow: var(--rr-shadow-lg);
 }
 
-/* Logo im Mini-Oval */
 .mini-oval-icon {
-    height: 120%;       /* orientiert sich an der Oval-Höhe */
-    width: auto;
-    object-fit: contain;
-    opacity: 0.95;
+  width: auto;
+  height: 60%;
+  max-height: 60px;
+  object-fit: contain;
 }
 
+/* ============================================================
+   MOBILE / TABLET
+   ============================================================ */
 
+@media (max-width: 768px) {
+  :root {
+    --rr-navbar-height: 64px;
+  }
+
+  .navbar {
+    padding: 0 var(--rr-space-s);
+  }
+
+  .navbar-burger {
+    display: flex;
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: var(--rr-navbar-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: rgba(13, 17, 23, 0.98);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--rr-border);
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .navbar-links.is-open {
+    max-height: 320px;
+  }
+
+  .navbar-links a {
+    display: block;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--rr-border);
+    font-size: 1.05rem;
+  }
+
+  .navbar-links a::after {
+    display: none;
+  }
+
+  .hero {
+    padding: var(--rr-space-l) var(--rr-space-s) var(--rr-space-m);
+  }
+
+  .hero-logo img {
+    max-width: 260px;
+  }
+
+  .portals {
+    padding: var(--rr-space-m) var(--rr-space-s);
+  }
+
+  .content-container {
+    padding: var(--rr-space-m);
+  }
+
+  .content-page {
+    padding: calc(var(--rr-navbar-height) + var(--rr-space-m)) var(--rr-space-s) var(--rr-space-l);
+  }
+}

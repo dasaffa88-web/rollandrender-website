@@ -3,61 +3,91 @@
 <head>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="d04af094-6d74-403a-b236-dac26a28b1f7"></script>
     <meta charset="UTF-8">
-    <title>Roll & Render Studio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll & Render Studio — Hybrid Systems • Digital Tools</title>
+    <meta name="description" content="Roll & Render Studio — Indie-Studio für hybride Tabletop-Systeme und digitale Tools. Dice & Screen und Bookielist.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
 </head>
-
 <body>
 
-    <!-- LOGO + OVAL -->
-    <div class="logo-wrapper">
-        <img src="../assets/images/logo.png" class="logo" alt="">
-    </div>
-
-    <!-- NAVIGATION OVALE OBEN -->
-    <a href="ueber-mich.html" class="nav-oval nav-oval-top nav-oval-left">🧑‍💻 Über mich</a>
-    <a href="dienstleistungen.html" class="nav-oval nav-oval-top nav-oval-right">🛠️ Dienstleistungen</a>
-
-    <!-- NAVIGATION OVALE MITTE -->
-    <a href="projects.html" class="nav-oval nav-oval-mid nav-oval-left">🧩 Projekte</a>
-    <a href="social.html" class="nav-oval nav-oval-mid nav-oval-right">🌐Socialmedia & Kontakt</a>
-
-    <!-- HERO TEXT -->
-    <header class="hero">
-        <p class="hero-line">Für die Träumer unter euch.</p>
-        <p class="hero-line">Manchmal braucht es nur den ersten Schritt.</p>
-        <p class="hero-line">Ich helfe euch dabei, ihn zu gehen.</p>
-        <h1 class="hero-core">Aus Gedanken werden Systeme.</h1>
-    </header>
+    <!-- STICKY NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-logo" aria-label="Roll & Render Studio Startseite">
+            <img src="assets/images/rollandrender_logo_neu.png" alt="Roll & Render Studio">
+        </a>
+        <button class="navbar-burger" aria-label="Menü öffnen" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="navbar-links">
+            <li><a href="projects.html">Projekte</a></li>
+            <li><a href="ueber-mich.html">Über mich</a></li>
+            <li><a href="social.html">Connect</a></li>
+        </ul>
+    </nav>
 
     <main>
 
-        <!-- FEATURE CARDS -->
-        <section class="features">
-            <div class="feature-card">
-                <h3>Software & Tools</h3>
-                <p>Modulare Systeme für Kreative und Visionäre.</p>
+        <!-- HERO -->
+        <header class="hero">
+            <div class="hero-logo">
+                <img src="assets/images/rollandrender_logo_neu.png" alt="Roll & Render Studio — Hybrid Systems • Digital Tools">
             </div>
+            <p class="hero-tagline">Aus Gedanken werden <span class="accent">Systeme.</span></p>
+            <p class="hero-intro">Unabhängiges Ein-Mann-Studio. Ich baue hybride Tabletop-Systeme und clevere Digital Tools — kompromisslos und nur worauf ich Bock habe.</p>
+        </header>
 
-            <div class="feature-card">
-                <h3>Workflows & Automation</h3>
-                <p>Struktur, Klarheit und Abläufe, die Raum für Ideen schaffen.</p>
-            </div>
+        <!-- PORTAL SÄULEN -->
+        <section class="portals" aria-label="Studio Säulen">
 
-            <div class="feature-card">
-                <h3>Indie Games</h3>
-                <p>Eigene Welten, spielbare Ideen und kreative Experimente.</p>
-            </div>
+            <!-- Säule 1: Hybrid Systems -->
+            <article class="portal-column">
+                <header class="portal-column-head">
+                    <h2 class="portal-column-title">Hybrid Systems</h2>
+                    <p class="portal-column-claim">Physisches Tabletop trifft digitale Logik und immersive Welten.</p>
+                </header>
+                <a href="dice-and-screen/index.html" class="portal-card portal-card-dns" aria-label="Dice & Screen besuchen">
+                    <img src="assets/images/D&SLogoohnebackground.png" alt="Dice & Screen" class="portal-card-logo">
+                    <h3>Dice &amp; Screen</h3>
+                    <p>Das taktische Command-Center für moderne Pen-and-Paper-Sessions und hybride Welten.</p>
+                    <span class="portal-card-cta">Entdecken →</span>
+                </a>
+            </article>
+
+            <!-- Säule 2: Digital Tools -->
+            <article class="portal-column">
+                <header class="portal-column-head">
+                    <h2 class="portal-column-title">Digital Tools</h2>
+                    <p class="portal-column-claim">Durchdachte Utility-Apps und smarte Software für Sammlungen und Workflows.</p>
+                </header>
+                <a href="bookielist/index.html" class="portal-card portal-card-bookie" aria-label="Bookielist besuchen">
+                    <img src="bookielist/Images/logo_bookielist.png" alt="Bookielist" class="portal-card-logo">
+                    <h3>Bookielist</h3>
+                    <p>Die minimalistische Sammlungsverwaltung für physische Bücher – ohne Werbung oder Account-Zwang.</p>
+                    <span class="portal-card-cta">Entdecken →</span>
+                </a>
+            </article>
+
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <a href="projects.html" class="cta-button">Alle Projekte ansehen →</a>
         </section>
 
     </main>
 
     <footer class="footer">
-        <p>© 2026 Roll & Render Studio — 
-            <a href="/impressum.html">Impressum</a> • 
-            <a href="/datenschutz.html">Datenschutz</a>
+        <p>© 2026 Roll & Render Studio —
+            <a href="impressum.html">Impressum</a> •
+            <a href="datenschutz.html">Datenschutz</a>
         </p>
     </footer>
 
+    <script src="scripts/main.js"></script>
 </body>
 </html>
