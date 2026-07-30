@@ -548,9 +548,11 @@ main {
 .social-links {
   display: flex;
   justify-content: center;
-  gap: var(--rr-space-m);
+  flex-wrap: wrap;
+  gap: clamp(0.75rem, 4vw, 2rem);
   margin: var(--rr-space-m) 0;
-  font-size: 2rem;
+  padding: 0 var(--rr-space-s);
+  font-size: clamp(1.6rem, 8vw, 2rem);
 }
 
 .social-links a {
@@ -600,9 +602,12 @@ main {
 }
 
 .contact-mail {
-  font-size: 1.25rem;
+  display: inline-block;
+  font-size: clamp(1rem, 4vw, 1.25rem);
   font-weight: 600;
   color: var(--rr-steel);
+  word-break: break-all;
+  padding: 0 var(--rr-space-s);
 }
 
 .contact-mail:hover {
