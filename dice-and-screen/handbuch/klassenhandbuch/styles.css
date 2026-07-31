@@ -431,6 +431,7 @@ tr:hover td { background: rgba(203, 155, 76, 0.08); }
   body {
     background-attachment: scroll;
   }
+  .index-hero h1 { letter-spacing: 0.02em; }
   .handbuch-root { padding: 30px 12px 50px; }
   .dns-hero {
     padding: 28px 18px 24px;
@@ -468,7 +469,7 @@ tr:hover td { background: rgba(203, 155, 76, 0.08); }
   text-shadow: 0 0 24px var(--theme-glow);
   margin-bottom: 8px;
   overflow-wrap: break-word;
-  word-break: break-word;
+  hyphens: auto;
 }
 .index-subtitle {
   font-family: 'Cinzel', serif;
