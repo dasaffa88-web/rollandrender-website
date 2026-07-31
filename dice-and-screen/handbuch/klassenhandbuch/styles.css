@@ -469,7 +469,6 @@ tr:hover td { background: rgba(203, 155, 76, 0.08); }
   text-shadow: 0 0 24px var(--theme-glow);
   margin-bottom: 8px;
   overflow-wrap: break-word;
-  hyphens: auto;
 }
 .index-subtitle {
   font-family: 'Cinzel', serif;
