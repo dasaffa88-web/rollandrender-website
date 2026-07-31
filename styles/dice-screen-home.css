@@ -175,6 +175,42 @@ body.dice-screen-home::after {
     0 0 9px rgba(203, 155, 76, 0.25);
 }
 
+/* Status-Badge im Hero — "In aktiver Entwicklung" */
+.dice-hero-status {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 14px auto 0;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(203, 155, 76, 0.35);
+  background: rgba(20, 19, 19, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #e8d7b3;
+}
+
+.dice-status-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--dns-bronze);
+  box-shadow: 0 0 8px rgba(203, 155, 76, 0.6);
+  animation: dns-status-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes dns-status-pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
 .dice-hero-image {
   position: relative;
   z-index: 1;
