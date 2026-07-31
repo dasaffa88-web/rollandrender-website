@@ -68,6 +68,8 @@ body.theme-frost {
 /* ===== BASIS ===== */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+html { overflow-x: hidden; }
+
 body {
   font-family: 'Inter', sans-serif;
   font-size: 15px;
@@ -80,6 +82,7 @@ body {
     linear-gradient(180deg, var(--dns-deep-shadow) 0%, #1b1511 42%, #100d0b 100%);
   background-attachment: fixed;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 body::before {
@@ -425,6 +428,9 @@ tr:hover td { background: rgba(203, 155, 76, 0.08); }
 
 /* ===== MOBILE ===== */
 @media (max-width: 700px) {
+  body {
+    background-attachment: scroll;
+  }
   .handbuch-root { padding: 30px 12px 50px; }
   .dns-hero {
     padding: 28px 18px 24px;
