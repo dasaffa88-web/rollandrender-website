@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ELEMENTARIST — Element-Magier | Dice &amp; Screen Klassenhandbuch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="theme-frost">
+
+<div class="handbuch-root">
+
+  <a href="./index.html" class="nav-back">← Klassenhandbuch</a>
+
+  <header class="dns-hero">
+    <div class="hero-portrait">
+      <img src="./img/elementarist.png" alt="ELEMENTARIST" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="portrait-missing"><span class="pm-label">Bild fehlt</span><span class="pm-file">img/elementarist.png</span></div>
+    </div>
+    <div class="hero-text">
+      <h1>ELEMENTARIST</h1>
+      <div class="subtitle">Element-Magier</div>
+      <div class="tagline">Feuer, Eis, Blitz, Erde — die Elemente sind seine Waffen.</div>
+    </div>
+  </header>
+
+  <section class="dns-section">
+    <h2>Übersicht</h2>
+    <table class="overview-table">
+      <tr><td>Rolle</td><td>Vollzauberer · Elementarer Schadensverursacher · Flächeneffekt-Spezialist</td></tr>
+      <tr><td>Zauberertyp</td><td><span class="badge badge-FULL">Vollzauberer</span> Zauberslots bis Rang 9</td></tr>
+      <tr><td>Primärer Schadensattribut</td><td>Intelligenz (INT)</td></tr>
+      <tr><td>Sekundärer Schadensattribut</td><td>—</td></tr>
+      <tr><td>Zauberattribut</td><td>Intelligenz (INT)</td></tr>
+      <tr><td>TP (L1)</td><td>6</td></tr>
+      <tr><td>TP pro Level</td><td>4</td></tr>
+      <tr><td>Rüstung</td><td>Keine</td></tr>
+      <tr><td>Waffen</td><td>Magierwaffen — Dolche, Stäbe, Zauberstäbe, Bücher</td></tr>
+      <tr><td>Rettungswürfe</td><td>Intelligenz (INT), Konstitution (KON)</td></tr>
+      <tr><td>Attributsteigerung (Level)</td><td>4, 8, 12, 16</td></tr>
+      <tr><td>Fertigkeiten (2 zur Auswahl)</td><td>Arkana, Naturkunde, Nachforschung, Wissen, Logik</td></tr>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Philosophie</h2>
+    <div class="philosophy-block">
+      <p>Der ELEMENTARIST ist der Spezialist für elementare Magie — Feuer, Eis, Blitz und Erde sind seine Werkzeuge. Wo der MAGIER das breiteste Spektrum hat, hat der ELEMENTARIST die tiefste Elementar-Expertise. Er wählt ein Element (FLAMME, FROST oder STURM) als seinen Fokus und bekommt zunehmend bessere Boni darauf: +Profan-Bonus auf Zauber-Angriffswürfe (L1), +1W6 Bonus-Schaden pro Zug (L5), Resistenz-Ignorierung (L10), +2 Schaden (L14). Er kann aber auch alle anderen Elemente nutzen — Flammenwelle, Eisnebel, Blitzschlag, Erdbeben, Wasserpeitsche. Mit Elementarform (L18) verwandelt er sich selbst in einen Elementar. Seine Abschlussfähigkeit (L20) gibt ihm einen Basiszauber des gewählten Elements beliebig oft. Er ist der Meister der Elemente — auf Distanz und im Flächeneffekt gibt es niemand der mehr Fläche deckt.</p>
+    </div>
+  </section>
+
+  <section class="dns-section">
+    <h2>Klassenfähigkeiten</h2>
+    <table class="feature-table">
+      <thead>
+        <tr><th class="level-cell">Level</th><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="level-cell">L1</td><td>Elementarfokus</td><td>Wähle ein Element (FLAMME, FROST, STURM). +Profan-Bonus auf Zauber-Angriffswürfe mit diesem Element (skaliert: +2/+4/+6/+8/+10 bei L1/L5/L9/L13/L17).</td></tr>
+        <tr><td class="level-cell">L2</td><td>Elementarbindung</td><td>Element wählen (wird als gewähltes Element im System gespeichert).</td></tr>
+        <tr><td class="level-cell">L3</td><td>Elementare Affinität</td><td>Passiv: +2 Intelligenz.</td></tr>
+        <tr><td class="level-cell">L5</td><td>Elementarer Ausbruch</td><td>Passiv: 1/Zug +1W6 Bonus-Schaden mit gewähltem Element.</td></tr>
+        <tr><td class="level-cell">L6</td><td>Elementare Resistenz</td><td>Passiv: Resistenz gegen das gewählte Element.</td></tr>
+        <tr><td class="level-cell">L10</td><td>Elementarer Schild</td><td>Passiv: Verbündete in 10ft erhalten Resistenz gegen FLAMME, FROST, STURM.</td></tr>
+        <tr><td class="level-cell">L10</td><td>Elementare Durchschlagskraft</td><td>Passiv: Zauber des gewählten Elements ignorieren Resistenz.</td></tr>
+        <tr><td class="level-cell">L14</td><td>Meisterelement</td><td>Passiv: +2 Schaden mit gewähltem Element.</td></tr>
+        <tr><td class="level-cell">L18</td><td>Elementarform</td><td>1/Lange Rast: Verwandle dich in einen Elementar für 1 Minute (Feuer, Wasser, Luft oder Erde).</td></tr>
+        <tr><td class="level-cell">L20</td><td>Erzmagier der Elemente</td><td>Passiv: Basiszauber des gewählten Elements beliebig oft einsetzbar.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Fähigkeiten</h2>
+    <p class="note">Alle Zauber nutzen Zauberslots (Vollzauberer-Progression, Rang 1–9). Zauberattribut ist Intelligenz (INT). Upcast-Skalierung pro zusätzlichem Zauberslot bei Froststrahl (+1W8), Steinschlag (+1W8), Flammenwelle (+1W6), Wasserpeitsche (+1W6), Blitzschlag (+1W8), Erdbeben (+1W6), Flammensturm (+1W6), Kettenblitz (+1W8 +1 Ziel).</p>
+
+    <h3>Basiszauber</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Froststrahl</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-basiszauber">Basiszauber — unbegrenzt</span></td>
+          <td>L1</td>
+          <td><span class="el-FROST">FROST</span> 1W8 Frost, GES-Rettungswurf (halber Schaden bei Erfolg), Reichweite 12. Upcast: +1W8 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Steinschlag</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-basiszauber">Basiszauber — unbegrenzt</span></td>
+          <td>L1</td>
+          <td><span class="el-NATURE">NATUR</span> 1W8 Wucht, Angriffswurf, Reichweite 12. Upcast: +1W8 pro Slot.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Zauber</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Eisnebel</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-FROST">FROST</span> Flächeneffekt 10ft: 2W6 Frost + GES-Rettungswurf oder festgehalten.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Flammenwelle</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-FLAME">FLAMME</span> Kegel 15ft: 3W6 Feuer + GES-Rettungswurf (halber Schaden bei Erfolg).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Wasserpeitsche</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-NATURE">NATUR</span> 2W6 + STR-Rettungswurf oder gepackt.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Blitzschlag</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 2</span></td>
+          <td>L3</td>
+          <td><span class="el-STORM">STURM</span> 4W8 Blitz + GES-Rettungswurf (halber Schaden bei Erfolg), Reichweite 30.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Steinhaut</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 2</span></td>
+          <td>L3</td>
+          <td><span class="el-NATURE">NATUR</span> +3 RK für 1 Minute.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Erdbeben</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 3</span></td>
+          <td>L5</td>
+          <td><span class="el-NATURE">NATUR</span> Flächeneffekt 20ft: 5W6 Wucht + STR-Rettungswurf oder niedergeschlagen.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Flammensturm</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 4</span></td>
+          <td>L7</td>
+          <td><span class="el-FLAME">FLAMME</span> Flächeneffekt 20ft: 7W6 Feuer + GES-Rettungswurf (halber Schaden bei Erfolg).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Kettenblitz</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 5</span></td>
+          <td>L9</td>
+          <td><span class="el-STORM">STURM</span> 8W8 Blitz + GES-Rettungswurf (halber Schaden bei Erfolg) + Kette auf 3 weitere Gegner.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Spezialfähigkeiten</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Elementarform</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Lange Rast</span></td>
+          <td>L18</td>
+          <td>Verwandle dich in einen Elementar für 1 Minute (Feuer, Wasser, Luft oder Erde).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Ressourcen</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Ressource</th><th>Mechanik</th><th>Verfügbarkeit</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Zauberslots</span></td>
+          <td>Vollzauberer-Progression (Rang 1–9). Zauberattribut: INT.</td>
+          <td>Alle Zauber, pro Zauberslot</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Gewähltes Element</span></td>
+          <td>FLAMME, FROST oder STURM — bestimmt Skalierungs-Boni (Angriff, Schaden, Resistenz)</td>
+          <td>Ab L1, gewählt bei Charaktererstellung</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Elementarer Ausbruch</span></td>
+          <td>+1W6 Bonus-Schaden mit gewähltem Element (hardcoded)</td>
+          <td>1/Zug, ab L5</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Elementarform</span></td>
+          <td>Verwandlung in Elementar</td>
+          <td>1/Lange Rast, ab L18</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Spielstil-Tipps</h2>
+    <div class="playstyle-tip">
+      <strong>Frühe Level (L1-4):</strong> Wähle dein Element (FLAMME/FROST/STURM) — es bestimmt alle Skalierungs-Boni. Froststrahl und Steinschlag sind deine Basiszauber. Flammenwelle (Kegel) und Eisnebel (Flächeneffekt + festgehalten) sind deine frühen Kontrolle-Zauber.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Mittlere Level (L5-12):</strong> Elementarer Ausbruch (L5) gibt +1W6 pro Zug mit gewähltem Element. Blitzschlag (4W8) und Erdbeben (5W6 Flächeneffekt + niedergeschlagen) sind deine Haupt-Schadenszauber. Elementare Resistenz (L6) macht dich robust gegen dein eigenes Element.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Hohe Level (L13-20):</strong> Flammensturm (7W6 Flächeneffekt) und Kettenblitz (8W8 + Kette auf 3) sind deine stärksten Zauber. Elementare Durchschlagskraft (L10) ignoriert Resistenz. Elementarform (L18) verwandelt dich in einen Elementar. Erzmagier (L20) gibt Basiszauber beliebig oft.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Synergien:</strong> Elementarfokus + Elementarer Ausbruch + Meisterelement = massiver Bonus-Schaden pro Zug mit gewähltem Element. Eisnebel (festgehalten) → Kettenblitz trifft alle. Elementare Durchschlagskraft + Flammensturm = kein Gegner ist mehr sicher. Steinhaut (+3 RK) hält dich am Leben.
+    </div>
+  </section>
+
+  <footer class="handbuch-footer">
+    <p>Dice &amp; Screen — Klassenhandbuch · <a href="./index.html">Zurück zum Index</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

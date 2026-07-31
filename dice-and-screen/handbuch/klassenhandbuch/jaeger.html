@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JÄGER — Jäger | Dice &amp; Screen Klassenhandbuch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="theme-bronze">
+<div class="handbuch-root">
+
+  <a href="./index.html" class="nav-back">← Klassenhandbuch</a>
+
+  <header class="dns-hero">
+    <div class="hero-portrait">
+      <img src="./img/jaeger.png" alt="JÄGER" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="portrait-missing"><span class="pm-label">Bild fehlt</span><span class="pm-file">img/jaeger.png</span></div>
+    </div>
+    <div class="hero-text">
+      <h1>JÄGER</h1>
+      <div class="subtitle">Jäger</div>
+      <div class="tagline">Tierischer Begleiter, Fallen, Todesmark — die Wildnis ist sein Revier.</div>
+    </div>
+  </header>
+
+  <section class="dns-section">
+    <h2>Übersicht</h2>
+    <table class="overview-table">
+      <tr><td>Rolle</td><td>DPS · Reichweite · Begleiter · Fallen</td></tr>
+      <tr><td>Zauberertyp</td><td><span class="badge badge-NONE">Kein Zauberer</span> Keine Zauberslots</td></tr>
+      <tr><td>Primärer Schadensattribut</td><td>Geschick (DEX)</td></tr>
+      <tr><td>Sekundärer Schadensattribut</td><td>—</td></tr>
+      <tr><td>Zauberattribut</td><td>—</td></tr>
+      <tr><td>TP (L1)</td><td>10</td></tr>
+      <tr><td>TP pro Level</td><td>6</td></tr>
+      <tr><td>Rüstung</td><td>Mittel (alle Rüstungen)</td></tr>
+      <tr><td>Waffen</td><td>Primalwaffen (Schwerter, Äxte, Keulen, Dolche, Speere, Bögen, Armbrüste, Wurfwaffen, Stäbe)</td></tr>
+      <tr><td>Rettungswürfe</td><td>Geschick (DEX), Weisheit (WIS)</td></tr>
+      <tr><td>Attributsteigerung (Level)</td><td>4, 8, 12, 16</td></tr>
+      <tr><td>Fertigkeiten (2 zur Auswahl)</td><td>Wahrnehmung, Überleben, Naturkunde, Tierführung, Athletik</td></tr>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Philosophie</h2>
+    <div class="philosophy-block">
+      <p>Der JÄGER ist der Herr der Wildnis. Er lebt mit der Natur, folgt Spuren, stellt Fallen und kämpft Seite an Seite mit einem tierischen Begleiter. Seine Stärke liegt nicht in roher Gewalt, sondern in Vorbereitung und Geduld — er markiert sein Ziel, schwächt es mit Gift und Fallen, und beendet es mit einem präzisen Todesschuss. Sein Begleiter ist kein Haustier, sondern ein Partner der die Frontlinie hält während er aus der Distanz zuschlägt.</p>
+    </div>
+  </section>
+
+  <section class="dns-section">
+    <h2>Klassenfähigkeiten</h2>
+    <table class="feature-table">
+      <thead>
+        <tr><th class="level-cell">Level</th><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="level-cell">L5</td><td>Zusatzangriff</td><td>2 Angriffe pro Angriffs-Aktion.</td></tr>
+        <tr><td class="level-cell">L9</td><td>Beutejäger</td><td>+Profan-Bonus auf Angriffswürfe gegen markierte Ziele.</td></tr>
+        <tr><td class="level-cell">L11</td><td>Zusatzangriff 2</td><td>3 Angriffe pro Angriffs-Aktion.</td></tr>
+        <tr><td class="level-cell">L19</td><td>Verbesserter Begleiter</td><td>Jagdinstinkt — Weisheit +2 (skaliert Begleiter-Fähigkeiten).</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Fähigkeiten</h2>
+
+    <h3>Aktive Fähigkeiten</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Fallensteller</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">2/Kampf</span></td>
+          <td>L1</td>
+          <td>Platziere eine Falle auf ein Feld — <span class="el-PHYSICAL">PHYSISCH</span> 2W6 Schaden und Ziel wird festgehalten (RESTRAINED) wenn ein Feind das Feld betritt.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Schuss auf Schwachstelle</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">1/Zug</span></td>
+          <td>L2</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> Präziser Schuss: +1W8 Bonus-Schaden auf den nächsten Angriff.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Schnelljagd</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-unlimited">unbegrenzt</span></td>
+          <td>L3</td>
+          <td>Rückzug + 15ft Bewegungsbonus für 1 Runde.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Giftpfeil</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Kampf</span></td>
+          <td>L5</td>
+          <td>Ziel muss einen CON-Rettungswurf ablegen oder wird vergiftet — <span class="el-NATURE">NATUR</span> 1W6 Giftschaden pro Runde für 3 Runden.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Sprengfalle</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Kampf</span></td>
+          <td>L7</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> Platziere eine Sprengfalle auf ein Feld: 3W6 Schaden + liegend (PRONE) wenn ein Feind das Feld betritt.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Wachhund</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Kampf</span></td>
+          <td>L9</td>
+          <td>Dein Begleiter erhält +2 RK für 1 Minute.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Jagdpfeiff</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Kampf</span></td>
+          <td>L11</td>
+          <td>Signal: Alle Verbündeten in 30ft erhalten +1W4 auf ihren nächsten Angriff.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Todesschuss</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">1/Lange Rast</span></td>
+          <td>L15</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> +4W6 Schaden auf den nächsten Angriff. Ab L17: Automatischer Kritischer Treffer gegen markierte Ziele.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Todesmark</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Kampf</span></td>
+          <td>L1</td>
+          <td>Markiere ein Ziel als verwundbar — es erleidet doppelten Schaden durch deine Angriffe.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Verbesserte Tarnung</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-unlimited">unbegrenzt</span></td>
+          <td>L7</td>
+          <td>Verstecke dich (HIDDEN). Ab L7 darfst du Verstecken als Bonus-Aktion nutzen.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Jägerentschluss</span></td>
+          <td>Frei</td>
+          <td><span class="badge badge-uses">1/Lange Rast</span></td>
+          <td>L1</td>
+          <td>Wiederhole einen fehlgeschlagenen Rettungswurf — der Spieler würfelt selbst neu.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Begleiter rufen</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Begleiter</th><th>Aktion</th><th>Nutzung</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Wolfsbegleiter</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">1/Lange Rast</span></td>
+          <td>Beschwöre einen Wolf als Begleiter für 10 Minuten. Der Wolf kämpft eigenständig an deiner Seite.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Bärenbegleiter</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Lange Rast</span></td>
+          <td>Beschwöre einen Bären als Begleiter für 10 Minuten. Der Bär ist ein starker Verteidiger-Kämpfer.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Falkenbegleiter</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Lange Rast</span></td>
+          <td>Beschwöre einen Falken als Begleiter für 10 Minuten. Der Falke ist ein schneller Fernkämpfer.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Pantherbegleiter</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Lange Rast</span></td>
+          <td>Beschwöre einen Panther als Begleiter für 10 Minuten. Der Panther ist ein schneller Angreifer.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Spielstil-Tipps</h2>
+    <div class="playstyle-tip">
+      <strong>Frühe Level (L1-4):</strong> Fallensteller (L1) platziert eine Falle auf ein Feld — ein Feind der es betritt nimmt 2W6 Schaden und wird festgehalten. Nutze die Falle um Engpässe zu blockieren oder sie hinter den Gegner zu legen damit er hineinläuft. Todesmark (L1) verdoppelt deinen Schaden gegen ein Ziel — markiere den gefährlichsten Gegner. Schuss auf Schwachstelle (L2) als Bonus-Aktion gibt dir jeden Zug +1W8. Schnelljagd (L3) für Mobilität — Rückzug und Bewegungsbonus in einer Bonus-Aktion. Ruf einen Begleiter herbei — der Wolf ist dein frühester Verbündeter und hält die Frontlinie.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Mittlere Level (L5-12):</strong> Zusatzangriff verdoppelt deine Schüsse. Giftpfeil (L5) bringt Schaden über Zeit über 3 Runden — gut gegen Ziele mit hohen TP. Ab L7 darfst du Verstecken als Bonus-Aktion — nutze Tarnung zwischen deinen Angriffen. Sprengfalle (L7) ist stärker als die Standardfalle: 3W6 plus liegend. Beutejäger (L9) gibt dir +Profan-Bonus auf Angriffe gegen markierte Ziele — kombiniere mit Todesmark für tödliche Präzision. Wachhund (L9) verstärkt deinen Begleiter mit +2 RK. Jagdpfeiff (L11) verstärkt die ganze Gruppe mit +1W4.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Hohe Level (L13-20):</strong> Zusatzangriff 2 (L11) gibt dir 3 Angriffe pro Zug — kombiniere mit Schuss auf Schwachstelle als Bonus-Aktion für 4 Schüsse mit Bonus-Schaden. Todesschuss (L15) mit +4W6 ist dein schwerster Einzeltreffer — 1/Lange Rast, spare ihn für markierte Ziele. Ab L17 wird Todesschuss zum Automatischer Kritischer Treffer gegen markierte Ziele — Todesmark + Todesschuss = Hinrichtung. Verbesserter Begleiter (L19) mit WIS +2 skaliert deine Begleiter-Fähigkeiten weiter.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Synergien:</strong> Todesmark (doppelter Schaden) + Schuss auf Schwachstelle (+1W8) + Todesschuss (+4W6) = massiver Hinrichtungs-Spitze. Falle auf ein Engpass-Feld legen → Gegner hineinlocken → Begleiter blockt die andere Seite → du schießt aus der Distanz. Giftpfeil für Schaden über Zeit, dann Tarnung um sich zu verstecken — der Gegner stirbt langsam ohne dich zu finden. Jagdpfeiff als Eröffnung verstärkt die ganze Gruppe. Bär als Verteidiger-Begleiter wenn du Nahkämpfer in der Gruppe hast, Falke für zusätzlichen Fernkampf-Schaden.
+    </div>
+  </section>
+
+  <footer class="handbuch-footer">
+    <p>Dice &amp; Screen — Klassenhandbuch · <a href="./index.html">Zurück zum Index</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

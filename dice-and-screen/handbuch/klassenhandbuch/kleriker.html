@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KLERIKER — Göttlicher Diener | Dice &amp; Screen Klassenhandbuch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="theme-aether">
+
+<div class="handbuch-root">
+
+  <a href="./index.html" class="nav-back">← Klassenhandbuch</a>
+
+  <header class="dns-hero">
+    <div class="hero-portrait">
+      <img src="./img/kleriker.png" alt="KLERIKER" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="portrait-missing"><span class="pm-label">Bild fehlt</span><span class="pm-file">img/kleriker.png</span></div>
+    </div>
+    <div class="hero-text">
+      <h1>KLERIKER</h1>
+      <div class="subtitle">Göttlicher Diener</div>
+      <div class="tagline">Heilung, Schutz, Untote vernichten — die Hand der Götter auf Erden.</div>
+    </div>
+  </header>
+
+  <section class="dns-section">
+    <h2>Übersicht</h2>
+    <table class="overview-table">
+      <tr><td>Rolle</td><td>Vollzauberer · Heiler · Unterstützer · Untote-Vernichter · Front-Hybrid</td></tr>
+      <tr><td>Zauberertyp</td><td><span class="badge badge-FULL">Vollzauberer</span> Zauberslots bis Rang 9</td></tr>
+      <tr><td>Primärer Schadensattribut</td><td>Weisheit (WIS)</td></tr>
+      <tr><td>Sekundärer Schadensattribut</td><td>—</td></tr>
+      <tr><td>Zauberattribut</td><td>Weisheit (WIS)</td></tr>
+      <tr><td>TP (L1)</td><td>8</td></tr>
+      <tr><td>TP pro Level</td><td>5</td></tr>
+      <tr><td>Rüstung</td><td>Mittlere Rüstung (inkl. Schilde)</td></tr>
+      <tr><td>Waffen</td><td>Göttliche Waffen — Kriegshammer, Morgenstern, Streitkolben, Schleuder</td></tr>
+      <tr><td>Rettungswürfe</td><td>Weisheit (WIS), Charisma (CHA)</td></tr>
+      <tr><td>Attributsteigerung (Level)</td><td>4, 8, 12, 16</td></tr>
+      <tr><td>Fertigkeiten (2 zur Auswahl)</td><td>Religion, Medizin, Intuition, Geisteskunde, Wahrnehmung</td></tr>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Philosophie</h2>
+    <div class="philosophy-block">
+      <p>Der KLERIKER ist der göttliche Diener — er kanalisiert die Macht seines Gottes in Heilung, Schutz und Zerstörung von Untoten. Weisheit treibt seine Zauber, und er ist der robusteste Zauberer auf dem Feld: mittlere Rüstung, Schild, 8 TP auf Level 1. Seine Göttliche Energie (L2) ist ein geteilter Pool für Untote Vertreiben und subclass-spezifische Optionen — 2 pro Rast, 3 ab L18. Göttlicher Schlag (L8) fügt seinen Waffenangriffen +1W8 Heilig-Schaden hinzu (+2W8 ab L14). Heiliges Gebet und Leben Erwecken heilen Verbündete, Göttliche Wacht bufft die RK der Gruppe, Göttlicher Sturm (L9) richtet 8W8 Heilig + 8W8 Donner in einer Fläche an. Mit Göttliches Eingreifen (L10) bittet er seinen Gott um Hilfe — Kleriker-Level Prozent Chance, automatisch erfolgreich ab L20. Er ist der wichtigste Heiler und Unterstützer in jeder Gruppe, aber kein reiner Hinterland-Zauberer — er steht in der zweiten Reihe und hält die Gruppe am Leben.</p>
+    </div>
+  </section>
+
+  <section class="dns-section">
+    <h2>Klassenfähigkeiten</h2>
+    <table class="feature-table">
+      <thead>
+        <tr><th class="level-cell">Level</th><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="level-cell">L1</td><td>Göttliches Zaubern</td><td>Vollzauberer-Progression (Zauberslots Rang 1–9). Zauberattribut: WIS.</td></tr>
+        <tr><td class="level-cell">L1</td><td>Gewählter Rettungswurf</td><td>Passiv: +Profan-Bonus auf einen gewählten Rettungswurf (skaliert: +2/+4/+6/+8/+10 bei L1/L5/L9/L13/L17).</td></tr>
+        <tr><td class="level-cell">L2</td><td>Göttliche Energie</td><td>Geteilter Pool: 2/Rast (3/Rast ab L18). Gewährt Untote Vertreiben und subclass-Optionen.</td></tr>
+        <tr><td class="level-cell">L2</td><td>Untote Vertreiben</td><td>Göttliche Energie: Untote in 30ft müssen WIS-Rettungswurf ablegen oder werden vertrieben/vernichtet.</td></tr>
+        <tr><td class="level-cell">L3</td><td>Göttliche Gabe</td><td>Wähle 2 zusätzliche Zauber aus der Kleriker-Liste (bis Rang 2).</td></tr>
+        <tr><td class="level-cell">L5</td><td>Untote Vernichten</td><td>Untote bis CR 0.5 werden bei erfolgreichem Vertreiben sofort vernichtet.</td></tr>
+        <tr><td class="level-cell">L6</td><td>Gesegnete Heilung</td><td>Passiv: +WIS-Modifikator auf alle Heilzauber.</td></tr>
+        <tr><td class="level-cell">L8</td><td>Göttlicher Schlag</td><td>Passiv: +1W8 Heilig-Schaden auf Waffenangriffe (+2W8 ab L14). Untote Vernichten bis CR 1.</td></tr>
+        <tr><td class="level-cell">L10</td><td>Göttliches Eingreifen</td><td>1/Lange Rast: Kleriker-Level Prozent Chance, Gott um Hilfe bitten.</td></tr>
+        <tr><td class="level-cell">L11</td><td>Untote Vernichten+</td><td>Untote Vernichten bis CR 1 (erweitert).</td></tr>
+        <tr><td class="level-cell">L17</td><td>Freie Zauber</td><td>1/Rast: Ein Zauber bis Rang 5 ohne Zauberslot.</td></tr>
+        <tr><td class="level-cell">L18</td><td>Verbesserte Göttlichkeit</td><td>Göttliche Energie: 3/Rast statt 2/Rast.</td></tr>
+        <tr><td class="level-cell">L19</td><td>Untote Vernichten++</td><td>Untote Vernichten bis CR 2.</td></tr>
+        <tr><td class="level-cell">L20</td><td>Göttliches Eingreifen+</td><td>Passiv: Göttliches Eingreifen ist automatisch erfolgreich.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Fähigkeiten</h2>
+    <p class="note">Alle Zauber nutzen Zauberslots (Vollzauberer-Progression, Rang 1–9). Zauberattribut ist Weisheit (WIS). Upcast-Skalierung pro zusätzlichem Zauberslot bei Göttliche Strafe (+1W6), Blitzschlag (+1W8), Leben Erwecken (+1W8 Heilung), Flammenschlag (+1W6), Heiliges Gebet (+1W4 Heilung).</p>
+
+    <h3>Basiszauber</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Lichtstrahl</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-basiszauber">Basiszauber — unbegrenzt</span></td>
+          <td>L1</td>
+          <td><span class="el-LIGHT">LICHT</span> 1W8 Heilig, Angriffswurf.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Zauber</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Göttliche Strafe</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-LIGHT">LICHT</span> 3W6 Heilig + KON-Rettungswurf (halber Schaden bei Erfolg), Reichweite 18. Upcast: +1W6 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Heiliges Gebet</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-LIGHT">LICHT</span> Flächeneffekt 10ft um dich: Heile alle Verbündeten 2W4+2. Upcast: +1W4 Heilung pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Blitzschlag</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 2</span></td>
+          <td>L3</td>
+          <td><span class="el-STORM">STURM</span> 4W8 Blitz + GES-Rettungswurf (halber Schaden bei Erfolg). Upcast: +1W8 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Leben Erwecken</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 2</span></td>
+          <td>L3</td>
+          <td><span class="el-LIGHT">LICHT</span> Berührung: Heile 3W8+3. Upcast: +1W8 Heilung pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Flammenschlag</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 3</span></td>
+          <td>L5</td>
+          <td><span class="el-FLAME">FLAMME</span> 6W6 Feuer + GES-Rettungswurf (halber Schaden bei Erfolg). Upcast: +1W6 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Göttliche Wacht</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 4</span></td>
+          <td>L7</td>
+          <td><span class="el-LIGHT">LICHT</span> Aura 10ft: Verbündete erhalten +2 RK für 1 Minute.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Göttlicher Sturm</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 5</span></td>
+          <td>L9</td>
+          <td><span class="el-LIGHT">LICHT</span> Flächeneffekt 20ft: 8W8 Heilig + 8W8 Donner + KON-Rettungswurf (halber Schaden bei Erfolg).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Spezialfähigkeiten</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Untote Verbannen</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Göttliche Energie</span></td>
+          <td>L2</td>
+          <td><span class="el-LIGHT">LICHT</span> Untote in 30ft müssen WIS-Rettungswurf ablegen oder 10W8 Heilig. CR-Limit skaliert mit Level.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Auferstehung</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Lange Rast</span></td>
+          <td>L13</td>
+          <td><span class="el-LIGHT">LICHT</span> Belebe verbündeten Kämpfer mit vollen TP.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Ressourcen</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Ressource</th><th>Mechanik</th><th>Verfügbarkeit</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Zauberslots</span></td>
+          <td>Vollzauberer-Progression (Rang 1–9). Zauberattribut: WIS.</td>
+          <td>Alle Zauber, pro Zauberslot</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Göttliche Energie</span></td>
+          <td>Geteilter Pool für Untote Vertreiben und subclass-Optionen</td>
+          <td>2/Rast (3/Rast ab L18)</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Göttliches Eingreifen</span></td>
+          <td>Kleriker-Level Prozent Chance auf göttliche Hilfe</td>
+          <td>1/Lange Rast, ab L10 (automatisch ab L20)</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Freie Zauber</span></td>
+          <td>Zauber bis Rang 5 ohne Zauberslot</td>
+          <td>1/Rast, ab L17</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Auferstehung</span></td>
+          <td>Belebe Verbündeten mit vollen TP</td>
+          <td>1/Lange Rast, ab L13</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Spielstil-Tipps</h2>
+    <div class="playstyle-tip">
+      <strong>Frühe Level (L1-4):</strong> Lichtstrahl (1W8 Heilig) ist dein Basiszauber. Göttliche Strafe (3W6) und Heiliges Gebet (Gruppenheilung) sind deine Hauptzauber. Göttliche Energie (L2) gibt dir Untote Vertreiben — nutze sie gegen Untote-Gruppen. Mittlere Rüstung + Schild macht dich robust.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Mittlere Level (L5-12):</strong> Göttlicher Schlag (L8) gibt +1W8 Heilig auf Waffenangriffe — du bist jetzt ein Front-Hybrid. Gesegnete Heilung (L6) verstärkt deine Heilzauber mit +WIS. Blitzschlag und Flammenschlag erweitern dein Schadens-Arsenal. Göttliches Eingreifen (L10) gibt dir eine Notfall-Option.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Hohe Level (L13-20):</strong> Göttliche Wacht (+2 RK Aura) und Göttlicher Sturm (8W8+8W8 Flächeneffekt) sind deine starken Zauber. Auferstehung (L13) belebt Verbündete. Freie Zauber (L17) geben dir 1 freien Zauber bis Rang 5 pro Rast. Verbesserte Göttlichkeit (L18) gibt 3 Göttliche Energie pro Rast. Göttliches Eingreifen+ (L20) ist automatisch erfolgreich.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Synergien:</strong> Gesegnete Heilung + Heiliges Gebet = massiv verstärkte Gruppenheilung. Göttlicher Schlag + Zusatzangriff (falls subclass) = doppelter Bonus-Schaden. Göttliche Wacht + Front-Gruppe = alle bekommen +2 RK. Untote Verbannen + niedrige CR Untote = sofort vernichtet. Göttliches Eingreifen als Notfall wenn alles schiefgeht.
+    </div>
+  </section>
+
+  <footer class="handbuch-footer">
+    <p>Dice &amp; Screen — Klassenhandbuch · <a href="./index.html">Zurück zum Index</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

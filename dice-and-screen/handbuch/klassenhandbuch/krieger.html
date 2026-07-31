@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KRIEGER — Universeller Kämpfer | Dice & Screen Klassenhandbuch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="theme-bronze">
+
+<div class="handbuch-root">
+
+  <!-- ===== NAVIGATION ===== -->
+  <a href="./index.html" class="nav-back">← Klassenhandbuch</a>
+
+  <!-- ===== HERO / KLASSEN-KOPF ===== -->
+  <header class="dns-hero">
+    <div class="hero-portrait">
+      <img src="./img/krieger.png" alt="KRIEGER" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="portrait-missing"><span class="pm-label">Bild fehlt</span><span class="pm-file">img/krieger.png</span></div>
+    </div>
+    <div class="hero-text">
+      <h1>KRIEGER</h1>
+      <div class="subtitle">Universeller Kämpfer</div>
+      <div class="tagline">Waffen, Kampf, Taktik.</div>
+    </div>
+  </header>
+
+  <!-- ===== ÜBERSICHT ===== -->
+  <section class="dns-section">
+    <h2>Übersicht</h2>
+    <table class="overview-table">
+      <tr><td>Rolle</td><td>Verteidiger / Frontkämpfer</td></tr>
+      <tr><td>Zauberertyp</td><td><span class="badge badge-NONE">Kein Zauberer</span> Keine Zauberslots</td></tr>
+      <tr><td>Primärer Schadensattribut</td><td>Stärke (STR)</td></tr>
+      <tr><td>Sekundärer Schadensattribut</td><td>—</td></tr>
+      <tr><td>Zauberattribut</td><td>—</td></tr>
+      <tr><td>TP (L1)</td><td>10</td></tr>
+      <tr><td>TP pro Level</td><td>6</td></tr>
+      <tr><td>Rüstung</td><td>Schwer (alle Rüstungen)</td></tr>
+      <tr><td>Waffen</td><td>Kampfwaffen (alle)</td></tr>
+      <tr><td>Rettungswürfe</td><td>Stärke (STR), Konstitution (CON)</td></tr>
+      <tr><td>Attributsteigerung (Level)</td><td>4, 6, 8, 12, 14, 16</td></tr>
+      <tr><td>Fertigkeiten (2 zur Auswahl)</td><td>Athletik, Einschüchtern, Wahrnehmung, Tierführung, Überleben, Geschichte, Naturkunde</td></tr>
+    </table>
+  </section>
+
+  <!-- ===== PHILOSOPHIE ===== -->
+  <section class="dns-section">
+    <h2>Philosophie</h2>
+    <div class="philosophy-block">
+      <p>Der KRIEGER ist der taktische Frontkämpfer — er hält die Linie,
+      unterbricht Gegner und gibt Verbündeten Raum. Seine Stärke liegt nicht in
+      Magie, sondern in Waffenmeisterschaft, Überlegenheitswürfeln und
+      kampftaktischen Manövern. Er ist der universellste Nahkämpfer: robust,
+      flexibel und mit zunehmendem Level immer gefährlicher.</p>
+    </div>
+  </section>
+
+  <!-- ===== Klassenfähigkeiten ===== -->
+  <section class="dns-section">
+    <h2>Klassenfähigkeiten</h2>
+    <table class="feature-table">
+      <thead>
+        <tr><th class="level-cell">Level</th><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="level-cell">L1</td><td>Kampfstil</td><td>Auswahl: Bogenschießen / Verteidigung / Duelieren / Zweihandkampf / Schutz / Zweiwaffenkampf</td></tr>
+        <tr><td class="level-cell">L2</td><td>Aktionsstoß</td><td>Freie Aktion: eine zusätzliche Aktion pro Zug. 1/Kurze Rast (2 ab L17).</td></tr>
+        <tr><td class="level-cell">L3</td><td>Waffenmeisterschaft</td><td>Waffen-Profan-Bonus-Auswahl</td></tr>
+        <tr><td class="level-cell">L5</td><td>Zusatzangriff</td><td>2 Angriffe pro Angriffs-Aktion</td></tr>
+        <tr><td class="level-cell">L10</td><td>Kampfmeister</td><td>Überlegenheitswürfel-Pool (4 Würfel, W8 → W10 ab L10 → W12 ab L18)</td></tr>
+        <tr><td class="level-cell">L10</td><td>Entwaffnen</td><td>Bonus-Aktion: Entwaffne einen Gegner. 1/Kurze Rast.</td></tr>
+        <tr><td class="level-cell">L11</td><td>Zusatzangriff 2</td><td>3 Angriffe pro Angriffs-Aktion</td></tr>
+        <tr><td class="level-cell">L13</td><td>Unbeugsamkeit</td><td>Rettungswurf wiederholen. 1/Lange Rast (2 ab L13, 3 ab L17).</td></tr>
+        <tr><td class="level-cell">L15</td><td>Freier Rückzug</td><td>1/Zug nach einem Treffer: freier Rückzug ohne Gelegenheitsangriff</td></tr>
+        <tr><td class="level-cell">L17</td><td>Verbesserter Aktionsstoß</td><td>Aktionsstoß 2/Kurze Rast</td></tr>
+        <tr><td class="level-cell">L18</td><td>Todeswacht</td><td>1/Lange Rast: überlebe bei 1 TP statt zu sterben</td></tr>
+        <tr><td class="level-cell">L20</td><td>Kriegsveteran</td><td>1/Lange Rast: alle Angriffe einer Runde neu würfeln → automatischer Kritischer Treffer</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ===== ABILITIES ===== -->
+  <section class="dns-section">
+    <h2>Fähigkeiten</h2>
+
+    <h3>Aktive Fähigkeiten</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Zweiter Wind</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">1/Kampf</span></td>
+          <td>L1</td>
+          <td>Du heilst dich um 1W10 + deinen Level an TP.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Aktionsstoß</span></td>
+          <td>Freie Aktion</td>
+          <td><span class="badge badge-uses">1/Kampf</span></td>
+          <td>L2</td>
+          <td>Du erhältst eine zusätzliche Aktion in diesem Zug. (2/Kurze Rast ab L17.)</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Gefechtsinstinkt</span></td>
+          <td>Freie Aktion</td>
+          <td><span class="badge badge-uses">1/Rast</span></td>
+          <td>L7</td>
+          <td>1/Kurze Rast — wiederhole einen fehlgeschlagenen Angriffswurf.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Unbeugsamkeit</span></td>
+          <td>Freie Aktion</td>
+          <td><span class="badge badge-uses">1/Lange Rast</span></td>
+          <td>L13</td>
+          <td>1/Lange Rast — wiederhole einen fehlgeschlagenen Rettungswurf.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Sturzangriff</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-unlimited">Überlegenheitswürfel</span></td>
+          <td>—</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> Wenn du eine Kreatur triffst, kannst du 1 Überlegenheitswürfel ausgeben für +1W8 Schaden. Ziel muss einen Stärke-Rettungswurf ablegen oder umgestoßen werden.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Stolzschlag</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-unlimited">Überlegenheitswürfel</span></td>
+          <td>L3</td>
+          <td>Ziel muss einen Stärke-Rettungswurf ablegen oder wird umgestoßen (liegend).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Einschüchternder Schlag</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-unlimited">Überlegenheitswürfel</span></td>
+          <td>L3</td>
+          <td>Ziel muss einen Stärke-Rettungswurf ablegen oder wird 1 Runde verängstigt.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Präzisionsschlag</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-unlimited">Überlegenheitswürfel</span></td>
+          <td>L3</td>
+          <td>+1W8 auf den nächsten Angriffswurf.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Sammelruf</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-unlimited">Überlegenheitswürfel</span></td>
+          <td>L5</td>
+          <td>Verbündete in 10ft bekommen temporäre Trefferpunkte.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Schwungschlag</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-unlimited">Überlegenheitswürfel</span></td>
+          <td>L7</td>
+          <td>Spalt-Angriff der 2 Gegner trifft.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Reaktionen</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Auslöser</th><th>Nutzung</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Parieren</span></td>
+          <td>—</td>
+          <td><span class="badge badge-unlimited">Überlegenheitswürfel</span></td>
+          <td>Wenn ein Gegner dich mit einem Nahkampfangriff trifft, kannst du 1 Überlegenheitswürfel ausgeben, um den Schaden um den Wurf + Geschicklichkeitsmodifikator zu reduzieren.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Erwiderung</span></td>
+          <td>—</td>
+          <td><span class="badge badge-unlimited">Überlegenheitswürfel</span></td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> Wenn eine Kreatur dich verfehlt, kannst du 1 Überlegenheitswürfel ausgeben, um sofort einen Gegenangriff auszuführen. Bei einem Treffer: Waffenschaden + 1W8.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Schutz</span></td>
+          <td>Bei Treffer</td>
+          <td><span class="badge badge-uses">1/Zug</span></td>
+          <td>Wenn eine Kreatur innerhalb 5ft einen Verbündeten angreift, nutze deinen Schild um den Schaden zu halbieren.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Passive Fähigkeiten</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Hartgedienter Veteran</span></td>
+          <td><span class="badge badge-passive">PASSIV</span> Immun gegen Verängstigung.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Ressourcen</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Ressource</th><th>Mechanik</th><th>Verfügbarkeit</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Überlegenheitswürfel</span></td>
+          <td>4 Würfel (W8 → W10 ab L10 → W12 ab L18), genutzt von Manövern</td>
+          <td>Ab L3, Kurze Rast</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ===== SPIELSTIL ===== -->
+  <section class="dns-section">
+    <h2>Spielstil-Tipps</h2>
+    <div class="playstyle-tip">
+      <strong>Frühe Level (L1-4):</strong> Zweiter Wind hält dich am Leben, Aktionsstoß gibt
+      Spitzenschaden. Ab L3 kommen Überlegenheitswürfel — nutze Präzisionsschlag
+      für wichtige Angriffe.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Mittlere Level (L5-12):</strong> Zusatzangriff verdoppelt deine Angriffe.
+      Sammelruf unterstützt die Gruppe, Schwungschlag trifft mehrere Gegner.
+      Ab L10 werden die Überlegenheitswürfel zu W10.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Hohe Level (L13-20):</strong> Unbeugsamkeit schützt vor kritischen Rettungswürfen.
+      Ab L17 zwei Aktionsstöße pro Kampf. L20 Kriegsveteran (automatischer Kritischer Treffer)
+      ist der krönende Abschluss.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Synergien:</strong> Alle Manöver (Parieren, Erwiderung, Sturzangriff + 5 neue)
+      teilen sich den Pool — 4 Würfel/Kurze Rast limitieren die Nutzung.
+      Kombiniere Aktionsstoß + Zusatzangriff für maximale Angriffe pro Runde.
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="handbuch-footer">
+    <p>Dice &amp; Screen — Klassenhandbuch · <a href="./index.html">Zurück zum Index</a></p>
+  </footer>
+
+</div>
+
+</body>
+</html>

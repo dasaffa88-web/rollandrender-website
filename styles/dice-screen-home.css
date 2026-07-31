@@ -226,6 +226,21 @@ body.dice-screen-home::after {
     0 0 30px rgba(203, 155, 76, 0.15);
 }
 
+/* Showcase-Screenshot — Dashboard in Aktion */
+.dice-showcase-img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1.2rem auto 0;
+  border-radius: 12px;
+  border: 1px solid rgba(203, 155, 76, 0.45);
+  box-shadow:
+    0 14px 36px rgba(0, 0, 0, 0.5),
+    0 0 28px rgba(203, 155, 76, 0.14);
+}
+
 .dice-hero-subline {
   position: relative;
   z-index: 1;

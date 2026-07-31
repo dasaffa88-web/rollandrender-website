@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCHURKE — Listiger Kämpfer | Dice & Screen Klassenhandbuch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="theme-bronze">
+<div class="handbuch-root">
+
+  <a href="./index.html" class="nav-back">← Klassenhandbuch</a>
+
+  <header class="dns-hero">
+    <div class="hero-portrait">
+      <img src="./img/schurke.png" alt="SCHURKE" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="portrait-missing"><span class="pm-label">Bild fehlt</span><span class="pm-file">img/schurke.png</span></div>
+    </div>
+    <div class="hero-text">
+      <h1>SCHURKE</h1>
+      <div class="subtitle">Listiger Kämpfer</div>
+      <div class="tagline">Heimlichkeit, Präzision, Schaden.</div>
+    </div>
+  </header>
+
+  <section class="dns-section">
+    <h2>Übersicht</h2>
+    <table class="overview-table">
+      <tr><td>Rolle</td><td>Bewegungskämpfer · Spitzenschaden · Kontrolle</td></tr>
+      <tr><td>Zauberertyp</td><td><span class="badge badge-NONE">Kein Zauberer</span> Keine Zauberslots</td></tr>
+      <tr><td>Primärer Schadensattribut</td><td>Geschick (DEX)</td></tr>
+      <tr><td>Sekundärer Schadensattribut</td><td>—</td></tr>
+      <tr><td>Zauberattribut</td><td>—</td></tr>
+      <tr><td>TP (L1)</td><td>8</td></tr>
+      <tr><td>TP pro Level</td><td>5</td></tr>
+      <tr><td>Rüstung</td><td>Leicht (alle Rüstungen)</td></tr>
+      <tr><td>Waffen</td><td>Agile Waffen (Finesse, Handarmbrüste, leichte Waffen)</td></tr>
+      <tr><td>Rettungswürfe</td><td>Geschick (DEX), Intelligenz (INT)</td></tr>
+      <tr><td>Attributsteigerung (Level)</td><td>4, 8, 10, 12, 16</td></tr>
+      <tr><td>Fertigkeiten (4 zur Auswahl)</td><td>Schleichen, Fingerfertigkeit, Akrobatik, Täuschung, Einschüchtern, Nachforschung, Wahrnehmung, Überreden</td></tr>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Philosophie</h2>
+    <div class="philosophy-block">
+      <p>Der SCHURKE ist ein listiger Bewegungskämpfer — er positioniert sich, trifft hart einmal und verschwindet wieder. Seine Stärke liegt in Heimlichkeit, Präzision und dem Meiden von direkten Konfrontationen. Mit Schleichangriffen, Finten und schmutzigen Tricks eliminiert er Gegner bevor sie reagieren können. Er ist fragil, aber tödlich — ein Meister der ersten Runde.</p>
+    </div>
+  </section>
+
+  <section class="dns-section">
+    <h2>Klassenfähigkeiten</h2>
+    <table class="feature-table">
+      <thead>
+        <tr><th class="level-cell">Level</th><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="level-cell">L1</td><td>Schleichangriff</td><td>1W6 pro 2 Level bei Vorteil oder Verbündetem in 5ft, 1/Runde. (Max 10W6 auf L19-20.)</td></tr>
+        <tr><td class="level-cell">L1</td><td>Diebessprache</td><td>Geheime Sprache der Unterwelt.</td></tr>
+        <tr><td class="level-cell">L2</td><td>Listige Aktion</td><td>Bonus-Aktion: Verstecken / Rückzug / Sprinten.</td></tr>
+        <tr><td class="level-cell">L5</td><td>Blitzschnelle Ausweichmanöver</td><td>Reaktion: Halbiere eingehenden Schaden von einem Angreifer. 1/Zug.</td></tr>
+        <tr><td class="level-cell">L5</td><td>Schurkeninstinkt</td><td>Listige Aktion: Verstecken als Bonus-Aktion.</td></tr>
+        <tr><td class="level-cell">L7</td><td>Entfesselungskunst</td><td>DEX-Rettungswürfe: 0 Schaden statt halber Schaden bei erfolgreichem Rettungswurf.</td></tr>
+        <tr><td class="level-cell">L11</td><td>Verbesserter Schleichangriff 1</td><td>Schleichangriff: 1x zusätzlich pro Runde nutzbar.</td></tr>
+        <tr><td class="level-cell">L11</td><td>Zuverlässiges Talent</td><td>Mindestens 10 auf Fertigkeitsprobes mit Profan-Bonus.</td></tr>
+        <tr><td class="level-cell">L13</td><td>Verbesserter Schleichangriff 2</td><td>Schleichangriff: weitere Skalierung.</td></tr>
+        <tr><td class="level-cell">L15</td><td>Schicksalsstoß</td><td>1/Kurze Rast: beliebiger Wurf wird zu einer nat 20 (Automatischer Kritischer Treffer).</td></tr>
+        <tr><td class="level-cell">L17</td><td>Automatischer Erfolg</td><td>1/Kurze Rast: Fertigkeitsprobe automatisch erfolgreich.</td></tr>
+        <tr><td class="level-cell">L18</td><td>Entzogen</td><td>Keine Vorteil gegen den SCHURKEN mehr möglich.</td></tr>
+        <tr><td class="level-cell">L20</td><td>Glücksritter / Meisterdieb</td><td>Abschlussfähigkeiten.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Fähigkeiten</h2>
+
+    <h3>Aktive Fähigkeiten</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Schattenschlag</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-unlimited">unbegrenzt</span></td>
+          <td>L1</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> +1W6 Präzisionsschaden auf den nächsten Angriff. Nur nutzbar wenn versteckt.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Finte</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-unlimited">unbegrenzt</span></td>
+          <td>L2</td>
+          <td>Vorteil auf den nächsten Angriffswurf.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Schmutziger Trick</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-unlimited">unbegrenzt</span></td>
+          <td>L3</td>
+          <td>Ziel muss einen CON-Rettungswurf ablegen oder wird 1 Runde geblendet.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Nierenschlag</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-unlimited">unbegrenzt</span></td>
+          <td>L5</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> Waffenangriff: Ziel muss einen CON-Rettungswurf ablegen oder wird 1 Runde vergiftet.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Vergiftete Klinge</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-unlimited">unbegrenzt</span></td>
+          <td>L5</td>
+          <td><span class="el-NATURE">NATUR</span> Waffenangriff: Ziel muss einen CON-Rettungswurf ablegen oder wird vergiftet und nimmt 1W6 Giftschaden pro Runde für 3 Runden.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Rauchbombe</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-unlimited">unbegrenzt</span></td>
+          <td>L7</td>
+          <td>Erzeugt eine 10ft Rauchwolke die die Sicht blockiert für 1 Runde.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Gnadenloser Stich</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">1/Kurze Rast</span></td>
+          <td>L7</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> +3W6 Schaden auf den nächsten Angriff. Besonders effektiv gegen überraschte oder geblendete Ziele.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Todesschlag</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">1/Kurze Rast</span></td>
+          <td>L17</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> +5W6 Schaden auf den nächsten Angriff. Automatischer Kritischer Treffer gegen überraschte Ziele.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Reaktionen</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Auslöser</th><th>Nutzung</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Blitzschnelle Ausweichmanöver</span></td>
+          <td>Bei Treffer</td>
+          <td><span class="badge badge-uses">1/Zug</span></td>
+          <td>Halbiere den Angriffsschaden von einem Angreifer.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Ausweichrolle</span></td>
+          <td>Bei Verfehlen</td>
+          <td><span class="badge badge-unlimited">unbegrenzt</span></td>
+          <td>Wenn ein Angriff dich verfehlt: freier Rückzug + 15ft Bewegungsbonus für 1 Runde.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Passive Fähigkeiten</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Meister der Schatten</span></td>
+          <td><span class="badge badge-passive">PASSIV</span> Abschlussfähigkeit: +2W6 Bonus-Schaden auf alle Angriffe (immer aktiv).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Ressourcen</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Ressource</th><th>Mechanik</th><th>Verfügbarkeit</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Schleichangriff</span></td>
+          <td>1W6 pro 2 Level (max 10W6), 1/Runde (2/Runde ab L11)</td>
+          <td>Ab L1, pro Runde</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Schicksalsstoß</span></td>
+          <td>1/Kurze Rast — beliebiger Wurf wird nat 20</td>
+          <td>Ab L15, Kurze Rast</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Automatischer Erfolg</span></td>
+          <td>1/Kurze Rast — Fertigkeitsprobe automatisch erfolgreich</td>
+          <td>Ab L17, Kurze Rast</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Spielstil-Tipps</h2>
+    <div class="playstyle-tip">
+      <strong>Frühe Level (L1-4):</strong> Schleichangriff ist dein Kern — positioniere dich für Vorteil oder halte dich in der Nähe eines Verbündeten. Schattenschlag gibt dir +1W6 wenn versteckt. Finte verschafft dir Vorteil für den Schleichangriff. Schmutziger Trick blendet Gegner und öffnet Combo-Möglichkeiten.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Mittlere Level (L5-12):</strong> Blitzschnelle Ausweichmanöver und Ausweichrolle machen dich schwer zu treffen. Nierenschlag und Vergiftete Klinge fügen Schaden über Zeit und Zustände hinzu. Rauchbombe gibt dir Fluchtmöglichkeiten. Gnadenloser Stich (L7) ist dein großer Spitzenschaden — spare ihn für überraschte oder geblendete Ziele.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Hohe Level (L13-20):</strong> Verbesserter Schleichangriff lässt dich 2x pro Runde zuschlagen. Schicksalsstoß (L15) garantiert einen nat 20 — perfekt für Todesschlag (L17) mit +5W6 und Automatischer Kritischer Treffer. Entzogen (L18) macht dich immun gegen Vorteil von Gegnern. Meister der Schatten (L20) gibt permanent +2W6 auf jeden Angriff.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Synergien:</strong> Schmutziger Trick (blenden) → Gnadenloser Stich (+3W6) → Schleichangriff (Bonus) = massiver Spitzenschaden. Rauchbombe → Verstecken → Schattenschlag (+1W6). Schicksalsstoß + Todesschlag = ein-PRO-Rast-Verwüstung. Kombiniere Listige Aktion (Verstecken als Bonus-Aktion) mit Schattenschlag für konstanten Bonus-Schaden.
+    </div>
+  </section>
+
+  <footer class="handbuch-footer">
+    <p>Dice &amp; Screen — Klassenhandbuch · <a href="./index.html">Zurück zum Index</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

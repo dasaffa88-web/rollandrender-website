@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEISTERBESCHWÖRER — Geisterrufer | Dice &amp; Screen Klassenhandbuch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="theme-aether">
+
+<div class="handbuch-root">
+
+  <a href="./index.html" class="nav-back">← Klassenhandbuch</a>
+
+  <header class="dns-hero">
+    <div class="hero-portrait">
+      <img src="./img/geisterbeschwoerer.png" alt="GEISTERBESCHWÖRER" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="portrait-missing"><span class="pm-label">Bild fehlt</span><span class="pm-file">img/geisterbeschwoerer.png</span></div>
+    </div>
+    <div class="hero-text">
+      <h1>GEISTERBESCHWÖRER</h1>
+      <div class="subtitle">Geisterrufer</div>
+      <div class="tagline">Äther, Geister, Seelenraub — der Herr der ätherischen Ebene.</div>
+    </div>
+  </header>
+
+  <section class="dns-section">
+    <h2>Übersicht</h2>
+    <table class="overview-table">
+      <tr><td>Rolle</td><td>Vollzauberer · Äther-Schaden · Beschwörer · Lebensraub · Kontrolle</td></tr>
+      <tr><td>Zauberertyp</td><td><span class="badge badge-FULL">Vollzauberer</span> Zauberslots bis Rang 9</td></tr>
+      <tr><td>Primärer Schadensattribut</td><td>Weisheit (WIS)</td></tr>
+      <tr><td>Sekundärer Schadensattribut</td><td>—</td></tr>
+      <tr><td>Zauberattribut</td><td>Weisheit (WIS)</td></tr>
+      <tr><td>TP (L1)</td><td>6</td></tr>
+      <tr><td>TP pro Level</td><td>4</td></tr>
+      <tr><td>Rüstung</td><td>Keine</td></tr>
+      <tr><td>Waffen</td><td>Magierwaffen — Dolche, Stäbe, Zauberstäbe, Bücher</td></tr>
+      <tr><td>Rettungswürfe</td><td>Weisheit (WIS), Charisma (CHA)</td></tr>
+      <tr><td>Attributsteigerung (Level)</td><td>4, 8, 12, 16</td></tr>
+      <tr><td>Fertigkeiten (2 zur Auswahl)</td><td>Geisteskunde, Intuition, Wahrnehmung, Nachforschung, Religion</td></tr>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Philosophie</h2>
+    <div class="philosophy-block">
+      <p>Der GEISTERBESCHWÖRER ist der Herr der ätherischen Ebene — er ruft Geister als Begleiter, kanalisiert Ätherenergie und stiehlt Seelen von seinen Feinden. Weisheit treibt seine Zauber, Charisma hilft bei Beschwörungen. Seine Zauber fügen ÄTHER- und SCHATTEN-Schaden zu: Aetherstoß (Basiszauber auf Rang 1), Seelenraub heilt ihn für 50% des Schadens (ab L5, hardcoded). Geisterkette hält Gegner fest, Geisterschrei verängstigt ganze Gruppen, Todesfluch verflucht und fügt Schaden über Zeit zu. Mit Schutzgeist rufen (L10) und Kriegsgeist/Spähergeist (L10) beschwört er verschiedene Geister-Begleiter — ab L10 können 2 gleichzeitig aktiv sein. Aetherische Resonanz (L14) gibt +2 Schaden gegen verfluchte Ziele. Frostaura (L14) fügt Gegnern in Nähe +2 FROST-Schaden zu. Ätherform (L18) macht ihn ätherisch. Geisterfürst (L20) verdoppelt die TP seiner Geister und gibt +2 Schaden. Er ist fragil wie der NECROMANT, aber seine Geister-Armee und die Kombination aus ÄTHER und SCHATTEN machen ihn flexibler im Schaden.</p>
+    </div>
+  </section>
+
+  <section class="dns-section">
+    <h2>Klassenfähigkeiten</h2>
+    <table class="feature-table">
+      <thead>
+        <tr><th class="level-cell">Level</th><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="level-cell">L1</td><td>Spektralsicht</td><td>Passiv: Erkenne Unsichtbare/Versteckte in 6 Feldern.</td></tr>
+        <tr><td class="level-cell">L3</td><td>Geistbindung</td><td>Wähle 2 zusätzliche Zauber aus der Geisterbeschwörer-Liste (bis Rang 2).</td></tr>
+        <tr><td class="level-cell">L5</td><td>Lebensentzug</td><td>Passiv: Zauber heilen dich für 50% des verursachten Schadens (Lebensraub).</td></tr>
+        <tr><td class="level-cell">L6</td><td>Schutzmechanismus</td><td>1/Kampf: Reduziere Schaden an Verbündetem um 1W6+Level.</td></tr>
+        <tr><td class="level-cell">L10</td><td>Geisterlegion</td><td>Passiv: 2 Geister-Begleiter gleichzeitig aktiv (statt 1).</td></tr>
+        <tr><td class="level-cell">L10</td><td>Schutzgeist rufen</td><td>2/Kampf: Schutzgeist beschwören, der an deiner Seite kämpft.</td></tr>
+        <tr><td class="level-cell">L10</td><td>Kriegsgeist / Spähergeist</td><td>2/Kurze Rast: Kriegsgeist oder Spähergeist beschwören.</td></tr>
+        <tr><td class="level-cell">L10</td><td>Geisterschild</td><td>1/Kampf: Reduziere eigenen Schaden um 1W6+Level.</td></tr>
+        <tr><td class="level-cell">L14</td><td>Aetherische Resonanz</td><td>Passiv: +2 Schaden gegen verfluchte Ziele.</td></tr>
+        <tr><td class="level-cell">L14</td><td>Frostaura</td><td>Passiv: +2 FROST-Schaden an Gegner in 10ft.</td></tr>
+        <tr><td class="level-cell">L14</td><td>Verbannen</td><td>1/Lange Rast: Ziel verbannen.</td></tr>
+        <tr><td class="level-cell">L18</td><td>Ätherform</td><td>Verwandle dich in eine ätherische Form (Form-System: ETHEREAL_FORM).</td></tr>
+        <tr><td class="level-cell">L20</td><td>Geisterfürst</td><td>Passiv: Geister-Beschwörungen erhalten doppelte TP und +2 Schaden.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Fähigkeiten</h2>
+    <p class="note">Alle Zauber nutzen Zauberslots (Vollzauberer-Progression, Rang 1–9). Zauberattribut ist Weisheit (WIS). Upcast-Skalierung pro zusätzlichem Zauberslot bei Aetherstoß (+1W8), Seelenraub (+1W6), Geisterschrei (+1W6).</p>
+
+    <h3>Zauber</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Aetherstoß</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-AETHER">ÄTHER</span> 2W8 Äther, Angriffswurf, Reichweite 18. Upcast: +1W8 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Geisterkette</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-AETHER">ÄTHER</span> Ziel muss WIS-Rettungswurf ablegen oder wird festgehalten (1 Minute).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Seelenraub</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 2</span></td>
+          <td>L3</td>
+          <td><span class="el-SHADOW">SCHATTEN</span> 3W6 Schatten + WIS-Rettungswurf (halber Schaden bei Erfolg). Lebensraub 50% ab L5. Upcast: +1W6 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Geisterschrei</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 2</span></td>
+          <td>L3</td>
+          <td><span class="el-MIND">GEIST</span> Kegel 15ft: 3W6 Geist + KON-Rettungswurf oder verängstigt (1 Runde). Upcast: +1W6 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Todesfluch</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 3</span></td>
+          <td>L5</td>
+          <td><span class="el-SHADOW">SCHATTEN</span> Ziel muss WIS-Rettungswurf ablegen oder wird verflucht + 2W6 Schatten-Schaden über Zeit (3 Runden).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Ätherform (verstärkt)</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 3</span></td>
+          <td>L5</td>
+          <td><span class="el-AETHER">ÄTHER</span> +2 RK für 1 Minute (selbst).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Geisterlegion</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 4</span></td>
+          <td>L7</td>
+          <td><span class="el-AETHER">ÄTHER</span> Beschwört einen Geister-Krieger. Ab L10 können 2 Geister gleichzeitig aktiv sein.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Aethersturm</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 5</span></td>
+          <td>L9</td>
+          <td><span class="el-AETHER">ÄTHER</span> Flächeneffekt 20ft: 8W8 Äther + GES-Rettungswurf (halber Schaden bei Erfolg).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Spezialfähigkeiten</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Schutzgeist rufen</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">2/Kampf</span></td>
+          <td>L10</td>
+          <td>Beschwöre einen Schutzgeist, der an deiner Seite kämpft.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Kriegsgeist</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">2/Kurze Rast</span></td>
+          <td>L10</td>
+          <td>Beschwöre einen Kriegsgeist als Begleiter.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Spähergeist</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">2/Kurze Rast</span></td>
+          <td>L10</td>
+          <td>Beschwöre einen Spähergeist als Begleiter.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Geisterschild</span></td>
+          <td>Reaktion</td>
+          <td><span class="badge badge-uses">1/Kampf</span></td>
+          <td>L10</td>
+          <td>Reduziere eigenen Schaden um 1W6+Level.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Schutzmechanismus</span></td>
+          <td>Reaktion</td>
+          <td><span class="badge badge-uses">1/Kampf</span></td>
+          <td>L6</td>
+          <td>Reduziere Schaden an Verbündetem um 1W6+Level.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Verbannen</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Lange Rast</span></td>
+          <td>L14</td>
+          <td>Verbanne ein Ziel in eine andere Ebene.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Ätherform</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Spezial</span></td>
+          <td>L18</td>
+          <td>Verwandle dich in eine ätherische Form (Form-System: ETHEREAL_FORM).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Ressourcen</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Ressource</th><th>Mechanik</th><th>Verfügbarkeit</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Zauberslots</span></td>
+          <td>Vollzauberer-Progression (Rang 1–9). Zauberattribut: WIS.</td>
+          <td>Alle Zauber, pro Zauberslot</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Geister-Begleiter</span></td>
+          <td>Schutzgeist, Kriegsgeist, Spähergeist (2 gleichzeitig ab L10, doppelte TP ab L20)</td>
+          <td>2/Kampf oder 2/Kurze Rast, ab L10</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Geisterschild / Schutzmechanismus</span></td>
+          <td>Schaden reduzieren (1W6+Level)</td>
+          <td>1/Kampf, ab L6/L10</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Verbannen</span></td>
+          <td>Ziel in andere Ebene verbannen</td>
+          <td>1/Lange Rast, ab L14</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Spielstil-Tipps</h2>
+    <div class="playstyle-tip">
+      <strong>Frühe Level (L1-4):</strong> Aetherstoß (2W8 ÄTHER) ist dein Hauptzauber. Geisterkette hält Gegner fest. Seelenraub (3W6) und Geisterschrei (verängstigt) kommen ab L3. Geistbindung (L3) gibt 2 zusätzliche Zauber. Du bist fragil — halte dich hinten und lass Geister die Front halten.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Mittlere Level (L5-12):</strong> Lebensentzug (L5) aktiviert Lebensraub — du heilst für 50% des Schadens. Schutzmechanismus (L6) reduziert Schaden für Verbündete. Ab L10 explodiert deine Beschwörung: Schutzgeist, Kriegsgeist, Spähergeist — 2 gleichzeitig aktiv. Geisterschild schützt dich selbst. Todesfluch (verflucht + Schaden über Zeit) ist dein starkes Kontrolle-Werkzeug.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Hohe Level (L13-20):</strong> Aethersturm (8W8 Flächeneffekt) ist dein stärkster Zauber. Aetherische Resonanz (L14) gibt +2 Schaden gegen verfluchte Ziele — kombiniere mit Todesfluch. Frostaura (L14) schadet Gegnern in Nähe passiv. Ätherform (L18) macht dich ätherisch. Geisterfürst (L20) verdoppelt TP deiner Geister und gibt +2 Schaden — deine Geister-Armee wird unaufhaltsam.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Synergien:</strong> Todesfluch (verflucht) + Aetherische Resonanz (L14) = +2 Schaden auf alle weiteren Zauber. Seelenraub + Lebensraub (L5) = du heilst während du Schaden machst. 2 Geister gleichzeitig (L10) + Geisterfürst (L20) = unaufhaltsame Geister-Armee. Geisterkette (festgehalten) → Aethersturm = festgehaltene Gegner schaffen den Rettungswurf nicht. Frostaura + Geister im Nahkampf = passiver Bonusschaden.
+    </div>
+  </section>
+
+  <footer class="handbuch-footer">
+    <p>Dice &amp; Screen — Klassenhandbuch · <a href="./index.html">Zurück zum Index</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

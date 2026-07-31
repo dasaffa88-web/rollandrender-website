@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TÜFTLER — Tüftler | Dice &amp; Screen Klassenhandbuch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="theme-frost">
+
+<div class="handbuch-root">
+
+  <a href="./index.html" class="nav-back">← Klassenhandbuch</a>
+
+  <header class="dns-hero">
+    <div class="hero-portrait">
+      <img src="./img/tueftler.png" alt="TÜFTLER" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="portrait-missing"><span class="pm-label">Bild fehlt</span><span class="pm-file">img/tueftler.png</span></div>
+    </div>
+    <div class="hero-text">
+      <h1>TÜFTLER</h1>
+      <div class="subtitle">Tüftler</div>
+      <div class="tagline">Bomben, Infusionen, mechanische Begleiter — Erfindergeist in Aktion.</div>
+    </div>
+  </header>
+
+  <section class="dns-section">
+    <h2>Übersicht</h2>
+    <table class="overview-table">
+      <tr><td>Rolle</td><td>Halbzauberer · Bombenwerfer · Infusionen · Beschwörer · Unterstützer</td></tr>
+      <tr><td>Zauberertyp</td><td><span class="badge badge-HALF">Halbzauberer</span> Keine Zauberslots — Tüftler-Punkte</td></tr>
+      <tr><td>Primärer Schadensattribut</td><td>Intelligenz (INT)</td></tr>
+      <tr><td>Sekundärer Schadensattribut</td><td>Geschicklichkeit (DEX)</td></tr>
+      <tr><td>Zauberattribut</td><td>Intelligenz (INT)</td></tr>
+      <tr><td>TP (L1)</td><td>10</td></tr>
+      <tr><td>TP pro Level</td><td>6</td></tr>
+      <tr><td>Rüstung</td><td>Leichte Rüstung</td></tr>
+      <tr><td>Waffen</td><td>Tüftlerwaffen — Schrotflinte, Dolche, Keulen, Armbrüste</td></tr>
+      <tr><td>Rettungswürfe</td><td>Intelligenz (INT), Geschicklichkeit (DEX)</td></tr>
+      <tr><td>Attributsteigerung (Level)</td><td>4, 8, 12, 16</td></tr>
+      <tr><td>Fertigkeiten (2 zur Auswahl)</td><td>Technik, Handwerk, Alchemie, Nachforschung, Logik</td></tr>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Philosophie</h2>
+    <div class="philosophy-block">
+      <p>Der TÜFTLER ist der Erfinder und Bombenwerfer — er nutzt Tüftler-Punkte statt Zauberslots, wirft Bomben als Bonus-Aktion und verzaubert Waffen mit Infusionen. Intelligenz treibt seine Bomben und Infusionen, Geschicklichkeit seine Schrotflinte. Seine Bomben decken alle Elemente ab: Feuerbombe (2W6 FLAMME), Frostbombe (festgehalten), Blitzbombe (3W6 STURM), Giftbombe (vergiftet), Meisterbombe (6W6+2W6 Flächeneffekt). Dampfstoß wirft Gegner zurück, Arkane Kanone ist eine stationäre Waffe die 3 Runden lang Schaden macht. Schrotflinte (2W4 PHYSISCH) ist sein Basis-Angriff. Mit Infusion (L5) verzaubert er Waffen/Rüstungen mit +1, mit Alchemistische Bombe (L2) bekommt er seinen Bomben-Pool (Tüftler-Punkte = Level, pro Kurze Rast). Schutzmechanismus (L6) reduziert Schaden als Reaktion. Mechanischer Begleiter (L10) gibt ihm einen permanenten Begleiter. Meisterinfrafusion (L14) verstärkt seine Infusionen mit +2 und Elementar-Schaden. Meisterhandwerker (L18) lässt ihn dauerhafte magische Gegenstände herstellen. Dampfgolem-Form (L20) verwandelt ihn in einen Dampfgolem. Er ist der vielseitigste Nicht-Zauberer — Schaden, Kontrolle, Unterstützung und Beschwörung durch Technik.</p>
+    </div>
+  </section>
+
+  <section class="dns-section">
+    <h2>Klassenfähigkeiten</h2>
+    <table class="feature-table">
+      <thead>
+        <tr><th class="level-cell">Level</th><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="level-cell">L1</td><td>Tüftlergeist</td><td>Passiv: Vorteil auf Handwerks- und Nachforschungs-Proben.</td></tr>
+        <tr><td class="level-cell">L2</td><td>Alchemistische Bombe</td><td>Tüftler-Punkte-Pool (Level = Punkte, pro Kurze Rast). Bonus-Aktion: Bombe werfen, 1W6+INT Elementar-Schaden, 1 Feld Flächeneffekt.</td></tr>
+        <tr><td class="level-cell">L3</td><td>Tüftler-Technik</td><td>1 zusätzliche Infusion (RP-Marker).</td></tr>
+        <tr><td class="level-cell">L5</td><td>Infusion</td><td>1/Lange Rast: Verzaubere Waffe/Rüstung mit +1 Bonus für 1 Stunde.</td></tr>
+        <tr><td class="level-cell">L6</td><td>Schutzmechanismus</td><td>Reaktion: Reduziere Schaden um 1W6+Level (alle Schadenstypen).</td></tr>
+        <tr><td class="level-cell">L10</td><td>Mechanischer Begleiter</td><td>Beschwöre einen permanenten mechanischen Begleiter.</td></tr>
+        <tr><td class="level-cell">L14</td><td>Meisterinfrafusion</td><td>Passiv: Infusionen geben +2 und Elementar-Schaden.</td></tr>
+        <tr><td class="level-cell">L18</td><td>Meisterhandwerker</td><td>Passiv: Dauerhafte magische Gegenstände herstellen.</td></tr>
+        <tr><td class="level-cell">L20</td><td>Dampfgolem-Form</td><td>Verwandle dich in einen mechanischen Golem (Form-System: STEAM_GOLEM_FORM).</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Fähigkeiten</h2>
+    <p class="note">Der TÜFTLER nutzt Tüftler-Punkte statt Zauberslots (Tüftler-Punkte = Level, pro Kurze Rast). Bomben sind Bonus-Aktionen. Alle Fähigkeiten nutzen INT als Attribut.</p>
+
+    <h3>Basisangriff</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Schrotflinte</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-basiszauber">Basisangriff — unbegrenzt</span></td>
+          <td>L1</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> 2W4 Physisch, Angriffswurf, Reichweite 5.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Bomben (Bonus-Aktion)</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Feuerbombe</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">Tüftler-Punkt</span></td>
+          <td>L2</td>
+          <td><span class="el-FLAME">FLAMME</span> Flächeneffekt 5ft: 2W6 Feuer.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Frostbombe</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">Tüftler-Punkt</span></td>
+          <td>L2</td>
+          <td><span class="el-FROST">FROST</span> Flächeneffekt 5ft: 1W6 Frost + GES-Rettungswurf oder festgehalten.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Blitzbombe</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">Tüftler-Punkt</span></td>
+          <td>L2</td>
+          <td><span class="el-STORM">STURM</span> Flächeneffekt 5ft: 3W6 Blitz + GES-Rettungswurf (halber Schaden bei Erfolg).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Giftbombe</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">Tüftler-Punkt</span></td>
+          <td>L2</td>
+          <td><span class="el-NATURE">NATUR</span> Flächeneffekt 5ft: 1W6 Natur + KON-Rettungswurf oder vergiftet (3 Runden).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Meisterbombe</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">Tüftler-Punkt</span></td>
+          <td>L10</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> Flächeneffekt 10ft: 6W6 Physisch + 2W6 Feuer.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Spezialfähigkeiten</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Dampfstoß</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Tüftler-Punkt</span></td>
+          <td>L2</td>
+          <td><span class="el-STORM">STURM</span> Kegel 15ft: 3W6 Sturm + STR-Rettungswurf oder Zurückstoßen 10ft.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Arkane Kanone</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Tüftler-Punkt</span></td>
+          <td>L5</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> Stationäre Kanone: 4W6 Physisch pro Runde für 3 Runden im 10ft Bereich.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Verstärkte Rüstung</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Tüftler-Punkt</span></td>
+          <td>L2</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> +2 RK für 1 Minute (selbst).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Heiltrank</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Tüftler-Punkt</span></td>
+          <td>L2</td>
+          <td>Berührung: Heile Verbündeten 2W4+2.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Reparatur</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Tüftler-Punkt</span></td>
+          <td>L10</td>
+          <td>Berührung: Heile Konstrukt-Verbündeten 3W8.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Ressourcen</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Ressource</th><th>Mechanik</th><th>Verfügbarkeit</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Tüftler-Punkte</span></td>
+          <td>Bomben und Spezialfähigkeiten (Level = Punkte)</td>
+          <td>Pro Kurze Rast</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Infusion</span></td>
+          <td>Waffe/Rüstung mit +1 verzaubern (1 Stunde)</td>
+          <td>1/Lange Rast, ab L5</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Schutzmechanismus</span></td>
+          <td>Schaden reduzieren (1W6+Level, alle Typen)</td>
+          <td>Reaktion, ab L6</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Mechanischer Begleiter</span></td>
+          <td>Permanenter mechanischer Begleiter</td>
+          <td>Ab L10</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Dampfgolem-Form</span></td>
+          <td>Verwandlung in Dampfgolem (STEAM_GOLEM_FORM)</td>
+          <td>Ab L20</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Spielstil-Tipps</h2>
+    <div class="playstyle-tip">
+      <strong>Frühe Level (L1-4):</strong> Schrotflinte (2W4 PHYSISCH) ist dein Basisangriff. Ab L2 bekommst du Alchemistische Bomben — Tüftler-Punkte = Level pro Kurze Rast. Feuerbombe (2W6), Frostbombe (festgehalten), Blitzbombe (3W6), Giftbombe (vergiftet) decken alle Elemente ab. Dampfstoß wirft Gegner zurück, Verstärkte Rüstung gibt +2 RK. Tüftler-Technik (L3) gibt 1 Extra-Infusion.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Mittlere Level (L5-12):</strong> Infusion (L5) verzaubert Waffen/Rüstungen mit +1 für 1 Stunde. Arkane Kanone (L5) ist eine stationäre Waffe die 3 Runden lang 4W6 pro Runde macht. Schutzmechanismus (L6) reduziert Schaden als Reaktion. Ab L10 bekommst du Meisterbombe (6W6+2W6) und einen permanenten mechanischen Begleiter. Reparatur heilt Konstrukte.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Hohe Level (L13-20):</strong> Meisterinfrafusion (L14) verstärkt deine Infusionen mit +2 und Elementar-Schaden — deine Waffen werden massiv stärker. Meisterhandwerker (L18) lässt dich dauerhafte magische Gegenstände herstellen. Dampfgolem-Form (L20) verwandelt dich in einen mechanischen Golem — die ultimative Form der Erfinderkunst.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Synergien:</strong> Infusion (+1 Waffe) + Schrotflinte = verstärkter Basisangriff. Frostbombe (festgehalten) → Schrotflinte = festgehaltene Gegner treffen nicht ausweichen. Arkane Kanone + mechanischer Begleiter = zwei Schadensquellen gleichzeitig. Meisterinfrafusion (L14) + Infusion = +2 Waffe mit Elementar-Schaden. Heiltrank + Reparatur = heilt sowohl organische als auch mechanische Verbündete.
+    </div>
+  </section>
+
+  <footer class="handbuch-footer">
+    <p>Dice &amp; Screen — Klassenhandbuch · <a href="./index.html">Zurück zum Index</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

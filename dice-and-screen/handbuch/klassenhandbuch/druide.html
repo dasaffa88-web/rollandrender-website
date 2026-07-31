@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DRUIDE — Naturhüter | Dice &amp; Screen Klassenhandbuch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="theme-nature">
+
+<div class="handbuch-root">
+
+  <a href="./index.html" class="nav-back">← Klassenhandbuch</a>
+
+  <header class="dns-hero">
+    <div class="hero-portrait">
+      <img src="./img/druide.png" alt="DRUIDE" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="portrait-missing"><span class="pm-label">Bild fehlt</span><span class="pm-file">img/druide.png</span></div>
+    </div>
+    <div class="hero-text">
+      <h1>DRUIDE</h1>
+      <div class="subtitle">Naturhüter</div>
+      <div class="tagline">Naturmagie, Gestaltwandeln, Elementargewalt — die Wut der Wildnis in Person.</div>
+    </div>
+  </header>
+
+  <section class="dns-section">
+    <h2>Übersicht</h2>
+    <table class="overview-table">
+      <tr><td>Rolle</td><td>Vollzauberer · Naturzauberer · Gestaltwandler · Heiler · Kontrolle</td></tr>
+      <tr><td>Zauberertyp</td><td><span class="badge badge-FULL">Vollzauberer</span> Zauberslots bis Rang 9</td></tr>
+      <tr><td>Primärer Schadensattribut</td><td>Weisheit (WIS)</td></tr>
+      <tr><td>Sekundärer Schadensattribut</td><td>—</td></tr>
+      <tr><td>Zauberattribut</td><td>Weisheit (WIS)</td></tr>
+      <tr><td>TP (L1)</td><td>8</td></tr>
+      <tr><td>TP pro Level</td><td>5</td></tr>
+      <tr><td>Rüstung</td><td>Mittlere Rüstung (kein Metall)</td></tr>
+      <tr><td>Waffen</td><td>Naturwaffen — Keule, Dolch, Wurfpfeil, Speer, Schleuder, Streitkolben</td></tr>
+      <tr><td>Rettungswürfe</td><td>Weisheit (WIS), Intelligenz (INT)</td></tr>
+      <tr><td>Attributsteigerung (Level)</td><td>4, 8, 12, 16</td></tr>
+      <tr><td>Fertigkeiten (2 zur Auswahl)</td><td>Naturkunde, Tierkunde, Überzeugen, Medizin, Wahrnehmung</td></tr>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Philosophie</h2>
+    <div class="philosophy-block">
+      <p>Der DRUIDE ist der Hüter der Natur — er kanalisiert die Wildnis in Naturmagie, Gestaltwandeln und elementare Gewalt. Weisheit treibt seine Zauber, und wie der KLERIKER ist er robust: mittlere Rüstung, 8 TP auf Level 1. Seine Gestaltwandeln (L2) ist das Herzstück — 2/Kurze Rast verwandelt er sich in ein Tier, mit höheren Levels immer mächtigere Formen. Seine Zauber decken das gesamte Spektrum der Natur ab: Eisfangriff friert Gegner fest, Pflanzenwachstum macht Gelände schwer passierbar, Blitzschlag und Sonnenstrahl richten massiven Schaden an, Heilung der Natur und Heilung der Lande heilen Verbündete. Mit Naturzuflucht (L10) wird er immun gegen Gift, mit Bestienform (L14) bekommt er Resistenz gegen Kreaturschaden. Tierzauber (L18) lässt ihn in Tiergestalt zaubern, Erzdruide (L20) gibt ihm unbegrenzte Gestaltwandeln. Er ist der vielseitigste Naturzauberer — Heilung, Schaden, Kontrolle und Gestaltwandeln in einer Klasse.</p>
+    </div>
+  </section>
+
+  <section class="dns-section">
+    <h2>Klassenfähigkeiten</h2>
+    <table class="feature-table">
+      <thead>
+        <tr><th class="level-cell">Level</th><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="level-cell">L1</td><td>Druidisch</td><td>Geheime Sprache der Druiden — nur für Druiden verständlich.</td></tr>
+        <tr><td class="level-cell">L2</td><td>Gestaltwandeln</td><td>2/Kurze Rast: Verwandle dich in ein Tier (CR-begrenzt). Übernimm TP, Attribute und Fähigkeiten der Form.</td></tr>
+        <tr><td class="level-cell">L3</td><td>Naturverbundenheit</td><td>Wähle 2 zusätzliche Zauber aus der Druide-Liste (bis Rang 2).</td></tr>
+        <tr><td class="level-cell">L4</td><td>Gestaltwandeln Verbesserung</td><td>Höhere CR-Grenze für Gestaltwandeln (schwimmende/flugfähige Formen).</td></tr>
+        <tr><td class="level-cell">L5</td><td>Naturverbundenheit II</td><td>Passiv: +2 Weisheit.</td></tr>
+        <tr><td class="level-cell">L6</td><td>Landritt</td><td>Passiv: Kein Bewegungsverlust durch schwieriges Gelände.</td></tr>
+        <tr><td class="level-cell">L10</td><td>Nebelform</td><td>Passiv: Permanent unsichtbar bei schwachem Licht.</td></tr>
+        <tr><td class="level-cell">L10</td><td>Naturzuflucht</td><td>Passiv: Immun gegen Gift, Vorteil gegen Verängstigt.</td></tr>
+        <tr><td class="level-cell">L14</td><td>Bestienform</td><td>Passiv: Resistenz gegen Gift- und Kreaturschaden (50%).</td></tr>
+        <tr><td class="level-cell">L18</td><td>Tierzauber</td><td>Passiv: Zauber in Tiergestalt wirken.</td></tr>
+        <tr><td class="level-cell">L20</td><td>Erzdruide</td><td>Passiv: Unbegrenzte Gestaltwandeln, Zauber-Komponenten ignoriert.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Fähigkeiten</h2>
+    <p class="note">Alle Zauber nutzen Zauberslots (Vollzauberer-Progression, Rang 1–9). Zauberattribut ist Weisheit (WIS). Upcast-Skalierung pro zusätzlichem Zauberslot bei Eisfangriff (+1W6), Mondlicht (+1W4), Blitzschlag (+1W8), Heilung der Lande (+1W8 Heilung), Sonnenstrahl (+1W8), Heilung der Natur (+1W4 Heilung).</p>
+
+    <h3>Basiszauber</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Dornranke</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-basiszauber">Basiszauber — unbegrenzt</span></td>
+          <td>L1</td>
+          <td><span class="el-NATURE">NATUR</span> 1W6 Naturschaden, Angriffswurf.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Zauber</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Eisfangriff</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-FROST">FROST</span> 2W6 Frost + GES-Rettungswurf oder festgehalten. Upcast: +1W6 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Heilung der Natur</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-NATURE">NATUR</span> Berührung: Heile 2W4+2. Upcast: +1W4 Heilung pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Mondlicht</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 2</span></td>
+          <td>L3</td>
+          <td><span class="el-LIGHT">LICHT</span> 3W4 Heilig + KON-Rettungswurf (halber Schaden bei Erfolg), Reichweite 18. Upcast: +1W4 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Pflanzenwachstum</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 2</span></td>
+          <td>L3</td>
+          <td><span class="el-NATURE">NATUR</span> Flächeneffekt 20ft: Schwieriges Gelände für Gegner (1 Minute).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Blitzschlag</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 3</span></td>
+          <td>L5</td>
+          <td><span class="el-STORM">STURM</span> 5W8 Blitz + GES-Rettungswurf (halber Schaden bei Erfolg). Upcast: +1W8 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Heilung der Lande</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 3</span></td>
+          <td>L5</td>
+          <td><span class="el-NATURE">NATUR</span> Flächeneffekt 10ft: Heile alle Verbündeten 3W8. Upcast: +1W8 Heilung pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Sonnenstrahl</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 4</span></td>
+          <td>L7</td>
+          <td><span class="el-LIGHT">LICHT</span> 6W8 Heilig + KON-Rettungswurf oder geblendet (1 Minute). Upcast: +1W8 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Steinhaut</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 4</span></td>
+          <td>L7</td>
+          <td><span class="el-NATURE">NATUR</span> Verbündeter erhält +3 RK für 1 Minute.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Spezialfähigkeiten</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Gestaltwandeln</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">2/Kurze Rast</span></td>
+          <td>L2</td>
+          <td>Verwandle dich in ein Tier (CR-begrenzt). Übernimm TP, Attribute und Fähigkeiten der Form.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Urkraft</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Lange Rast</span></td>
+          <td>L20</td>
+          <td>Verwandle dich in eine mächtige Bestie für 1 Stunde.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Ressourcen</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Ressource</th><th>Mechanik</th><th>Verfügbarkeit</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Zauberslots</span></td>
+          <td>Vollzauberer-Progression (Rang 1–9). Zauberattribut: WIS.</td>
+          <td>Alle Zauber, pro Zauberslot</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Gestaltwandeln</span></td>
+          <td>Tierverwandlung (CR-begrenzt, skaliert mit Level)</td>
+          <td>2/Kurze Rast (unbegrenzt ab L20)</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Urkraft</span></td>
+          <td>Verwandlung in mächtige Bestie für 1 Stunde</td>
+          <td>1/Lange Rast</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Spielstil-Tipps</h2>
+    <div class="playstyle-tip">
+      <strong>Frühe Level (L1-4):</strong> Dornranke (1W6 NATUR) ist dein Basiszauber. Eisfangriff (festgehalten) und Heilung der Natur sind deine frühen Zauber. Gestaltwandeln (L2) gibt dir Tierformen — nutze sie für Aufklärung oder als Front-Kämpfer. Naturverbundenheit (L3) gibt dir 2 zusätzliche Zauber.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Mittlere Level (L5-12):</strong> Naturverbundenheit II (L5) gibt +2 WIS — skaliert alle deine Zauber. Blitzschlag (5W8) und Heilung der Lande (Gruppenheilung) sind deine Hauptzauber. Landritt (L6) macht dich immun gegen schwieriges Gelände. Nebelform und Naturzuflucht (L10) machen dich unsichtbar im Schatten und immun gegen Gift.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Hohe Level (L13-20):</strong> Sonnenstrahl (6W8 + geblendet) und Steinhaut (+3 RK) sind deine starken Zauber. Bestienform (L14) gibt Resistenz gegen Kreaturschaden. Tierzauber (L18) lässt dich in Tiergestalt zaubern. Erzdruide (L20) gibt unbegrenzte Gestaltwandeln — wechsle Formen frei nach Bedarf.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Synergien:</strong> Gestaltwandeln + Tierzauber (L18) = zaubern in Tierform ohne Abbruch. Pflanzenwachstum + Landritt = Gegner sind langsam, du nicht. Eisfangriff (festgehalten) → Blitzschlag = festgehaltene Gegner schaffen den Rettungswurf nicht. Nebelform (unsichtbar) → Dornranke = Bonus-Schaden aus dem Versteck. Heilung der Lande nach Gruppen-Schaden = alle heilen.
+    </div>
+  </section>
+
+  <footer class="handbuch-footer">
+    <p>Dice &amp; Screen — Klassenhandbuch · <a href="./index.html">Zurück zum Index</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

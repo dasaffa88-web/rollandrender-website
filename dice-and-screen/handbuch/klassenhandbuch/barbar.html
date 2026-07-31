@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BARBAR — Wilder Kämpfer | Dice & Screen Klassenhandbuch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="theme-bronze">
+<div class="handbuch-root">
+
+  <a href="./index.html" class="nav-back">← Klassenhandbuch</a>
+
+  <header class="dns-hero">
+    <div class="hero-portrait">
+      <img src="./img/barbar.png" alt="BARBAR" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="portrait-missing"><span class="pm-label">Bild fehlt</span><span class="pm-file">img/barbar.png</span></div>
+    </div>
+    <div class="hero-text">
+      <h1>BARBAR</h1>
+      <div class="subtitle">Wilder Kämpfer</div>
+      <div class="tagline">Wut, Angriff, physischer Schaden.</div>
+    </div>
+  </header>
+
+  <section class="dns-section">
+    <h2>Übersicht</h2>
+    <table class="overview-table">
+      <tr><td>Rolle</td><td>Verteidiger / Frontkämpfer · Spitzenschaden</td></tr>
+      <tr><td>Zauberertyp</td><td><span class="badge badge-NONE">Kein Zauberer</span> Keine Zauberslots</td></tr>
+      <tr><td>Primärer Schadensattribut</td><td>Stärke (STR)</td></tr>
+      <tr><td>Sekundärer Schadensattribut</td><td>—</td></tr>
+      <tr><td>Zauberattribut</td><td>—</td></tr>
+      <tr><td>TP (L1)</td><td>12</td></tr>
+      <tr><td>TP pro Level</td><td>7</td></tr>
+      <tr><td>Rüstung</td><td>Mittel (alle Rüstungen) · Rüstungslos-Verteidigung</td></tr>
+      <tr><td>Waffen</td><td>Kampfwaffen (alle)</td></tr>
+      <tr><td>Rettungswürfe</td><td>Stärke (STR), Konstitution (CON)</td></tr>
+      <tr><td>Attributsteigerung (Level)</td><td>4, 8, 12, 16</td></tr>
+      <tr><td>Fertigkeiten (2 zur Auswahl)</td><td>Athletik, Einschüchtern, Wahrnehmung, Überleben, Tierführung, Naturkunde</td></tr>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Philosophie</h2>
+    <div class="philosophy-block">
+      <p>Der BARBAR ist die pure, ungezähmte Kraft — ein Frontkämpfer, der Schaden einsteckt und mit roher Wut zurückschlägt. Seine Wutanfälle machen ihn resistenter gegen physischen Schaden und verstärken seine Angriffe. Er ist kein Taktiker wie der KRIEGER, sondern ein Sturm aus Stahl und Muskel, der Gegner durch reinen Schaden und Einschüchterung besiegt.</p>
+    </div>
+  </section>
+
+  <section class="dns-section">
+    <h2>Klassenfähigkeiten</h2>
+    <table class="feature-table">
+      <thead>
+        <tr><th class="level-cell">Level</th><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="level-cell">L1</td><td>Wutanfall</td><td>Bonus-Aktion: +2 Schaden auf STR-Angriffe, Widerstand gegen physischen Schaden, 1 Minute. 2/Lange Rast (skaliert: 3@L6, 4@L12, 5@L15, 6@L17, unbegrenzt@L20).</td></tr>
+        <tr><td class="level-cell">L1</td><td>Rüstungslos-Verteidigung</td><td>RK = 10 + Geschick (DEX) + Konstitution (CON) ohne Rüstung.</td></tr>
+        <tr><td class="level-cell">L2</td><td>Wilder Angriff</td><td>Vorteil auf STR-Angriffe, Nachteil auf eigene RK.</td></tr>
+        <tr><td class="level-cell">L2</td><td>Gefahrensinn</td><td>Vorteil auf DEX-Rettungswürfe gegen sichtbare Gefahren.</td></tr>
+        <tr><td class="level-cell">L3</td><td>Urinstinkt</td><td>Urweg-Auswahl (Primal Path).</td></tr>
+        <tr><td class="level-cell">L5</td><td>Zusatzangriff</td><td>2 Angriffe pro Angriffs-Aktion.</td></tr>
+        <tr><td class="level-cell">L5</td><td>Schnelle Bewegung</td><td>+10 ft Bewegungsrate.</td></tr>
+        <tr><td class="level-cell">L7</td><td>Wildes Instinkt</td><td>Vorteil auf Initiative, kann nicht überrascht werden.</td></tr>
+        <tr><td class="level-cell">L9</td><td>Brutaler Kritischer Treffer</td><td>+1 Waffenwürfel bei Krit (+2@L13, +3@L17).</td></tr>
+        <tr><td class="level-cell">L11</td><td>Unerbittlicher Zorn</td><td>Bei 0 TP: CON-Rettungswurf (DC 10) um bei 1 TP zu bleiben. DC steigt pro Erfolg um 5.</td></tr>
+        <tr><td class="level-cell">L15</td><td>Persistenter Zorn</td><td>Wutanfall endet nicht vorzeitig.</td></tr>
+        <tr><td class="level-cell">L17</td><td>Persistenter Zorn (verbessert)</td><td>Wutanfall dauert bis Kampfende.</td></tr>
+        <tr><td class="level-cell">L18</td><td>Unbeugsame Stärke</td><td>Passiv: STR-Wurf-Minimum.</td></tr>
+        <tr><td class="level-cell">L19</td><td>Urkraft</td><td>Passiv: Stärke-Boost.</td></tr>
+        <tr><td class="level-cell">L20</td><td>Urwildmeister</td><td>+4 STR/CON, Abschlussfähigkeit.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Fähigkeiten</h2>
+
+    <h3>Aktive Fähigkeiten</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Wutanfall</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">2/Lange Rast</span></td>
+          <td>L1</td>
+          <td>Aktiviere Wut: 10 Runden, +2/+3/+4 Schaden (L1/L9/L16), <span class="el-PHYSICAL">PHYSISCH</span> Widerstand, Vorteil auf STR, blockt Zauberei. Ab L17 dauert der Wutanfall bis Kampfende.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Wilder Angriff</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-unlimited">unbegrenzt</span></td>
+          <td>L2</td>
+          <td>Vorteil auf STR-Angriffe für 1 Runde. Nachteil auf eigene RK.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Urschlag</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-unlimited">unbegrenzt</span></td>
+          <td>L3</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> +1W6 Schaden auf nächsten Treffer. Nur während Wutanfall.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Wutangriff</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-unlimited">unbegrenzt</span></td>
+          <td>L5</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> +1 Waffenangriff in diesem Zug. Nur während Wutanfall.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Wilder Sprung</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-unlimited">unbegrenzt</span></td>
+          <td>L5</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> Sprung-Angriff: Waffenangriff + 1W6 Schaden + freier Rückzug.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Wirbelangriff</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-unlimited">unbegrenzt</span></td>
+          <td>L7</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> Trifft alle Gegner in 10ft mit Waffenschaden.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Bodenslam</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-unlimited">unbegrenzt</span></td>
+          <td>L7</td>
+          <td>Alle Gegner in 10ft müssen einen STR-Rettungswurf ablegen oder werden umgestoßen (liegend).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Einschüchterndes Brüllen</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-unlimited">unbegrenzt</span></td>
+          <td>L7</td>
+          <td>Alle Gegner in 10ft müssen einen WIS-Rettungswurf ablegen oder werden 1 Runde verängstigt.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Schreckensbrüllen</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-unlimited">unbegrenzt</span></td>
+          <td>L13</td>
+          <td>Alle Gegner in 30ft müssen einen WIS-Rettungswurf ablegen oder werden 1 Minute verängstigt.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Unaufhaltsame Kraft</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">1/Kampf</span></td>
+          <td>L15</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> +2W6 Schaden auf alle Angriffe + Kritischer-Bereich 19-20 für 1 Minute. Nur bei niedrigen TP nutzbar.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Urkraft-Schlag</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">1/Lange Rast</span></td>
+          <td>L20</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> Abschlussfähigkeit: +4W6 Schaden auf nächsten Angriff.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Passive Fähigkeiten</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Unerbittlicher Zorn</span></td>
+          <td><span class="badge badge-passive">PASSIV</span> Bei 0 TP: CON-Rettungswurf (DC 10) um bei 1 TP zu bleiben. DC steigt pro Erfolg um 5.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Wutgetriebene Resistenz</span></td>
+          <td><span class="badge badge-passive">PASSIV</span> Widerstand gegen physischen Schaden für 1 Minute. Nur während Wutanfall.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Ressourcen</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Ressource</th><th>Mechanik</th><th>Verfügbarkeit</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Wutanfall-Nutzungen</span></td>
+          <td>2/Lange Rast (3@L6, 4@L12, 5@L15, 6@L17, unbegrenzt@L20)</td>
+          <td>Ab L1, Lange Rast</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Spielstil-Tipps</h2>
+    <div class="playstyle-tip">
+      <strong>Frühe Level (L1-4):</strong> Wutanfall ist dein Kern — aktiviere ihn sofort bei Kampfbeginn. +2 Schaden pro Angriff und physische Resistenz machen dich zum Verteidiger und Spitzenschaden-Verursacher. Wilder Angriff gibt dir Vorteil, aber Vorsicht: die RK-Einbuße macht dich verwundbar.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Mittlere Level (L5-12):</strong> Zusatzangriff verdoppelt deine Angriffe — kombiniere mit Wutangriff für 3 Angriffe pro Runde während Wut. Urschlag gibt dir +1W6 Bonus-Schaden. Wirbelangriff und Bodenslam sind stark gegen Gruppen. Einschüchterndes Brüllen gibt dir Kontrolle.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Hohe Level (L13-20):</strong> Schreckensbrüllen verängstigt ganze Gruppen. Unaufhaltsame Kraft (L15) ist dein Notfall-Spitze — +2W6 und Kritischer-Bereich 19-20 bei niedrigen TP. Ab L17 dauert Wut bis Kampfende. Urkraft-Schlag (L20) macht dich zum ein-PRO-Kampf-Verwüster.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Synergien:</strong> Wutanfall + Urschlag + Wutangriff = maximale Spitzenschaden in einer Runde. Wilder Angriff + Brutaler Kritischer Treffer = öfter kritisch treffen. Unerbittlicher Zorn macht dich nahezu unbesiegbar — bei 0 TP bleibst du mit einem KON-Rettungswurf stehen. Kombiniere Unaufhaltsame Kraft (bei niedrigen TP) mit Unerbittlichem Zorn für maximalen Risiko-Belohnung.
+    </div>
+  </section>
+
+  <footer class="handbuch-footer">
+    <p>Dice &amp; Screen — Klassenhandbuch · <a href="./index.html">Zurück zum Index</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

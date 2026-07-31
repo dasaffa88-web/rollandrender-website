@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BARDE — Liederheld | Dice &amp; Screen Klassenhandbuch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="theme-aether">
+
+<div class="handbuch-root">
+
+  <a href="./index.html" class="nav-back">← Klassenhandbuch</a>
+
+  <header class="dns-hero">
+    <div class="hero-portrait">
+      <img src="./img/barde.png" alt="BARDE" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="portrait-missing"><span class="pm-label">Bild fehlt</span><span class="pm-file">img/barde.png</span></div>
+    </div>
+    <div class="hero-text">
+      <h1>BARDE</h1>
+      <div class="subtitle">Liederheld</div>
+      <div class="tagline">Lieder die inspirieren, Worte die bezaubern — der vielseitigste Unterstützer.</div>
+    </div>
+  </header>
+
+  <section class="dns-section">
+    <h2>Übersicht</h2>
+    <table class="overview-table">
+      <tr><td>Rolle</td><td>Vollzauberer · Unterstützung · Kontrolle · Heiler · Gesicht der Gruppe</td></tr>
+      <tr><td>Zauberertyp</td><td><span class="badge badge-FULL">Vollzauberer</span> Zauberslots bis Rang 9</td></tr>
+      <tr><td>Primärer Schadensattribut</td><td>Charisma (CHA)</td></tr>
+      <tr><td>Sekundärer Schadensattribut</td><td>—</td></tr>
+      <tr><td>Zauberattribut</td><td>Charisma (CHA)</td></tr>
+      <tr><td>TP (L1)</td><td>8</td></tr>
+      <tr><td>TP pro Level</td><td>5</td></tr>
+      <tr><td>Rüstung</td><td>Leichte Rüstung</td></tr>
+      <tr><td>Waffen</td><td>Bardenwaffen — Rapier, Langschwert, Handarmbrust, Dolche</td></tr>
+      <tr><td>Rettungswürfe</td><td>Charisma (CHA), Weisheit (WIS)</td></tr>
+      <tr><td>Attributsteigerung (Level)</td><td>4, 8, 12, 16</td></tr>
+      <tr><td>Fertigkeiten (3 zur Auswahl)</td><td>Auftreten, Überzeugen, Lügen, Etikette, Kreativität, Intuition, Wahrnehmung</td></tr>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Philosophie</h2>
+    <div class="philosophy-block">
+      <p>Der BARDE ist der Liederheld — er inspiriert Verbündete, bezaubert Gegner und füllt jede Rolle aus die die Gruppe braucht. Charisma treibt seine Zauber, Weisheit schützt ihn, und drei Fertigkeiten seiner Wahl machen ihn zum Gesicht der Gruppe in jeder sozialen Situation. Seine Bardeninspiration (L1) gibt Verbündeten Bonus-Würfel die sie auf Angriffe, Rettungswürfe oder Fertigkeitsproben addieren können — der vielseitigste Unterstützungs-Mechanismus im Spiel. Lied der Tapferkeit bufft Angriffe, Lied der Helden bufft die RK, Heilgesang und Heiltroubadour heilen. Spott und Brechung kontrollieren Gegner, Machtwort betäubt, Wunsch (L20) kopiert einen beliebigen Zauber. Mit Magische Geheimnisse (L10) kann er Zauber aus jeder Klasse lernen — er ist nicht auf Barden-Zauber beschränkt. Er ist kein reiner Schadensverursacher, aber er macht jede Gruppe besser nur durch seine Anwesenheit.</p>
+    </div>
+  </section>
+
+  <section class="dns-section">
+    <h2>Klassenfähigkeiten</h2>
+    <table class="feature-table">
+      <thead>
+        <tr><th class="level-cell">Level</th><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="level-cell">L1</td><td>Bardeninspiration</td><td>Bonus-Aktion: Verbündeter erhält Inspirations-Würfel (W6, skaliert auf W8/W10/W12 bei L5/L10/L15). Auf Angriffe, Rettungswürfe oder Fertigkeitsproben addierbar.</td></tr>
+        <tr><td class="level-cell">L2</td><td>Allround-Talent</td><td>Passiv: Halber Profan-Bonus auf nicht-profiente Fertigkeitsproben.</td></tr>
+        <tr><td class="level-cell">L2</td><td>Lied der Ruhe</td><td>Kurze/Lange Rast: Bonus-TP für alle Verbündeten.</td></tr>
+        <tr><td class="level-cell">L3</td><td>Expertise</td><td>Doppelter Profan-Bonus auf 2 Fertigkeiten.</td></tr>
+        <tr><td class="level-cell">L5</td><td>Quelle der Inspiration</td><td>Bardeninspiration: Erholung bei Kurzer Rast statt Lange Rast.</td></tr>
+        <tr><td class="level-cell">L6</td><td>Zusätzlicher Angriff</td><td>2 Angriffe pro Angriffs-Aktion.</td></tr>
+        <tr><td class="level-cell">L6</td><td>Gegenzauber</td><td>Verbündete in 30ft: Vorteil gegen Bezaubert und Verängstigt.</td></tr>
+        <tr><td class="level-cell">L10</td><td>Magische Geheimnisse</td><td>Wähle 2 Zauber aus jeder Klasse (bis Rang 5).</td></tr>
+        <tr><td class="level-cell">L14</td><td>Magische Geheimnisse+</td><td>Wähle 2 weitere Zauber aus jeder Klasse (bis Rang 7).</td></tr>
+        <tr><td class="level-cell">L18</td><td>Verbesserte Inspiration</td><td>Bardeninspiration wird W12 (skaliert automatisch).</td></tr>
+        <tr><td class="level-cell">L20</td><td>Überlegene Inspiration</td><td>Passiv: Bei Initiative erhältst du mindestens 1 Bardeninspiration zurück.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Fähigkeiten</h2>
+    <p class="note">Alle Zauber nutzen Zauberslots (Vollzauberer-Progression, Rang 1–9). Zauberattribut ist Charisma (CHA). Upcast-Skalierung pro zusätzlichem Zauberslot bei Schallstoß (+1W8), Heilgesang (+1W4 Heilung), Heiltroubadour (+1W8 Heilung).</p>
+
+    <h3>Basiszauber</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Schallstoß</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-basiszauber">Basiszauber — unbegrenzt</span></td>
+          <td>L1</td>
+          <td><span class="el-STORM">STURM</span> 1W8 Donner, Angriffswurf. Upcast mit Zauberslot: +1W8 pro Slot.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Zauber</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Heilgesang</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-LIGHT">LICHT</span> Berührung: Heile 2W4+2. Upcast: +1W4 Heilung pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Lied der Tapferkeit</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-MIND">GEIST</span> Flächeneffekt 10ft: Verbündete erhalten +1W4 auf nächsten Angriff.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Spott</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-MIND">GEIST</span> Ziel muss WIS-Rettungswurf ablegen oder erhält Nachteil auf Angriffe (1 Minute).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Unsichtbarkeit</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 2</span></td>
+          <td>L3</td>
+          <td><span class="el-MIND">GEIST</span> Verbündeter wird unsichtbar für 1 Minute.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Brechung</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 3</span></td>
+          <td>L5</td>
+          <td><span class="el-MIND">GEIST</span> Ziel muss WIS-Rettungswurf ablegen oder wird bezaubert (1 Minute).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Heiltroubadour</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 3</span></td>
+          <td>L5</td>
+          <td><span class="el-LIGHT">LICHT</span> Flächeneffekt 10ft: Heile alle Verbündeten 3W8. Upcast: +1W8 Heilung pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Lied der Helden</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 4</span></td>
+          <td>L7</td>
+          <td><span class="el-MIND">GEIST</span> Flächeneffekt 10ft: Verbündete erhalten +2 RK für 1 Minute.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Machtwort</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 4</span></td>
+          <td>L7</td>
+          <td><span class="el-MIND">GEIST</span> Ziel muss WIS-Rettungswurf ablegen oder wird betäubt (1 Runde).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Spezialfähigkeiten</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Wunsch</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Lange Rast</span></td>
+          <td>L20</td>
+          <td>Kopiere einen beliebigen Zauber Rang 8 oder niedriger.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Ressourcen</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Ressource</th><th>Mechanik</th><th>Verfügbarkeit</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Zauberslots</span></td>
+          <td>Vollzauberer-Progression (Rang 1–9). Zauberattribut: CHA.</td>
+          <td>Alle Zauber, pro Zauberslot</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Bardeninspiration</span></td>
+          <td>Bonus-Aktion: Verbündeter erhält Inspirations-Würfel (W6→W8→W10→W12)</td>
+          <td>Pro Rast, ab L1 (Kurze Rast ab L5)</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Wunsch</span></td>
+          <td>Kopiere beliebigen Zauber Rang 8 oder niedriger</td>
+          <td>1/Lange Rast, ab L20</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Spielstil-Tipps</h2>
+    <div class="playstyle-tip">
+      <strong>Frühe Level (L1-4):</strong> Bardeninspiration (L1) ist dein Kern — gib Verbündeten Bonus-Würfel. Heilgesang heilt, Lied der Tapferkeit bufft Angriffe, Spott gibt Gegnern Nachteil. Allround-Talent (L2) macht dich zum Allrounder in Fertigkeitsproben.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Mittlere Level (L5-12):</strong> Quelle der Inspiration (L5) lädt bei Kurzer Rast auf. Zusätzlicher Angriff (L6) verdoppelt deine Nahkampfangriffe. Gegenzauber (L6) schützt Verbündete vor Bezauberung. Brechung und Heiltroubadour erweitern dein Arsenal. Magische Geheimnisse (L10) öffnet Zauber aller Klassen.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Hohe Level (L13-20):</strong> Lied der Helden (+2 RK) und Machtwort (betäubt) sind deine starken Zauber. Magische Geheimnisse+ (L14) gibt 2 weitere Zauber jeder Klasse bis Rang 7. Verbesserte Inspiration (L18) macht deine Würfel zu W12. Wunsch (L20) kopiert beliebige Zauber — die ultimative Vielseitigkeit.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Synergien:</strong> Bardeninspiration + Lied der Tapferkeit = Verbündeter bekommt +1W4 Schaden UND Inspirations-Würfel. Spott (Nachteil) + Angriff des Verbündeten = Gegner trifft schwer. Heiltroubadour nach Gruppen-Schaden = alle heilen. Magische Geheimnisse + Meteor/Versteinern = Barde kann Magier-Zauber wirken.
+    </div>
+  </section>
+
+  <footer class="handbuch-footer">
+    <p>Dice &amp; Screen — Klassenhandbuch · <a href="./index.html">Zurück zum Index</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

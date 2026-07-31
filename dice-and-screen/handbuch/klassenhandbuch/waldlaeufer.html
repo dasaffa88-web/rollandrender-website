@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WALDLÄUFER — Naturverbundener Hybrid-Kämpfer | Dice &amp; Screen Klassenhandbuch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="theme-bronze">
+<div class="handbuch-root">
+
+  <a href="./index.html" class="nav-back">← Klassenhandbuch</a>
+
+  <header class="dns-hero">
+    <div class="hero-portrait">
+      <img src="./img/waldlaeufer.png" alt="WALDLÄUFER" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="portrait-missing"><span class="pm-label">Bild fehlt</span><span class="pm-file">img/waldlaeufer.png</span></div>
+    </div>
+    <div class="hero-text">
+      <h1>WALDLÄUFER</h1>
+      <div class="subtitle">Naturverbundener Hybrid-Kämpfer</div>
+      <div class="tagline">Nahkampf · Fernkampf · Naturmagie — flexibel in jeder Reichweite.</div>
+    </div>
+  </header>
+
+  <section class="dns-section">
+    <h2>Übersicht</h2>
+    <table class="overview-table">
+      <tr><td>Rolle</td><td>Hybrid-Kämpfer (Nahkampf + Fernkampf) · Halbzauberer (Naturmagie) · Späher · Fährtenleser</td></tr>
+      <tr><td>Zauberertyp</td><td><span class="badge badge-HALF">Halbzauberer</span> Zauberslots ab L2 (max Rang 5)</td></tr>
+      <tr><td>Primärer Schadensattribut</td><td>Geschick (DEX)</td></tr>
+      <tr><td>Sekundärer Schadensattribut</td><td>Weisheit (WIS)</td></tr>
+      <tr><td>Zauberattribut</td><td>Weisheit (WIS)</td></tr>
+      <tr><td>TP (L1)</td><td>10</td></tr>
+      <tr><td>TP pro Level</td><td>6</td></tr>
+      <tr><td>Rüstung</td><td>Mittel (alle Rüstungen)</td></tr>
+      <tr><td>Waffen</td><td>Primalwaffen — ein- und zweihändig nutzbar: Schwerter, Äxte, Keulen, Dolche, Speere, Bögen, Armbrüste, Wurfwaffen, Stäbe</td></tr>
+      <tr><td>Rettungswürfe</td><td>Geschick (DEX), Weisheit (WIS)</td></tr>
+      <tr><td>Attributsteigerung (Level)</td><td>4, 8, 12, 16</td></tr>
+      <tr><td>Fertigkeiten (3 zur Auswahl)</td><td>Wahrnehmung, Überleben, Naturkunde, Tierführung, Nachforschung, Schleichen, Akrobatik</td></tr>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Philosophie</h2>
+    <div class="philosophy-block">
+      <p>Der WALDLÄUFER ist ein naturverbundener Hybrid-Kämpfer, der alle drei Kampfstile vereint: Nahkampf mit Schwert, Axt oder Speer, Fernkampf mit Bogen oder Armbrust, und Naturmagie als Halbzauberer. Er ist mit Bogen und Klinge gleichermaßen vertraut und wechselt frei zwischen den Reichweiten, je nachdem was die Situation erfordert. Wo der JAEGER auf Begleiter und Fallen setzt, vertraut der WALDLÄUFER auf Naturzauber — Wurzeln die Gegner festhalten, Nebel der die Sicht blockiert, Dornen die aus dem Boden schießen. Seine Naturmagie ergänzt die Waffenkünste — Kontrolle, Heilung, Mobilität und Unterstützung statt reinen Zerstörungszaubern. Sein Bevorzugter Feind macht ihn zum Spezialisten gegen bestimmte Gegnertypen, Fährtenlesekunst und Naturkunde machen ihn zum idealen Späher. Er ist flexibel, anpassungsfähig und überlebt in jeder Umgebung — ein Allrounder, der nie aufhilft.</p>
+    </div>
+  </section>
+
+  <section class="dns-section">
+    <h2>Klassenfähigkeiten</h2>
+    <table class="feature-table">
+      <thead>
+        <tr><th class="level-cell">Level</th><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="level-cell">L1</td><td>Bevorzugter Feind</td><td>Passiv: +ProficiencyBonus Schaden gegen gewählte Feindtypen, Vorteil auf Fährtenlesen. (Gewählt beim Level-Up via Feat-Auswahl.)</td></tr>
+        <tr><td class="level-cell">L1</td><td>Naturkundiger</td><td>Passiv: Kein schwieriges Gelände, Vorteil auf Initiative, keine Überraschung in bevorzugtem Gelände.</td></tr>
+        <tr><td class="level-cell">L2</td><td>Kampfstil</td><td>Wähle einen von 6 Kampfstilen (siehe unten).</td></tr>
+        <tr><td class="level-cell">L3</td><td>Urzeitliche Wahrnehmung</td><td>1 Zauberslot: 1 Minute lang Kreatur-Typen in 1 Meile Entfernung erkennen.</td></tr>
+        <tr><td class="level-cell">L5</td><td>Zusatzangriff</td><td>2 Angriffe pro Angriffs-Aktion — funktioniert Nah- und Fernkampf.</td></tr>
+        <tr><td class="level-cell">L6</td><td>Natürlicher Widerstand</td><td>Passiv: Resistenz (50% Schadensreduktion) gegen einen wählbaren Schadenstyp.</td></tr>
+        <tr><td class="level-cell">L7</td><td>Waldlaeufer-Instinkt</td><td>Passiv: +2 Weisheit — skaliert Zauber-Rettungswurf-SG und Begleiter-Fähigkeiten.</td></tr>
+        <tr><td class="level-cell">L8</td><td>Landritt</td><td>Passiv: Ignoriert schwieriges Gelände (natürlich), ignoriert nichtmagische Pflanzen-Magie.</td></tr>
+        <tr><td class="level-cell">L10</td><td>In der Ebene verstecken</td><td>1 Minute Vorbereitung: +10 auf Schleichen-Proben.</td></tr>
+        <tr><td class="level-cell">L11</td><td>Bedingter Bonus-Angriff</td><td>1/Zug: Bonus-Angriff nach einem erfolgreichen Treffer.</td></tr>
+        <tr><td class="level-cell">L14</td><td>Verbesserte Tarnung</td><td>Passiv: Vorteil auf Schleichen-Proben, auch in offenem Gelände.</td></tr>
+        <tr><td class="level-cell">L18</td><td>Wilde Sinne</td><td>Passiv: Keine Angriffs-Vorteil gegen dich (Unsichtbar/Versteckt-Gegner erhalten keinen Vorteil).</td></tr>
+        <tr><td class="level-cell">L20</td><td>Feindtöter</td><td>1/Zug: +Weisheits-Modifikator auf Angriff oder Schaden gegen Bevorzugten Feind.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Kampfstile (L2 — wähle einen)</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Stil</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="ability-name">Schießen (Archery)</span></td><td>+2 auf Angriffswürfe mit Fernkampfwaffen.</td></tr>
+        <tr><td><span class="ability-name">Verteidigung (Defense)</span></td><td>+1 RK wenn du Rüstung trägst.</td></tr>
+        <tr><td><span class="ability-name">Duellieren (Dueling)</span></td><td>+2 Schaden mit Einhandwaffe, andere Hand frei.</td></tr>
+        <tr><td><span class="ability-name">Zweihandkampf (GWF)</span></td><td>Neu würfeln von 1en und 2en auf Schadenswürfeln mit Zweihandwaffen.</td></tr>
+        <tr><td><span class="ability-name">Schutz (Protection)</span></td><td>Reaktion: Reduziere Schaden eines Angriffs gegen Verbündeten innerhalb 5ft (Schild nötig). Gewährt die PROTECTION-Ability.</td></tr>
+        <tr><td><span class="ability-name">Zweiwaffenkampf (TWF)</span></td><td>Ability-Modifikator wird auf Off-Hand-Schaden addiert.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Fähigkeiten</h2>
+
+    <h3>Naturzauber</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Heilung der Natur</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Zauberslot</span></td>
+          <td>L2</td>
+          <td><span class="el-NATURE">NATUR</span> Berühre einen Verbündeten: heile 2W4+2 TP. Upcast: +1W4 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Tiergespräch</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Zauberslot</span></td>
+          <td>L2</td>
+          <td>Kommuniziere mit Tieren — RP-Effekt für Erkundung und Information.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Nebelwolke</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Zauberslot</span></td>
+          <td>L2</td>
+          <td><span class="el-NATURE">NATUR</span> Beschwöre eine 10ft Nebelzone die die Sicht für 1 Minute blockiert.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Dornenhagel</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Zauberslot</span></td>
+          <td>L2</td>
+          <td><span class="el-NATURE">NATUR</span> Dornen schießen aus dem Boden: 2W6 Stichschaden + RESTRAINED (STR-Rettungswurf). Upcast: +1W6 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Schnellfuß</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Zauberslot</span></td>
+          <td>L3</td>
+          <td><span class="el-NATURE">NATUR</span> +30ft Bewegungsrate für 1 Minute.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Wurzelgriff</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Zauberslot</span></td>
+          <td>L3</td>
+          <td><span class="el-NATURE">NATUR</span> Wurzeln greifen alle Gegner in 10ft — STR-Rettungswurf oder festgehalten (GRAPPLED).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Pfeil der Stürme</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Zauberslot</span></td>
+          <td>L3</td>
+          <td><span class="el-STORM">STURM</span> Fernkampfangriff: 3W8 Schaden + Kette auf 2 weitere Gegner. Upcast: +1W8 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Steinhaut</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Zauberslot</span></td>
+          <td>L5</td>
+          <td><span class="el-NATURE">NATUR</span> Verbündeter erhält +2 RK für 1 Minute.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Eiswind</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Zauberslot</span></td>
+          <td>L5</td>
+          <td><span class="el-FROST">FROST</span> Kegel: 4W6 Frostschaden + DEX-Rettungswurf für halben Schaden. Upcast: +1W6 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Ruf der Wildnis</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Zauberslot</span></td>
+          <td>L7</td>
+          <td><span class="el-NATURE">NATUR</span> Beschwöre einen Naturgeist als Begleiter für 1 Minute.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Reaktionen</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Auslöser</th><th>Nutzung</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Schutz</span></td>
+          <td>Verbündeter in 5ft wird angegriffen</td>
+          <td><span class="badge badge-uses">1/Zug</span></td>
+          <td>Nutze deinen Schild um den Schaden eines Angriffs gegen einen Verbündeten in 5ft zu halbieren.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Passive Fähigkeiten</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Natürlicher Widerstand</span></td>
+          <td><span class="badge badge-passive">PASSIV</span> Resistenz gegen einen wählbaren Schadenstyp.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Landritt</span></td>
+          <td><span class="badge badge-passive">PASSIV</span> Du kannst durch schwieriges Gelände bewegen ohne Bewegung zu verlieren.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Ressourcen</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Ressource</th><th>Mechanik</th><th>Verfügbarkeit</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Zauberslots</span></td>
+          <td>Halbzauberer-Progression (Rang 1–5). Zauberattribut: WIS.</td>
+          <td>Alle Zauber, pro Zauberslot</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Bevorzugter Feind</span></td>
+          <td>+ProficiencyBonus Schaden gegen gewählte Feindtypen (hardcoded)</td>
+          <td>Ab L1, passiv</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Feindtöter</span></td>
+          <td>1/Zug: +WIS-Mod auf Angriff/Schaden gegen Bevorzugten Feind</td>
+          <td>Ab L20, pro Zug</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Spielstil-Tipps</h2>
+    <div class="playstyle-tip">
+      <strong>Frühe Level (L1-4):</strong> Bevorzugter Feind gibt Bonus-Schaden gegen gewählte Gegnertypen. Kampfstil wählen: Schießen (Fernkampf), Duellieren (Einhand+Schild), Zweihandkampf (zweihändig). Dornenhagel (L2) ist dein Eröffnungszauber — 2W6 + festgehalten.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Mittlere Level (L5-12):</strong> Zusatzangriff (L5) verdoppelt Angriffe, Nah- wie Fernkampf. Wurzelgriff (L3) hält Gruppen fest. Pfeil der Stürme (L3) ist dein stärkster Schadenszauber — 3W8 + Kette. Ruf der Wildnis (L7) beschwört einen Naturgeist-Begleiter.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Hohe Level (L13-20):</strong> Verbesserte Tarnung (L14) gibt Vorteil auf Schleichen-Proben. Wilde Sinne (L18) machen dich immun gegen Vorteil von Versteckten/Unsichtbaren. Feindtöter (L20) gibt +WIS-Mod pro Zug gegen Bevorzugten Feind.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Synergien:</strong> Bevorzugter Feind + Feindtöter = massiver Schaden gegen Spezialgegner. Dornenhagel (festgehalten) → Pfeil der Stürme oder Nahkampf-Finish. Wurzelgriff → Eiswind (Kegel trifft alle Festgehaltenen). Nebelwolke + Verbesserte Tarnung = praktisch unfindbar.
+    </div>
+  </section>
+
+  <footer class="handbuch-footer">
+    <p>Dice &amp; Screen — Klassenhandbuch · <a href="./index.html">Zurück zum Index</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

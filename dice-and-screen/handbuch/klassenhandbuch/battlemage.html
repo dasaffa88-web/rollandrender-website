@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAMPFMAGIER — Magischer Front-Hybrid | Dice &amp; Screen Klassenhandbuch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="theme-aether">
+<div class="handbuch-root">
+
+  <a href="./index.html" class="nav-back">← Klassenhandbuch</a>
+
+  <header class="dns-hero">
+    <div class="hero-portrait">
+      <img src="./img/battlemage.png" alt="KAMPFMAGIER" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="portrait-missing"><span class="pm-label">Bild fehlt</span><span class="pm-file">img/battlemage.png</span></div>
+    </div>
+    <div class="hero-text">
+      <h1>KAMPFMAGIER</h1>
+      <div class="subtitle">Magischer Front-Hybrid</div>
+      <div class="tagline">Stahl + Arkana — Waffenangriffe verstärkt durch Zauber.</div>
+    </div>
+  </header>
+
+  <section class="dns-section">
+    <h2>Übersicht</h2>
+    <table class="overview-table">
+      <tr><td>Rolle</td><td>Front-Hybrid (Nahkampf + Magie) · Drittelzauberer (Arkana) · Nahkampf-Verursacher</td></tr>
+      <tr><td>Zauberertyp</td><td><span class="badge badge-THIRD">Drittelzauberer</span> Zauberslots bis Rang 4 (vorbereitete Zauber)</td></tr>
+      <tr><td>Primärer Schadensattribut</td><td>Stärke (STR)</td></tr>
+      <tr><td>Sekundärer Schadensattribut</td><td>Intelligenz (INT)</td></tr>
+      <tr><td>Zauberattribut</td><td>Intelligenz (INT)</td></tr>
+      <tr><td>TP (L1)</td><td>10</td></tr>
+      <tr><td>TP pro Level</td><td>6</td></tr>
+      <tr><td>Rüstung</td><td>Leicht · Mittel · Schild (keine schwere Rüstung für Arkaner Schild)</td></tr>
+      <tr><td>Waffen</td><td>Hybridwaffen — ein- und zweihändig: Schwerter, Äxte, Keulen, Dolche, Speere, Bögen, Armbrüste, Wurfwaffen, Stäbe, Zauberstäbe, Bücher</td></tr>
+      <tr><td>Rettungswürfe</td><td>Stärke (STR), Intelligenz (INT)</td></tr>
+      <tr><td>Attributsteigerung (Level)</td><td>4, 6, 8, 12, 14, 16</td></tr>
+      <tr><td>Fertigkeiten (2 zur Auswahl)</td><td>Arkana, Athletik, Einschüchtern, Nachforschung, Wahrnehmung</td></tr>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Philosophie</h2>
+    <div class="philosophy-block">
+      <p>Der KAMPFMAGIER ist ein magischer Front-Hybrid — er steht in der ersten Reihe und verstärkt seine Waffenangriffe mit Arkana. Stärke treibt die Klinge, Intelligenz treibt die Zauber, und beides zusammen macht ihn zu einem der gefährlichsten Nahkämpfer auf dem Feld. Als Drittelzauberer hat er weniger Zauberslots als ein Vollzauberer, aber seine Zauber sind keine Ersatz für die Waffe — sie sind Erweiterungen davon. Flammenschlag fügt Feuerbonus hinzu, Frostschlag friert Gegner ein, Blitzschlag springt weiter, Explosionsschlag macht Flächeneffekt aus einem einzelnen Treffer. Mit Zauberschlag (L6) kombiniert er Berührungszauber mit Nahkampf-Angriffen in einer Aktion, und Verstärkter Schlag (L14) gibt ihm permanenten Aether-Bonus. Er ist kein Zauberer der aus der Distanz zaubert — er ist ein Krieger mit Magie in der Klinge.</p>
+    </div>
+  </section>
+
+  <section class="dns-section">
+    <h2>Klassenfähigkeiten</h2>
+    <table class="feature-table">
+      <thead>
+        <tr><th class="level-cell">Level</th><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="level-cell">L1</td><td>Arkanschlag</td><td>Passiv: +Int-Modifikator auf Waffen-Schaden.</td></tr>
+        <tr><td class="level-cell">L2</td><td>Arkaner Schild</td><td>Passiv: +2 RK solange du keine schwere Rüstung trägst.</td></tr>
+        <tr><td class="level-cell">L2</td><td>Kriegsmagie</td><td>Passiv: Nach einem Basiszauber als Aktion, Bonus-Aktion Nahkampf-Angriff.</td></tr>
+        <tr><td class="level-cell">L3</td><td>Arkaner Stil</td><td>Kampfmagie-Stil wählen (narrativ — prägt die Kampfweise).</td></tr>
+        <tr><td class="level-cell">L5</td><td>Zusätzlicher Angriff</td><td>2 Angriffe pro Angriffs-Aktion.</td></tr>
+        <tr><td class="level-cell">L6</td><td>Zauberschlag</td><td>1/Zug: Wirke einen Berührungszauber als Teil eines Nahkampf-Angriffs (Kombination aus Waffe + Zauber in einer Aktion).</td></tr>
+        <tr><td class="level-cell">L9</td><td>Verstärkter Schlag+</td><td>Passiv: +1W6 Magieschaden auf alle Waffenangriffe.</td></tr>
+        <tr><td class="level-cell">L10</td><td>Magie-Resistenz</td><td>Passiv: Vorteil auf alle Rettungswürfe gegen Zauber.</td></tr>
+        <tr><td class="level-cell">L11</td><td>Zusätzlicher Angriff 2</td><td>3 Angriffe pro Angriffs-Aktion.</td></tr>
+        <tr><td class="level-cell">L13</td><td>Arkane Resilienz</td><td>Passiv: Resistenz (50% Schadensreduktion) gegen Feuer, Kälte und Blitz.</td></tr>
+        <tr><td class="level-cell">L14</td><td>Verstärkter Schlag</td><td>1/Zug: +1W8 Aether (Arkane Gewalt) Schaden auf einen Waffenangriff.</td></tr>
+        <tr><td class="level-cell">L15</td><td>Arkaner Champion</td><td>1/Kurze Rast: Temporäre Trefferpunkte in Höhe deines Levels.</td></tr>
+        <tr><td class="level-cell">L17</td><td>Magie-Durchdringung</td><td>Passiv: Eigene Zauber ignorieren alle Schadensresistenzen der Gegner.</td></tr>
+        <tr><td class="level-cell">L18</td><td>Kampfmagier-Meisterschaft</td><td>Passiv: Vorteil auf Zauber-Angriffswürfe und Waffenangriffe.</td></tr>
+        <tr><td class="level-cell">L19</td><td>Arkaner Meister</td><td>Passiv: +2 Intelligenz (Maximum 24) — skaliert Arkanschlag, Zauber-Rettungswurf-SG, Zauberschaden.</td></tr>
+        <tr><td class="level-cell">L20</td><td>Arkane Überladung</td><td>1/Lange Rast: Maximiere die Schadenswürfel eines Zaubers (Rang 1–5).</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Fähigkeiten</h2>
+    <p class="note">Alle Zauber nutzen Zauberslots (Drittelzauberer-Progression, Rang 1–4). Zauberattribut ist Intelligenz (INT). Upcast-Skalierung pro zusätzlichem Zauberslot bei Arkaner Stoß (+1W8), Flammenschlag (+1W6), Explosionsschlag (+1W6), Kampfzauberer (+1W8), Arkaner Sturm (+1W6), Arkane Heilung (+1W8).</p>
+
+    <h3>Basiszauber</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Arkaner Stoß</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-basiszauber">Basiszauber — unbegrenzt</span></td>
+          <td>L1</td>
+          <td><span class="el-AETHER">AETHER</span> 1W8 im Nahkampf (Reichweite 1). Upcast mit Zauberslot: +1W8 pro Slot.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Zauber</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Flammenschlag</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-FLAME">FEUER</span> Waffenangriff + 1W6 Feuer Bonus-Schaden. Upcast: +1W6 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Frostschlag</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-FROST">FROST</span> Waffenangriff + 1W6 Frost. Ziel muss STR-Rettungswurf ablegen oder wird 1 Runde festgehalten (RESTRAINED).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Blitzschlag</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-STORM">STURM</span> Waffenangriff + 1W6 Sturm + Kette auf 1 weiteren Gegner (Kettenreichweite 2).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Arkane Heilung</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-AETHER">AETHER</span> Berühre sich selbst oder Verbündeten: heile 1W8. Upcast: +1W8 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Arkane Waffe</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-AETHER">AETHER</span> Waffe bekommt +1 auf Angriffswürfe und +1 Schaden für 1 Minute (10 Runden).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Explosionsschlag</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 2</span></td>
+          <td>L3</td>
+          <td><span class="el-FLAME">FEUER</span> Waffenangriff: 2W6 Feuer + Flächeneffekt 10ft um das Ziel (nur Gegner). Upcast: +1W6 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Arkane Barriere</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 2</span></td>
+          <td>L3</td>
+          <td><span class="el-AETHER">AETHER</span> +4 RK für 1 Minute (10 Runden).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Elemitransmutation</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 2</span></td>
+          <td>L3</td>
+          <td><span class="el-AETHER">AETHER</span> Wandle deinen Waffenschaden in ein gewähltes Element für 1 Minute (Spieler entscheidet selbst). Erfordert Konzentration.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Kampfzauberer</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 3</span></td>
+          <td>L5</td>
+          <td><span class="el-AETHER">AETHER</span> 3W8 + Angriffswurf, Reichweite 12. Upcast: +1W8 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Arkaner Sturm</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 3</span></td>
+          <td>L5</td>
+          <td><span class="el-AETHER">AETHER</span> Flächeneffekt 10ft um sich: 3W6 + DEX-Rettungswurf (halber Schaden bei Erfolg). Upcast: +1W6 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Arkane Verstärkung</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 4</span></td>
+          <td>L7</td>
+          <td><span class="el-AETHER">AETHER</span> +2 RK + +1W8 Aether auf alle Waffenangriffe für 1 Minute (10 Runden). Erfordert Konzentration.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Aktive Fähigkeit</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Arkaner Champion</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Kurze Rast</span></td>
+          <td>L15</td>
+          <td>Temporäre Trefferpunkte in Höhe deines Levels.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Passive Fähigkeiten</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Arkaner Schild</span></td>
+          <td><span class="badge badge-passive">PASSIV</span> +2 RK solange du keine schwere Rüstung trägst.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Verstärkter Schlag+</span></td>
+          <td><span class="badge badge-passive">PASSIV</span> +1W6 Magieschaden auf alle Waffenangriffe.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Arkane Resilienz</span></td>
+          <td><span class="badge badge-passive">PASSIV</span> Resistenz (50% Schadensreduktion) gegen Feuer, Kälte und Blitz.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Ressourcen</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Ressource</th><th>Mechanik</th><th>Verfügbarkeit</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Zauberslots</span></td>
+          <td>Drittelzauberer-Progression (Rang 1–4). Zauberattribut: INT.</td>
+          <td>Alle Zauber, pro Zauberslot</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Arkanschlag</span></td>
+          <td>+INT-Mod auf Waffen-Schaden (hardcoded)</td>
+          <td>Ab L1, passiv</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Zauberschlag</span></td>
+          <td>1/Zug: Berührungszauber + Nahkampf-Angriff als Kombination</td>
+          <td>Ab L6, pro Zug</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Verstärkter Schlag</span></td>
+          <td>1/Zug: +1W8 AETHER auf Waffenangriff (hardcoded)</td>
+          <td>Ab L14, pro Zug</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Arkane Überladung</span></td>
+          <td>1/Lange Rast: maximiere Schadenswürfel eines Zaubers</td>
+          <td>Ab L20, Lange Rast</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Spielstil-Tipps</h2>
+    <div class="playstyle-tip">
+      <strong>Frühe Level (L1-4):</strong> Arkanschlag (+INT-Mod) auf jeden Waffenangriff. Arkaner Stoß (Basiszauber) + Kriegsmagie (L2) = Nahkampf-Bonusangriff. Frostschlag hält Gegner fest, Flammenschlag/Blitzschlag fügen Element-Schaden hinzu.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Mittlere Level (L5-12):</strong> Zusätzlicher Angriff (L5) verdoppelt die Waffenangriffe. Zauberschlag (L6) kombiniert Berührungszauber + Nahkampf in einer Aktion. Verstärkter Schlag+ (L9) gibt permanent +1W6 Magieschaden. Magie-Resistenz (L10) gibt Vorteil auf Zauber-Rettungswürfe.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Hohe Level (L13-20):</strong> Arkane Resilienz (L13) gibt Resistenz gegen Feuer/Kälte/Blitz. Verstärkter Schlag (L14) addiert +1W8 Aether pro Zug. Magie-Durchdringung (L17) ignoriert alle Resistenzen. Arkane Überladung (L20) maximiert 1/Lange Rast einen Zauber.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Synergien:</strong> Arkanschlag + Verstärkter Schlag+ + Verstärkter Schlag = massiver Bonus-Schaden pro Waffenangriff. Zauberschlag + Flammenschlag = Waffe + Zauber in einer Aktion. Frostschlag (festgehalten) → zweiter Angriff mit Vorteil. Arkane Barriere + Arkaner Schild = +6 RK.
+    </div>
+  </section>
+
+  <footer class="handbuch-footer">
+    <p>Dice &amp; Screen — Klassenhandbuch · <a href="./index.html">Zurück zum Index</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

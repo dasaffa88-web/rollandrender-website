@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCHÜTZE — Scharfschütze | Dice &amp; Screen Klassenhandbuch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="theme-bronze">
+<div class="handbuch-root">
+
+  <a href="./index.html" class="nav-back">← Klassenhandbuch</a>
+
+  <header class="dns-hero">
+    <div class="hero-portrait">
+      <img src="./img/schuetze.png" alt="SCHÜTZE" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="portrait-missing"><span class="pm-label">Bild fehlt</span><span class="pm-file">img/schuetze.png</span></div>
+    </div>
+    <div class="hero-text">
+      <h1>SCHÜTZE</h1>
+      <div class="subtitle">Scharfschütze</div>
+      <div class="tagline">Präzision, Reichweite, Kontrolle — ein Schuss, ein Kill.</div>
+    </div>
+  </header>
+
+  <section class="dns-section">
+    <h2>Übersicht</h2>
+    <table class="overview-table">
+      <tr><td>Rolle</td><td>DPS · Reichweite · Kontrolle</td></tr>
+      <tr><td>Zauberertyp</td><td><span class="badge badge-NONE">Kein Zauberer</span> Keine Zauberslots</td></tr>
+      <tr><td>Primärer Schadensattribut</td><td>Geschick (DEX)</td></tr>
+      <tr><td>Sekundärer Schadensattribut</td><td>—</td></tr>
+      <tr><td>Zauberattribut</td><td>—</td></tr>
+      <tr><td>TP (L1)</td><td>10</td></tr>
+      <tr><td>TP pro Level</td><td>6</td></tr>
+      <tr><td>Rüstung</td><td>Leicht (alle Rüstungen)</td></tr>
+      <tr><td>Waffen</td><td>Feuerwaffen (Handfeuerwaffe, Muskete), Armbrüste, Dolche</td></tr>
+      <tr><td>Rettungswürfe</td><td>Geschick (DEX), Weisheit (WIS)</td></tr>
+      <tr><td>Attributsteigerung (Level)</td><td>4, 6, 8, 12, 14, 16</td></tr>
+      <tr><td>Fertigkeiten (2 zur Auswahl)</td><td>Wahrnehmung, Schleichen, Akrobatik, Nachforschung, Überleben</td></tr>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Philosophie</h2>
+    <div class="philosophy-block">
+      <p>Der SCHÜTZE ist der Meister der Distanz. Er wählt seine Position, liest das Feld und trifft mit einem Schuss, wo andere einen ganzen Schwung brauchen. Seine Fähigkeiten skalieren mit dem Level — von einfachen Präzisionsschüssen bis zum Meisterschuss, der jeden Gegner mit einem einzigen, perfekt platzierten Treffer niederstreckt. Deckung ist für ihn kein Hindernis, sondern eine Einladung. Er ist nicht der robusteste Kämpfer, aber auf Distanz ist er der tödlichste.</p>
+    </div>
+  </section>
+
+  <section class="dns-section">
+    <h2>Klassenfähigkeiten</h2>
+    <table class="feature-table">
+      <thead>
+        <tr><th class="level-cell">Level</th><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="level-cell">L1</td><td>Deckung ignorieren (halb)</td><td>Ignoriert halbe Deckung bei Fernkampf-Angriffen.</td></tr>
+        <tr><td class="level-cell">L5</td><td>Zusatzangriff</td><td>2 Angriffe pro Angriffs-Aktion.</td></tr>
+        <tr><td class="level-cell">L6</td><td>Deckung ignorieren (voll)</td><td>Ignoriert vollständige Deckung bei Fernkampf-Angriffen.</td></tr>
+        <tr><td class="level-cell">L7</td><td>Verbesserter Scharfschütze</td><td>Verbesserte Präzision und Reichweite.</td></tr>
+        <tr><td class="level-cell">L11</td><td>Zusatzangriff 2</td><td>3 Angriffe pro Angriffs-Aktion.</td></tr>
+        <tr><td class="level-cell">L17</td><td>Todesschütze</td><td>Automatischer Kritischer Treffer und maximaler Schaden auf Schüsse — der Meisterschuss wird zur Todesgewissheit.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Fähigkeiten</h2>
+
+    <h3>Aktive Fähigkeiten</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Streifschuss</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Zug</span></td>
+          <td>L1</td>
+          <td>Streifschuss: Ziel muss einen DEX-Rettungswurf ablegen oder wird umgestoßen (liegend).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Anlegeschuss</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Zug</span></td>
+          <td>L1</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> +2 auf den Angriffswurf + 1W8 Bonus-Schaden.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Schnellfeuer</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">1/Zug</span></td>
+          <td>L2</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> +1W6 Bonus-Schaden auf den nächsten Angriff.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Blindschuss</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Kampf</span></td>
+          <td>L3</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> Schuss durch Deckung: ignoriert Deckung für diesen Angriff + 1W8 Schaden.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Verfolgungsschuss</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-unlimited">unbegrenzt</span></td>
+          <td>L3</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> Wenn das Ziel bereits verwundet ist: +2W6 Bonus-Schaden.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Splitterschuss</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Kampf</span></td>
+          <td>L5</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> Ein Schuss, der aufsplittert und 2 Gegner trifft.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Giftpfeil</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Kampf</span></td>
+          <td>L5</td>
+          <td>Ziel muss einen CON-Rettungswurf ablegen oder wird vergiftet — <span class="el-NATURE">NATUR</span> 1W6 Giftschaden pro Runde für 3 Runden.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Niederhaltung</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Kampf</span></td>
+          <td>L7</td>
+          <td>Deckungsfeuer: Alle Gegner in einem Kegel müssen einen DEX-Rettungswurf ablegen oder erhalten Nachteil auf ihren nächsten Angriff.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Todbringer</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">1/Kampf</span></td>
+          <td>L9</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> +3W8 Bonus-Schaden auf den nächsten Angriff.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Scharfschützenschuss</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">1/Kampf</span></td>
+          <td>L11</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> +4W8 Bonus-Schaden auf den nächsten Angriff — extreme Reichweite.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Konzentrierter Schuss</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">1/Lange Rast</span></td>
+          <td>L13</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> +5W8 Bonus-Schaden auf den nächsten Angriff.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Meisterschuss</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">1/Lange Rast</span></td>
+          <td>L17</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> +6W8 Bonus-Schaden auf den nächsten Angriff. Ab L17: Automatischer Kritischer Treffer + maximaler Schaden.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Spielstil-Tipps</h2>
+    <div class="playstyle-tip">
+      <strong>Frühe Level (L1-4):</strong> Position ist alles — halte Abstand und schieße aus der Distanz. Anlegeschuss (L1) ist dein zuverlässiger Präzisionsschuss: +2 Angriffswurf und 1W8 Bonus. Streifschuss (L1) wirft Gegner um — nützlich gegen Nahkämpfer die dich erreichen wollen. Schnellfeuer (L2) als Bonus-Aktion gibt dir jeden Zug +1W6 obendrauf. Blindschuss (L3) ignoriert Deckung — Gegner die sich verstecken denken sind nicht sicher. Verfolgungsschuss (L3) auf verwundete Ziele für +2W6.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Mittlere Level (L5-12):</strong> Zusatzangriff verdoppelt deine Schüsse. Splitterschuss (L5) trifft zwei Gegner gleichzeitig — perfekt gegen Gruppen. Giftpfeil (L5) bringt Schaden über Zeit über 3 Runden — gut gegen Ziele mit hohen TP. Ab L6 ignoriert du vollständige Deckung — niemand kann sich mehr verstecken. Niederhaltung (L7) gibt dir Kontrolle über das Feld: alle Gegner im Kegel mit Nachteil auf ihre Angriffe. Todbringer (L9) als Bonus-Aktion: +3W8 — kombiniere mit Schnellfeuer für massiven Spitzenschaden. Scharfschützenschuss (L11) steigert auf +4W8.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Hohe Level (L13-20):</strong> Konzentrierter Schuss (L13) mit +5W8 ist dein schwerster Einzeltreffer — 1/Lange Rast, also wähle das Ziel weise. Ab L17 wird Meisterschuss zur Todesgewissheit: +6W8 plus Automatischer Kritischer Treffer plus maximaler Schaden — das beendet Kämpfe. Zusatzangriff 2 (L11) gibt dir 3 Schüsse pro Aktion — kombiniert mit Schnellfeuer + Todbringer als Bonus-Aktion sind das 4 Schüsse mit massivem Bonus-Schaden in einer Runde.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Synergien:</strong> Anlegeschuss (+2 Angriff, 1W8) + Schnellfeuer (+1W6) = zuverlässiger Spitzenschaden jeder Zug. Verfolgungsschuss auf verwundete Ziele für +2W6 — spare ihn für Hinrichtungs-Situationen. Giftpfeil + Niederhaltung = Gegner ist vergiftet und hat Nachteil — kann sich nicht wehren. Splitterschuss gegen Gruppen, Konzentrierter Schuss gegen Einzelziele. Meisterschuss als Eröffnung gegen den gefährlichsten Gegner — Automatischer Kritischer Treffer mit +6W8 und maximalem Schaden beendet oft den Kampf bevor er beginnt.
+    </div>
+  </section>
+
+  <footer class="handbuch-footer">
+    <p>Dice &amp; Screen — Klassenhandbuch · <a href="./index.html">Zurück zum Index</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

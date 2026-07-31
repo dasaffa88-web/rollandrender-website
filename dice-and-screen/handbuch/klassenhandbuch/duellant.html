@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DUELLANT — Duell-Kämpfer | Dice &amp; Screen Klassenhandbuch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="theme-bronze">
+<div class="handbuch-root">
+
+  <a href="./index.html" class="nav-back">← Klassenhandbuch</a>
+
+  <header class="dns-hero">
+    <div class="hero-portrait">
+      <img src="./img/duellant.png" alt="DUELLANT" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="portrait-missing"><span class="pm-label">Bild fehlt</span><span class="pm-file">img/duellant.png</span></div>
+    </div>
+    <div class="hero-text">
+      <h1>DUELLANT</h1>
+      <div class="subtitle">Duell-Kämpfer</div>
+      <div class="tagline">Fechtkunst, Parieren, Kontern, Duell-Beherrschung.</div>
+    </div>
+  </header>
+
+  <section class="dns-section">
+    <h2>Übersicht</h2>
+    <table class="overview-table">
+      <tr><td>Rolle</td><td>Bewegungskämpfer · Spitzenschaden · Duell-Spezialist</td></tr>
+      <tr><td>Zauberertyp</td><td><span class="badge badge-NONE">Kein Zauberer</span> Keine Zauberslots</td></tr>
+      <tr><td>Primärer Schadensattribut</td><td>Geschick (DEX)</td></tr>
+      <tr><td>Sekundärer Schadensattribut</td><td>Stärke (STR)</td></tr>
+      <tr><td>Zauberattribut</td><td>—</td></tr>
+      <tr><td>TP (L1)</td><td>9</td></tr>
+      <tr><td>TP pro Level</td><td>5</td></tr>
+      <tr><td>Rüstung</td><td>Leicht (alle Rüstungen)</td></tr>
+      <tr><td>Waffen</td><td>Duellwaffen (Rapier, Kurzschwerter, leichte Waffen)</td></tr>
+      <tr><td>Rettungswürfe</td><td>Geschick (DEX), Charisma (CHA)</td></tr>
+      <tr><td>Attributsteigerung (Level)</td><td>4, 8, 10, 12, 16</td></tr>
+      <tr><td>Fertigkeiten (4 zur Auswahl)</td><td>Akrobatik, Fingerfertigkeit, Täuschung, Einschüchtern, Wahrnehmung, Überreden, Nachforschung</td></tr>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Philosophie</h2>
+    <div class="philosophy-block">
+      <p>Der DUELLANT ist ein Meister des Einzelkampfes. Er fordert seinen Gegner heraus, lenkt ihn mit Finten ab, pariert seine Angriffe und kontert im selben Zug. Seine Stärke liegt nicht in roher Gewalt oder Magie, sondern in Präzision, Bewegung und dem Lesen des Gegners. Im direkten Duell ist er tödlich — gegen eine Übermacht braucht er Cleverness und Mobilität, um die Bedingungen zu diktieren.</p>
+    </div>
+  </section>
+
+  <section class="dns-section">
+    <h2>Klassenfähigkeiten</h2>
+    <table class="feature-table">
+      <thead>
+        <tr><th class="level-cell">Level</th><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="level-cell">L1</td><td>Fechtkunst</td><td>Geschick (DEX) für den Schaden aller Finesse-Waffen.</td></tr>
+        <tr><td class="level-cell">L3</td><td>Parieren</td><td>Reaktion: Pariere einen eingehenden Angriff (1/Zug).</td></tr>
+        <tr><td class="level-cell">L3</td><td>Riposte</td><td>Reaktion: Konterangriff nach erfolgreichem Parieren (1/Zug).</td></tr>
+        <tr><td class="level-cell">L3</td><td>Duellherausforderung</td><td>Bonus-Aktion: Markiere ein Ziel — es erleidet +4 Schaden durch dich für bis zu 1 Minute.</td></tr>
+        <tr><td class="level-cell">L5</td><td>Zusatzangriff</td><td>2 Angriffe pro Angriffs-Aktion.</td></tr>
+        <tr><td class="level-cell">L7</td><td>Duelleur</td><td>+Profan-Bonus auf Geschick-Rettungswürfe im Duell.</td></tr>
+        <tr><td class="level-cell">L9</td><td>Verbesserter Parieren</td><td>+2 RK im Duell.</td></tr>
+        <tr><td class="level-cell">L11</td><td>Zusatzangriff 2</td><td>3 Angriffe pro Angriffs-Aktion.</td></tr>
+        <tr><td class="level-cell">L13</td><td>Meisterduellant</td><td>Vorteil gegen herausgeforderte Ziele.</td></tr>
+        <tr><td class="level-cell">L17</td><td>Unbesiegbar</td><td>1/Lange Rast: Automatisches Parieren — ein Treffer wird komplett negiert.</td></tr>
+        <tr><td class="level-cell">L19</td><td>Reflexe</td><td>Ausweichen — bei erfolgreichen Geschick-Rettungswürfen kein Schaden statt halber Schaden.</td></tr>
+        <tr><td class="level-cell">L20</td><td>Legendarer Duellant</td><td>Abschlussfähigkeit: +2W8 Bonus-Schaden auf alle Angriffe (immer aktiv).</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Fähigkeiten</h2>
+
+    <h3>Aktive Fähigkeiten</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Duellherausforderung</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-unlimited">unbegrenzt</span></td>
+          <td>L1</td>
+          <td>Fordere ein Ziel heraus — bis zu 1 Minute erleidet es +4 Schaden durch dich. Nur 1 Ziel zur Zeit.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Fußwerk</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-unlimited">unbegrenzt</span></td>
+          <td>L2</td>
+          <td>Rückzug + 15ft Bewegungsbonus für 1 Runde.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Fintenschlag</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">1/Zug</span></td>
+          <td>L3</td>
+          <td>Vorteil auf den nächsten Angriff + <span class="el-PHYSICAL">PHYSISCH</span> 1W6 Bonus-Schaden.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Präziser Stoß</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Kampf</span></td>
+          <td>L5</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> Waffenangriff: +2 auf den Angriffswurf + 1W8 Bonus-Schaden.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Lösender Schlag</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Kampf</span></td>
+          <td>L7</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> Waffenangriff + Rückzug in derselben Aktion.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Klingenlock</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Zug</span></td>
+          <td>L11</td>
+          <td>Ziel muss einen STR-Rettungswurf ablegen oder wird 1 Runde festgehalten (Bewegung = 0).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Finalesschlag</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">1/Lange Rast</span></td>
+          <td>L15</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> +4W6 Schaden und Kritischer-Bereich 18-20 auf den nächsten Angriff.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Perfektes Duell</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Kampf</span></td>
+          <td>L17</td>
+          <td>Du erleidest keinen Schaden von einem Angriff gegen dich.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Reaktionen</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Auslöser</th><th>Nutzung</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Konterschlag</span></td>
+          <td>Nach erfolgreichem Parieren</td>
+          <td><span class="badge badge-uses">1/Zug</span></td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> Konterangriff mit +1W8 Schaden.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Gegenschlag</span></td>
+          <td>Bei verfehltem Angriff</td>
+          <td><span class="badge badge-uses">1/Zug</span></td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> Konterangriff mit +1W6 Schaden.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Passive Fähigkeiten</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Legendarer Duellant</span></td>
+          <td><span class="badge badge-passive">PASSIV</span> Abschlussfähigkeit: +2W8 Bonus-Schaden auf alle Angriffe (immer aktiv).</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Spielstil-Tipps</h2>
+    <div class="playstyle-tip">
+      <strong>Frühe Level (L1-4):</strong> Duellherausforderung ist dein Kern — markiere den gefährlichsten Gegner und fokussiere ihn. Fußwerk (L2) gibt dir Mobilität: hinein, angreifen, raus. Fintenschlag (L3) verschafft dir Vorteil und Bonus-Schaden als Bonus-Aktion. Parieren und Riposte (L3) sind deine Reaktionen — ein erfolgreicher Parry führt direkt zu einem Konter.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Mittlere Level (L5-12):</strong> Zusatzangriff verdoppelt deine Angriffe. Präziser Stoß (L5) ist dein zuverlässiger Spitzenschaden — +2 Angriffswurf und 1W8 Bonus. Lösender Schlag (L7) kombiniert Angriff und Rückzug. Duelleur (L7) gibt dir Profan-Bonus auf GES-Rettungswürfe im Duell. Verbesserter Parieren (L9) erhöht deine RK im Duell um +2. Klingenlock (L11) hält Gegner fest — perfekt um einen fliehenden Gegner zu stoppen.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Hohe Level (L13-20):</strong> Meisterduellant (L13) gibt dir Vorteil gegen herausgeforderte Ziele — kombiniere mit Fintenschlag für massiven Spitzenschaden. Finalesschlag (L15) ist dein Todesstoß: +4W6 und Kritischer-Bereich 18-20 — spare ihn für Ziele mit niedrigen TP. Perfektes Duell (L17) negiert einen kompletten Angriff. Unbesiegbar (L17) gibt dir ein automatisches Parieren pro Rast. Reflexe (L19) macht dich immun gegen Flächenzauber. Legendarer Duellant (L20) gibt permanent +2W8 auf jeden Angriff.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Synergien:</strong> Duellherausforderung → Fintenschlag (Vorteil) → Präziser Stoß (+2 Angriff, 1W8) = maximale Spitzenschaden auf ein Ziel. Parieren → Konterschlag = Reaktions-Schaden ohne eigene Aktion. Fußwerk → Angriff → Lösender Schlag (Rückzug) = Schlag und Rückzug ohne Gelegenheitsangriffe. Klingenlock hält den Gegner fest, dann Finalesschlag als Hinrichtung. Gegen Gruppen: markiere einen, Fußwerk um die anderen zu umgehen, fokussiere das markierte Ziel.
+    </div>
+  </section>
+
+  <footer class="handbuch-footer">
+    <p>Dice &amp; Screen — Klassenhandbuch · <a href="./index.html">Zurück zum Index</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAGIER — Universeller Arkanzauberer | Dice &amp; Screen Klassenhandbuch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="theme-aether">
+
+<div class="handbuch-root">
+
+  <a href="./index.html" class="nav-back">← Klassenhandbuch</a>
+
+  <header class="dns-hero">
+    <div class="hero-portrait">
+      <img src="./img/magier.png" alt="MAGIER" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="portrait-missing"><span class="pm-label">Bild fehlt</span><span class="pm-file">img/magier.png</span></div>
+    </div>
+    <div class="hero-text">
+      <h1>MAGIER</h1>
+      <div class="subtitle">Universeller Arkanzauberer</div>
+      <div class="tagline">Breites Spektrum, tiefe Arkana — vielseitigster Zauberer auf dem Feld.</div>
+    </div>
+  </header>
+
+  <section class="dns-section">
+    <h2>Übersicht</h2>
+    <table class="overview-table">
+      <tr><td>Rolle</td><td>Vollzauberer · Arkaner Schadensverursacher · Kontrolle · Vielseitig</td></tr>
+      <tr><td>Zauberertyp</td><td><span class="badge badge-FULL">Vollzauberer</span> Zauberslots bis Rang 9</td></tr>
+      <tr><td>Primärer Schadensattribut</td><td>Intelligenz (INT)</td></tr>
+      <tr><td>Sekundärer Schadensattribut</td><td>—</td></tr>
+      <tr><td>Zauberattribut</td><td>Intelligenz (INT)</td></tr>
+      <tr><td>TP (L1)</td><td>6</td></tr>
+      <tr><td>TP pro Level</td><td>4</td></tr>
+      <tr><td>Rüstung</td><td>Keine</td></tr>
+      <tr><td>Waffen</td><td>Magierwaffen — Dolche, Stäbe, Zauberstäbe, Bücher</td></tr>
+      <tr><td>Rettungswürfe</td><td>Intelligenz (INT), Weisheit (WIS)</td></tr>
+      <tr><td>Attributsteigerung (Level)</td><td>4, 8, 12, 16</td></tr>
+      <tr><td>Fertigkeiten (2 zur Auswahl)</td><td>Arkana, Geschichte, Nachforschung, Religion, Logik, Wissen</td></tr>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Philosophie</h2>
+    <div class="philosophy-block">
+      <p>Der MAGIER ist der universelle Arkanzauberer — er beherrscht das breiteste Spektrum an Zaubern, von elementarer Zerstörung über Kontrolle bis zu Verwandlung und Zeitmagie. Intelligenz ist sein einziger Treiber: Zauber-Schaden, Zauber-Rettungswurf-SG und vorbereitete Zauber skalieren alle darüber. Er ist kein Nahkämpfer, kein Heiler, kein Verteidiger — er ist der vielseitige Zauberer der jede Situation löst. Meteor verwandelt Gruppen in Asche, Eisschacht betäubt Einzelziele, Versteinern versteinert auf Berührung, Urzeit bezaubert ganze Gruppen. Mit Vorzeichen (L2) sieht er die Zukunft voraus — zwei W20 die er als Ersatz für beliebige Würfe einsetzen kann. Arkanes Wiederherstellen (L1) gibt ihm Zauberslots zurück, Arkane Überladung (L14) maximiert Schadenswürfel. Er ist fragil, aber auf Distanz ist er die tödlichste Klasse auf dem Feld.</p>
+    </div>
+  </section>
+
+  <section class="dns-section">
+    <h2>Klassenfähigkeiten</h2>
+    <table class="feature-table">
+      <thead>
+        <tr><th class="level-cell">Level</th><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="level-cell">L1</td><td>Arkanes Wiederherstellen</td><td>1/Lange Rast: Zauberslots zurückgewinnen (halbes Level an Slot-Levels).</td></tr>
+        <tr><td class="level-cell">L2</td><td>Vorzeichen</td><td>2 W20 würfeln nach langer Rast — als Ersatz für beliebige Angriffs-/Rettungswürfe einsetzbar.</td></tr>
+        <tr><td class="level-cell">L2</td><td>Grimmige Ernte</td><td>Passiv: Heile Level+2 TP wenn du einen Gegner mit einem Zauber tötest.</td></tr>
+        <tr><td class="level-cell">L2</td><td>Elementare Meisterschaft</td><td>Wähle ein Element. +2 Zauber-Rettungswurf-SG für dieses Element, skaliert mit Level (+2/+4/+6/+8/+10 bei L2/L5/L9/L13/L17).</td></tr>
+        <tr><td class="level-cell">L3</td><td>Arkanes Wissen</td><td>Wähle 2 zusätzliche Zauber aus der Magier-Liste (bis Rang 2).</td></tr>
+        <tr><td class="level-cell">L5</td><td>Arkane Analyse</td><td>Passiv: +2 Intelligenz.</td></tr>
+        <tr><td class="level-cell">L6</td><td>Mächtiger Basiszauber</td><td>Passiv: Basiszauber-Schaden skaliert mit Level (zusätzlichlicher Würfel bei höheren Levels).</td></tr>
+        <tr><td class="level-cell">L10</td><td>Zauber-Immunität</td><td>Passiv: Immun gegen Zauber-Unterbrechung für das gewählte Element.</td></tr>
+        <tr><td class="level-cell">L14</td><td>Arkane Überladung</td><td>1/Lange Rast: Maximiere die Schadenswürfel eines Zaubers (Rang 1–5).</td></tr>
+        <tr><td class="level-cell">L18</td><td>Zaubermeisterschaft</td><td>1/Lange Rast: 1 Zauber Rang 1–2 beliebig oft einsetzbar.</td></tr>
+        <tr><td class="level-cell">L20</td><td>Signaturzauber</td><td>2 Zauber Rang 3, je 1/Kurze Rast einsetzbar.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Fähigkeiten</h2>
+    <p class="note">Alle Zauber nutzen Zauberslots (Vollzauberer-Progression, Rang 1–9). Zauberattribut ist Intelligenz (INT). Upcast-Skalierung pro zusätzlichem Zauberslot bei Magischer Pfeil (+1W10), Donnerwelle (+1W8), Blitzstrahl (+1W8), Eisschacht (+1W6).</p>
+
+    <h3>Basiszauber</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Magischer Pfeil</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-basiszauber">Basiszauber — unbegrenzt</span></td>
+          <td>L1</td>
+          <td><span class="el-AETHER">AETHER</span> 1W10 Arkanschaden, Angriffswurf, Reichweite 24. Upcast mit Zauberslot: +1W10 pro Slot.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Zauber</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Donnerwelle</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-STORM">STURM</span> Kegel 15ft: 2W8 Donner + KON-Rettungswurf oder 10ft Rückstoß.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Magierrüstung</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-AETHER">AETHER</span> +3 RK für 8 Stunden.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Schild</span></td>
+          <td>Reaktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-AETHER">AETHER</span> +5 RK bis nächste Runde wenn angegriffen.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Schlaf</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-AETHER">AETHER</span> Flächeneffekt 10ft: Alle Gegner müssen WIS-Rettungswurf ablegen oder werden kampfunfähig.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Flammenmensch</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 2</span></td>
+          <td>L3</td>
+          <td><span class="el-FLAME">FLAMME</span> Resistenz gegen Feuer und Frost für 1 Minute. Erfordert Konzentration.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Blitzstrahl</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 3</span></td>
+          <td>L5</td>
+          <td><span class="el-STORM">STURM</span> 4W8 Blitz + GES-Rettungswurf (halber Schaden bei Erfolg), Reichweite 30.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Eisschacht</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 3</span></td>
+          <td>L5</td>
+          <td><span class="el-FROST">FROST</span> 6W6 Frost + KON-Rettungswurf oder betäubt (1 Runde), Reichweite 12.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Versteinern</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 4</span></td>
+          <td>L7</td>
+          <td><span class="el-AETHER">AETHER</span> Berührung: KON-Rettungswurf oder versteinert.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Meteor</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 5</span></td>
+          <td>L9</td>
+          <td><span class="el-FLAME">FLAMME</span> Flächeneffekt 20ft: 10W6 Feuer + 10W6 Wucht + GES-Rettungswurf (halber Schaden bei Erfolg).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Spezialfähigkeiten</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Zeitstopp</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Lange Rast</span></td>
+          <td>L13</td>
+          <td><span class="el-AETHER">AETHER</span> +2 auf alle Rettungswürfe für 1 Minute.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Urzeit</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Lange Rast</span></td>
+          <td>L17</td>
+          <td><span class="el-AETHER">AETHER</span> Alle Gegner in 30ft müssen WIS-Rettungswurf ablegen oder werden bezaubert (1 Minute). Erfordert Konzentration.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Ressourcen</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Ressource</th><th>Mechanik</th><th>Verfügbarkeit</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Zauberslots</span></td>
+          <td>Vollzauberer-Progression (Rang 1–9). Zauberattribut: INT.</td>
+          <td>Alle Zauber, pro Zauberslot</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Arkanes Wiederherstellen</span></td>
+          <td>Zauberslots zurückgewinnen (halbes Level an Slot-Levels)</td>
+          <td>1/Lange Rast</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Vorzeichen</span></td>
+          <td>2 W20 nach langer Rast — als Ersatz für beliebige Würfe einsetzbar</td>
+          <td>2/Lange Rast</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Arkane Überladung</span></td>
+          <td>Maximiere Schadenswürfel eines Zaubers (Rang 1–5)</td>
+          <td>1/Lange Rast, ab L14</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Signaturzauber</span></td>
+          <td>2 Zauber Rang 3 beliebig oft</td>
+          <td>Je 1/Kurze Rast, ab L20</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Spielstil-Tipps</h2>
+    <div class="playstyle-tip">
+      <strong>Frühe Level (L1-4):</strong> Magischer Pfeil (1W10 Aether) ist dein Basiszauber. Donnerwelle und Schlaf kontrollieren Gruppen. Magierrüstung (+3 RK) und Schild (+5 RK Reaktion) halten dich am Leben. Vorzeichen (L2) gibt dir zwei W20 als Ersatz-Würfe.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Mittlere Level (L5-12):</strong> Blitzstrahl (4W8) und Eisschacht (6W6 + betäubt) sind deine Haupt-Schadenszauber. Elementare Meisterschaft (L2) skaliert den Rettungswurf-SG für dein gewähltes Element weiter. Mächtiger Basiszauber (L6) lässt Magischer Pfeil skalieren.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Hohe Level (L13-20):</strong> Meteor (10W6+10W6 Flächeneffekt) ist dein stärkster Schadenszauber. Versteinern (L7) entfernt einzelne Gegner. Arkane Überladung (L14) maximiert Schadenswürfel. Urzeit (L17) bezaubert Gruppen. Signaturzauber (L20) gibt dir 2 Rang-3-Zauber pro Kurze Rast.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Synergien:</strong> Elementare Meisterschaft + Blitzstrahl/Eisschacht = höherer Rettungswurf-SG, Gegner schaffen seltener den Rettungswurf. Arkane Überladung + Meteor = 20×6=120 garantierter Schaden. Vorzeichen + Versteinern = niedrige W20 als Gegner-Rettungswurf einsetzen. Schlaf → Grimmige Ernte = Zauber-Kill heilt dich.
+    </div>
+  </section>
+
+  <footer class="handbuch-footer">
+    <p>Dice &amp; Screen — Klassenhandbuch · <a href="./index.html">Zurück zum Index</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCHAMANE — Geisterzauberer | Dice &amp; Screen Klassenhandbuch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="theme-shadow">
+
+<div class="handbuch-root">
+
+  <a href="./index.html" class="nav-back">← Klassenhandbuch</a>
+
+  <header class="dns-hero">
+    <div class="hero-portrait">
+      <img src="./img/schamane.png" alt="SCHAMANE" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="portrait-missing"><span class="pm-label">Bild fehlt</span><span class="pm-file">img/schamane.png</span></div>
+    </div>
+    <div class="hero-text">
+      <h1>SCHAMANE</h1>
+      <div class="subtitle">Geisterzauberer</div>
+      <div class="tagline">Ahnen, Geister, Seelen — die Brücke zwischen den Welten.</div>
+    </div>
+  </header>
+
+  <section class="dns-section">
+    <h2>Übersicht</h2>
+    <table class="overview-table">
+      <tr><td>Rolle</td><td>Vollzauberer · Geisterzauberer · Heiler · Unterstützer · Beschwörer</td></tr>
+      <tr><td>Zauberertyp</td><td><span class="badge badge-FULL">Vollzauberer</span> Zauberslots bis Rang 9</td></tr>
+      <tr><td>Primärer Schadensattribut</td><td>Weisheit (WIS)</td></tr>
+      <tr><td>Sekundärer Schadensattribut</td><td>—</td></tr>
+      <tr><td>Zauberattribut</td><td>Weisheit (WIS)</td></tr>
+      <tr><td>TP (L1)</td><td>8</td></tr>
+      <tr><td>TP pro Level</td><td>5</td></tr>
+      <tr><td>Rüstung</td><td>Mittlere Rüstung (kein Metall)</td></tr>
+      <tr><td>Waffen</td><td>Naturwaffen — Keule, Dolch, Wurfpfeil, Speer, Schleuder, Streitkolben</td></tr>
+      <tr><td>Rettungswürfe</td><td>Weisheit (WIS), Konstitution (KON)</td></tr>
+      <tr><td>Attributsteigerung (Level)</td><td>4, 8, 12, 16</td></tr>
+      <tr><td>Fertigkeiten (2 zur Auswahl)</td><td>Geisteskunde, Tierkunde, Medizin, Naturkunde, Wahrnehmung</td></tr>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Philosophie</h2>
+    <div class="philosophy-block">
+      <p>Der SCHAMANE ist die Brücke zwischen den Welten — er ruft Ahnen und Geister, heilt mit Geisterenergie und lenkt den Kampf durch Ahnenflüche und Geisterwände. Weisheit treibt seine Zauber, Konstitution macht ihn robust. Wo der KLERIKER göttliche Macht kanalisiert, ruft der SCHAMANE die Geister der Vorfahren — Ahnenfluch verflucht Gegner, Ahnenmacht und Ahnensturm fügen GEIST-Schaden zu, Ahnensegen bufft die Rettungswürfe der Gruppe. Seine Geisterheilung gibt temporäre TP zusätzlich zur Heilung (ab L2, skaliert mit Level), Geisterschild bufft die RK und gibt physische Resistenz, Geisterruf beschwört einen Geist-Begleiter. Mit Ahnenzorn (L5) fügt ein Geist 1/Zug +1W6 Schaden hinzu wenn Verbündete treffen. Geisterwandel (L18) lässt ihn durch Wände bewegen, Großer Geist (L20) verwandelt ihn in eine Geisterform. Er ist der vielseitigste Geisterzauberer — Heilung, Schaden, Kontrolle und Beschwörung in einer Klasse.</p>
+    </div>
+  </section>
+
+  <section class="dns-section">
+    <h2>Klassenfähigkeiten</h2>
+    <table class="feature-table">
+      <thead>
+        <tr><th class="level-cell">Level</th><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="level-cell">L1</td><td>Geisterführer</td><td>Passiv: Vorteil auf einen gewählten Rettungswurf.</td></tr>
+        <tr><td class="level-cell">L2</td><td>Temporäre Heilung</td><td>Passiv: Heilzauber geben zusätzlich temporäre TP (Profan-Bonus, skaliert mit Level).</td></tr>
+        <tr><td class="level-cell">L3</td><td>Geistergabe</td><td>Wähle 2 zusätzliche Zauber aus der Schamane-Liste (bis Rang 2).</td></tr>
+        <tr><td class="level-cell">L5</td><td>Ahnenzorn</td><td>Passiv: 1/Zug, wenn Verbündeter trifft, Geist fügt +1W6 Schaden hinzu.</td></tr>
+        <tr><td class="level-cell">L6</td><td>Spirituelle Heilung</td><td>Passiv: Heilungszauber heilen zusätzlich 1W6.</td></tr>
+        <tr><td class="level-cell">L6</td><td>Geisterschild</td><td>Reaktion: Verbündeter in 6 Feldern nimmt Schaden → reduziere um 1W6+Level.</td></tr>
+        <tr><td class="level-cell">L10</td><td>Ahnenwächter</td><td>Verbündete in 10ft erhalten temporäre TP.</td></tr>
+        <tr><td class="level-cell">L10</td><td>Geisterbeschwörung</td><td>1/Lange Rast: Geisterwächter beschwören.</td></tr>
+        <tr><td class="level-cell">L14</td><td>Geister-Verbesserung</td><td>Passiv: Beschworene Geister erhalten +2 TP pro deinem Level.</td></tr>
+        <tr><td class="level-cell">L18</td><td>Geisterwandel</td><td>Passiv: Kann durch Kreaturen und Wände bewegen (ätherisch).</td></tr>
+        <tr><td class="level-cell">L20</td><td>Großer Geist</td><td>Verwandle dich in eine Geisterform (Form-System: SPIRIT_FORM).</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Fähigkeiten</h2>
+    <p class="note">Alle Zauber nutzen Zauberslots (Vollzauberer-Progression, Rang 1–9). Zauberattribut ist Weisheit (WIS). Upcast-Skalierung pro zusätzlichem Zauberslot bei Geisterschlag (+1W8), Geisterheilung (+1W4 Heilung), Ahnenmacht (+1W6), Lebensstrom (+1W8 Heilung).</p>
+
+    <h3>Basiszauber</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Geisterschlag</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-basiszauber">Basiszauber — unbegrenzt</span></td>
+          <td>L1</td>
+          <td><span class="el-MIND">GEIST</span> 1W8 Geist, Angriffswurf. Upcast mit Zauberslot: +1W8 pro Slot.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Zauber</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Ahnenfluch</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-MIND">GEIST</span> Ziel muss WIS-Rettungswurf ablegen oder wird verflucht (1 Minute).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Geisterheilung</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-MIND">GEIST</span> Berührung: Heile 2W4+2 + temporäre TP. Upcast: +1W4 Heilung pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Geisterruf</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-MIND">GEIST</span> Beschwöre einen Geist als Begleiter für 1 Minute.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Lebensgeist</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-MIND">GEIST</span> Flächeneffekt 10ft um dich: Heile alle Verbündeten 1W4+1.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Geisterschild</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 2</span></td>
+          <td>L3</td>
+          <td><span class="el-MIND">GEIST</span> Verbündeter erhält +2 RK + physische Resistenz für 1 Minute.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Reinigung</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 2</span></td>
+          <td>L3</td>
+          <td><span class="el-MIND">GEIST</span> Entferne 1 Zustand von einem Verbündeten.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Ahnenmacht</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 3</span></td>
+          <td>L5</td>
+          <td><span class="el-MIND">GEIST</span> 5W6 Geist + WIS-Rettungswurf (halber Schaden bei Erfolg). Upcast: +1W6 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Geisterwand</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 3</span></td>
+          <td>L5</td>
+          <td><span class="el-MIND">GEIST</span> Flächeneffekt 20ft: Alle Gegner müssen WIS-Rettungswurf ablegen oder werden verängstigt (1 Minute).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Lebensstrom</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 4</span></td>
+          <td>L7</td>
+          <td><span class="el-MIND">GEIST</span> Flächeneffekt 20ft: Heile alle Verbündeten 4W8. Upcast: +1W8 Heilung pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Ahnensegen</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 4</span></td>
+          <td>L7</td>
+          <td><span class="el-MIND">GEIST</span> Aura 10ft: Verbündete erhalten +1W4 auf Rettungswürfe für 1 Minute.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Ahnensturm</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 5</span></td>
+          <td>L9</td>
+          <td><span class="el-MIND">GEIST</span> Flächeneffekt 20ft: 8W8 Geist + WIS-Rettungswurf (halber Schaden bei Erfolg).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Ressourcen</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Ressource</th><th>Mechanik</th><th>Verfügbarkeit</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Zauberslots</span></td>
+          <td>Vollzauberer-Progression (Rang 1–9). Zauberattribut: WIS.</td>
+          <td>Alle Zauber, pro Zauberslot</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Geisterschild</span></td>
+          <td>Reaktion: Schaden für Verbündeten reduzieren (1W6+Level)</td>
+          <td>Pro Rast, ab L6</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Geisterbeschwörung</span></td>
+          <td>Geisterwächter beschwören</td>
+          <td>1/Lange Rast, ab L10</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Großer Geist</span></td>
+          <td>Verwandlung in Geisterform (SPIRIT_FORM)</td>
+          <td>Ab L20</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Spielstil-Tipps</h2>
+    <div class="playstyle-tip">
+      <strong>Frühe Level (L1-4):</strong> Geisterschlag (1W8 GEIST) ist dein Basiszauber. Geisterheilung heilt + temporäre TP (ab L2). Ahnenfluch verflucht Gegner, Geisterruf beschwört einen Begleiter. Lebensgeist heilt die Gruppe. Geistergabe (L3) gibt 2 zusätzliche Zauber.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Mittlere Level (L5-12):</strong> Ahnenzorn (L5) gibt +1W6 pro Zug wenn Verbündete treffen. Spirituelle Heilung (L6) gibt +1W6 auf Heilzauber. Geisterschild (Reaktion) reduziert Schaden für Verbündete. Ahnenmacht (5W6) und Geisterwand (verängstigt) sind deine Hauptzauber. Ahnenwächter (L10) gibt der Gruppe temporäre TP.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Hohe Level (L13-20):</strong> Lebensstrom (4W8 Gruppenheilung) und Ahnensegen (+1W4 auf Rettungswürfe) sind deine starken Zauber. Ahnensturm (8W8 Flächeneffekt) ist dein stärkster Schadenszauber. Geister-Verbesserung (L14) bufft deine Beschwörungen. Geisterwandel (L18) macht dich ätherisch. Großer Geist (L20) verwandelt dich in eine Geisterform.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Synergien:</strong> Geisterheilung + temporäre TP (L2) = doppelte Heilung pro Zauber. Ahnenzorn + mehrere Verbündete = +1W6 fast jeder Zug. Ahnenfluch (verflucht) → Ahnenmacht = verfluchte Gegner haben Nachteil. Geisterschild auf den Verteidiger = +2 RK + physische Resistenz. Geisterruf + Geister-Verbesserung (L14) = starker Geist-Begleiter mit vielen TP.
+    </div>
+  </section>
+
+  <footer class="handbuch-footer">
+    <p>Dice &amp; Screen — Klassenhandbuch · <a href="./index.html">Zurück zum Index</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

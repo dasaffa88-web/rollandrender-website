@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MÖNCH — Ki-Kämpfer | Dice &amp; Screen Klassenhandbuch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="theme-bronze">
+<div class="handbuch-root">
+
+  <a href="./index.html" class="nav-back">← Klassenhandbuch</a>
+
+  <header class="dns-hero">
+    <div class="hero-portrait">
+      <img src="./img/moench.png" alt="MÖNCH" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="portrait-missing"><span class="pm-label">Bild fehlt</span><span class="pm-file">img/moench.png</span></div>
+    </div>
+    <div class="hero-text">
+      <h1>MÖNCH</h1>
+      <div class="subtitle">Ki-Kämpfer</div>
+      <div class="tagline">Waffenlos, Beweglichkeit, Ki-Energie.</div>
+    </div>
+  </header>
+
+  <section class="dns-section">
+    <h2>Übersicht</h2>
+    <table class="overview-table">
+      <tr><td>Rolle</td><td>Mobiler Angreifer · Spitzenschaden · Kontrolle</td></tr>
+      <tr><td>Zauberertyp</td><td><span class="badge badge-NONE">Kein Zauberer</span> Keine Zauberslots — nutzt Ki</td></tr>
+      <tr><td>Primärer Schadensattribut</td><td>Geschick (DEX)</td></tr>
+      <tr><td>Sekundärer Schadensattribut</td><td>Weisheit (WIS)</td></tr>
+      <tr><td>Zauberattribut</td><td>—</td></tr>
+      <tr><td>TP (L1)</td><td>8</td></tr>
+      <tr><td>TP pro Level</td><td>5</td></tr>
+      <tr><td>Rüstung</td><td>Keine · Rüstungslos-Verteidigung (RK = 10 + DEX + WIS)</td></tr>
+      <tr><td>Waffen</td><td>Mönchswaffen (waffenlos, Stäbe, Kurzschwerter, einfache Waffen)</td></tr>
+      <tr><td>Rettungswürfe</td><td>Geschick (DEX), Weisheit (WIS)</td></tr>
+      <tr><td>Attributsteigerung (Level)</td><td>4, 8, 12, 16</td></tr>
+      <tr><td>Fertigkeiten (3 zur Auswahl)</td><td>Akrobatik, Athletik, Intuition, Wahrnehmung, Geistige Stabilität, Heilkunde</td></tr>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Philosophie</h2>
+    <div class="philosophy-block">
+      <p>Der MÖNCH kämpft mit dem eigenen Körper als Waffe. Durch jahrelange Disziplin hat er gelernt, seine innere Energie — Ki — zu bündeln und in übermenschliche Schnelligkeit, Präzision und Widerstandskraft zu verwandeln. Er trägt keine Rüstung, weil er sie nicht braucht: Wer ihn treffen will, muss ihn erst einmal fassen. Sein Spielstil lebt von Bewegung, vielen kleinen Treffern und dem gezielten Einsatz von Ki im richtigen Moment.</p>
+    </div>
+  </section>
+
+  <section class="dns-section">
+    <h2>Klassenfähigkeiten</h2>
+    <table class="feature-table">
+      <thead>
+        <tr><th class="level-cell">Level</th><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="level-cell">L1</td><td>Kampfkunst</td><td>Waffenlose Schläge verursachen 1W4 Schaden (1W6 ab L5, 1W8 ab L11, 1W10 ab L17) und nutzen Geschick (DEX).</td></tr>
+        <tr><td class="level-cell">L1</td><td>Rüstungslos-Verteidigung</td><td>RK = 10 + Geschick (DEX) + Weisheit (WIS) ohne Rüstung.</td></tr>
+        <tr><td class="level-cell">L2</td><td>Ki</td><td>Ki-Pool in Höhe deines Levels. Die meisten Ki-Fähigkeiten kosten 1 Punkt. Erholt sich bei kurzer Rast.</td></tr>
+        <tr><td class="level-cell">L2</td><td>Rüstungslose Bewegung</td><td>+10 ft Bewegungsrate (steigt mit dem Level).</td></tr>
+        <tr><td class="level-cell">L5</td><td>Zusatzangriff</td><td>2 Angriffe pro Angriffs-Aktion.</td></tr>
+        <tr><td class="level-cell">L6</td><td>Ki-Schadensbonus</td><td>+Weisheits-Modifikator auf Ki-Fähigkeiten.</td></tr>
+        <tr><td class="level-cell">L11</td><td>Diamantseele</td><td>Profan-Bonus auf alle Rettungswürfe.</td></tr>
+        <tr><td class="level-cell">L11</td><td>Verbessertes Ki</td><td>Ki-Fähigkeiten werden stärker.</td></tr>
+        <tr><td class="level-cell">L17</td><td>Meisterhaftes Ki</td><td>Ki-Fähigkeiten werden weiter verstärkt.</td></tr>
+        <tr><td class="level-cell">L20</td><td>Vollkommenes Selbst</td><td>Unbegrenztes Ki — du musst nicht mehr haushalten.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Fähigkeiten</h2>
+
+    <h3>Aktive Fähigkeiten</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Schlaghagel</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">1 Ki</span></td>
+          <td>L2</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> Unmittelbar nach deiner Angriffs-Aktion: führe zwei waffenlose Schläge als Bonus-Aktion aus.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Geduldige Verteidigung</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">1 Ki</span></td>
+          <td>L2</td>
+          <td>Führe die Ausweich-Aktion als Bonus-Aktion aus — Angriffe gegen dich haben Nachteil.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Windritt</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">1 Ki</span></td>
+          <td>L2</td>
+          <td>Führe Rückzug oder Sprung als Bonus-Aktion aus und verdopple deine Bewegungsrate für diesen Zug.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Betäubungsschlag</span></td>
+          <td>Freie Aktion</td>
+          <td><span class="badge badge-uses">1 Ki</span></td>
+          <td>L5</td>
+          <td>Nach einem Treffer: Ziel muss einen CON-Rettungswurf ablegen oder wird 1 Runde betäubt.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Innerer Frieden</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1 Ki</span></td>
+          <td>L7</td>
+          <td>Entferne alle negativen Conditions von dir selbst — Gift, Betäubung, Verängstigung, Blenden und mehr weichen innerer Disziplin.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Erderschütternder Tritt</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1 Ki</span></td>
+          <td>L14</td>
+          <td><span class="el-PHYSICAL">PHYSISCH</span> 10ft Flächeneffekt um dich: 3W6 Wuchtschaden + STR-Rettungswurf oder liegend. Feinde in Reichweite werden zu Boden geworfen.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Leerkörper</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">1 Ki</span></td>
+          <td>L18</td>
+          <td>Werde unsichtbar und erhalte Widerstand gegen physischen Schaden für 1 Minute (10 Runden).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Zitternde Handfläche</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Lange Rast</span></td>
+          <td>L17</td>
+          <td>Berühre ein Ziel: CON-Rettungswurf oder 10W10 Schaden.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Reaktionen</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Auslöser</th><th>Nutzung</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Geschosse ablenken</span></td>
+          <td>Bei Fernkampf-Treffer</td>
+          <td><span class="badge badge-uses">1 Ki</span></td>
+          <td>Wenn dich ein Projektil trifft: reduziere den Schaden um 1W10 + Ki-Modifikator. Bei ausreichender Reduktion kannst du das Projektil zurückwerfen.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Passive Fähigkeiten</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Eiserner Körper</span></td>
+          <td><span class="badge badge-passive">PASSIV</span> Widerstand gegen Giftschaden (50 %).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Zeitloser Körper</span></td>
+          <td><span class="badge badge-passive">PASSIV</span> Du alterst nicht und brauchst keine Nahrung.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Eins mit der Welt</span></td>
+          <td><span class="badge badge-passive">PASSIV</span> Abschlussfähigkeit: Unbegrenztes Ki.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Ressourcen</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Ressource</th><th>Mechanik</th><th>Verfügbarkeit</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Ki</span></td>
+          <td>Punkte in Höhe deines Levels. Die meisten Fähigkeiten kosten 1 Punkt. Ab L20 unbegrenzt.</td>
+          <td>Ab L2, kurze Rast</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Kampfkunst-Würfel</span></td>
+          <td>Waffenlose Schläge: 1W4 → 1W6 (L5) → 1W8 (L11) → 1W10 (L17)</td>
+          <td>Ab L1, immer</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Spielstil-Tipps</h2>
+    <div class="playstyle-tip">
+      <strong>Frühe Level (L1-4):</strong> Du bist schnell, aber zerbrechlich. Rüstungslos-Verteidigung belohnt hohe Werte in Geschick und Weisheit — investiere in beide. Ab L2 hast du Ki: Schlaghagel für Schaden, Geduldige Verteidigung wenn du im Fokus stehst, Windritt um aus der Gefahrenzone zu kommen. Mit nur wenigen Punkten musst du gut haushalten.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Mittlere Level (L5-12):</strong> Zusatzangriff plus Schlaghagel ergibt bis zu vier Treffer pro Runde. Betäubungsschlag ist deine stärkste Fähigkeit — ein betäubter Gegner verliert seinen ganzen Zug. Ab L6 verstärkt Weisheit deine Ki-Fähigkeiten. Innerer Frieden (L7) befreit dich von jeder negativen Condition — Gift, Betäubung und Blenden werden mit einem Ki-Punkt abgeworfen. Diamantseele (L11) macht dich gegen Zauber und Effekte deutlich robuster.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Hohe Level (L13-20):</strong> Erderschütternder Tritt (L14) wirft ganze Gruppen um dich zu Boden — kombiniere ihn mit Windritt um dich mitten in die Feinde zu positionieren. Zitternde Handfläche (L17) ist ein potenzieller Ein-Schlag-Kill gegen einen einzelnen Gegner. Leerkörper (L18) macht dich unsichtbar und widerstandsfähig als Bonus-Aktion für nur 1 Ki. Ab L20 entfällt das Ki-Management vollständig — nutze jede Fähigkeit in jeder Runde.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Synergien:</strong> Betäubungsschlag direkt nach dem ersten Treffer aus dem Schlaghagel — der Gegner verliert seinen Zug und deine Verbündeten treffen ihn mit Vorteil. Windritt hinein, Erderschütternder Tritt, alle Feinde liegend — dann Schlaghagel auf den gefährlichsten. Innerer Frieden als Notfall-Reset wenn du vergiftet oder geblendet wurdest. Leerkörper plus Betäubungsschlag eröffnet einen Kampf, bevor der Gegner reagieren kann. Geschosse ablenken macht dich gegen Bogenschützen fast immun.
+    </div>
+  </section>
+
+  <footer class="handbuch-footer">
+    <p>Dice &amp; Screen — Klassenhandbuch · <a href="./index.html">Zurück zum Index</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

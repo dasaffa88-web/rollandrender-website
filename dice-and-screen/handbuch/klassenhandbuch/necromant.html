@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NECROMANT — Totenbeschwörer | Dice &amp; Screen Klassenhandbuch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="theme-shadow">
+
+<div class="handbuch-root">
+
+  <a href="./index.html" class="nav-back">← Klassenhandbuch</a>
+
+  <header class="dns-hero">
+    <div class="hero-portrait">
+      <img src="./img/necromant.png" alt="NECROMANT" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="portrait-missing"><span class="pm-label">Bild fehlt</span><span class="pm-file">img/necromant.png</span></div>
+    </div>
+    <div class="hero-text">
+      <h1>NECROMANT</h1>
+      <div class="subtitle">Totenbeschwörer</div>
+      <div class="tagline">Schatten, Untote, Lebensentzug — die Macht über Tod und Verfall.</div>
+    </div>
+  </header>
+
+  <section class="dns-section">
+    <h2>Übersicht</h2>
+    <table class="overview-table">
+      <tr><td>Rolle</td><td>Vollzauberer · Schatten-Schaden · Beschwörer · Lebensraub · Kontrolle</td></tr>
+      <tr><td>Zauberertyp</td><td><span class="badge badge-FULL">Vollzauberer</span> Zauberslots bis Rang 9</td></tr>
+      <tr><td>Primärer Schadensattribut</td><td>Weisheit (WIS)</td></tr>
+      <tr><td>Sekundärer Schadensattribut</td><td>Intelligenz (INT) — ab L11 Bonus-Schaden</td></tr>
+      <tr><td>Zauberattribut</td><td>Weisheit (WIS)</td></tr>
+      <tr><td>TP (L1)</td><td>6</td></tr>
+      <tr><td>TP pro Level</td><td>4</td></tr>
+      <tr><td>Rüstung</td><td>Keine</td></tr>
+      <tr><td>Waffen</td><td>Magierwaffen — Dolche, Stäbe, Zauberstäbe, Bücher</td></tr>
+      <tr><td>Rettungswürfe</td><td>Weisheit (WIS), Intelligenz (INT)</td></tr>
+      <tr><td>Attributsteigerung (Level)</td><td>4, 8, 12, 16</td></tr>
+      <tr><td>Fertigkeiten (2 zur Auswahl)</td><td>Arkana, Religion, Geisteskunde, Nachforschung, Medizin</td></tr>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Philosophie</h2>
+    <div class="philosophy-block">
+      <p>Der NECROMANT ist der Meister über Tod und Verfall — er kanalisiert Schattenenergie, beschwört Untote und stiehlt Leben von seinen Feinden. Weisheit treibt seine Zauber, Intelligenz gibt ab L11 zusätzlichen Schaden. Seine Zauber fügen SCHATTEN-Schaden zu: Totenstrahl (Basiszauber), Lebensentzug und Lichterlöschen heilen ihn für 50% des Schadens (ab L5, hardcoded). Todesgriff vergiftet auf Berührung, Verwesen richtet Schaden aus der Distanz, Todeswolke vergiftet ganze Gruppen. Totenwacht beschwört Skelette — ab L10 können 2 Untote gleichzeitig aktiv sein. Mit Totenerweckung (L6) bekommen seine Untoten +Level TP und +Profan-Bonus Schaden. Lebenskraft (L2) heilt ihn wenn seine Untoten einen Gegner töten. An den Tod gewöhnt (L10) gibt ihm Resistenz gegen SCHATTEN. Todeswacht (L14) lässt ihn bei 0 TP überleben. Totenfürst (L18) beschwört einen Totenritter, Lichform (L20) verwandelt ihn in einen Lich. Er ist fragil, aber seine Untoten-Armee und sein Lebensraub machen ihn zu einem der gefährlichsten Zauberer auf dem Feld.</p>
+    </div>
+  </section>
+
+  <section class="dns-section">
+    <h2>Klassenfähigkeiten</h2>
+    <table class="feature-table">
+      <thead>
+        <tr><th class="level-cell">Level</th><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="level-cell">L1</td><td>Todesberührung</td><td>Passiv: Nekromantie-Zauber fügen +INT-Modifikator SCHATTEN-Schaden hinzu (ab L11).</td></tr>
+        <tr><td class="level-cell">L2</td><td>Lebenskraft</td><td>Passiv: Wenn ein Untoten-Begleiter einen Gegner tötet, heile dich um 1W4+Level.</td></tr>
+        <tr><td class="level-cell">L3</td><td>Tote erwecken</td><td>Erweckt einen Untoten, der dir dient.</td></tr>
+        <tr><td class="level-cell">L5</td><td>Lebensentzug</td><td>Passiv: Nekromantie-Zauber heilen dich für 50% des verursachten Schadens (Lebensraub).</td></tr>
+        <tr><td class="level-cell">L5</td><td>Fluch der Schwäche</td><td>1/Kampf: Ziel hat Nachteil auf Angriff und Schaden.</td></tr>
+        <tr><td class="level-cell">L6</td><td>Totenerweckung</td><td>Passiv: Untote-Beschwörungen erhalten +Level TP und +Profan-Bonus Schaden.</td></tr>
+        <tr><td class="level-cell">L6</td><td>Skelett/Ghul erwecken</td><td>2/Kurze Rast: Skelett oder Ghul als Untoten beschwören.</td></tr>
+        <tr><td class="level-cell">L10</td><td>An den Tod gewöhnt</td><td>Passiv: Resistenz gegen SCHATTEN-Schaden. 2 Untote gleichzeitig aktiv.</td></tr>
+        <tr><td class="level-cell">L11</td><td>Todesberührung+</td><td>Passiv: +INT-Modifikator auf alle Nekromantie-Zauber-Schaden.</td></tr>
+        <tr><td class="level-cell">L14</td><td>Todeswacht</td><td>1/Lange Rast: Bei 0 TP überlebe mit 1 TP statt zu sterben.</td></tr>
+        <tr><td class="level-cell">L18</td><td>Totenfürst</td><td>Beschwöre einen mächtigen Untoten (Totenritter).</td></tr>
+        <tr><td class="level-cell">L20</td><td>Lichform</td><td>Verwandle dich in einen Lich (Form-System: LICH_FORM).</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Fähigkeiten</h2>
+    <p class="note">Alle Zauber nutzen Zauberslots (Vollzauberer-Progression, Rang 1–9). Zauberattribut ist Weisheit (WIS). Upcast-Skalierung pro zusätzlichem Zauberslot bei Totenstrahl (+1W8), Todesgriff (+1W6), Lebensentzug (+1W6), Verwesen (+1W6), Todeswolke (+1W6).</p>
+
+    <h3>Basiszauber</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Totenstrahl</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-basiszauber">Basiszauber — unbegrenzt</span></td>
+          <td>L1</td>
+          <td><span class="el-SHADOW">SCHATTEN</span> 1W8 Schatten, Angriffswurf, Reichweite 12. Upcast mit Zauberslot: +1W8 pro Slot.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Zauber</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Knochenrüstung</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-SHADOW">SCHATTEN</span> +3 RK für 1 Minute (selbst).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Lebensentzug</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-SHADOW">SCHATTEN</span> 2W6 Schatten + WIS-Rettungswurf (halber Schaden bei Erfolg). Lebensraub 50% ab L5. Upcast: +1W6 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Todesgriff</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-SHADOW">SCHATTEN</span> Berührung: 1W6 Schatten + KON-Rettungswurf oder vergiftet (1 Runde). Upcast: +1W6 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Totenforcht</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 2</span></td>
+          <td>L3</td>
+          <td><span class="el-SHADOW">SCHATTEN</span> Flächeneffekt 10ft: Alle Gegner müssen WIS-Rettungswurf ablegen oder werden verängstigt (1 Minute).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Verwesen</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 3</span></td>
+          <td>L5</td>
+          <td><span class="el-SHADOW">SCHATTEN</span> 5W6 Schatten + KON-Rettungswurf (halber Schaden bei Erfolg), Reichweite 18. Upcast: +1W6 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Todeswolke</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 4</span></td>
+          <td>L7</td>
+          <td><span class="el-SHADOW">SCHATTEN</span> Flächeneffekt 20ft: 6W6 Schatten + KON-Rettungswurf (halber Schaden bei Erfolg) + vergiftet (1 Runde). Upcast: +1W6 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Totenwacht</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 4</span></td>
+          <td>L7</td>
+          <td><span class="el-SHADOW">SCHATTEN</span> Beschwört ein Skelett. Ab L10 können 2 Untote gleichzeitig aktiv sein.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Lichterlöschen</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 5</span></td>
+          <td>L9</td>
+          <td><span class="el-SHADOW">SCHATTEN</span> 8W8 Schatten + WIS-Rettungswurf (halber Schaden bei Erfolg). Lebensraub 50% ab L5.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Spezialfähigkeiten</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Skelett erwecken</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">2/Kurze Rast</span></td>
+          <td>L6</td>
+          <td>Beschwöre ein Skelett als Untoten-Begleiter.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Ghul erwecken</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">2/Kurze Rast</span></td>
+          <td>L6</td>
+          <td>Beschwöre einen Ghul als Untoten-Begleiter.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Todeswacht</span></td>
+          <td>Passiv</td>
+          <td><span class="badge badge-uses">1/Lange Rast</span></td>
+          <td>L14</td>
+          <td>Bei 0 TP überlebe mit 1 TP statt zu sterben.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Totenfürst</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Lange Rast</span></td>
+          <td>L18</td>
+          <td>Beschwöre einen mächtigen Untoten (Totenritter).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Lichform</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Spezial</span></td>
+          <td>L20</td>
+          <td>Verwandle dich in einen Lich (Form-System: LICH_FORM).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Ressourcen</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Ressource</th><th>Mechanik</th><th>Verfügbarkeit</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Zauberslots</span></td>
+          <td>Vollzauberer-Progression (Rang 1–9). Zauberattribut: WIS.</td>
+          <td>Alle Zauber, pro Zauberslot</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Skelett/Ghul erwecken</span></td>
+          <td>Untoten-Begleiter beschwören (2 gleichzeitig ab L10)</td>
+          <td>2/Kurze Rast, ab L6</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Fluch der Schwäche</span></td>
+          <td>Ziel erhält Nachteil auf Angriff und Schaden</td>
+          <td>1/Kampf, ab L5</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Todeswacht</span></td>
+          <td>Bei 0 TP mit 1 TP überleben</td>
+          <td>1/Lange Rast, ab L14</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Lichform</span></td>
+          <td>Verwandlung in Lich (LICH_FORM)</td>
+          <td>Ab L20</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Spielstil-Tipps</h2>
+    <div class="playstyle-tip">
+      <strong>Frühe Level (L1-4):</strong> Totenstrahl (1W8 SCHATTEN) ist dein Basiszauber. Lebensentzug (2W6 + Lebensraub ab L5) und Todesgriff (vergiftet) sind deine frühen Zauber. Knochenrüstung (+3 RK) hält dich am Leben. Lebenskraft (L2) heilt dich wenn deine Untoten töten. Tote erwecken (L3) gibt dir deinen ersten Untoten.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Mittlere Level (L5-12):</strong> Lebensentzug (L5) aktiviert Lebensraub — du heilst für 50% des Schadens. Totenerweckung (L6) verstärkt deine Untoten mit +Level TP und +Profan-Bonus Schaden. Skelett und Ghul erwecken geben dir eine Armee. Verwesen (5W6) und Todeswolke (6W6 + vergiftet) sind deine Haupt-Schadenszauber. An den Tod gewöhnt (L10) gibt SCHATTEN-Resistenz.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Hohe Level (L13-20):</strong> Todesberührung+ (L11) gibt +INT-Mod auf alle Nekromantie-Zauber. Lichterlöschen (8W8 + Lebensraub) ist dein stärkster Schadenszauber. Todeswacht (L14) lässt dich bei 0 TP überleben. Totenfürst (L18) beschwört einen Totenritter. Lichform (L20) verwandelt dich in einen Lich — die ultimative Form der Unsterblichkeit.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Synergien:</strong> Lebensentzug + Lebensraub (L5) = du heilst während du Schaden machst. Totenerweckung (L6) + Skelett erwecken = Untote mit massiv vielen TP und Bonus-Schaden. Lebenskraft (L2) + Untoten-Armee = du heilst jedes Mal wenn deine Untoten töten. Todeswolke (vergiftet) + Verwesen = doppelter SCHATTEN-Schaden. An den Tod gewöhnt macht dich immun gegen deinen eigenen Element-Typ.
+    </div>
+  </section>
+
+  <footer class="handbuch-footer">
+    <p>Dice &amp; Screen — Klassenhandbuch · <a href="./index.html">Zurück zum Index</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

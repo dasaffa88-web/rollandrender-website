@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DAEMONENRUFER — Dämonenbinder | Dice &amp; Screen Klassenhandbuch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="theme-shadow">
+
+<div class="handbuch-root">
+
+  <a href="./index.html" class="nav-back">← Klassenhandbuch</a>
+
+  <header class="dns-hero">
+    <div class="hero-portrait">
+      <img src="./img/daemonenrufer.png" alt="DAEMONENRUFER" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="portrait-missing"><span class="pm-label">Bild fehlt</span><span class="pm-file">img/daemonenrufer.png</span></div>
+    </div>
+    <div class="hero-text">
+      <h1>DAEMONENRUFER</h1>
+      <div class="subtitle">Dämonenbinder</div>
+      <div class="tagline">Höllenfeuer, Flüche, Dämonen — Macht aus den Abgründen.</div>
+    </div>
+  </header>
+
+  <section class="dns-section">
+    <h2>Übersicht</h2>
+    <table class="overview-table">
+      <tr><td>Rolle</td><td>Vollzauberer · Flammen-Schaden · Fluch-Spezialist · Beschwörer · Kontrolle</td></tr>
+      <tr><td>Zauberertyp</td><td><span class="badge badge-FULL">Vollzauberer</span> Zauberslots bis Rang 9</td></tr>
+      <tr><td>Primärer Schadensattribut</td><td>Charisma (CHA) — Dämonischer Pakt</td></tr>
+      <tr><td>Sekundärer Schadensattribut</td><td>Weisheit (WIS) — Zauberattribut</td></tr>
+      <tr><td>Zauberattribut</td><td>Weisheit (WIS)</td></tr>
+      <tr><td>TP (L1)</td><td>8</td></tr>
+      <tr><td>TP pro Level</td><td>5</td></tr>
+      <tr><td>Rüstung</td><td>Leichte Rüstung</td></tr>
+      <tr><td>Waffen</td><td>Magierwaffen — Dolche, Stäbe, Zauberstäbe, Bücher</td></tr>
+      <tr><td>Rettungswürfe</td><td>Weisheit (WIS), Charisma (CHA)</td></tr>
+      <tr><td>Attributsteigerung (Level)</td><td>4, 8, 12, 16</td></tr>
+      <tr><td>Fertigkeiten (2 zur Auswahl)</td><td>Geisteskunde, Einschüchtern, Religion, Wahrnehmung, Nachforschung</td></tr>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Philosophie</h2>
+    <div class="philosophy-block">
+      <p>Der DAEMONENRUFER ist der Binder von Dämonen — er ruft Höllenfeuer herbei, verflucht seine Feinde und beschwört Dämonen als Begleiter. Weisheit treibt seine Zauber, Charisma seinen Dämonischen Pakt (L1: +CHA-Modifikator Schaden gegen verfluchte/verängstigte Ziele). Seine Zauber fügen FLAMME und SCHATTEN-Schaden zu: Höllenfeuer (2W6 FLAMME), Schattenschlag (3W6 SCHATTEN), Verdammnis (verängstigt), Höllensturm (6W6+6W6 Flächeneffekt), Inferno (10W6 + Schaden über Zeit). Seine Fluch-Spezialität ist einzigartig: Brennender Fluch (L6) lässt jeden Fluch-Zauber zusätzlich 1W4 FLAMME-Schaden über Zeit auslösen, Explosiver Fluch (L14) lässt verfluchte Ziele bei Tod explodieren (8W6 FLAMME). Dämonenbeschwörung (L5) ruft einen Imp, Daemonische Verbesserung (L10) gibt beschworenen Dämonen +2 TP pro Level. Höllischer Gegenangriff (L2) ist eine Reaktion die Angreifer mit 2W6+Level FLAMME schadet. Daemonische Widerstandsfähigkeit (L6) gibt Resistenz gegen FLAMME und NATUR. Großer Dämon (L18) beschwört einen mächtigen Dämon, Dämonenform (L20) verwandelt ihn selbst in einen Dämon. Er ist der Meister der Flüche und des Höllenfeuers — hochgradig synergetisch.</p>
+    </div>
+  </section>
+
+  <section class="dns-section">
+    <h2>Klassenfähigkeiten</h2>
+    <table class="feature-table">
+      <thead>
+        <tr><th class="level-cell">Level</th><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="level-cell">L1</td><td>Dämonischer Pakt</td><td>Passiv: +CHA-Modifikator Schaden gegen verfluchte oder verängstigte Ziele.</td></tr>
+        <tr><td class="level-cell">L2</td><td>Höllischer Gegenangriff</td><td>Reaktion: Wenn getroffen, füge Angreifer 2W6+Level FLAMME-Schaden zu.</td></tr>
+        <tr><td class="level-cell">L3</td><td>Dämonenbindung</td><td>Wähle 2 zusätzliche Zauber aus der Dämonenrufer-Liste (bis Rang 2).</td></tr>
+        <tr><td class="level-cell">L5</td><td>Dämonenbeschwörung</td><td>Beschwöre einen Imp (kleiner Dämon) als Begleiter.</td></tr>
+        <tr><td class="level-cell">L6</td><td>Brennender Fluch</td><td>Passiv: Fluch-Zauber fügen zusätzlich 1W4 FLAMME-Schaden über Zeit (3 Runden) hinzu.</td></tr>
+        <tr><td class="level-cell">L6</td><td>Daemonische Widerstandsfähigkeit</td><td>Passiv: Resistenz gegen FLAMME und NATUR-Schaden.</td></tr>
+        <tr><td class="level-cell">L10</td><td>Daemonische Verbesserung</td><td>Passiv: Beschworene Dämonen erhalten +2 TP pro deinem Level.</td></tr>
+        <tr><td class="level-cell">L14</td><td>Explosiver Fluch</td><td>1/Lange Rast: Verfluchtes Ziel explodiert bei Tod — 8W6 FLAMME in 3 Feldern, GES-Rettungswurf halbiert.</td></tr>
+        <tr><td class="level-cell">L18</td><td>Großer Dämon</td><td>Beschwöre einen mächtigen Dämon (GREATER_DEMON).</td></tr>
+        <tr><td class="level-cell">L20</td><td>Dämonenform</td><td>Verwandle dich in einen Dämon (Form-System: DEMON_FORM).</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Fähigkeiten</h2>
+    <p class="note">Alle Zauber nutzen Zauberslots (Vollzauberer-Progression, Rang 1–9). Zauberattribut ist Weisheit (WIS). Upcast-Skalierung pro zusätzlichem Zauberslot bei Höllenfeuer (+1W6), Schattenschlag (+1W6), Höllensturm (+1W6).</p>
+
+    <h3>Zauber</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Höllenfeuer</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-FLAME">FLAMME</span> 2W6 Feuer + GES-Rettungswurf (halber Schaden bei Erfolg), Reichweite 18. Upcast: +1W6 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Verdammnis</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 1</span></td>
+          <td>L1</td>
+          <td><span class="el-FLAME">FLAMME</span> Ziel muss WIS-Rettungswurf ablegen oder wird verängstigt (1 Minute).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Schattenschlag</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 2</span></td>
+          <td>L3</td>
+          <td><span class="el-SHADOW">SCHATTEN</span> 3W6 Schatten, Angriffswurf, Reichweite 12. Upcast: +1W6 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Dunkler Pakt</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 2</span></td>
+          <td>L3</td>
+          <td><span class="el-FLAME">FLAMME</span> Erhalte +2 auf Zauber-Rettungswurf-SG für 1 Runde. (RP: Opfere 1W4 TP — Spieler wendet manuell an.)</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Dämonischer Ruf</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 3</span></td>
+          <td>L5</td>
+          <td><span class="el-FLAME">FLAMME</span> Beschwört einen Imp als Begleiter.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Fluch der Pein</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 3</span></td>
+          <td>L5</td>
+          <td><span class="el-FLAME">FLAMME</span> Ziel muss WIS-Rettungswurf ablegen oder wird verflucht + 3W6 Feuer-Schaden über Zeit (3 Runden).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Höllensturm</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 4</span></td>
+          <td>L7</td>
+          <td><span class="el-FLAME">FLAMME</span> Flächeneffekt 20ft: 6W6 Feuer + 6W6 Schatten + GES-Rettungswurf (halber Schaden bei Erfolg). Upcast: +1W6 pro Slot.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Inferno</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-spellslot">Zauberslot 5</span></td>
+          <td>L9</td>
+          <td><span class="el-FLAME">FLAMME</span> Flächeneffekt 30ft: 10W6 Feuer + GES-Rettungswurf (halber Schaden bei Erfolg) + 2W6 Feuer-Schaden über Zeit (3 Runden).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Spezialfähigkeiten</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Höllischer Gegenangriff</span></td>
+          <td>Reaktion</td>
+          <td><span class="badge badge-uses">Pro Rast</span></td>
+          <td>L2</td>
+          <td><span class="el-FLAME">FLAMME</span> Wenn getroffen, füge Angreifer 2W6+Level Feuerschaden zu.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Brennender Fluch</span></td>
+          <td>Passiv</td>
+          <td><span class="badge badge-passive">Passiv</span></td>
+          <td>L6</td>
+          <td><span class="el-FLAME">FLAMME</span> Fluch-Zauber fügen automatisch 1W4 Feuer-Schaden über Zeit (3 Runden) hinzu.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Explosiver Fluch</span></td>
+          <td>Passiv</td>
+          <td><span class="badge badge-uses">1/Lange Rast</span></td>
+          <td>L14</td>
+          <td><span class="el-FLAME">FLAMME</span> Verfluchtes Ziel explodiert bei Tod — 8W6 Feuer in 3 Feldern, GES-Rettungswurf halbiert.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Großer Dämon</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Lange Rast</span></td>
+          <td>L18</td>
+          <td>Beschwöre einen mächtigen Dämon (GREATER_DEMON).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Dämonenform</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Spezial</span></td>
+          <td>L20</td>
+          <td>Verwandle dich in einen Dämon (Form-System: DEMON_FORM).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Ressourcen</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Ressource</th><th>Mechanik</th><th>Verfügbarkeit</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Zauberslots</span></td>
+          <td>Vollzauberer-Progression (Rang 1–9). Zauberattribut: WIS.</td>
+          <td>Alle Zauber, pro Zauberslot</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Höllischer Gegenangriff</span></td>
+          <td>Reaktion: 2W6+Level FLAMME an Angreifer</td>
+          <td>Pro Rast, ab L2</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Dämonen-Begleiter</span></td>
+          <td>Imp (L5) oder Großer Dämon (L18), +2 TP/Level ab L10</td>
+          <td>Beschwörung, ab L5</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Explosiver Fluch</span></td>
+          <td>Verfluchtes Ziel explodiert bei Tod (8W6 FLAMME)</td>
+          <td>1/Lange Rast, ab L14</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Dämonenform</span></td>
+          <td>Verwandlung in Dämon (DEMON_FORM)</td>
+          <td>Ab L20</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Spielstil-Tipps</h2>
+    <div class="playstyle-tip">
+      <strong>Frühe Level (L1-4):</strong> Höllenfeuer (2W6 FLAMME) und Verdammnis (verängstigt) sind deine frühen Zauber. Dämonischer Pakt (L1) gibt +CHA-Mod Schaden gegen verfluchte/verängstigte Ziele — kombiniere Verdammnis mit Höllenfeuer. Höllischer Gegenangriff (L2) schadet Angreifern als Reaktion. Dämonenbindung (L3) gibt 2 zusätzliche Zauber.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Mittlere Level (L5-12):</strong> Dämonenbeschwörung (L5) ruft einen Imp als Begleiter. Fluch der Pein (3W6 Schaden über Zeit) ist dein starkes Fluch-Werkzeug. Ab L6 explodiert deine Synergie: Brennender Fluch lässt jeden Fluch zusätzlich 1W4 FLAMME-Schaden über Zeit auslösen, Daemonische Widerstandsfähigkeit gibt Resistenz gegen FLAMME und NATUR. Daemonische Verbesserung (L10) macht deinen Imp stärker.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Hohe Level (L13-20):</strong> Höllensturm (6W6+6W6 Flächeneffekt) und Inferno (10W6 + Schaden über Zeit) sind deine stärksten Zauber. Explosiver Fluch (L14) lässt verfluchte Ziele bei Tod explodieren — 8W6 FLAMME Flächeneffekt. Großer Dämon (L18) beschwört einen mächtigen Dämon. Dämonenform (L20) verwandelt dich selbst in einen Dämon — die ultimative Form der höllischen Macht.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Synergien:</strong> Verdammnis (verängstigt) + Dämonischer Pakt (L1) = +CHA-Mod auf alle weiteren Zauber. Fluch der Pein + Brennender Fluch (L6) = doppelter Schaden über Zeit. Explosiver Fluch (L14) + Fluch der Pein = Ziel stirbt an Schaden über Zeit und explodiert. Dämonischer Ruf (Imp) + Daemonische Verbesserung (L10) = Imp mit massiv vielen TP. Höllischer Gegenangriff + Nahkampf-Gegner = jeder Treffer schadet dem Angreifer.
+    </div>
+  </section>
+
+  <footer class="handbuch-footer">
+    <p>Dice &amp; Screen — Klassenhandbuch · <a href="./index.html">Zurück zum Index</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PALADIN — Heiliger Krieger | Dice & Screen Klassenhandbuch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="theme-bronze">
+<div class="handbuch-root">
+
+  <a href="./index.html" class="nav-back">← Klassenhandbuch</a>
+
+  <header class="dns-hero">
+    <div class="hero-portrait">
+      <img src="./img/paladin.png" alt="PALADIN" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="portrait-missing"><span class="pm-label">Bild fehlt</span><span class="pm-file">img/paladin.png</span></div>
+    </div>
+    <div class="hero-text">
+      <h1>PALADIN</h1>
+      <div class="subtitle">Heiliger Krieger</div>
+      <div class="tagline">Heilung, Schutz, Göttliche Magie, Kampf.</div>
+    </div>
+  </header>
+
+  <section class="dns-section">
+    <h2>Übersicht</h2>
+    <table class="overview-table">
+      <tr><td>Rolle</td><td>Verteidiger / Frontkämpfer · Heiler · Unterstützer</td></tr>
+      <tr><td>Zauberertyp</td><td><span class="badge badge-HALF">Halbzauberer</span> Zauberslots ab L2 (max Rang 5)</td></tr>
+      <tr><td>Primärer Schadensattribut</td><td>Stärke (STR)</td></tr>
+      <tr><td>Sekundärer Schadensattribut</td><td>Weisheit (WIS)</td></tr>
+      <tr><td>Zauberattribut</td><td>Weisheit (WIS)</td></tr>
+      <tr><td>TP (L1)</td><td>10</td></tr>
+      <tr><td>TP pro Level</td><td>6</td></tr>
+      <tr><td>Rüstung</td><td>Schwer (alle Rüstungen)</td></tr>
+      <tr><td>Waffen</td><td>Kampfwaffen (alle)</td></tr>
+      <tr><td>Rettungswürfe</td><td>Weisheit (WIS), Charisma (CHA)</td></tr>
+      <tr><td>Attributsteigerung (Level)</td><td>4, 8, 12, 16, 19</td></tr>
+      <tr><td>Fertigkeiten (2 zur Auswahl)</td><td>Athletik, Einschüchtern, Religion, Heilkunde, Überreden, Etikette, Wahrnehmung</td></tr>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Philosophie</h2>
+    <div class="philosophy-block">
+      <p>Der PALADIN ist ein heiliger Krieger — eine Mischung aus Frontkämpfer und göttlichem Zauberer. Er hält die Linie wie ein KRIEGER, heilt wie ein KLERIKER und kanalisiert die Macht seines Glaubens in Form von Schlägen, Auren und Schwüren. Seine Stärke liegt in der Vielseitigkeit: er kann Schaden austeilen, Verbündete beschützen und Untote vernichten — oft in derselben Runde.</p>
+    </div>
+  </section>
+
+  <section class="dns-section">
+    <h2>Klassenfähigkeiten</h2>
+    <table class="feature-table">
+      <thead>
+        <tr><th class="level-cell">Level</th><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="level-cell">L1</td><td>Göttlicher Sinn</td><td>Erkenne Untote, Feen und Dämonen in der Nähe.</td></tr>
+        <tr><td class="level-cell">L1</td><td>Handauflegen</td><td>TP-Pool (5 × Level). Heilen, Krankheiten/Gifte heilen (5 Punkte).</td></tr>
+        <tr><td class="level-cell">L2</td><td>Kampfstil</td><td>Auswahl: Verteidigung / Duelieren / Zweihandkampf / Schutz / Zweiwaffenkampf</td></tr>
+        <tr><td class="level-cell">L2</td><td>Göttlicher Schlag</td><td>Bei Treffer: verbrauche Zauberslot für 2W8 Strahlenschaden (+1W8 pro Rang darüber, +1W8 gegen Untote/Dämonen).</td></tr>
+        <tr><td class="level-cell">L2</td><td>Zauberei</td><td>Halbzauberer-Progression, WIS als Zauberattribut.</td></tr>
+        <tr><td class="level-cell">L3</td><td>Göttlichkeit kanalisieren</td><td>1/Rast (2/Rast ab L5). Pool für Untote vernichten und Geweihte Waffe.</td></tr>
+        <tr><td class="level-cell">L5</td><td>Zusatzangriff</td><td>2 Angriffe pro Angriffs-Aktion</td></tr>
+        <tr><td class="level-cell">L6</td><td>Aura des Schutzes</td><td>+CHA-Mod auf Rettungswürfe (Passiv, 10ft).</td></tr>
+        <tr><td class="level-cell">L7</td><td>Aura-Verbesserung</td><td>Aura-Radius erhöht sich.</td></tr>
+        <tr><td class="level-cell">L10</td><td>Göttliche Vitalität</td><td>Bei Kampfbeginn: temporäre TP in Höhe deines Levels.</td></tr>
+        <tr><td class="level-cell">L11</td><td>Zusatzangriff 2</td><td>3 Angriffe pro Angriffs-Aktion</td></tr>
+        <tr><td class="level-cell">L14</td><td>Reinigende Berührung</td><td>1/Lange Rast: Entferne einen Zustand von einem Verbündeten durch Berührung.</td></tr>
+        <tr><td class="level-cell">L18</td><td>Aura-Verbesserung</td><td>Aura-Radius auf 30ft (7 Felder).</td></tr>
+        <tr><td class="level-cell">L20</td><td>Heiliger Schwur</td><td>1/Lange Rast: +1W8 auf alle Rettungswürfe für 1 Minute.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Fähigkeiten</h2>
+
+    <h3>Aktive Fähigkeiten</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Aktion</th><th>Nutzung</th><th>Level</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Handauflegen — Heilung</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-unlimited">Handauflegen-Pool</span></td>
+          <td>L1</td>
+          <td>Lege deine Hand auf eine Kreatur und heile sie. Jeder ausgegebene Punkt heilt 1 TP. Pool: 5 Punkte pro Level.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Handauflegen — Krankheit heilen</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">5 Punkte</span></td>
+          <td>L1</td>
+          <td>Verbrauche 5 Punkte aus dem Handauflegen-Pool, um eine Krankheit vom Ziel zu heilen.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Handauflegen — Gift neutralisieren</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">5 Punkte</span></td>
+          <td>L1</td>
+          <td>Verbrauche 5 Punkte aus dem Handauflegen-Pool, um Gift vom Ziel zu neutralisieren. Entfernt den Zustand 'Vergiftet'.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Göttlicher Schlag</span></td>
+          <td>Freie Aktion</td>
+          <td><span class="badge badge-uses">Zauberslot</span></td>
+          <td>L2</td>
+          <td><span class="el-LIGHT">STRAHLEND</span> Wenn du triffst, verbrauche einen Zauberslot für 2W8 Strahlenschaden. +1W8 pro Rang darüber. +1W8 gegen Untote/Dämonen.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Glaubensschild</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">Zauberslot</span></td>
+          <td>L2</td>
+          <td><span class="el-LIGHT">STRAHLEND</span> Ein schimmerndes Feld umgibt eine Kreatur und gewährt +2 RK für die Dauer.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Göttliche Gunst</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">Zauberslot</span></td>
+          <td>L2</td>
+          <td><span class="el-LIGHT">STRAHLEND</span> +1W4 Strahlenschaden auf alle Angriffe für 1 Minute.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Schutz vor Bösem</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Zauberslot</span></td>
+          <td>L2</td>
+          <td>Ziel bekommt Absorption gegen Untote, Feen und Dämonen.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Brandender Schlag</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">Zauberslot</span></td>
+          <td>L2</td>
+          <td><span class="el-FLAME">FEUER</span> Nächster Treffer: +1W6 Feuerschaden + 1W6/Runde (CON-Rettungswurf).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Zorniger Schlag</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">Zauberslot</span></td>
+          <td>L2</td>
+          <td><span class="el-MIND">PSYCHISCH</span> Nächster Treffer: +1W6 Psychisch + Verängstigt (WIS-Rettungswurf).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Geweihte Waffe</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Göttlichkeit</span></td>
+          <td>L3</td>
+          <td>Kanalisiere Göttlichkeit: Waffe erhält +2 auf Angriffswürfe für 1 Minute.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Untote vernichten</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Göttlichkeit</span></td>
+          <td>L3</td>
+          <td><span class="el-LIGHT">STRAHLEND</span> Kanalisiere Göttlichkeit: Untote in 30ft müssen einen CON-Rettungswurf ablegen oder erleiden 10W8 Schaden.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Aura der Vitalität</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Zauberslot</span></td>
+          <td>L5</td>
+          <td>Aura: Heile 2W6/Runde als Bonus-Aktion für 1 Minute.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Blendender Schlag</span></td>
+          <td>Bonus-Aktion</td>
+          <td><span class="badge badge-uses">Zauberslot Rang 3</span></td>
+          <td>L5</td>
+          <td><span class="el-LIGHT">STRAHLEND</span> Nächster Treffer: +3W8 Strahlend + Geblendet (CON-Rettungswurf).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Göttliche Aura</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Zauberslot Rang 3</span></td>
+          <td>L6</td>
+          <td>Aura 10ft: Selbst + Verbündete immun gegen Verängstigung und Bezauberung.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Aura des Lebens</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Zauberslot Rang 4</span></td>
+          <td>L7</td>
+          <td>Aura: Verbündete haben Widerstand gegen Nekrotischen Schaden.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Verbannung</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Zauberslot Rang 4</span></td>
+          <td>L7</td>
+          <td>Verbanne ein extraplanares Wesen (CHA-Rettungswurf).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Fluch brechen</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Zauberslot Rang 3</span></td>
+          <td>—</td>
+          <td><span class="el-LIGHT">STRAHLEND</span> Alle Flüche, die auf einer Kreatur lasten, werden aufgehoben. Verfluchte Gegenstände können danach normal abgelegt werden.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Fluch legen</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">Zauberslot Rang 3</span></td>
+          <td>—</td>
+          <td><span class="el-SHADOW">SCHATTEN</span> Verfluche eine Kreatur (Konzentration).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Reinigende Berührung</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Lange Rast</span></td>
+          <td>L14</td>
+          <td>Entferne einen Zustand von einem Verbündeten durch Berührung.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Heiliger Schwur</span></td>
+          <td>Aktion</td>
+          <td><span class="badge badge-uses">1/Lange Rast</span></td>
+          <td>L20</td>
+          <td>Für 1 Minute (10 Runden) erhältst du +1W8 auf alle Rettungswürfe.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Reaktionen</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Auslöser</th><th>Nutzung</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Schutz</span></td>
+          <td>Bei Treffer</td>
+          <td><span class="badge badge-uses">1/Zug</span></td>
+          <td>Wenn eine Kreatur innerhalb 5ft einen Verbündeten angreift, nutze deinen Schild um den Schaden zu halbieren.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Passive Fähigkeiten</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Fähigkeit</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Aura des Schutzes</span></td>
+          <td><span class="badge badge-passive">PASSIV</span> +CHA-Mod auf Rettungswürfe (10ft, ab L6).</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Aura des Mutes</span></td>
+          <td><span class="badge badge-passive">PASSIV</span> Selbst + Verbündete in der Nähe immun gegen Verängstigung.</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Göttliche Vitalität</span></td>
+          <td><span class="badge badge-passive">PASSIV</span> Bei Kampfbeginn: temporäre TP in Höhe deines Levels.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Ressourcen</h3>
+    <table class="ability-table">
+      <thead>
+        <tr><th>Ressource</th><th>Mechanik</th><th>Verfügbarkeit</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ability-name">Handauflegen-Pool</span></td>
+          <td>5 Punkte pro Level — Heilen (1 TP/Punkt), Krankheit/Gift heilen (5 Punkte)</td>
+          <td>Ab L1, Lange Rast</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Göttlichkeit kanalisieren</span></td>
+          <td>1/Rast (2/Rast ab L5, 3/Rast ab L18) — für Untote vernichten und Geweihte Waffe</td>
+          <td>Ab L3, Kurze/Lange Rast</td>
+        </tr>
+        <tr>
+          <td><span class="ability-name">Zauberslots</span></td>
+          <td>Halbzauberer-Progression (L2=1@R1, L5=2@R2, L9=2@R3, L13=2@R4, L17=2@R5)</td>
+          <td>Ab L2, Lange Rast</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="dns-section">
+    <h2>Spielstil-Tipps</h2>
+    <div class="playstyle-tip">
+      <strong>Frühe Level (L1-4):</strong> Handauflegen hält die Gruppe am Leben. Ab L2 kommt Göttlicher Schlag — dein wichtigster Spitzenschaden. Nutze Zorniger Schlag und Brandender Schlag für Kontrolle und Schaden über Zeit. Göttlichkeit kanalisieren ab L3 für Untote vernichten.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Mittlere Level (L5-12):</strong> Zusatzangriff verdoppelt deine Angriffe. Aura des Schutzes (L6) gibt der ganzen Gruppe Rettungswurf-Bonus. Göttliche Vitalität (L10) gibt dir temporäre TP bei Kampfbeginn. Blendender Schlag und Aura der Vitalität ergänzen dein Arsenal.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Hohe Level (L13-20):</strong> Höhere Zauberslots für massiven Göttlichen Schlag. Aura des Lebens und Verbannung geben dir starke Kontrolle. Ab L18 wird die Aura auf 30ft erweitert. Heiliger Schwur (L20) macht dich nahezu unbesiegbar.
+    </div>
+    <div class="playstyle-tip">
+      <strong>Synergien:</strong> Göttlicher Schlag + Zusatzangriff = doppelte Chance auf Spitzenschaden. Aura des Schutzes schützt die ganze Gruppe in der Nähe. Handauflegen-Pool ist flexibel — heile effizient mit kleinen Beträgen oder spare für Krankheiten/Gifte.
+    </div>
+  </section>
+
+  <footer class="handbuch-footer">
+    <p>Dice &amp; Screen — Klassenhandbuch · <a href="./index.html">Zurück zum Index</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
