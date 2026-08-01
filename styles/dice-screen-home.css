@@ -239,6 +239,82 @@ body.dice-screen-home::after {
   box-shadow:
     0 14px 36px rgba(0, 0, 0, 0.5),
     0 0 28px rgba(203, 155, 76, 0.14);
+  cursor: zoom-in;
+  transition: box-shadow 0.2s ease;
+}
+.dice-showcase-img:hover {
+  box-shadow:
+    0 14px 36px rgba(0, 0, 0, 0.5),
+    0 0 36px rgba(203, 155, 76, 0.25);
+}
+
+/* Lightbox */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(10, 8, 6, 0.92);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  cursor: zoom-out;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease-out, visibility 0.25s ease-out;
+}
+.lightbox-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 12px;
+  border: 1px solid rgba(203, 155, 76, 0.5);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(203, 155, 76, 0.2);
+  transform: scale(0.95);
+  transition: transform 0.25s ease-out;
+}
+.lightbox-overlay.active img {
+  transform: scale(1);
+}
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(203, 155, 76, 0.5);
+  border-radius: 50%;
+  background: rgba(20, 19, 19, 0.8);
+  color: #f5e6c2;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease-out, border-color 0.15s ease-out;
+}
+.lightbox-close:hover {
+  background: rgba(203, 155, 76, 0.2);
+  border-color: rgba(203, 155, 76, 0.8);
+}
+@media (max-width: 768px) {
+  .lightbox-overlay {
+    padding: 72px 12px 20px;
+  }
+  .lightbox-overlay img {
+    max-width: calc(100vw - 24px);
+    max-height: calc(100dvh - 92px);
+  }
+  .lightbox-close {
+    top: 14px;
+    right: 14px;
+  }
 }
 
 .dice-hero-subline {
