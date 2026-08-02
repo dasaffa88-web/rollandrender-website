@@ -104,6 +104,86 @@ body::before {
   color: #a89878;
 }
 
+/* ===== 2-LINK-KARTE (Creator-Tool Sub-Seiten) ===== */
+.hub-card-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 560px;
+  margin: 0 auto;
+}
+.hub-card-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 12px;
+  border: 1px solid rgba(203, 155, 76, 0.32);
+  background:
+    linear-gradient(160deg, rgba(255, 239, 206, 0.08), rgba(255, 239, 206, 0.02) 48%),
+    rgba(27, 21, 16, 0.82);
+  box-shadow:
+    0 10px 28px var(--dns-shadow-black),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  padding: 22px 26px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  border-left: 3px solid rgba(203, 155, 76, 0.5);
+}
+.hub-card-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(203, 155, 76, 0.55);
+  box-shadow:
+    0 14px 32px var(--dns-shadow-black),
+    0 0 22px rgba(203, 155, 76, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+.hub-card-link-icon {
+  font-size: 1.8rem;
+  flex: 0 0 auto;
+  line-height: 1;
+}
+.hub-card-link-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.hub-card-link-text strong {
+  font-family: 'Cinzel', serif;
+  font-size: 1.2rem;
+  color: #f6e5bf;
+}
+.hub-card-link-text em {
+  font-style: normal;
+  font-size: 0.88rem;
+  color: #e4d2ad;
+  line-height: 1.5;
+}
+
+/* ===== INFO-NOTE (Hub-Hinweis) ===== */
+.hub-info-note {
+  background: rgba(203, 155, 76, 0.08);
+  border-left: 3px solid rgba(203, 155, 76, 0.5);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 20px;
+  margin-bottom: 28px;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #e4d2ad;
+}
+.hub-info-note strong {
+  color: #f6e5bf;
+  font-family: 'Cinzel', serif;
+}
+.hub-info-note a {
+  color: #ddb46e;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.hub-info-note a:hover {
+  color: #f4d79a;
+}
+
 /* ===== KARTEN-GRID ===== */
 .hub-grid {
   display: grid;
@@ -126,6 +206,7 @@ body::before {
 .hub-card {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   text-decoration: none;
   color: inherit;
   border-radius: 16px;
@@ -188,6 +269,56 @@ body::before {
 }
 .hub-card:hover .hub-card-cta {
   color: #f4d79a;
+}
+
+/* Sub-Link-Anzeige in Hub-Karten (Basisanleitung · Schema) */
+.hub-card-sub-links {
+  margin-top: 14px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-family: 'Cinzel', serif;
+  font-size: 0.82rem;
+  color: #a89878;
+  letter-spacing: 0.02em;
+}
+.hub-card-sub-links span:nth-child(2) {
+  color: rgba(203, 155, 76, 0.4);
+}
+.hub-card:hover .hub-card-sub-links {
+  color: #c9a84c;
+}
+
+/* 2 Links in einer Hub-Karte (Creator-Tools) */
+.hub-card-links {
+  margin-top: 18px;
+  display: block;
+  width: 100%;
+}
+.hub-card-links a {
+  display: block;
+  width: fit-content;
+  color: #ddb46e;
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+  transition: color 0.2s ease;
+}
+.hub-card-links a::after {
+  content: "→";
+  font-size: 0.85rem;
+  transition: transform 0.2s ease;
+}
+.hub-card-links a:hover {
+  color: #f4d79a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(203, 155, 76, 0.6);
+}
+.hub-card-links a:hover::after {
+  transform: translateX(3px);
 }
 
 /* ===== HUB-KARTE (Platzhalter / "Folgt") ===== */

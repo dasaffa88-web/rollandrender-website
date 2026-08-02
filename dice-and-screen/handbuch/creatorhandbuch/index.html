@@ -8,22 +8,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles.css">
-<style>
-  .creator-section { max-width: 800px; margin: 2rem auto; padding: 0 1.5rem; }
-  .creator-section h2 { color: var(--bronze-accent, #c8a96a); margin-top: 2.5rem; border-bottom: 1px solid rgba(200,169,106,0.3); padding-bottom: 0.5rem; }
-  .creator-section h3 { color: var(--bronze-accent, #c8a96a); margin-top: 1.5rem; }
-  .creator-section p { line-height: 1.7; margin-bottom: 1rem; }
-  .creator-section code { background: rgba(200,169,106,0.12); padding: 0.15em 0.4em; border-radius: 3px; font-family: 'Courier New', monospace; font-size: 0.95em; }
-  .creator-section pre { background: rgba(20,20,25,0.6); border: 1px solid rgba(200,169,106,0.2); border-radius: 6px; padding: 1rem; overflow-x: auto; line-height: 1.5; }
-  .creator-section pre code { background: none; padding: 0; }
-  .creator-section ul { margin-left: 1.5rem; margin-bottom: 1rem; }
-  .creator-section li { margin-bottom: 0.4rem; line-height: 1.5; }
-  .creator-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
-  .creator-table th, .creator-table td { padding: 0.6rem 0.8rem; text-align: left; border-bottom: 1px solid rgba(200,169,106,0.15); }
-  .creator-table th { color: var(--bronze-accent, #c8a96a); font-weight: 600; }
-  .creator-note { background: rgba(200,169,106,0.08); border-left: 3px solid var(--bronze-accent, #c8a96a); padding: 0.8rem 1.2rem; margin: 1.5rem 0; border-radius: 0 4px 4px 0; }
-  .creator-warn { background: rgba(200,80,40,0.08); border-left: 3px solid #c85028; padding: 0.8rem 1.2rem; margin: 1.5rem 0; border-radius: 0 4px 4px 0; }
-</style>
 </head>
 <body class="theme-bronze">
 
@@ -33,111 +17,72 @@
 
   <header class="index-hero">
     <h1>Creator-Handbuch</h1>
-    <div class="index-subtitle">Content-Packs, Namespaces &amp; Modding</div>
-    <div class="index-tagline">Erstelle eigene Inhalte für Dice &amp; Screen — Items, Abilities, Forms, Summons, Enemies und Feats — mit dem Content-Pack-System.</div>
+    <div class="index-subtitle">Eigene Inhalte erstellen</div>
+    <div class="index-tagline">Lerne die Creator-Tools von Dice &amp; Screen kennen — vom Namespace-System bis zum Item Creator.</div>
   </header>
 
-  <div class="creator-section">
+  <div class="hub-info-note">
+    <strong>Kurz gesagt:</strong> Die Creator-Tools im Spiel machen das meiste automatisch — du klickst einfach auf „Item Creator" oder „Ability Creator" und leg los.
+    Die <a href="./grundlagen/index.html">Grundlagen</a> (Namespace &amp; Content-Pack-System) sind nur wichtig, wenn du direkt JSON-Dateien schreiben oder Mods verwalten willst.
+  </div>
 
-    <h2>Überblick</h2>
-    <p>Dice &amp; Screen nutzt ein <strong>Namespace- &amp; Content-Pack-System</strong> für alle spielbaren Inhalte. Jede Content-Datei gehört zu einem <strong>Creator</strong> (z. B. <code>diceandscreen</code>) und einem <strong>Pack</strong> (z. B. <code>baseset</code>). Das ermöglicht:</p>
-    <ul>
-      <li><strong>Modding:</strong> Eigene Inhalte ohne Kollision mit Core-Content</li>
-      <li><strong>Pack-Verwaltung:</strong> Ganze Content-Gruppen an-/ausschalten</li>
-      <li><strong>Klare Trennung:</strong> Core vs. Erweiterung vs. Homebrew</li>
-    </ul>
+  <div class="hub-grid">
 
-    <h2>1. Das Namespace-Schema</h2>
-    <p>Jede Content-Datei hat drei Pflichtfelder, aus denen die ID automatisch gebildet wird:</p>
-    <pre><code>{
-  "creator": "diceandscreen",
-  "pack": "baseset",
-  "itemname": "longsword_common",
-  "name": { "de": "Langschwert", "en": "Longsword" }
-}</code></pre>
-    <p>Die eindeutige ID wird zusammengesetzt: <code>creator:pack:itemname</code></p>
-    <pre><code>diceandscreen:baseset:longsword_common</code></pre>
+    <!-- Grundlagen: Namespace & Content-Pack-System -->
+    <a href="./grundlagen/index.html" class="hub-card">
+      <div class="hub-card-icon">📦</div>
+      <h2>Grundlagen</h2>
+      <div class="hub-card-sub">Namespace- &amp; Content-Pack-System</div>
+      <p class="hub-card-desc">Das Fundament aller Inhalte: Creator, Pack, Namespace-IDs, Dateinamen-Konvention, Pack-Manager und Phantom-Logik.</p>
+      <span class="hub-card-cta">Öffnen →</span>
+    </a>
 
-    <h3>Bezeichner-Regeln</h3>
-    <ul>
-      <li><code>creator</code>: Name des Erstellers (z. B. <code>diceandscreen</code>, <code>myhomebrew</code>)</li>
-      <li><code>pack</code>: Name des Packs (z. B. <code>baseset</code>, <code>expansion1</code>)</li>
-      <li><code>itemname</code>: Eindeutiger Name innerhalb des Packs, <strong>lowercase</strong> (z. B. <code>longsword_common</code>)</li>
-    </ul>
-
-    <h2>2. Dateinamen-Konvention</h2>
-    <p>Da der Doppelpunkt (<code>:</code>) auf Windows ungültig ist, wird der Dateiname mit Unterstrich gebildet:</p>
-    <pre><code>ID:       diceandscreen:baseset:longsword_common
-Dateiname: diceandscreen_baseset_longsword_common.json</code></pre>
-    <p>Die JSON-Felder <code>creator</code>, <code>pack</code>, <code>itemname</code> bleiben als separate Werte erhalten.</p>
-
-    <h2>3. Content-Domänen</h2>
-    <p>Folgende Content-Typen unterstützen das Namespace-System:</p>
-    <table class="creator-table">
-      <thead><tr><th>Domäne</th><th>Ordner</th><th>Beschreibung</th></tr></thead>
-      <tbody>
-        <tr><td>Items</td><td><code>data/items/</code></td><td>Waffen, Rüstungen, Tränke, Schmuck, Misc</td></tr>
-        <tr><td>Abilities</td><td><code>data/abilities/</code></td><td>Fähigkeiten, Zauber, Reaktionen</td></tr>
-        <tr><td>Forms</td><td><code>data/forms/</code></td><td>Verwandlungs-Formen (Wild Shape etc.)</td></tr>
-        <tr><td>Summons</td><td><code>data/summons/</code></td><td>Beschwörungs-Templates</td></tr>
-        <tr><td>Enemies</td><td><code>data/enemies/</code></td><td>Gegner-Definitionen</td></tr>
-        <tr><td>Feats</td><td><code>data/feats/</code></td><td>Feat-Definitionen</td></tr>
-      </tbody>
-    </table>
-
-    <div class="creator-note">
-      <strong>Nicht modbar:</strong> Effects/EffectPresets (<code>data/effects/</code>) und Mechanics (<code>data/mechanics.json</code>) sind Engine-intern und nicht Teil des Namespace-Systems. Biomes und NPCs sind ebenfalls out of scope.
+    <!-- Item Creator -->
+    <div class="hub-card hub-card-upcoming hub-card-with-links">
+      <div class="hub-card-icon">⚔️</div>
+      <h2>Item Creator</h2>
+      <div class="hub-card-sub">Waffen, Rüstung, Tränke &amp; mehr</div>
+      <p class="hub-card-desc">Erstelle eigene Items — Felder, Seltenheiten, Damage-Types, Klassenzuweisung und Weight/Value.</p>
+      <div class="hub-card-links">
+        <a href="./item-creator/basisanleitung/">🎮 Basisanleitung</a>
+        <a href="./item-creator/schema/">📋 Schema &amp; Bauplan</a>
+      </div>
     </div>
 
-    <h2>4. Eigenes Content-Pack erstellen</h2>
-    <h3>Schritt 1: Creator- &amp; Pack-Namen wählen</h3>
-    <p>Wähle einen eindeutigen Creator-Namen (z. B. <code>myhomebrew</code>) und einen Pack-Namen (z. B. <code>mymodules</code>).</p>
-
-    <h3>Schritt 2: JSON-Datei erstellen</h3>
-    <p>Lege eine Datei im entsprechenden Ordner an, z. B. <code>data/items/myhomebrew_mymodules_flaming_sword.json</code>:</p>
-    <pre><code>{
-  "creator": "myhomebrew",
-  "pack": "mymodules",
-  "itemname": "flaming_sword",
-  "name": { "de": "Flammenschwert", "en": "Flaming Sword" },
-  "type": "WEAPON",
-  "rarity": "RARE",
-  "damage": "1d8",
-  "damageType": "FIRE",
-  "weight": 3.0,
-  "value": 500
-}</code></pre>
-
-    <h3>Schritt 3: Im Pack-Manager aktivieren</h3>
-    <p>Öffne den Pack-Manager im Startscreen. Dein Pack <code>myhomebrew:mymodules</code> erscheint automatisch in der Liste. Aktiviere es mit dem Toggle-Schalter.</p>
-
-    <h2>5. Pack-Manager-UI</h2>
-    <p>Der Pack-Manager ist über einen Button im <strong>Startscreen</strong> erreichbar (vor Session-Start). Er zeigt alle entdeckten Packs mit Toggle-Schaltern:</p>
-    <ul>
-      <li><strong>Core-Pack</strong> (<code>diceandscreen:baseset</code>): Immer aktiv, nicht deaktivierbar (ausgegraut)</li>
-      <li><strong>Eigene Packs</strong>: Können an-/ausgeschaltet werden</li>
-      <li><strong>Mod-Packs</strong>: Werden automatisch beim Start entdeckt</li>
-    </ul>
-    <p>Packs sind <strong>fix pro Session</strong> — sie können nur vor Session-Start geändert werden, nicht in einer laufenden Session.</p>
-
-    <h2>6. Verhalten bei deaktivierten / fehlenden Packs</h2>
-    <p>Wenn ein Charakter Content referenziert, der nicht geladen ist — egal ob wegen deaktiviertem Pack, fehlender Mod-Datei oder Mod-Update — greift die <strong>Phantom-Logik</strong>:</p>
-    <ul>
-      <li>Der Content wird <strong>ausgeblendet</strong> (Platzhalter: Name = ID, keine Stats, keine Mechanik)</li>
-      <li>Der Charakter bleibt <strong>spielbar mit Lücken</strong></li>
-      <li>Die Referenz-Daten bleiben in der Save-Datei erhalten</li>
-      <li>Bei <strong>Reaktivierung</strong> des Packs wird der Content wieder angezeigt</li>
-    </ul>
-
-    <div class="creator-note">
-      <strong>Robustheit:</strong> Charaktere gehen bei Mod-Updates oder temporär deaktivierten Mods <strong>nicht kaputt</strong>. Die Phantom-Logik gilt universell für fehlenden Content — nicht nur für Deaktivierung.
+    <!-- Ability Creator -->
+    <div class="hub-card hub-card-upcoming hub-card-with-links">
+      <div class="hub-card-icon">✦</div>
+      <h2>Ability Creator</h2>
+      <div class="hub-card-sub">Zauber, Fähigkeiten &amp; Reaktionen</div>
+      <p class="hub-card-desc">Erstelle eigene Abilities — Spell-Slots, Scaling, Reaktionen, Forms und Summons.</p>
+      <div class="hub-card-links">
+        <a href="./ability-creator/basisanleitung/">🎮 Basisanleitung</a>
+        <a href="./ability-creator/schema/">📋 Schema &amp; Bauplan</a>
+      </div>
     </div>
 
-    <h2>7. Save-Format</h2>
-    <p>Charaktere speichern Namespace-IDs (<code>diceandscreen:baseset:longsword_common</code>). Bei Save-Format-Brüchen (z. B. Wechsel von flachen IDs auf Namespace-IDs) ist <strong>keine Backward-Kompatibilität</strong> gewährleistet — alte Saves mit flachen IDs laden nicht mehr. Dies wird im Changelog dokumentiert.</p>
+    <!-- Enemy Creator -->
+    <div class="hub-card hub-card-upcoming hub-card-with-links">
+      <div class="hub-card-icon">🐉</div>
+      <h2>Enemy Creator</h2>
+      <div class="hub-card-sub">Gegner &amp; Bestiarium</div>
+      <p class="hub-card-desc">Erstelle eigene Gegner — Statblöcke, Verhalten, CR und Loot-Zuweisung.</p>
+      <div class="hub-card-links">
+        <a href="./enemy-creator/basisanleitung/">🎮 Basisanleitung</a>
+        <a href="./enemy-creator/schema/">📋 Schema &amp; Bauplan</a>
+      </div>
+    </div>
 
-    <div class="creator-warn">
-      <strong>Achtung:</strong> Beim Wechsel auf das Namespace-System werden alte Savegames nicht mehr kompatibel sein. Erstelle ein Backup deiner Charaktere vor dem Update.
+    <!-- Feat Creator -->
+    <div class="hub-card hub-card-upcoming hub-card-with-links">
+      <div class="hub-card-icon">✨</div>
+      <h2>Feat Creator</h2>
+      <div class="hub-card-sub">Fertigkeiten &amp; Talente</div>
+      <p class="hub-card-desc">Erstelle eigene Feats — Voraussetzungen, Effects, Block-System und Selection-Slots.</p>
+      <div class="hub-card-links">
+        <a href="./feat-creator/basisanleitung/">🎮 Basisanleitung</a>
+        <a href="./feat-creator/schema/">📋 Schema &amp; Bauplan</a>
+      </div>
     </div>
 
   </div>
