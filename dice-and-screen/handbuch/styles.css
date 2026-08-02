@@ -235,6 +235,14 @@ body::before {
   font-size: 2rem;
   margin-bottom: 12px;
   line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: radial-gradient(circle at 50% 50%, rgba(203, 155, 76, 0.18), rgba(203, 155, 76, 0.04) 70%);
+  box-shadow: 0 0 18px rgba(203, 155, 76, 0.12), inset 0 0 12px rgba(203, 155, 76, 0.08);
 }
 
 .hub-card h2 {
