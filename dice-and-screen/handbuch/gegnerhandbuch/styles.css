@@ -242,8 +242,8 @@ body::before {
 
 .enemy-portrait {
   flex: 0 0 auto;
-  width: 100px;
-  height: 100px;
+  width: 160px;
+  height: 160px;
   border-radius: 12px;
   border: 1px solid rgba(203, 155, 76, 0.25);
   background: rgba(20, 18, 15, 0.6);
@@ -263,7 +263,7 @@ body::before {
 .enemy-portrait.portrait-missing::after {
   content: "?";
   font-family: 'Cinzel', serif;
-  font-size: 2rem;
+  font-size: 3rem;
   color: rgba(203, 155, 76, 0.3);
 }
 
@@ -338,29 +338,29 @@ body::before {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1px;
-  background: rgba(203, 155, 76, 0.15);
-  border-radius: 10px;
+  background: rgba(203, 155, 76, 0.12);
+  border-radius: 8px;
   overflow: hidden;
-  margin-bottom: 18px;
-  border: 1px solid rgba(203, 155, 76, 0.18);
+  margin-bottom: 16px;
+  border: 1px solid rgba(203, 155, 76, 0.15);
 }
 .stat-cell {
   background: rgba(27, 21, 16, 0.9);
-  padding: 10px 8px;
+  padding: 6px 4px;
   text-align: center;
 }
 .stat-label {
   display: block;
   font-family: 'Cinzel', serif;
-  font-size: 0.72rem;
+  font-size: 0.62rem;
   color: #a89878;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  margin-bottom: 2px;
+  margin-bottom: 1px;
 }
 .stat-value {
   display: block;
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #f6e5bf;
 }
@@ -577,9 +577,9 @@ body::before {
     gap: 14px;
   }
   .enemy-portrait {
-    width: 80px;
-    height: 80px;
-    font-size: 2rem;
+    width: 120px;
+    height: 120px;
+    font-size: 2.4rem;
   }
   .statblock {
     display: block;
