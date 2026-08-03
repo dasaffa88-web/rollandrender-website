@@ -25,7 +25,9 @@
 
 <article class="enemy-card red">
   <div class="enemy-header">
-    <div class="enemy-portrait">?</div>
+    <div class="enemy-portrait">
+      <img src="../img/adult_fire_dragon.png" alt="Erwachsener Feuerdrache" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('portrait-missing');">
+    </div>
     <div class="enemy-title">
       <div class="enemy-name">Erwachsener Feuerdrache <span class="rank-badge rank-boss">Boss</span></div>
       <div class="enemy-tags"><span class="enemy-tag">Monstrosität</span> <span class="enemy-tag">Riesig</span> <span class="enemy-tag">BRUTAL</span></div>
@@ -54,13 +56,13 @@
     <div class="boss-phase-item"><strong>Phase 2</strong> — &lt;50% HP · frei: enemy_buff_rage · Signal: boss.dragon.phase2.rage</div>
     <div class="boss-phase-item"><strong>Phase 3</strong> — &lt;25% HP · RECHARGE_4_6 · frei: enemy_cone_breath_fire · Signal: boss.dragon.phase3.laststand</div>
   </div>
-  <div class="enemy-sl">
-    <h3>SL-Hinweise</h3>
-    <ul class="sl-list">
+  <div class="enemy-tips">
+    <h3>Tipps gegen Erwachsener Feuerdrache</h3>
+    <ul class="tips-list">
       <li>Hohe AC (18) — braucht Attack-Buff oder Save-basierte Angriffe</li>
       <li>Hohe HP (180) — braucht anhaltenden Schaden, nicht Burst</li>
-      <li>SaveDC 19 — Save-basierte Angriffe sind gefährlich, Advantage holen</li>
-      <li>Hoher DPR (50) — Priorität zum Ausschalten, sonst sterben Spieler schnell</li>
+      <li>SaveDC 19 — Save-Advantage holen (Aura of Protection, Bless)</li>
+      <li>Hoher DPR (50) — schnell ausschalten oder CC setzen, sonst sterben Spieler</li>
     </ul>
   </div>
   <div class="enemy-ki">
@@ -71,11 +73,21 @@
     <h3>Lore</h3>
     <p>Sein Herz brennt seit dreihundert Jahren. Die Berge erinnern sich an seinen Namen, die Dörfer nicht mehr.</p>
   </div>
+  <div class="enemy-sl">
+    <h3>SL-Hinweise</h3>
+    <ul class="sl-list">
+      <li>Boss-Encounter für High-Level-Gruppen — solo mit Boss-Phasen-Mechanik</li>
+      <li>Synergie: Solo-Boss — optional 2-3 Harpyien als Luftunterstützung</li>
+      <li>Dramaturgie: Boss-Phasen als Encounter-Höhepunkte — jede Phase braucht andere Taktik</li>
+    </ul>
+  </div>
 </article>
 
 <article class="enemy-card red">
   <div class="enemy-header">
-    <div class="enemy-portrait">?</div>
+    <div class="enemy-portrait">
+      <img src="../img/vampire_lord.png" alt="Vampirlord" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('portrait-missing');">
+    </div>
     <div class="enemy-title">
       <div class="enemy-name">Vampirlord <span class="rank-badge rank-boss">Boss</span></div>
       <div class="enemy-tags"><span class="enemy-tag">Untot</span> <span class="enemy-tag">Mittel</span> <span class="enemy-tag">FLINK</span></div>
@@ -104,13 +116,13 @@
     <h3>Boss-Phasen</h3>
     <div class="boss-phase-item"><strong>Phase 2</strong> — &lt;50% HP · BEAST_FORM · Signal: boss.vampire.phase2.beast</div>
   </div>
-  <div class="enemy-sl">
-    <h3>SL-Hinweise</h3>
-    <ul class="sl-list">
+  <div class="enemy-tips">
+    <h3>Tipps gegen Vampirlord</h3>
+    <ul class="tips-list">
       <li>Hohe AC (17) — braucht Attack-Buff oder Save-basierte Angriffe</li>
       <li>Hohe HP (180) — braucht anhaltenden Schaden, nicht Burst</li>
-      <li>SaveDC 19 — Save-basierte Angriffe sind gefährlich, Advantage holen</li>
-      <li>Hoher DPR (40) — Priorität zum Ausschalten, sonst sterben Spieler schnell</li>
+      <li>SaveDC 19 — Save-Advantage holen (Aura of Protection, Bless)</li>
+      <li>Hoher DPR (40) — schnell ausschalten oder CC setzen, sonst sterben Spieler</li>
     </ul>
   </div>
   <div class="enemy-ki">
@@ -121,11 +133,20 @@
     <h3>Lore</h3>
     <p>Er hat Königreiche sterben sehen. Er war bei jedem ihrer letzten Abendessen.</p>
   </div>
+  <div class="enemy-sl">
+    <h3>SL-Hinweise</h3>
+    <ul class="sl-list">
+      <li>Boss-Encounter für High-Level-Gruppen — solo mit Boss-Phasen-Mechanik</li>
+      <li>Dramaturgie: Boss-Phasen als Encounter-Höhepunkte — jede Phase braucht andere Taktik</li>
+    </ul>
+  </div>
 </article>
 
 <article class="enemy-card red">
   <div class="enemy-header">
-    <div class="enemy-portrait">?</div>
+    <div class="enemy-portrait">
+      <img src="../img/archdemon.png" alt="Erzdämon" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('portrait-missing');">
+    </div>
     <div class="enemy-title">
       <div class="enemy-name">Erzdämon <span class="rank-badge rank-boss">Boss</span></div>
       <div class="enemy-tags"><span class="enemy-tag">Dämon</span> <span class="enemy-tag">Groß</span> <span class="enemy-tag">BRUTAL</span></div>
@@ -155,13 +176,13 @@
     <div class="boss-phase-item"><strong>Phase 2</strong> — &lt;66% HP · frei: enemy_summon_imps · Signal: boss.archdemon.phase2.summon</div>
     <div class="boss-phase-item"><strong>Phase 3</strong> — &lt;33% HP · HELLFIRE_AURA · Signal: boss.archdemon.phase3.hellfire</div>
   </div>
-  <div class="enemy-sl">
-    <h3>SL-Hinweise</h3>
-    <ul class="sl-list">
+  <div class="enemy-tips">
+    <h3>Tipps gegen Erzdämon</h3>
+    <ul class="tips-list">
       <li>Hohe AC (19) — braucht Attack-Buff oder Save-basierte Angriffe</li>
       <li>Hohe HP (220) — braucht anhaltenden Schaden, nicht Burst</li>
-      <li>SaveDC 21 — Save-basierte Angriffe sind gefährlich, Advantage holen</li>
-      <li>Hoher DPR (55) — Priorität zum Ausschalten, sonst sterben Spieler schnell</li>
+      <li>SaveDC 21 — Save-Advantage holen (Aura of Protection, Bless)</li>
+      <li>Hoher DPR (55) — schnell ausschalten oder CC setzen, sonst sterben Spieler</li>
     </ul>
   </div>
   <div class="enemy-ki">
@@ -172,11 +193,21 @@
     <h3>Lore</h3>
     <p>Sein wahrer Name ist in Stein gemeißelt, der vor der ersten Zivilisation lag. Er lacht, wenn er ihn hört.</p>
   </div>
+  <div class="enemy-sl">
+    <h3>SL-Hinweise</h3>
+    <ul class="sl-list">
+      <li>Boss-Encounter für High-Level-Gruppen — solo mit Boss-Phasen-Mechanik</li>
+      <li>Synergie: 2 Succubi + 4 Dretches als Vorhut — Erzdämon als Boss-Encounter</li>
+      <li>Dramaturgie: Boss-Phasen als Encounter-Höhepunkte — jede Phase braucht andere Taktik</li>
+    </ul>
+  </div>
 </article>
 
 <article class="enemy-card red">
   <div class="enemy-header">
-    <div class="enemy-portrait">?</div>
+    <div class="enemy-portrait">
+      <img src="../img/lich.png" alt="Lich" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('portrait-missing');">
+    </div>
     <div class="enemy-title">
       <div class="enemy-name">Lich <span class="rank-badge rank-boss">Boss</span></div>
       <div class="enemy-tags"><span class="enemy-tag">Untot</span> <span class="enemy-tag">Mittel</span> <span class="enemy-tag">MYSTISCH</span></div>
@@ -207,12 +238,12 @@
     <div class="boss-phase-item"><strong>Phase 2</strong> — &lt;66% HP · Signal: boss.lich.phase2.soulstorm</div>
     <div class="boss-phase-item"><strong>Phase 3</strong> — &lt;33% HP · PHYLACTERY · Signal: boss.lich.phase3.phylactery</div>
   </div>
-  <div class="enemy-sl">
-    <h3>SL-Hinweise</h3>
-    <ul class="sl-list">
+  <div class="enemy-tips">
+    <h3>Tipps gegen Lich</h3>
+    <ul class="tips-list">
       <li>Hohe HP (180) — braucht anhaltenden Schaden, nicht Burst</li>
-      <li>SaveDC 21 — Save-basierte Angriffe sind gefährlich, Advantage holen</li>
-      <li>Hoher DPR (45) — Priorität zum Ausschalten, sonst sterben Spieler schnell</li>
+      <li>SaveDC 21 — Save-Advantage holen (Aura of Protection, Bless)</li>
+      <li>Hoher DPR (45) — schnell ausschalten oder CC setzen, sonst sterben Spieler</li>
       <li>Beschwört Verstärkung — zuerst den Beschwörer killen, nicht die Minions</li>
     </ul>
   </div>
@@ -223,6 +254,14 @@
   <div class="enemy-lore">
     <h3>Lore</h3>
     <p>Er hat den Tod in eine Phiole gesperrt und getrunken. Jetzt ist die Phiole sein Herz.</p>
+  </div>
+  <div class="enemy-sl">
+    <h3>SL-Hinweise</h3>
+    <ul class="sl-list">
+      <li>Boss-Encounter für High-Level-Gruppen — solo mit Boss-Phasen-Mechanik</li>
+      <li>Synergie: Skelette + Zombies als Cannon Fodder — Lich castet aus Sicherheit</li>
+      <li>Dramaturgie: Boss-Phasen als Encounter-Höhepunkte — jede Phase braucht andere Taktik</li>
+    </ul>
   </div>
 </article>
 

@@ -51,13 +51,14 @@ gegnerhandbuch/
 
 Pro Gegner eine Karte auf der Kategorie-Seite:
 
-1. **Portrait** (links, ~120×120) — Platzhalter bis backgroundless-Bilder fertig
+1. **Portrait** (links, ~100×100) — `gegnerhandbuch/img/<gegner_id>.png` (backgroundless)
 2. **Header:** Name + CR-Badge (farbcodiert) + Type/Size/Archetype-Tags + Initiative
 3. **Statblock-Tabelle:** HP, AC, ATK, SaveDC, DPR (kompakt)
 4. **Abilities-Liste:** Würfel-Formel + kurze Beschreibung pro Ability
-5. **SL-Hinweise** (dezenter Kasten): 2-4 taktische Tipps + Synergien ("Ideal zusammen mit...")
+5. **Tipps gegen X** (spielerfacing, blau-cyan Kasten): 2-4 taktische Tipps für die Party
 6. **KI-Verhalten:** 1-2 Sätze (aus Handbuch)
 7. **Lore:** 1-2 Sätze Flavour-Text (aus Handbuch)
+8. **SL-Hinweise** (SL-facing, bronze Kasten ganz unten): Encounter-Design + Synergien + Kombinationen
 
 ## CR-Color-Coding
 
@@ -71,13 +72,33 @@ Pro Gegner eine Karte auf der Kategorie-Seite:
 
 CR-Badge = kleiner farbiger Punkt oder Rahmen um die CR-Zahl.
 
-## SL-Hinweise — Inhalt pro Gegner
+## Tipps gegen X — Inhalt pro Gegner (spielerfacing)
 
-2-4 kurze, taktische Punkte:
+2-4 kurze, taktische Punkte für die **Party**:
 - **Schwäche ausnutzen** (niedrige AC, kein Save, anfällig für Condition X)
 - **Gegenmassnahme** (welche Ability/Strategie neutralisiert den Gegner)
-- **Synergie-Empfehlung** ("Ideal zusammen mit: Goblin-Schamane für Schattenfluch + Gift-Combo")
 - **Verhalten vorausdenken** (Flucht-KI blockieren, Summon-Priorität, etc.)
+- **Was vermeiden** (Lebensraub nicht mit vielen kleinen Treffen, etc.)
+
+## SL-Hinweise — Inhalt pro Gegner (SL-facing, ganz unten)
+
+2-3 kurze Punkte für den **Spielleiter**:
+- **Encounter-Design** ("Ideal als Trash-Mob in Gruppen von 3-5", "Auf erhöhten Positionen platzieren")
+- **Synergie-Kombinationen** ("Kombiniere mit Goblin-Schamane: Schattenfluch + Gift = tödliche Combo")
+- **Dramaturgie** ("Flucht-KI für wiederkehrende Gegner nutzen", "Bei 50% HP wird er aggressiver")
+
+## Portrait-Bilder
+
+- **Pfad:** `gegnerhandbuch/img/<gegner_id>.png`
+- **Format:** PNG, backgroundless (transparenter Hintergrund)
+- **Größe:** ~200×200px (wird auf 100×100 skaliert im CSS)
+- **Namenskonvention:** exakt die Gegner-ID aus den JSONs (z.B. `goblin_assassin.png`, `adult_fire_dragon.png`)
+- **Beispiele:**
+  - `rat_swarm.png` — Rattenschwarm
+  - `goblin_assassin.png` — Goblin-Assassine
+  - `adult_fire_dragon.png` — Erwachsener Feuerdrache
+  - `lich.png` — Lich
+  - `titan.png` — Titan
 
 ## Design
 
