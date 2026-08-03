@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raidbosse — Gegner-Handbuch | Dice &amp; Screen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body class="theme-bronze">
+
+<div class="handbuch-root">
+
+  <a href="../index.html" class="nav-back">← Gegner-Handbuch</a>
+
+  <header class="index-hero">
+    <h1>🐉 Raidbosse</h1>
+    <div class="index-subtitle">CR 18+ — 2 Gegner</div>
+    <div class="index-tagline">Legendäre Wesen jenseits jeder Einzelparty. Weltbedrohungen.</div>
+  </header>
+
+  <div class="enemy-grid">
+
+<article class="enemy-card gold">
+  <div class="enemy-header">
+    <div class="enemy-portrait">?</div>
+    <div class="enemy-title">
+      <div class="enemy-name">Antiker Drache <span class="rank-badge rank-raidboss">Raidboss</span></div>
+      <div class="enemy-tags"><span class="enemy-tag">Monstrosität</span> <span class="enemy-tag">Gargantuan</span> <span class="enemy-tag">BRUTAL</span></div>
+      <div class="enemy-init">Initiative +10</div>
+    </div>
+    <div class="cr-badge gold">21</div>
+  </div>
+    <div class="statblock">
+      <div class="stat-cell"><span class="stat-label">HP</span><span class="stat-value">350</span></div>
+      <div class="stat-cell"><span class="stat-label">AC</span><span class="stat-value">21</span></div>
+      <div class="stat-cell"><span class="stat-label">ATK</span><span class="stat-value">+16</span></div>
+      <div class="stat-cell"><span class="stat-label">SaveDC</span><span class="stat-value">24</span></div>
+      <div class="stat-cell"><span class="stat-label">DPR</span><span class="stat-value">75</span></div>
+    </div>
+  <div class="enemy-abilities">
+    <h3>Abilities</h3>
+    <ul class="ability-list">
+      <li class="ability-item"><span class="ability-name">Biss</span> <span class="ability-formula">(3W10+10)</span></li>
+      <li class="ability-item"><span class="ability-name">Klauen</span> <span class="ability-formula">(3W6+10)</span></li>
+      <li class="ability-item"><span class="ability-name">Verbrannte Erde</span> <span class="ability-formula">(12W6 · Radius: 6)</span></li>
+      <li class="ability-item"><span class="ability-name">Drachenschrei — permanent</span> <span class="ability-formula">(Radius: 8)</span></li>
+      <li class="ability-item"><span class="ability-name">Ur-Wut — permanent in Phase 3</span></li>
+    </ul>
+  </div>
+  <div class="boss-phases">
+    <h3>Boss-Phasen</h3>
+    <div class="boss-phase-item"><strong>Phase 2</strong> — &lt;75% HP · RECHARGE_5_6 · Signal: boss.ancientdragon.phase2.awakening</div>
+    <div class="boss-phase-item"><strong>Phase 3</strong> — &lt;50% HP · RECHARGE_4_6 · Signal: boss.ancientdragon.phase3.fury</div>
+    <div class="boss-phase-item"><strong>Phase 4</strong> — &lt;25% HP · RECHARGE_3_6 · frei: enemy_buff_rage · Signal: boss.ancientdragon.phase4.laststand</div>
+  </div>
+  <div class="enemy-sl">
+    <h3>SL-Hinweise</h3>
+    <ul class="sl-list">
+      <li>Hohe AC (21) — braucht Attack-Buff oder Save-basierte Angriffe</li>
+      <li>Hohe HP (350) — braucht anhaltenden Schaden, nicht Burst</li>
+      <li>SaveDC 24 — Save-basierte Angriffe sind gefährlich, Advantage holen</li>
+      <li>Hoher DPR (75) — Priorität zum Ausschalten, sonst sterben Spieler schnell</li>
+    </ul>
+  </div>
+  <div class="enemy-ki">
+    <h3>KI-Verhalten</h3>
+    <p>BOSS — flies so lange wie möglich, Atem bei Gruppenbildung, dann sinkt er in den Nahkampf. Letzte Phase ist ein alles-vernichtender Wutanfall.</p>
+  </div>
+  <div class="enemy-lore">
+    <h3>Lore</h3>
+    <p>Er hat Königreiche gegründet und begraben. Sein Schuppenpanzer trägt Narben von Drachentötern, die niemand mehr kennt.</p>
+  </div>
+</article>
+
+<article class="enemy-card gold">
+  <div class="enemy-header">
+    <div class="enemy-portrait">?</div>
+    <div class="enemy-title">
+      <div class="enemy-name">Titan <span class="rank-badge rank-raidboss">Raidboss</span></div>
+      <div class="enemy-tags"><span class="enemy-tag">Elementar</span> <span class="enemy-tag">Gargantuan</span> <span class="enemy-tag">BRUTAL</span></div>
+      <div class="enemy-init">Initiative +12</div>
+    </div>
+    <div class="cr-badge gold">23</div>
+  </div>
+    <div class="statblock">
+      <div class="stat-cell"><span class="stat-label">HP</span><span class="stat-value">400</span></div>
+      <div class="stat-cell"><span class="stat-label">AC</span><span class="stat-value">20</span></div>
+      <div class="stat-cell"><span class="stat-label">ATK</span><span class="stat-value">+17</span></div>
+      <div class="stat-cell"><span class="stat-label">SaveDC</span><span class="stat-value">25</span></div>
+      <div class="stat-cell"><span class="stat-label">DPR</span><span class="stat-value">80</span></div>
+    </div>
+  <div class="enemy-abilities">
+    <h3>Abilities</h3>
+    <ul class="ability-list">
+      <li class="ability-item"><span class="ability-name">Verheizende Faust</span> <span class="ability-formula">(4W10+10)</span></li>
+      <li class="ability-item"><span class="ability-name">Meteoriten-Feld</span> <span class="ability-formula">(4W8 · Radius: 4)</span></li>
+      <li class="ability-item"><span class="ability-name">Kosmischer Strahl</span> <span class="ability-formula">(8W8 · Radius: 10)</span></li>
+      <li class="ability-item"><span class="ability-name">Erschütterungswelle</span> <span class="ability-formula">(2W10+10)</span></li>
+      <li class="ability-item"><span class="ability-name">permanent — IMMUNITY nichtmagisch PHYSICAL</span></li>
+    </ul>
+  </div>
+  <div class="boss-phases">
+    <h3>Boss-Phasen</h3>
+    <div class="boss-phase-item"><strong>Phase 2</strong> — &lt;60% HP · Signal: boss.titan.phase2.meteor</div>
+    <div class="boss-phase-item"><strong>Phase 3</strong> — &lt;30% HP · STARDEATH · Signal: boss.titan.phase3.stardeath</div>
+  </div>
+  <div class="enemy-sl">
+    <h3>SL-Hinweise</h3>
+    <ul class="sl-list">
+      <li>Hohe AC (20) — braucht Attack-Buff oder Save-basierte Angriffe</li>
+      <li>Hohe HP (400) — braucht anhaltenden Schaden, nicht Burst</li>
+      <li>SaveDC 25 — Save-basierte Angriffe sind gefährlich, Advantage holen</li>
+      <li>Hoher DPR (80) — Priorität zum Ausschalten, sonst sterben Spieler schnell</li>
+    </ul>
+  </div>
+  <div class="enemy-ki">
+    <h3>KI-Verhalten</h3>
+    <p>BOSS — selten, langsam, aber alles zerstörend. Jeder Angriff verändert das Schlachtfeld.</p>
+  </div>
+  <div class="enemy-lore">
+    <h3>Lore</h3>
+    <p>Er war schon alt, als die Götter jung waren. Er schläft seit Ewigkeiten. Wenn er erwacht, wird die Welt sich an ihren eigenen Namen nicht erinnern.</p>
+  </div>
+</article>
+
+  </div>
+
+  <footer class="hub-footer">
+    <p>© 2026 Roll &amp; Render Studio — <a href="../index.html">Gegner-Handbuch</a> · <a href="../../index.html">Handbuch</a> · <a href="../../../index.html">Dice &amp; Screen</a></p>
+  </footer>
+
+</div>
+
+</body>
+</html>

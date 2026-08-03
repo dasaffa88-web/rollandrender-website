@@ -1,0 +1,568 @@
+/* ============================================================
+   Dice & Screen — Gegner-Handbuch (Bestiarium) Styles
+   Bronze-Dark-Stil, basiert auf klassenhandbuch/styles.css
+   Erweiterungen: CR-Color-Coding, Gegner-Karten, SL-Hinweis-Kasten
+   ============================================================ */
+
+:root {
+  --dns-bronze: #cb9b4c;
+  --dns-deep-shadow: #141313;
+  --dns-warm-black: #1f1914;
+  --dns-cyan: #5c8899;
+  --dns-soft-sand: #f5e6c2;
+  --dns-glow-gold: rgba(203, 155, 76, 0.35);
+  --dns-glow-cyan: rgba(92, 136, 153, 0.35);
+  --dns-shadow-black: rgba(0, 0, 0, 0.45);
+
+  /* CR-Colors */
+  --cr-green: #4a9d5a;
+  --cr-green-glow: rgba(74, 157, 90, 0.35);
+  --cr-blue: #4a7da8;
+  --cr-blue-glow: rgba(74, 125, 168, 0.35);
+  --cr-violet: #8b5fbf;
+  --cr-violet-glow: rgba(139, 95, 191, 0.35);
+  --cr-red: #c44a4a;
+  --cr-red-glow: rgba(196, 74, 74, 0.35);
+  --cr-gold: #d4a843;
+  --cr-gold-glow: rgba(212, 168, 67, 0.4);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { overflow-x: hidden; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--dns-soft-sand);
+  background:
+    radial-gradient(circle at 14% 18%, rgba(203, 155, 76, 0.2), transparent 34%),
+    radial-gradient(circle at 84% 8%, rgba(92, 136, 153, 0.2), transparent 40%),
+    radial-gradient(circle at 50% 76%, rgba(151, 97, 46, 0.2), transparent 48%),
+    linear-gradient(180deg, var(--dns-deep-shadow) 0%, #1b1511 42%, #100d0b 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.12;
+  background-image: repeating-linear-gradient(
+    125deg,
+    rgba(255, 227, 173, 0.35) 0,
+    rgba(255, 227, 173, 0.35) 1px,
+    transparent 1px,
+    transparent 14px
+  );
+}
+
+/* ===== LAYOUT ===== */
+.handbuch-root {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 24px 80px;
+}
+
+/* ===== NAVIGATION ===== */
+.nav-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(203, 155, 76, 0.32);
+  background: rgba(27, 21, 16, 0.7);
+  color: #ddb46e;
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  transition: all 0.2s ease;
+}
+.nav-back:hover {
+  border-color: rgba(203, 155, 76, 0.6);
+  box-shadow: 0 0 16px rgba(203, 155, 76, 0.18);
+  color: #f4d79a;
+}
+
+/* ===== HERO ===== */
+.index-hero {
+  text-align: center;
+  padding: 50px 20px 36px;
+  margin-bottom: 30px;
+}
+.index-hero h1 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 700;
+  color: #f6e5bf;
+  text-shadow: 0 0 20px var(--dns-glow-gold), 0 0 9px rgba(203, 155, 76, 0.25);
+  margin-bottom: 10px;
+}
+.index-subtitle {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  color: #ddb46e;
+  margin-bottom: 6px;
+}
+.index-tagline {
+  font-size: 0.95rem;
+  color: #a89878;
+}
+
+/* ===== HUB-GRID (6 Kategorie-Karten) ===== */
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  gap: 22px;
+}
+
+.hub-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 16px;
+  border: 1px solid rgba(203, 155, 76, 0.32);
+  background:
+    linear-gradient(160deg, rgba(255, 239, 206, 0.08), rgba(255, 239, 206, 0.02) 48%),
+    rgba(27, 21, 16, 0.82);
+  box-shadow:
+    0 10px 28px var(--dns-shadow-black),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  padding: 26px 28px;
+  min-height: 180px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  border-left: 3px solid var(--cr-color, rgba(203, 155, 76, 0.5));
+}
+.hub-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(203, 155, 76, 0.55);
+  box-shadow:
+    0 16px 36px var(--dns-shadow-black),
+    0 0 22px var(--cr-color, rgba(203, 155, 76, 0.16)),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.hub-card-icon {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.hub-card h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f6e5bf;
+  margin-bottom: 4px;
+}
+
+.hub-card-sub {
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  color: #ddb46e;
+  margin-bottom: 8px;
+}
+
+.hub-card-desc {
+  font-size: 0.9rem;
+  color: #e4d2ad;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.hub-card-count {
+  margin-top: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  color: #a89878;
+}
+
+.hub-card-cta {
+  margin-top: 12px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.86rem;
+  color: #ddb46e;
+  letter-spacing: 0.03em;
+  transition: color 0.2s ease;
+}
+.hub-card:hover .hub-card-cta {
+  color: #f4d79a;
+}
+
+/* CR-Color-Klassen für Hub-Karten */
+.cr-green { --cr-color: var(--cr-green-glow); border-left-color: var(--cr-green); }
+.cr-blue  { --cr-color: var(--cr-blue-glow);  border-left-color: var(--cr-blue); }
+.cr-violet{ --cr-color: var(--cr-violet-glow);border-left-color: var(--cr-violet); }
+.cr-red   { --cr-color: var(--cr-red-glow);   border-left-color: var(--cr-red); }
+.cr-gold  { --cr-color: var(--cr-gold-glow);  border-left-color: var(--cr-gold); }
+
+/* ===== GEGNER-KARTEN (Kategorie-Seiten) ===== */
+.enemy-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.enemy-card {
+  position: relative;
+  border-radius: 16px;
+  border: 1px solid rgba(203, 155, 76, 0.28);
+  background:
+    linear-gradient(160deg, rgba(255, 239, 206, 0.06), rgba(255, 239, 206, 0.02) 48%),
+    rgba(27, 21, 16, 0.85);
+  box-shadow:
+    0 10px 28px var(--dns-shadow-black),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  padding: 24px 26px;
+  border-left: 3px solid var(--cr-color, rgba(203, 155, 76, 0.4));
+  overflow: hidden;
+}
+
+/* Gegner-Karte Header */
+.enemy-header {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.enemy-portrait {
+  flex: 0 0 auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  border: 1px solid rgba(203, 155, 76, 0.25);
+  background: rgba(20, 18, 15, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  color: rgba(203, 155, 76, 0.3);
+  overflow: hidden;
+}
+.enemy-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+}
+
+.enemy-title {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.enemy-name {
+  font-family: 'Cinzel', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f6e5bf;
+  text-shadow: 0 0 12px rgba(203, 155, 76, 0.15);
+  margin-bottom: 4px;
+}
+
+.enemy-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.enemy-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(203, 155, 76, 0.25);
+  background: rgba(203, 155, 76, 0.06);
+  font-size: 0.78rem;
+  color: #c9a84c;
+  letter-spacing: 0.02em;
+}
+
+.enemy-init {
+  font-size: 0.82rem;
+  color: #a89878;
+}
+
+/* CR-Badge */
+.cr-badge {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+.cr-badge.cr-green  { background: linear-gradient(135deg, var(--cr-green), #3a7d48); box-shadow: 0 4px 12px var(--cr-green-glow), inset 0 1px 0 rgba(255,255,255,0.15); }
+.cr-badge.cr-blue   { background: linear-gradient(135deg, var(--cr-blue), #3a6a98); box-shadow: 0 4px 12px var(--cr-blue-glow), inset 0 1px 0 rgba(255,255,255,0.15); }
+.cr-badge.cr-violet { background: linear-gradient(135deg, var(--cr-violet), #7a4da8); box-shadow: 0 4px 12px var(--cr-violet-glow), inset 0 1px 0 rgba(255,255,255,0.15); }
+.cr-badge.cr-red    { background: linear-gradient(135deg, var(--cr-red), #a83a3a); box-shadow: 0 4px 12px var(--cr-red-glow), inset 0 1px 0 rgba(255,255,255,0.15); }
+.cr-badge.cr-gold   { background: linear-gradient(135deg, var(--cr-gold), #b8902f); box-shadow: 0 4px 12px var(--cr-gold-glow), inset 0 1px 0 rgba(255,255,255,0.2); }
+
+/* CR-Color für Karten-Border */
+.enemy-card.cr-green  { --cr-color: var(--cr-green-glow); border-left-color: var(--cr-green); }
+.enemy-card.cr-blue   { --cr-color: var(--cr-blue-glow);  border-left-color: var(--cr-blue); }
+.enemy-card.cr-violet { --cr-color: var(--cr-violet-glow);border-left-color: var(--cr-violet); }
+.enemy-card.cr-red    { --cr-color: var(--cr-red-glow);   border-left-color: var(--cr-red); }
+.enemy-card.cr-gold   { --cr-color: var(--cr-gold-glow);  border-left-color: var(--cr-gold); }
+
+/* Statblock-Tabelle */
+.statblock {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: rgba(203, 155, 76, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  border: 1px solid rgba(203, 155, 76, 0.18);
+}
+.stat-cell {
+  background: rgba(27, 21, 16, 0.9);
+  padding: 10px 8px;
+  text-align: center;
+}
+.stat-label {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  color: #a89878;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.stat-value {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #f6e5bf;
+}
+.stat-value.dash {
+  color: #6a6055;
+}
+
+/* Abilities */
+.enemy-abilities {
+  margin-bottom: 18px;
+}
+.enemy-abilities h3,
+.enemy-sl h3,
+.enemy-ki h3,
+.enemy-lore h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ddb46e;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.ability-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ability-item {
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: rgba(203, 155, 76, 0.05);
+  border-left: 2px solid rgba(203, 155, 76, 0.3);
+  font-size: 0.9rem;
+  color: #e4d2ad;
+}
+.ability-name {
+  font-weight: 600;
+  color: #f6e5bf;
+}
+.ability-formula {
+  color: #c9a84c;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+}
+.ability-note {
+  color: #a89878;
+  font-size: 0.82rem;
+}
+
+/* SL-Hinweise (Kasten) */
+.enemy-sl {
+  background: rgba(92, 136, 153, 0.08);
+  border-left: 3px solid rgba(92, 136, 153, 0.45);
+  border-radius: 0 10px 10px 0;
+  padding: 14px 18px;
+  margin-bottom: 16px;
+}
+.enemy-sl h3 {
+  color: #7ba8bc;
+}
+.sl-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.sl-list li {
+  font-size: 0.88rem;
+  color: #c5d8e0;
+  line-height: 1.5;
+  padding-left: 16px;
+  position: relative;
+}
+.sl-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #7ba8bc;
+}
+
+/* KI + Lore */
+.enemy-ki {
+  margin-bottom: 12px;
+}
+.enemy-ki p {
+  font-size: 0.9rem;
+  color: #e4d2ad;
+}
+
+.enemy-lore {
+  border-top: 1px solid rgba(203, 155, 76, 0.12);
+  padding-top: 12px;
+}
+.enemy-lore p {
+  font-size: 0.88rem;
+  color: #a89878;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* Boss-Phasen */
+.boss-phases {
+  margin-bottom: 18px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: rgba(196, 74, 74, 0.08);
+  border: 1px solid rgba(196, 74, 74, 0.2);
+}
+.boss-phases h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  color: #d97a7a;
+  margin-bottom: 6px;
+}
+.boss-phase-item {
+  font-size: 0.85rem;
+  color: #e4b8b8;
+  margin-bottom: 4px;
+}
+
+/* Rank-Badge (ELITE/BOSS/RAIDBOSS) */
+.rank-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+.rank-elite { background: rgba(139, 95, 191, 0.2); color: #b88de0; border: 1px solid rgba(139, 95, 191, 0.4); }
+.rank-boss { background: rgba(196, 74, 74, 0.2); color: #e07a7a; border: 1px solid rgba(196, 74, 74, 0.4); }
+.rank-raidboss { background: rgba(212, 168, 67, 0.2); color: #e0c068; border: 1px solid rgba(212, 168, 67, 0.4); }
+
+/* ===== FOOTER ===== */
+.hub-footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(203, 155, 76, 0.18);
+  font-size: 0.85rem;
+  color: #a89878;
+}
+.hub-footer a {
+  color: #ddb46e;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.hub-footer a:hover {
+  color: #f4d79a;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+  .handbuch-root {
+    padding: 40px 16px 60px;
+  }
+  .index-hero {
+    padding: 36px 16px 24px;
+  }
+  .hub-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .hub-card {
+    padding: 22px 24px;
+    min-height: auto;
+  }
+  .enemy-card {
+    padding: 20px 18px;
+  }
+  .enemy-header {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .enemy-portrait {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+  .statblock {
+    display: block;
+    overflow-x: auto;
+  }
+  .statblock {
+    grid-template-columns: repeat(5, minmax(60px, 1fr));
+  }
+}
+
+@media (max-width: 500px) {
+  .index-hero h1 {
+    font-size: 1.8rem;
+    letter-spacing: 0.02em;
+  }
+  .enemy-name {
+    font-size: 1.2rem;
+  }
+  .cr-badge {
+    min-width: 44px;
+    height: 44px;
+    font-size: 0.95rem;
+  }
+}

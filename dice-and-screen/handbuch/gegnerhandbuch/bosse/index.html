@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bosse — Gegner-Handbuch | Dice &amp; Screen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body class="theme-bronze">
+
+<div class="handbuch-root">
+
+  <a href="../index.html" class="nav-back">← Gegner-Handbuch</a>
+
+  <header class="index-hero">
+    <h1>👑 Bosse</h1>
+    <div class="index-subtitle">CR 11 – 17 — 4 Gegner</div>
+    <div class="index-tagline">Epische Gegner mit Boss-Phasen-Mechanik. Jedes Encounter ein Höhepunkt.</div>
+  </header>
+
+  <div class="enemy-grid">
+
+<article class="enemy-card red">
+  <div class="enemy-header">
+    <div class="enemy-portrait">?</div>
+    <div class="enemy-title">
+      <div class="enemy-name">Erwachsener Feuerdrache <span class="rank-badge rank-boss">Boss</span></div>
+      <div class="enemy-tags"><span class="enemy-tag">Monstrosität</span> <span class="enemy-tag">Riesig</span> <span class="enemy-tag">BRUTAL</span></div>
+      <div class="enemy-init">Initiative +6</div>
+    </div>
+    <div class="cr-badge red">14</div>
+  </div>
+    <div class="statblock">
+      <div class="stat-cell"><span class="stat-label">HP</span><span class="stat-value">180</span></div>
+      <div class="stat-cell"><span class="stat-label">AC</span><span class="stat-value">18</span></div>
+      <div class="stat-cell"><span class="stat-label">ATK</span><span class="stat-value">+11</span></div>
+      <div class="stat-cell"><span class="stat-label">SaveDC</span><span class="stat-value">19</span></div>
+      <div class="stat-cell"><span class="stat-label">DPR</span><span class="stat-value">50</span></div>
+    </div>
+  <div class="enemy-abilities">
+    <h3>Abilities</h3>
+    <ul class="ability-list">
+      <li class="ability-item"><span class="ability-name">Biss</span> <span class="ability-formula">(2W10+7)</span></li>
+      <li class="ability-item"><span class="ability-name">Klauen</span> <span class="ability-formula">(2W6+7)</span></li>
+      <li class="ability-item"><span class="ability-name">Feueratem</span> <span class="ability-formula">(7W6 · Radius: 5)</span></li>
+      <li class="ability-item"><span class="ability-name">Drachenschrei</span> <span class="ability-formula">(Recharge: RECHARGE_6 · Radius: 5)</span></li>
+    </ul>
+  </div>
+  <div class="boss-phases">
+    <h3>Boss-Phasen</h3>
+    <div class="boss-phase-item"><strong>Phase 2</strong> — &lt;50% HP · frei: enemy_buff_rage · Signal: boss.dragon.phase2.rage</div>
+    <div class="boss-phase-item"><strong>Phase 3</strong> — &lt;25% HP · RECHARGE_4_6 · frei: enemy_cone_breath_fire · Signal: boss.dragon.phase3.laststand</div>
+  </div>
+  <div class="enemy-sl">
+    <h3>SL-Hinweise</h3>
+    <ul class="sl-list">
+      <li>Hohe AC (18) — braucht Attack-Buff oder Save-basierte Angriffe</li>
+      <li>Hohe HP (180) — braucht anhaltenden Schaden, nicht Burst</li>
+      <li>SaveDC 19 — Save-basierte Angriffe sind gefährlich, Advantage holen</li>
+      <li>Hoher DPR (50) — Priorität zum Ausschalten, sonst sterben Spieler schnell</li>
+    </ul>
+  </div>
+  <div class="enemy-ki">
+    <h3>KI-Verhalten</h3>
+    <p>BOSS — hält Distanz bis Atem bereit, dann in Melee. Phasen-Wechsel bei 50%/25% signalisiert DM.</p>
+  </div>
+  <div class="enemy-lore">
+    <h3>Lore</h3>
+    <p>Sein Herz brennt seit dreihundert Jahren. Die Berge erinnern sich an seinen Namen, die Dörfer nicht mehr.</p>
+  </div>
+</article>
+
+<article class="enemy-card red">
+  <div class="enemy-header">
+    <div class="enemy-portrait">?</div>
+    <div class="enemy-title">
+      <div class="enemy-name">Vampirlord <span class="rank-badge rank-boss">Boss</span></div>
+      <div class="enemy-tags"><span class="enemy-tag">Untot</span> <span class="enemy-tag">Mittel</span> <span class="enemy-tag">FLINK</span></div>
+      <div class="enemy-init">Initiative +8</div>
+    </div>
+    <div class="cr-badge red">15</div>
+  </div>
+    <div class="statblock">
+      <div class="stat-cell"><span class="stat-label">HP</span><span class="stat-value">180</span></div>
+      <div class="stat-cell"><span class="stat-label">AC</span><span class="stat-value">17</span></div>
+      <div class="stat-cell"><span class="stat-label">ATK</span><span class="stat-value">+11</span></div>
+      <div class="stat-cell"><span class="stat-label">SaveDC</span><span class="stat-value">19</span></div>
+      <div class="stat-cell"><span class="stat-label">DPR</span><span class="stat-value">40</span></div>
+    </div>
+  <div class="enemy-abilities">
+    <h3>Abilities</h3>
+    <ul class="ability-list">
+      <li class="ability-item"><span class="ability-name">Königlicher Biss</span> <span class="ability-formula">(3W6+6)</span></li>
+      <li class="ability-item"><span class="ability-name">Klauen</span> <span class="ability-formula">(1W8+6)</span></li>
+      <li class="ability-item"><span class="ability-name">Schattensprung</span></li>
+      <li class="ability-item"><span class="ability-name">Beherrschender Blick — WIS-Save, DC aus targetSaveDcBudget CR 15</span></li>
+      <li class="ability-item"><span class="ability-name">Blutpakt — 1/Runde, nur wenn er Schaden verursacht hat</span> <span class="ability-formula">(Heilung: 3W8+5)</span></li>
+    </ul>
+  </div>
+  <div class="boss-phases">
+    <h3>Boss-Phasen</h3>
+    <div class="boss-phase-item"><strong>Phase 2</strong> — &lt;50% HP · BEAST_FORM · Signal: boss.vampire.phase2.beast</div>
+  </div>
+  <div class="enemy-sl">
+    <h3>SL-Hinweise</h3>
+    <ul class="sl-list">
+      <li>Hohe AC (17) — braucht Attack-Buff oder Save-basierte Angriffe</li>
+      <li>Hohe HP (180) — braucht anhaltenden Schaden, nicht Burst</li>
+      <li>SaveDC 19 — Save-basierte Angriffe sind gefährlich, Advantage holen</li>
+      <li>Hoher DPR (40) — Priorität zum Ausschalten, sonst sterben Spieler schnell</li>
+    </ul>
+  </div>
+  <div class="enemy-ki">
+    <h3>KI-Verhalten</h3>
+    <p>BOSS — charmiert Heiler, teleportiert hinter Schützen, beißt Tanks. Phasen-Wechsel bei 50%.</p>
+  </div>
+  <div class="enemy-lore">
+    <h3>Lore</h3>
+    <p>Er hat Königreiche sterben sehen. Er war bei jedem ihrer letzten Abendessen.</p>
+  </div>
+</article>
+
+<article class="enemy-card red">
+  <div class="enemy-header">
+    <div class="enemy-portrait">?</div>
+    <div class="enemy-title">
+      <div class="enemy-name">Erzdämon <span class="rank-badge rank-boss">Boss</span></div>
+      <div class="enemy-tags"><span class="enemy-tag">Dämon</span> <span class="enemy-tag">Groß</span> <span class="enemy-tag">BRUTAL</span></div>
+      <div class="enemy-init">Initiative +8</div>
+    </div>
+    <div class="cr-badge red">17</div>
+  </div>
+    <div class="statblock">
+      <div class="stat-cell"><span class="stat-label">HP</span><span class="stat-value">220</span></div>
+      <div class="stat-cell"><span class="stat-label">AC</span><span class="stat-value">19</span></div>
+      <div class="stat-cell"><span class="stat-label">ATK</span><span class="stat-value">+13</span></div>
+      <div class="stat-cell"><span class="stat-label">SaveDC</span><span class="stat-value">21</span></div>
+      <div class="stat-cell"><span class="stat-label">DPR</span><span class="stat-value">55</span></div>
+    </div>
+  <div class="enemy-abilities">
+    <h3>Abilities</h3>
+    <ul class="ability-list">
+      <li class="ability-item"><span class="ability-name">Verdammnis-Klinge</span> <span class="ability-formula">(3W6+8 · Element: DEMONIC)</span></li>
+      <li class="ability-item"><span class="ability-name">Höllenatem</span> <span class="ability-formula">(6W8 · Element: DEMONIC)</span></li>
+      <li class="ability-item"><span class="ability-name">Dämonenheer</span></li>
+      <li class="ability-item"><span class="ability-name">Aura der Verzweiflung — permanent</span></li>
+      <li class="ability-item"><span class="ability-name">Verdammnis-Fluch</span></li>
+    </ul>
+  </div>
+  <div class="boss-phases">
+    <h3>Boss-Phasen</h3>
+    <div class="boss-phase-item"><strong>Phase 2</strong> — &lt;66% HP · frei: enemy_summon_imps · Signal: boss.archdemon.phase2.summon</div>
+    <div class="boss-phase-item"><strong>Phase 3</strong> — &lt;33% HP · HELLFIRE_AURA · Signal: boss.archdemon.phase3.hellfire</div>
+  </div>
+  <div class="enemy-sl">
+    <h3>SL-Hinweise</h3>
+    <ul class="sl-list">
+      <li>Hohe AC (19) — braucht Attack-Buff oder Save-basierte Angriffe</li>
+      <li>Hohe HP (220) — braucht anhaltenden Schaden, nicht Burst</li>
+      <li>SaveDC 21 — Save-basierte Angriffe sind gefährlich, Advantage holen</li>
+      <li>Hoher DPR (55) — Priorität zum Ausschalten, sonst sterben Spieler schnell</li>
+    </ul>
+  </div>
+  <div class="enemy-ki">
+    <h3>KI-Verhalten</h3>
+    <p>BOSS — Aura lähmt, Fluch schwächt, Heer erschöpft. Phasen-Wechsel eskaliert.</p>
+  </div>
+  <div class="enemy-lore">
+    <h3>Lore</h3>
+    <p>Sein wahrer Name ist in Stein gemeißelt, der vor der ersten Zivilisation lag. Er lacht, wenn er ihn hört.</p>
+  </div>
+</article>
+
+<article class="enemy-card red">
+  <div class="enemy-header">
+    <div class="enemy-portrait">?</div>
+    <div class="enemy-title">
+      <div class="enemy-name">Lich <span class="rank-badge rank-boss">Boss</span></div>
+      <div class="enemy-tags"><span class="enemy-tag">Untot</span> <span class="enemy-tag">Mittel</span> <span class="enemy-tag">MYSTISCH</span></div>
+      <div class="enemy-init">Initiative +10</div>
+    </div>
+    <div class="cr-badge red">17</div>
+  </div>
+    <div class="statblock">
+      <div class="stat-cell"><span class="stat-label">HP</span><span class="stat-value">180</span></div>
+      <div class="stat-cell"><span class="stat-label">AC</span><span class="stat-value">16</span></div>
+      <div class="stat-cell"><span class="stat-label">ATK</span><span class="stat-value">+11</span></div>
+      <div class="stat-cell"><span class="stat-label">SaveDC</span><span class="stat-value">21</span></div>
+      <div class="stat-cell"><span class="stat-label">DPR</span><span class="stat-value">45</span></div>
+    </div>
+  <div class="enemy-abilities">
+    <h3>Abilities</h3>
+    <ul class="ability-list">
+      <li class="ability-item"><span class="ability-name">Seelen-Auslöschung</span> <span class="ability-formula">(4W6+5 · Sprünge: 4)</span></li>
+      <li class="ability-item"><span class="ability-name">Todesheer</span></li>
+      <li class="ability-item"><span class="ability-name">Verdammnis-Feld</span> <span class="ability-formula">(2W6 · Radius: 3)</span></li>
+      <li class="ability-item"><span class="ability-name">Lebensverfall</span></li>
+      <li class="ability-item"><span class="ability-name">Planar-Sprung</span></li>
+      <li class="ability-item"><span class="ability-name">Magische Rüstung — permanent passiv</span></li>
+    </ul>
+  </div>
+  <div class="boss-phases">
+    <h3>Boss-Phasen</h3>
+    <div class="boss-phase-item"><strong>Phase 2</strong> — &lt;66% HP · Signal: boss.lich.phase2.soulstorm</div>
+    <div class="boss-phase-item"><strong>Phase 3</strong> — &lt;33% HP · PHYLACTERY · Signal: boss.lich.phase3.phylactery</div>
+  </div>
+  <div class="enemy-sl">
+    <h3>SL-Hinweise</h3>
+    <ul class="sl-list">
+      <li>Hohe HP (180) — braucht anhaltenden Schaden, nicht Burst</li>
+      <li>SaveDC 21 — Save-basierte Angriffe sind gefährlich, Advantage holen</li>
+      <li>Hoher DPR (45) — Priorität zum Ausschalten, sonst sterben Spieler schnell</li>
+      <li>Beschwört Verstärkung — zuerst den Beschwörer killen, nicht die Minions</li>
+    </ul>
+  </div>
+  <div class="enemy-ki">
+    <h3>KI-Verhalten</h3>
+    <p>BOSS — strategisch, hält Distanz, erschafft Killzone. Phylakterium rettet ihn einmal.</p>
+  </div>
+  <div class="enemy-lore">
+    <h3>Lore</h3>
+    <p>Er hat den Tod in eine Phiole gesperrt und getrunken. Jetzt ist die Phiole sein Herz.</p>
+  </div>
+</article>
+
+  </div>
+
+  <footer class="hub-footer">
+    <p>© 2026 Roll &amp; Render Studio — <a href="../index.html">Gegner-Handbuch</a> · <a href="../../index.html">Handbuch</a> · <a href="../../../index.html">Dice &amp; Screen</a></p>
+  </footer>
+
+</div>
+
+</body>
+</html>
